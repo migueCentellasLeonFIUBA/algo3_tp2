@@ -1,75 +1,33 @@
 package edu.fiuba.algo3.modelo.ciudad;
 
-
-/**
-* @generated
-*/
 public class Ciudad {
-    
-    /**
-    * @generated
-    */
+
     private Integer visitas;
-    
-    /**
-    * @generated
-    */
+
     private String nombre;
-    
-    
-    /**
-    * @generated
-    */
+
     private Ladron ;
-    
-    /**
-    * @generated
-    */
+
     private Ladron ;
-    
-    /**
-    * @generated
-    */
+
     private Cordenadas cordenadas;
-    
-    /**
-    * @generated
-    */
+
     private Set<Edificio> edificio;
-    
-    /**
-    * @generated
-    */
+
     private Estrategia ;
-    
-    /**
-    * @generated
-    */
+
     private Secuaz ;
-    
-    /**
-    * @generated
-    */
+
     private Jugador ;
-    
-    
-    /**
-    * @generated
-    */
+
     public Integer getVisitas() {
         return this.visitas;
     }
-    
-    /**
-    * @generated
-    */
+
     public Integer setVisitas(Integer visitas) {
         this.visitas = visitas;
     }
     
-    /**
-    * @generated
-    */
     public String getNombre() {
         return this.nombre;
     }
