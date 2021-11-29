@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Jugador{
+-nombre: String
+-computadora :Computadora
+-reloj :Reloj
+-ciudad :Ciudad
+-orden :Orden
+
++getNombre() :String
++setNombre(nombre :String)
++setTiempo(horas :int)
++setVelocidad(vel :int)
++actualizarOrden(orden :Orden)
+
++viajarACiudad(Ciudad: ciudad)
++getVelocidad() :int
++visitarEdificio()
+
++ataqueConCuchillo()
++ataqueConArma()
+
++arretarSospechoso() :void
++getProximoNivel() :int
+
++tiempoTerminado()
+-terminarJuego()
+}
+
+Interface GradoPolicia{
++getVelocidad() :int
++LadronArrestado() :void
++getProximoNivel() :int
+}
+
+class Novato{
+-arrestos :int
+
++getProximoNivel() :int
++getVelocidad() :int
+}
+
+class Detective{
+-arrestos :int
+
++getProximoNivel() :int
++getVelocidad() :int
+}
+
+class Investigador{
+-arrestos :int
+
++getProximoNivel() :int
++getVelocidad() :int
+}
+
+class Sargento{
+-arrestos :int
+
++getProximoNivel() :int
++getVelocidad() :int
+}
+
+'Enlaces'
+GradoPolicia -- Jugador
+Detective --|> GradoPolicia
+Novato --|> GradoPolicia
+Investigador --|> GradoPolicia
+Sargento -|> GradoPolicia
+
+@enduml

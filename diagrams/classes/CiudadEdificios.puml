@@ -1,0 +1,85 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'Clases'
+'- privado'
+'# protegido'
+'~ privado del paquete'
+'+ publico'
+
+'{static} de clase'
+'{abstract} abs (clase que no debe ser instanciada))'
+
+'Comentarios'
+'note top of nombreClase : In java, every class\nextends this one.'
+'note "Nota flotante"'
+'puedo darle un alias a una nota para conectarla con otras cosas:'
+' note "mensaje" as Nota1'
+
+class Ciudad{
+-nombre: String
+-visitas : int
+-descripcion: String
+
++visitarEdificio() :String
++viajarACiudad(destino :Ciudad, velocidad :int, reloj :Reloj) :int
+
++setDescripcion(texto: String)
++setNombre(nombre :String)
++getDescripcion() :String
++getNombre() :String
+-calcularDistancia(pais: Pais)
+-getUbicacion() :Coordenadas
+}
+
+class Coordenadas{
+-latitud: int
+-longitud: int
+
++setCoordenadas(lat :int, long :int)
++calcularDistancia(coords: Coordenadas) :int
+-getLatitud() :int
+-getLongitud() :int
+}
+
+Interface Edificio{
++damePista() :Pista
+}
+
+class Banco{
+-ciudad :Ciudad
++damePista() :PistaEconomica
+}
+
+class Biblioteca{
+-ciudad :Ciudad
++damePista() :PistaHitorica
+}
+
+class Aereopuerto{
+-ciudad :Ciudad
++damePista() :PistaPaises
+}
+
+note left of Banco::"ciudad"
+    la ciudad que contiene
+    es la próxima en la ruta.
+end note
+
+'Enlaces'
+'<|-- herencia'
+'<--  directo/depende de'
+'*-- composicion'
+'o-- agregacion'
+'-- Asociacion'
+
+'"1" *-- "*" listas'
+':mensaje en linea'
+
+Coordenadas -* Ciudad
+Edificio --* Ciudad
+
+Banco -|> Edificio
+Biblioteca --|> Edificio
+Aereopuerto --|> Edificio
+@enduml

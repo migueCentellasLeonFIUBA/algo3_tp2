@@ -1,0 +1,149 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'Clases'
+'- privado'
+'# protegido'
+'~ privado del paquete'
+'+ publico'
+
+'{static} de clase'
+'{abstract} abs (clase que no debe ser instanciada))'
+
+'Comentarios'
+'note top of nombreClase : In java, every class\nextends this one.'
+'note "Nota flotante"'
+'puedo darle un alias a una nota para conectarla con otras cosas:'
+' note "mensaje" as Nota1'
+
+class Jugador{
+-nombre: String
+
++getNombre() :String
++setNombre(nombre :String)
++setTiempo(horas :int)
++setVelocidad(vel :int)
++actualizarOrden(orden :Orden)
+
++viajarACiudad(Ciudad: ciudad)
++visitarEdificio()
+
++ataqueConCuchillo()
++ataqueConArma()
+
++tiempoTerminado()
+-terminarJuego()
+}
+
+class Reloj{
+-fecha : Date
+-horasRestantes: int
+-horasPorDia: int
++setHoras(horas : int) :void
++setFecha(fecha : Date) :void
+
++ataqueConCuchillo() :void
++ataqueConArma() :void
++descontarViaje(distancia: int, volocidad: int) :void
++visitarEdificio(visitas: int) :void
++tiempoTerminado() :Bool
++informarDia() :Date
+-dormir()
+}
+
+note right of Reloj::"horasPorDia"
+    horasPorDia sirve para saber
+    cuando debe irse a dormir.
+end note
+
+Interface GradoPolicia{
++getVelocidad() :int
++LadronArrestado() :void
++getProximoNivel() :int
+}
+
+class Ciudad{
+-nombre: String
+-visitas : int
+-descripcion: String
+-coordenadas : Coordenadas
+
++visitarEdificio() :String
++viajarACiudad(destino :Ciudad, velocidad :int, reloj :Reloj) :int
+
++setDescripcion(texto: String)
++setNombre(nombre :String)
++getDescripcion() :String
++getNombre() :String
+-calcularDistancia(pais: Pais)
+-getUbicacion() :Coordenadas
+}
+
+class Computadora{
++mostrarSospechosos() :String List
++buscarSospechoso(caracteristicas :String List) :Sospechoso
+}
+
+note left of Computadora::"mostrarSospechosos()"
+    Informa a la interfaz la lista
+    de lista de sospechosos que
+    debe mostrar.
+end note
+
+class Caso{
++mostrarSospechosos() :String List
++buscarSospechoso(caracteristicas :String List) :Sospechoso
+}
+
+interface Sospechosos{
++cargaDeParametros(parametros[] :String List)
++arrestarSospechoso() :int
++esSospechoso(parametros[] :String List) :Bool
++getNombre() :String
++crearOrden() :Orden
+}
+
+class Ladron{
+-parametros[] :String List
+-ataques : int
+
++aparecer() :void
++atacar()
+-ataqueConCuchillo()
+-ataqueConArma()
+}
+
+note right of Ladron::"aparecer()"
+    muestra en pantalla cuando el
+    jugador esta en la ruta correcta.
+end note
+
+class Sospechoso{
+-parametros[] :String List
++arrestarSospechoso() :int
+}
+
+class Orden{
++arrestarSospechoso() :int
+}
+
+'Enlaces'
+'<|-- herencia'
+'<--  directo/depende de'
+'*-- composicion'
+'o-- agregacion'
+'-- Asociacion'
+
+'"1" *-- "*" listas'
+':mensaje en linea'
+Ciudad -- Jugador
+GradoPolicia - Jugador
+Reloj -* Jugador
+Computadora -- Jugador
+Orden -* Jugador
+Computadora - Orden
+Caso -- Computadora
+Sospechosos -* Caso
+Sospechoso -|> Sospechosos
+Ladron --|> Sospechosos
+@enduml
