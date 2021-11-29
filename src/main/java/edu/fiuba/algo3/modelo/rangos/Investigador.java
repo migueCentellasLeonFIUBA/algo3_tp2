@@ -1,28 +1,15 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
-/**
-* @generated
-*/
-public class Investigador implements GradoPolica {
-    
-    
-    
-    
 
-    //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public CargarPistas() {
-        //TODO
+public class Investigador implements GradoPolicia{
+
+    public void CargarPistas() {
+
     }
-    /**
-    * @generated
-    */
-    public CalcularTiempoViaje() {
-        //TODO
+
+    public void CalcularTiempoViaje() {
+
     }
     
 }
