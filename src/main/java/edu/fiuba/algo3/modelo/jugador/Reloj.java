@@ -1,108 +1,50 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 
-/**
-* @generated
-*/
+
 public class Reloj {
-    
-    /**
-    * @generated
-    */
+
     private Integer horasRestantes;
-    
-    /**
-    * @generated
-    */
     private Integer horasPordia;
-    
-    
-    /**
-    * @generated
-    */
-    private Jugador ;
-    
-    
-    /**
-    * @generated
-    */
+    private Integer cuchilladas;
+
     public Integer getHorasRestantes() {
         return this.horasRestantes;
     }
-    
-    /**
-    * @generated
-    */
-    public Integer setHorasRestantes(Integer horasRestantes) {
+    public void setHorasRestantes(Integer horasRestantes) {
         this.horasRestantes = horasRestantes;
     }
-    
-    /**
-    * @generated
-    */
     public Integer getHorasPordia() {
         return this.horasPordia;
     }
-    
-    /**
-    * @generated
-    */
-    public Integer setHorasPordia(Integer horasPordia) {
+    public void setHorasPordia(Integer horasPordia) {
         this.horasPordia = horasPordia;
     }
-    
-    
-    /**
-    * @generated
-    */
-    public Jugador get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Jugador set(Jugador ) {
-        this. = ;
-    }
-    
 
-    //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public ataqueConPistola() {
+    //Metodos
+
+    public void ataqueConPistola() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public ataqueConCuchillo() {
+
+    public void ataqueConCuchillo() {
+        //la primera vez resta 2hs, luego 1h
         //TODO
     }
-    /**
-    * @generated
-    */
-    public descontarViaje() {
+
+    public void descontarViaje() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public visitarEdificio() {
+
+    public void visitarEdificio() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public tiempoTerminado() {
+
+    public void tiempoTerminado() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public dormir() {
+
+    private void dormir() {
         //TODO
     }
     

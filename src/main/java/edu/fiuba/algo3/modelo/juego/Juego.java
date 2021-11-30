@@ -1,76 +1,53 @@
 package edu.fiuba.algo3.modelo.juego;
 
 
-/**
-* @generated
-*/
+import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.jugador.Caso;
+import edu.fiuba.algo3.modelo.jugador.Computadora;
+import edu.fiuba.algo3.modelo.jugador.Jugador;
+
+import java.util.List;
+
 public class Juego {
-    
-    
-    /**
-    * @generated
-    */
-    private Set<Jugador> ;
-    
-    
-    
-    /**
-    * @generated
-    */
-    public Jugador get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Jugador set(Jugador ) {
-        this. = ;
+
+    private List<Ciudad> ciudades;
+    private Computadora pc;
+    private Caso caso;
+
+    private Jugador jugador;
+
+    public void setJugador(Jugador jugador) {
+        this.jugador = jugador;
     }
     
 
-    //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public CargarSospechosos() {
+    //Operations
+
+    public void CargarSospechosos() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public CargarCiudades() {
+
+    public void CargarCiudades() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public CargarObjeto/s() {
+
+    public void CargarObjetos() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public IdentificarJugador() {
+
+    public void IdentificarJugador() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public TerminarJuego() {
+
+    public void TerminarJuego() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public CargarPistas() {
+
+    public void CargarPistas() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public CrearCaso() {
+
+    public void CrearCaso() {
         //TODO
     }
     

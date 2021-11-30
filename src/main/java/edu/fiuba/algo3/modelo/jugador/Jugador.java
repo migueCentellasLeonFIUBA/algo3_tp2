@@ -1,197 +1,64 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 
-/**
-* @generated
-*/
+import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.ladron.Secuaz;
+import edu.fiuba.algo3.modelo.rangos.*;
+
 public class Jugador {
-    
-    /**
-    * @generated
-    */
+
     private String nombre;
-    
-    /**
-    * @generated
-    */
-    private Integer arrestos;
-    
-    
-    /**
-    * @generated
-    */
-    private Computadora ;
-    
-    /**
-    * @generated
-    */
-    private Reloj ;
-    
-    /**
-    * @generated
-    */
-    private Juego ;
-    
-    /**
-    * @generated
-    */
-    private GradoPolica ;
-    
-    /**
-    * @generated
-    */
-    private Orden ;
-    
-    /**
-    * @generated
-    */
-    private Ciudad ;
-    
-    
-    /**
-    * @generated
-    */
+    private Integer arrestos; //debe guardarlos el rango
+
+    private Computadora pc;
+    private Reloj reloj;
+
+    private Novato rango; //???
+
+    private Orden orden;
+
+    private Ciudad ciudadActual;
+
+
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public void setArrestos(Integer arrestos) {
+        this.arrestos = arrestos;
+    } //debe hacerlo el rango
+    public void setOrden(Orden orden) {
+        this.orden = orden;
+    }
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudadActual = ciudad;
+    }
+    public void setComputadora(Computadora pc) {
+        this.pc = pc;
+    }
+
     public String getNombre() {
         return this.nombre;
     }
-    
-    /**
-    * @generated
-    */
-    public String setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
-    /**
-    * @generated
-    */
-    public Integer getArrestos() {
-        return this.arrestos;
-    }
-    
-    /**
-    * @generated
-    */
-    public Integer setArrestos(Integer arrestos) {
-        this.arrestos = arrestos;
-    }
-    
-    
-    /**
-    * @generated
-    */
-    public Orden get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Orden set(Orden ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public GradoPolica get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public GradoPolica set(GradoPolica ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Reloj get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Reloj set(Reloj ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ciudad get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ciudad set(Ciudad ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Juego get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Juego set(Juego ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Computadora get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Computadora set(Computadora ) {
-        this. = ;
-    }
-    
-
     //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public visitarEdificio() {
+
+    public void visitarEdificio() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public viajarACiudad() {
+
+    public void viajarACiudad(Ciudad destino) {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public BuscarSospechoso() {
+
+    public void BuscarSospechoso() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public ArrestarSospechoso() {
+
+    public void ArrestarSospechoso() {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public TerminarJuego() {
+
+    public void TerminarJuego() {
         //TODO
     }
     

@@ -1,58 +1,27 @@
 package edu.fiuba.algo3.modelo.jugador;
 
+import edu.fiuba.algo3.modelo.ladron.Secuaz;
 
-/**
-* @generated
-*/
 public class Computadora {
-    
-    
-    /**
-    * @generated
-    */
-    private Jugador ;
-    
-    
-    
-    /**
-    * @generated
-    */
-    public Jugador get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Jugador set(Jugador ) {
-        this. = ;
-    }
-    
+
 
     //                          Operations                                  
     
-    /**
-    * @generated
-    */
-    public BuscarSospechoso() {
+
+    public Secuaz BuscarSospechoso() {
+        //TODO
+        return new Secuaz();
+    }
+
+    public void establecerSexo(String caracteristica) {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public establecerSexo() {
+
+    public void establecerHobby(String caracteristica) {
         //TODO
     }
-    /**
-    * @generated
-    */
-    public establecerHobby() {
-        //TODO
-    }
-    /**
-    * @generated
-    */
-    public establecerCabello() {
+
+    public void establecerCabello(String caracteristica) {
         //TODO
     }
     

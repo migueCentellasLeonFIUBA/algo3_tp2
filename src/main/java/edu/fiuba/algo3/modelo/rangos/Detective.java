@@ -2,12 +2,16 @@ package edu.fiuba.algo3.modelo.rangos;
 
 public class Detective implements GradoPolicia {
 
+    private Integer velocidad;
+
+    @Override
     public void CargarPistas() {
 
     }
 
-    public void CalcularTiempoViaje() {
-
+    @Override
+    public Integer CalcularTiempoViaje() {
+        return 0;
     }
     
 }

@@ -1,88 +1,22 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
-/**
-* @generated
-*/
+import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+
+import java.util.List;
+
 public class Estrategia {
-    
-    
-    /**
-    * @generated
-    */
-    private Ladron ;
-    
-    /**
-    * @generated
-    */
-    private Objeto ;
-    
-    /**
-    * @generated
-    */
-    private Caso ;
-    
-    /**
-    * @generated
-    */
-    private Set<Ciudad> ;
-    
-    
-    
-    /**
-    * @generated
-    */
-    public Caso get() {
-        return this.;
+
+    private List<Ciudad> ciudades;
+    private Integer siguiente =0;
+
+    public Ciudad getProximaCiudad() {
+        siguiente += 1;
+        return ciudades.get(siguiente);
     }
-    
-    /**
-    * @generated
-    */
-    public Caso set(Caso ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ladron get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ladron set(Ladron ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ciudad get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ciudad set(Ciudad ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Objeto get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Objeto set(Objeto ) {
-        this. = ;
+
+    public void setCiudades(List<Ciudad> ciudades) {
+        this.ciudades.addAll(ciudades);
     }
     
 }

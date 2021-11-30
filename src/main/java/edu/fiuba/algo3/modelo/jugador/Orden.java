@@ -1,22 +1,6 @@
 package edu.fiuba.algo3.modelo.jugador;
 
+public interface Orden {
 
-/**
-* @generated
-*/
-public class Orden implements Orden {
-    
-    
-    
-    
-
-    //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public ArrestarSospechos() {
-        //TODO
-    }
-    
+    boolean ArrestarSospechos();
 }

@@ -1,104 +1,33 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
-/**
-* @generated
-*/
-public class Ladron implements Sospechable, Ladron {
-    
-    /**
-    * @generated
-    */
-    private invalid Caracteristicas;
-    
-    
-    /**
-    * @generated
-    */
-    private Caso ;
-    
-    /**
-    * @generated
-    */
-    private Estrategia ;
-    
-    /**
-    * @generated
-    */
-    private Ciudad ;
-    
-    
-    /**
-    * @generated
-    */
-    public invalid getCaracteristicas() {
-        return this.Caracteristicas;
-    }
-    
-    /**
-    * @generated
-    */
-    public invalid setCaracteristicas(invalid Caracteristicas) {
-        this.Caracteristicas = Caracteristicas;
-    }
-    
-    
-    /**
-    * @generated
-    */
-    public Caso get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Caso set(Caso ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Estrategia get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Estrategia set(Estrategia ) {
-        this. = ;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ciudad get() {
-        return this.;
-    }
-    
-    /**
-    * @generated
-    */
-    public Ciudad set(Ciudad ) {
-        this. = ;
-    }
-    
+import java.util.List;
 
-    //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public Arrestar() {
-        //TODO
+public class Ladron implements Secuaces {
+
+    private List<String> caracteristicas;
+    private Estrategia estrategia;
+
+    public void setCaracteristicas (List<String> caracteristicas) {
+        this.caracteristicas.addAll(caracteristicas);
     }
-    /**
-    * @generated
-    */
-    public Sospechar() {
+
+    public void setEstrategia(Estrategia plan) {
+        this.estrategia = plan;
+    }
+
+    //Operations
+
+    @Override
+    public boolean Arrestar() {
         //TODO
+        return true;
+    }
+
+    @Override
+    public boolean Sospechar() {
+        //TODO
+        return false;
     }
     
 }
