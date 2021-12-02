@@ -2,8 +2,7 @@ package edu.fiuba.algo3.modelo.jugador;
 
 
 import edu.fiuba.algo3.modelo.ciudad.Ciudad;
-import edu.fiuba.algo3.modelo.ladron.Secuaz;
-import edu.fiuba.algo3.modelo.rangos.*;
+import edu.fiuba.algo3.modelo.rangos.Novato;
 
 public class Jugador {
 
@@ -21,26 +20,21 @@ public class Jugador {
 
 
 
-    public void setNombre(String nombre) {
+    private void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void setArrestos(Integer arrestos) {
+    private void setArrestos(Integer arrestos) {
         this.arrestos = arrestos;
     } //debe hacerlo el rango
-    public void setOrden(Orden orden) {
+    private void setOrden(Orden orden) {
         this.orden = orden;
     }
-    public void setCiudad(Ciudad ciudad) {
+    private void setCiudad(Ciudad ciudad) {
         this.ciudadActual = ciudad;
     }
-    public void setComputadora(Computadora pc) {
+    private void setComputadora(Computadora pc) {
         this.pc = pc;
     }
-
-    public String getNombre() {
-        return this.nombre;
-    }
-    //                          Operations                                  
 
     public void visitarEdificio() {
         //TODO
@@ -61,5 +55,8 @@ public class Jugador {
     public void TerminarJuego() {
         //TODO
     }
-    
+
+    public boolean compararJugador(String nombre) {
+        return nombre.equals(this.nombre);
+    }
 }
