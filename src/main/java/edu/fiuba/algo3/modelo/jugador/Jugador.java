@@ -18,7 +18,10 @@ public class Jugador {
 
     private Ciudad ciudadActual;
 
-
+    public static Jugador crearJugador(String nombre,Integer arrestos)
+    {
+        new
+    }
 
     private void setNombre(String nombre) {
         this.nombre = nombre;

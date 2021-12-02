@@ -47,8 +47,6 @@ public class Juego {
 
                 Objeto obj = new Objeto();
                 obj.setnombre((String) js.get("Nombre"));
-                obj.setCi
-                Nicolás Carreño20:56
                 obj.setCiudad((String) js.get("CiudadDeOrigen"));
                 obj.setClase((String) js.get("Rareza"));
 
@@ -89,10 +87,12 @@ public class Juego {
 
         //IF de decisión del usuario
 
-        return Jugador crearJugador
+        return Jugador.crearJugador();
 
         // Posible refactor -> return jugadores.stream().anyMatch("aaaa");;
     }
+
+
 
     public void TerminarJuego() {
         //TODO
