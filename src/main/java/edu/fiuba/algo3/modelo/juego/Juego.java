@@ -5,7 +5,6 @@ import edu.fiuba.algo3.modelo.ciudad.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Computadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.objeto.Objeto;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -34,23 +33,20 @@ public class Juego {
     }
 
     //Operations
-    private void CargarJugadores() {
+    private List<Jugador> CargarJugadores() {
         JSONParser parser = new JSONParser();
         List<Jugador> jugadores = new ArrayList<Jugador>();
 
         try{
-            Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json"));
+            Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json"));
             JSONArray array = (JSONArray) ob;
 
             for (int i = 0; i < array.size(); i++) {
                 JSONObject js = (JSONObject) array.get(i);
 
-                Objeto obj = new Objeto();
-                obj.setnombre((String) js.get("Nombre"));
-                obj.setCiudad((String) js.get("CiudadDeOrigen"));
-                obj.setClase((String) js.get("Rareza"));
+                Jugador nuevoPlayer = Jugador.crearJugador(js.get("Nombre").toString(),Integer.parseInt(js.get("Arrestos").toString()));
 
-                objs.add(obj);
+                jugadores.add(nuevoPlayer);
             }
 
         } catch (java.io.FileNotFoundException e) {
@@ -60,8 +56,7 @@ public class Juego {
         } catch (ParseException e) {
             System.out.println(e.getMessage());
         }
-        return objs;
-
+        return jugadores;
     }
 
     public void CargarSospechosos() {
@@ -80,14 +75,14 @@ public class Juego {
 
         for (Jugador jugador : jugadores)
         {
-            if(jugador.compararJugador("nombre")){
+            if(jugador.compararJugador(nombre)){
                 return jugador;
             }
         }
 
         //IF de decisión del usuario
 
-        return Jugador.crearJugador();
+        return Jugador.crearJugador(nombre,0);
 
         // Posible refactor -> return jugadores.stream().anyMatch("aaaa");;
     }

@@ -18,25 +18,22 @@ public class Jugador {
 
     private Ciudad ciudadActual;
 
-    public static Jugador crearJugador(String nombre,Integer arrestos)
-    {
-        new
+    private Jugador(String nombre,Integer arrestos){
+        this.nombre=nombre;
+        this.arrestos=arrestos;
     }
 
-    private void setNombre(String nombre) {
-        this.nombre = nombre;
+    public static Jugador crearJugador(String nombre,Integer arrestos)
+    {
+        return new Jugador(nombre,arrestos);
     }
-    private void setArrestos(Integer arrestos) {
-        this.arrestos = arrestos;
-    } //debe hacerlo el rango
-    private void setOrden(Orden orden) {
-        this.orden = orden;
+
+    public String getNombre(){
+        return this.nombre;
     }
-    private void setCiudad(Ciudad ciudad) {
-        this.ciudadActual = ciudad;
-    }
-    private void setComputadora(Computadora pc) {
-        this.pc = pc;
+
+    public Integer getArrestos(){
+        return this.arrestos;
     }
 
     public void visitarEdificio() {
