@@ -13,6 +13,15 @@ public class Caso {
     private Ladron ladron;
     private Objeto objetoRobado; //??
 
+    private Caso() {
+
+    }
+
+
+    public static Caso crearCaso() {
+        return new Caso();
+    }
+
 
     public void setSospechosos(List<Secuaz> sospechosos) {
         this.sospechosos.addAll(sospechosos);
