@@ -34,8 +34,18 @@ public class Caso {
     public void setObjeto(Objeto objeto) {
         this.objetoRobado = objeto;
     }
-    
 
+    public void setObjetoRobado(Objeto objetoRobado) {
+        this.objetoRobado = objetoRobado;
+    }
+
+    public Ladron getLadron() {
+        return ladron;
+    }
+
+    public Objeto getObjetoRobado() {
+        return objetoRobado;
+    }
     //Operations
 
     public Secuaz BuscarSospechoso() {

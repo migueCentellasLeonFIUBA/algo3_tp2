@@ -1,7 +1,9 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 
+import edu.fiuba.algo3.modelo.Pistas.Pista;
 import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
 public class Jugador {
@@ -13,14 +15,17 @@ public class Jugador {
     private Reloj reloj;
 
     private Novato rango; //???
+    private GradoPolicia grado;
 
     private Orden orden;
 
     private Ciudad ciudadActual;
 
+
     private Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
         this.arrestos=arrestos;
+        this.reloj= new Reloj();
     }
 
     public static Jugador crearJugador(String nombre,Integer arrestos)
@@ -36,27 +41,35 @@ public class Jugador {
         return this.arrestos;
     }
 
-    public void visitarEdificio() {
-        //TODO
+    public void VisitarEdificio() {
+        ciudadActual.VisitarEdificio(reloj); //estaba
     }
 
     public void viajarACiudad(Ciudad destino) {
-        //TODO
     }
 
     public void BuscarSospechoso() {
-        //TODO
     }
 
     public void ArrestarSospechoso() {
-        //TODO
     }
 
     public void TerminarJuego() {
-        //TODO
     }
 
     public boolean compararJugador(String nombre) {
         return nombre.equals(this.nombre);
+    }
+
+    public void comienzaEnCiudad(Ciudad ciudad) {
+        this.ciudadActual=ciudad;
+    }
+
+    public Pista visitarEdificio() {
+        return ciudadActual.visitarEdificio(reloj,grado); //estaba
+    }
+
+    public Ciudad getCiudadActual() {
+        return ciudadActual;
     }
 }
