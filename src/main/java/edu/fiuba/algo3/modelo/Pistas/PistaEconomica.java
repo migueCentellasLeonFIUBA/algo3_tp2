@@ -1,4 +1,4 @@
 package edu.fiuba.algo3.modelo.Pistas;
 
-public class PistaEconomica {
+public class PistaEconomica implements Pista{
 }
