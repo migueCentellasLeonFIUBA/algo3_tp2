@@ -16,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JuegoTest{
+    /*
     @Test
     public void algunosObjetoSeCargaConParametrosEsperados() throws Exception {
 
@@ -35,5 +36,5 @@ public class JuegoTest{
         assertEquals(nombre, obj.get(27).getNombre());
         assertThat(rareza).isInstanceOf(RarezaMuyValioso.class);
     }
-
+    */
 }

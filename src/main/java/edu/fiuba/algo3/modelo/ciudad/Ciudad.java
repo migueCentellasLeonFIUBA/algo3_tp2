@@ -29,7 +29,6 @@ public class Ciudad{
         this.visitas = visitas;
     }
 
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -46,7 +45,6 @@ public class Ciudad{
     public void set(Estrategia estrategia) {
         this.estrategia = estrategia;
     }
-
 
     public void setCordenadas(Coordenadas coordenadas) {
         this.coordenadas = coordenadas;

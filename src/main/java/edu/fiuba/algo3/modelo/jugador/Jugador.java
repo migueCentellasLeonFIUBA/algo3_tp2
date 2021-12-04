@@ -33,6 +33,10 @@ public class Jugador {
         return new Jugador(nombre,arrestos);
     }
 
+    public void setCiudadActual(Ciudad origen){
+        this.ciudadActual = origen;
+    }
+
     public String getNombre(){
         return this.nombre;
     }
@@ -46,6 +50,7 @@ public class Jugador {
     }
 
     public void viajarACiudad(Ciudad destino) {
+
     }
 
     public void BuscarSospechoso() {

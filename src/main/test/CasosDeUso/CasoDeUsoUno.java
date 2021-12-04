@@ -7,7 +7,8 @@ import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
-import edu.fiuba.algo3.modelo.objeto.ObjetoComun;
+import edu.fiuba.algo3.modelo.objeto.Objeto;
+import edu.fiuba.algo3.modelo.objeto.RarezaComun;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,25 +25,27 @@ public class CasoDeUsoUno {
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Nico");
 
-        assertEquals("Nico",jugador.getNombre());
+        assertEquals("Nico", jugador.getNombre());
         assertTrue(1==jugador.getArrestos());
 
         Caso nuevoCaso= Caso.crearCaso();
-
     }
 
     @Test
     public void CasoUnoBis() {
+
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Nico");
-        assertEquals("Nico",jugador.getNombre());
+        assertEquals("Nico", jugador.getNombre());
+        Objeto objeto = new Objeto();
+        objeto.setRareza(new RarezaComun());
 
         Caso nuevoCaso= Caso.crearCaso();
-        nuevoCaso.setObjeto(new ObjetoComun());
+        nuevoCaso.setObjeto(objeto);
         Ladron femenino = new Ladron();
         nuevoCaso.setLadron(femenino);
 
-        assertThat(nuevoCaso.getObjetoRobado()).isInstanceOf(ObjetoComun.class);
+        assertThat(nuevoCaso.getObjetoRobado().getRareza()).isInstanceOf(RarezaComun.class);
         assertThat(nuevoCaso.getLadron()).isInstanceOf(Ladron.class);
 
         Ciudad ciudadMock = mock(Ciudad.class);

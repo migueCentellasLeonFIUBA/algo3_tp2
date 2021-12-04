@@ -4,22 +4,24 @@ package edu.fiuba.algo3.modelo.ciudad;
 
 public class Coordenadas {
 
-    private Integer latitud;
-    private Integer longitud;
-    
+    private float latitud;
+    private float longitud;
 
     //Operations
-
     public int CalcularDistancia(Coordenadas destino) {
         //TODO
         return 0;
     }
 
-    private int obtenerLatitud() {
+    public void setLatitud(float latitud){ this.latitud = latitud;}
+
+    public void setLongitud(float longitud){ this.longitud = longitud;}
+
+    private float obtenerLatitud() {
         return latitud;
     }
 
-    private int obtenerLongitud() {
+    private float obtenerLongitud() {
         return longitud;
     }
     

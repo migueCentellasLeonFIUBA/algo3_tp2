@@ -13,6 +13,15 @@ public class Caso {
     private Ladron ladron;
     private Objeto objetoRobado; //??
 
+    private Caso() {
+
+    }
+
+
+    public static Caso crearCaso() {
+        return new Caso();
+    }
+
 
     public void setSospechosos(List<Secuaz> sospechosos) {
         this.sospechosos.addAll(sospechosos);
@@ -21,12 +30,17 @@ public class Caso {
         this.ladron = ladron;
     }
 
-
     public void setObjeto(Objeto objeto) {
         this.objetoRobado = objeto;
     }
-    
 
+    public Ladron getLadron() {
+        return ladron;
+    }
+
+    public Objeto getObjetoRobado() {
+        return objetoRobado;
+    }
     //Operations
 
     public Secuaz BuscarSospechoso() {

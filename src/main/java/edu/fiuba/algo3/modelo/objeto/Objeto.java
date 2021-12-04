@@ -14,6 +14,10 @@ public class Objeto{
         this.ciudad = origen;
     }
 
+    public void setRareza(Rareza clase){
+        this.rareza = clase;
+    }
+
     public void setClase(String clase){
         if ( clase.equals("Comun"))
             this.rareza = new RarezaComun();
