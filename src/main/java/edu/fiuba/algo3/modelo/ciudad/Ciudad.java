@@ -21,8 +21,12 @@ public class Ciudad{
     private Edificio edificio;
     private Pista IPista;
 
-    public Ciudad(String nombre) {
+    private Ciudad(String nombre) {
         this.nombre = nombre;
+    }
+
+    public static Ciudad crear(String ciudadDeOrigen) {
+        return new Ciudad(ciudadDeOrigen);
     }
 
     public void setVisitas(Integer visitas) {

@@ -16,6 +16,7 @@ public class Jugador {
 
     private Novato rango; //???
     private GradoPolicia grado;
+    private Caso caso;
 
     private Orden orden;
 
@@ -71,5 +72,10 @@ public class Jugador {
 
     public Ciudad getCiudadActual() {
         return ciudadActual;
+    }
+
+    public void empezarCaso(Caso caso, Ciudad ciudad) {
+        this.caso=caso;
+        this.ciudadActual = ciudad;
     }
 }

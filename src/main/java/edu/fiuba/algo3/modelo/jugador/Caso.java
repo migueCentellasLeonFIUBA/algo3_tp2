@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.jugador;
 
 
 import edu.fiuba.algo3.modelo.ladron.*;
-import edu.fiuba.algo3.modelo.objeto.Objeto;
+import edu.fiuba.algo3.modelo.objeto.*;
 
 import java.util.List;
 
@@ -13,16 +13,17 @@ public class Caso {
     private Ladron ladron;
     private Objeto objetoRobado; //??
 
-    private Caso() {
 
+    private Caso(Ladron ladron, Objeto objeto){
+        this.ladron = ladron;
+        this.objetoRobado = objeto;
     }
 
-
-    public static Caso crearCaso() {
-        return new Caso();
+    public static Caso crearCaso(Ladron ladron, Objeto objeto) {
+        return new Caso(ladron, objeto);
     }
 
-
+/*
     public void setSospechosos(List<Secuaz> sospechosos) {
         this.sospechosos.addAll(sospechosos);
     }
@@ -38,7 +39,7 @@ public class Caso {
     public void setObjetoRobado(Objeto objetoRobado) {
         this.objetoRobado = objetoRobado;
     }
-
+*/
     public Ladron getLadron() {
         return ladron;
     }

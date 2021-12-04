@@ -8,6 +8,13 @@ public class Ladron implements Secuaces {
     private List<String> caracteristicas;
     private Estrategia estrategia;
 
+    private Ladron(List<String> caracteristicas){
+        this.caracteristicas =caracteristicas;
+    }
+    public static Ladron crear(List<String> caracteristicas) {
+        return new Ladron(caracteristicas);
+    }
+
     public void setCaracteristicas (List<String> caracteristicas) {
         this.caracteristicas.addAll(caracteristicas);
     }
