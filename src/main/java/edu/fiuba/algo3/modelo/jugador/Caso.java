@@ -31,11 +31,7 @@ public class Caso {
     }
 
 
-    public void setObjeto(Objeto objeto) {
-        this.objetoRobado = objeto;
-    }
-
-    public void setObjetoRobado(Objeto objetoRobado) {
+    public void setObjeto(Objeto objetoRobado) {
         this.objetoRobado = objetoRobado;
     }
 

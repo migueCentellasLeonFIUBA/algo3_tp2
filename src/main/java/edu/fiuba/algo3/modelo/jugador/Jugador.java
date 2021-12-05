@@ -41,10 +41,6 @@ public class Jugador {
         return this.arrestos;
     }
 
-    public void VisitarEdificio() {
-        ciudadActual.VisitarEdificio(reloj); //estaba
-    }
-
     public void viajarACiudad(Ciudad destino) {
     }
 
@@ -71,5 +67,9 @@ public class Jugador {
 
     public Ciudad getCiudadActual() {
         return ciudadActual;
+    }
+
+    public int horasRestantes() {
+        return reloj.getHorasRestantes();
     }
 }

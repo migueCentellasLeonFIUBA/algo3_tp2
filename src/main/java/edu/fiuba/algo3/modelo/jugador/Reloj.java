@@ -23,13 +23,22 @@ public class Reloj {
 
     //Metodos
 
+    public Reloj(){
+        this.horasRestantes = 152;
+        this.horasPordia = 24;
+        this.cuchilladas = 0;
+    }
+
     public void ataqueConPistola() {
         //TODO
     }
 
     public void ataqueConCuchillo() {
-        //la primera vez resta 2hs, luego 1h
-        //TODO
+        if (cuchilladas == 0){
+            this.horasRestantes -= 2;
+            this.cuchilladas++;
+        }
+        else this.horasRestantes = -1;
     }
 
     public void descontarViaje() {

@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
+import edu.fiuba.algo3.modelo.jugador.Reloj;
+
 import java.util.List;
 
 public class Ladron implements Secuaces {
@@ -14,6 +16,10 @@ public class Ladron implements Secuaces {
 
     public void setEstrategia(Estrategia plan) {
         this.estrategia = plan;
+    }
+
+    public void ataqueConCuchillo(Reloj relojJugador){
+        relojJugador.ataqueConCuchillo();
     }
 
     //Operations

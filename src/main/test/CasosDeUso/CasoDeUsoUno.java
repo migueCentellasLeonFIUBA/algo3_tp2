@@ -7,7 +7,8 @@ import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
-import edu.fiuba.algo3.modelo.objeto.ObjetoComun;
+import edu.fiuba.algo3.modelo.objeto.Comun;
+import edu.fiuba.algo3.modelo.objeto.Objeto;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -38,11 +39,11 @@ public class CasoDeUsoUno {
         assertEquals("Nico",jugador.getNombre());
 
         Caso nuevoCaso= Caso.crearCaso();
-        nuevoCaso.setObjeto(new ObjetoComun());
+        nuevoCaso.setObjeto(new Objeto());
         Ladron femenino = new Ladron();
         nuevoCaso.setLadron(femenino);
 
-        assertThat(nuevoCaso.getObjetoRobado()).isInstanceOf(ObjetoComun.class);
+        assertThat(nuevoCaso.getObjetoRobado()).isInstanceOf(Objeto.class);
         assertThat(nuevoCaso.getLadron()).isInstanceOf(Ladron.class);
 
         Ciudad ciudadMock = mock(Ciudad.class);

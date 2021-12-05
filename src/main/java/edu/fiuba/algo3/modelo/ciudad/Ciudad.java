@@ -29,21 +29,16 @@ public class Ciudad{
         this.visitas = visitas;
     }
 
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getNombre() {
         return this.nombre;
     }
 
-    public void set(Ladron ladron) {
+    public void setLadron(Ladron ladron) {
         this.ladron = ladron;
     }
 
 
-    public void set(Estrategia estrategia) {
+    public void setEstrategia(Estrategia estrategia) {
         this.estrategia = estrategia;
     }
 
@@ -61,9 +56,6 @@ public class Ciudad{
 
     //                          Operations
 
-    public void VisitarEdificio(Reloj reloj) {
-        //TODO
-    }
 
     public int CalcularDistancia(Ciudad destino) {
         //TODO
@@ -75,6 +67,7 @@ public class Ciudad{
     }
 
     public Pista visitarEdificio(Reloj reloj, GradoPolicia grado) {
+        ladron.ataqueConCuchillo(reloj);
         return IPista;
     }
 }
