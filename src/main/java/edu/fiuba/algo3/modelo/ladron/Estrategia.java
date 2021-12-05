@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
-import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 
 import java.util.List;
 

@@ -1,12 +1,21 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.juego.Juego;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
+import edu.fiuba.algo3.modelo.objetos.Rareza;
+import edu.fiuba.algo3.modelo.objetos.RarezaComun;
+
+import edu.fiuba.algo3.modelo.objetos.RarezaMuyValioso;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JuegoTest{
-    /*
     @Test
     public void algunosObjetoSeCargaConParametrosEsperados() throws Exception {
 
@@ -19,12 +28,12 @@ public class JuegoTest{
 
         assertEquals(nombre, obj.get(0).getNombre());
         assertThat(rareza).isInstanceOf(RarezaComun.class);
-
+/*
         //Ultimo Objeto del archivo
         nombre = "Tocado del rey Watusi";
         rareza = obj.get(27).getRareza();
         assertEquals(nombre, obj.get(27).getNombre());
         assertThat(rareza).isInstanceOf(RarezaMuyValioso.class);
+*/
     }
-    */
 }

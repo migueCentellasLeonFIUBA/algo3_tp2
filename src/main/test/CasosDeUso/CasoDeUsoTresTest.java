@@ -1,9 +1,9 @@
 package CasosDeUso;
 
-import edu.fiuba.algo3.modelo.ciudad.Coordenadas;
+import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
 import edu.fiuba.algo3.modelo.jugador.*;
 
-import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CasoDeUsoTres {
+public class CasoDeUsoTresTest {
 
     //Detective viaja de Montreal a México.
     @Test

@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.jugador;
 
 
 import edu.fiuba.algo3.modelo.pistas.Pista;
-import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
@@ -20,7 +20,6 @@ public class Jugador {
     private Orden orden;
 
     private Ciudad ciudadActual;
-
 
     private Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
