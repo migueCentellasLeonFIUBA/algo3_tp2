@@ -1,14 +1,14 @@
 package CasosDeUso;
 
-import edu.fiuba.algo3.modelo.Pistas.Pista;
-import edu.fiuba.algo3.modelo.Pistas.PistaEconomica;
+import edu.fiuba.algo3.modelo.pistas.Pista;
+import edu.fiuba.algo3.modelo.pistas.PistaEconomica;
 import edu.fiuba.algo3.modelo.ciudad.Ciudad;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
-import edu.fiuba.algo3.modelo.objeto.Objeto;
-import edu.fiuba.algo3.modelo.objeto.RarezaComun;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
+import edu.fiuba.algo3.modelo.objetos.RarezaComun;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

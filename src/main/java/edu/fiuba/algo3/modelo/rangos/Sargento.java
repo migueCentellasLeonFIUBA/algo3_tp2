@@ -3,16 +3,16 @@ package edu.fiuba.algo3.modelo.rangos;
 
 public class Sargento implements GradoPolicia {
 
-    private Integer velocidad;
+    private Integer velocidad = 1500;
 
     @Override
-    public void CargarPistas() {
+    public void cargarPistas() {
 
     }
 
     @Override
-    public Integer CalcularTiempoViaje() {
-        return 0;
+    public Integer calcularTiempoViaje() {
+        return velocidad;
     }
     
 }

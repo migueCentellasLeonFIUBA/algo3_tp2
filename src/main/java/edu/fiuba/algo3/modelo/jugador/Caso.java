@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.jugador;
 
 
 import edu.fiuba.algo3.modelo.ladron.*;
-import edu.fiuba.algo3.modelo.objeto.Objeto;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.List;
 

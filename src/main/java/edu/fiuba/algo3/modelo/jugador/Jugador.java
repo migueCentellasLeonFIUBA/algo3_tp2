@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 
-import edu.fiuba.algo3.modelo.Pistas.Pista;
+import edu.fiuba.algo3.modelo.pistas.Pista;
 import edu.fiuba.algo3.modelo.ciudad.Ciudad;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
@@ -37,6 +37,11 @@ public class Jugador {
         this.ciudadActual = origen;
     }
 
+    public void setReloj(Reloj reloj){
+        this.reloj = reloj;
+    }
+    public void setGrado(GradoPolicia rango){this.grado = rango;}
+
     public String getNombre(){
         return this.nombre;
     }
@@ -49,8 +54,17 @@ public class Jugador {
         ciudadActual.VisitarEdificio(reloj); //estaba
     }
 
+/*  //Opcion1: jugador calcula las horas.
     public void viajarACiudad(Ciudad destino) {
-
+        Integer distancia = ciudadActual.calcularDistancia(destino);
+        Integer horas = Math.round(distancia / grado.calcularTiempoViaje());
+        if (horas == 0)  horas = 1; //Filtro las dsitancias "0".
+        this.reloj.descontarhoras(horas);
+    }
+*/
+    //opcion 2: coordenadas calcula las horas.
+    public void viajarACiudad(Ciudad destino) {
+        ciudadActual.calcularDistancia(destino, grado.calcularTiempoViaje(), reloj);
     }
 
     public void BuscarSospechoso() {

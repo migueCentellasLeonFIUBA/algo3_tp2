@@ -1,10 +1,16 @@
 package edu.fiuba.algo3.modelo.ciudad;
 
 
-import edu.fiuba.algo3.modelo.Pistas.Pista;
-import edu.fiuba.algo3.modelo.edificios.*;
+import edu.fiuba.algo3.modelo.pistas.Pista;
+
+import edu.fiuba.algo3.modelo.edificios.AeroPuerto;
+import edu.fiuba.algo3.modelo.edificios.Banco;
+import edu.fiuba.algo3.modelo.edificios.Biblioteca;
+import edu.fiuba.algo3.modelo.edificios.Edificio;
+
 import edu.fiuba.algo3.modelo.jugador.Reloj;
-import edu.fiuba.algo3.modelo.ladron.*;
+import edu.fiuba.algo3.modelo.ladron.Estrategia;
+import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
 public class Ciudad{
@@ -13,12 +19,14 @@ public class Ciudad{
     private String nombre;
 
     private Coordenadas coordenadas;
-    private AeroPuerto aeroPuerto;
-    private Banco banco;
+
+    private AeroPuerto aeroPuerto = new AeroPuerto();
+    private Banco banco = new Banco();
     private Biblioteca biblioteca;
+    private Edificio edificio;
+
     private Estrategia estrategia;
     private Ladron ladron;
-    private Edificio edificio;
     private Pista IPista;
 
     public Ciudad(String nombre) {
@@ -37,12 +45,12 @@ public class Ciudad{
         return this.nombre;
     }
 
-    public void set(Ladron ladron) {
+    public void setLadron(Ladron ladron) {
         this.ladron = ladron;
     }
 
 
-    public void set(Estrategia estrategia) {
+    public void setEstrategia(Estrategia estrategia) {
         this.estrategia = estrategia;
     }
 
@@ -50,12 +58,11 @@ public class Ciudad{
         this.coordenadas = coordenadas;
     }
 
-    
- /*
-    public Edificio setEdificio(Edificio edificio) {
+
+    public void setEdificio(Edificio edificio) {
         this.edificio = edificio;
     }
- */
+
 
     //                          Operations
 
@@ -63,13 +70,16 @@ public class Ciudad{
         //TODO
     }
 
-    public int CalcularDistancia(Ciudad destino) {
-        //TODO
-        return 0;
+    public int calcularDistancia(Ciudad destino) {
+        return coordenadas.calcularDistancia(destino.getUbicacion());
     }
 
-    private Coordenadas obtenerUbicacion() {
-        return this.coordenadas;
+    //opcion2:
+    public void calcularDistancia(Ciudad destino, Integer velocidad, Reloj reloj) {
+        coordenadas.calcularDistancia(destino.getUbicacion(), velocidad,reloj);
+    }
+    private Coordenadas getUbicacion() {
+        return coordenadas;
     }
 
     public Pista visitarEdificio(Reloj reloj, GradoPolicia grado) {

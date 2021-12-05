@@ -4,16 +4,16 @@ package edu.fiuba.algo3.modelo.rangos;
 
 public class Novato implements GradoPolicia {
 
-    private Integer velocidad;
+    private Integer velocidad = 900;
 
     @Override
-    public void CargarPistas() {
+    public void cargarPistas() {
 
     }
 
     @Override
-    public Integer CalcularTiempoViaje() {
-        return 0;
+    public Integer calcularTiempoViaje() {
+        return velocidad;
     }
     
 }

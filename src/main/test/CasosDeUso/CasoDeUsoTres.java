@@ -1,35 +1,29 @@
 package CasosDeUso;
 
 import edu.fiuba.algo3.modelo.ciudad.Coordenadas;
-import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.*;
 
-import edu.fiuba.algo3.modelo.Pistas.Pista;
-import edu.fiuba.algo3.modelo.Pistas.PistaEconomica;
 import edu.fiuba.algo3.modelo.ciudad.Ciudad;
-import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.ladron.Ladron;
-import edu.fiuba.algo3.modelo.objeto.Objeto;
-import edu.fiuba.algo3.modelo.objeto.RarezaComun;
+import edu.fiuba.algo3.modelo.rangos.Novato;
 import org.junit.jupiter.api.Test;
-import edu.fiuba.algo3.modelo.jugador.Jugador;
 
-import static org.assertj.core.api.Assertions.assertThat;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class CasoDeUsoTres {
 
     //Detective viaja de Montreal a México.
     @Test
-    public void UnDetectiveViajaDeMontrealAMexicoYPierde_X_Horas(){
+    public void UnDetectiveViajaDeMontrealAMexicoYPierde_1_Hora(){
+        Integer horas = 24;
+        Integer velocidad = 900; //novato vel.
+
        Jugador jugador = Jugador.crearJugador("juan", 0);
        Reloj reloj = new Reloj();
-       reloj.setHorasRestantes(30);
+       reloj.setHorasRestantes(horas);
+       jugador.setReloj(reloj);
 
        Coordenadas mexico = new Coordenadas();
        mexico.setLatitud((float) 19.03);
@@ -39,18 +33,22 @@ public class CasoDeUsoTres {
        montreal.setLatitud((float) 45.50);
        montreal.setLongitud((float) -73.58);
 
+       //700,6609 + 624,5001 = 1325,161 , raiz = 36.4027608843 -> horas = 1h
+       Integer horasviaje = Math.round((float) 1325.161 /velocidad);
+
        Ciudad origen = new Ciudad("Montreal");
        origen.setCordenadas(montreal);
+
        Ciudad destino = new Ciudad("Mexico");
-       origen.setCordenadas(mexico);
+       destino.setCordenadas(mexico);
 
+       jugador.setCiudadActual(origen);
+       jugador.setGrado(new Novato());
 
+       //ya se cargaron los objetos necesarios
+        jugador.viajarACiudad(destino);
+        assertEquals(horas - horasviaje, reloj.getHorasRestantes());
 
     }
-
-
-
-
-
 
 }

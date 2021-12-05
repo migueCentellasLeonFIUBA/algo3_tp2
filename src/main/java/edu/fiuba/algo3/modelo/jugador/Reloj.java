@@ -1,13 +1,12 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 
-
 public class Reloj {
 
     private Integer horasRestantes;
     private Integer horasPordia = 24;
-    private Integer cuchilladas;
-
+    private Integer cuchilladas = 0;
+    private Integer horasSueño = 8;
 
     public void setHorasRestantes(Integer horasRestantes) {
         this.horasRestantes = horasRestantes;
@@ -35,20 +34,22 @@ public class Reloj {
     public void tiempoTerminado() {
         //TODO
     }
+    public void descontarhoras(Integer horas){
+        for (int i=0; i < horas; i+=1){
+            this.descontarHora();
+        }
+    }
 
     private void descontarHora(){
-        horasRestantes -=1;
-        horasPordia -= 1;
+        this.horasRestantes -=1;
+        this.horasPordia -= 1;
         this.dormir();
     }
 
     private void dormir() {
         if (horasPordia == 0){
             horasPordia = 24;
-
-            for (int i=0; i < 8; i+=1){
-                this.descontarHora();
-            }
+            this.descontarhoras(horasSueño);
         }
     }
     
