@@ -38,4 +38,17 @@ public class CasoDeUso5 {
 
     }
 
+    @Test
+    public void jugadorDuerme(){
+
+        Juego juego = new Juego();
+        Jugador jugador = juego.IdentificarJugador("Nico");
+
+        jugador.dormir();
+
+        int horasEsperadas = 144;
+        assertEquals(horasEsperadas, jugador.horasRestantes());
+
+    }
+
 }

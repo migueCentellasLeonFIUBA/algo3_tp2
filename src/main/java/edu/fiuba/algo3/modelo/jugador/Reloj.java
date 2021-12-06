@@ -36,7 +36,7 @@ public class Reloj {
     public void ataqueConCuchillo() {
         if (cuchilladas == 0){
             this.horasRestantes -= 2;
-            this.cuchilladas++;
+            this.cuchilladas = 1;
         }
         else this.horasRestantes = -1;
     }
@@ -53,8 +53,8 @@ public class Reloj {
         //TODO
     }
 
-    private void dormir() {
-        //TODO
+    public void dormir() {
+        this.horasRestantes -= 8;
     }
     
 }

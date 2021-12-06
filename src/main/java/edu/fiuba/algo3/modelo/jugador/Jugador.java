@@ -72,4 +72,8 @@ public class Jugador {
     public int horasRestantes() {
         return reloj.getHorasRestantes();
     }
+
+    public void dormir() {
+        reloj.dormir();
+    }
 }
