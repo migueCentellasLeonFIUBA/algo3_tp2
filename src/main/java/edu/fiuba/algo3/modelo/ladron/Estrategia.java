@@ -10,6 +10,10 @@ public class Estrategia {
     private List<Ciudad> ciudades;
     private Integer siguiente =0;
 
+    public Estrategia(int cantCiudades, Ciudad ciudad) {
+        ciudades.add(ciudad);
+    }
+
     public Ciudad getProximaCiudad() {
         siguiente += 1;
         return ciudades.get(siguiente);

@@ -15,5 +15,10 @@ public class Novato implements GradoPolicia {
     public Integer CalcularTiempoViaje() {
         return 0;
     }
+
+    public Boolean dificultadPista(String pista){
+
+        if(pista == "Facil")
+    }
     
 }

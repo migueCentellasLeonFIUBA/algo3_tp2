@@ -23,6 +23,25 @@ public class Reloj {
 
     //Metodos
 
+    public void descontarhoras(Integer horas){
+        for (int i=0; i < horas; i+=1){
+            this.descontarHora();
+        }
+    }
+
+    private void descontarHora(){
+        this.horasRestantes -=1;
+        this.horasPordia -= 1;
+        this.dormir();
+    }
+
+    private void dormir() {
+        if (horasPordia == 0){
+            horasPordia = 24;
+            this.descontarhoras(horasSueño);
+        }
+    }
+
     public void ataqueConPistola() {
         //TODO
     }

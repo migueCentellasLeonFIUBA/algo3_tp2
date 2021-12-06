@@ -1,0 +1,21 @@
+{
+  "Buenos Aires":{
+    "Banco":{
+      "Facil":"Pesos Argentinos.",
+      "Medio":"Inflación alta.",
+      "Dificil":"Tenia australes."
+    },
+    "AeroPuerto":{
+      "Facil":"Aerolineas Argentinas.",
+      "Medio":"Avión azul y blanco.",
+      "Dificil":"Ezeiza es el aeropuerto mas famoso."
+    },
+    "Biblioteca":{
+      "Facil":"San martin.",
+      "Medio":"Gauchos.",
+      "Dificil":"Tehuelches."
+    }
+  }
+}
+
+

@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 
+import edu.fiuba.algo3.modelo.ciudad.Ciudad;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objeto.*;
 
@@ -11,12 +12,14 @@ public class Caso {
 
     private List<Secuaz> sospechosos;
     private Ladron ladron;
-    private Objeto objetoRobado; //??
+    private Objeto objetoRobado;
+    private Estrategia estrategia;
 
 
-    private Caso(Ladron ladron, Objeto objeto){
+    private Caso(Ladron ladron, Objeto objeto, Ciudad ciudad){
         this.ladron = ladron;
         this.objetoRobado = objeto;
+        this.estrategia = objeto. crearEstrategia(ciudad);
     }
 
     public static Caso crearCaso(Ladron ladron, Objeto objeto) {

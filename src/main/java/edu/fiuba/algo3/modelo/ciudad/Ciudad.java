@@ -7,11 +7,16 @@ import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Ciudad{
 
     private Integer visitas;
     private String nombre;
 
+    private List<Edificio> listaEdificios;
     private Coordenadas coordenadas;
     private AeroPuerto aeroPuerto;
     private Banco banco;
@@ -20,9 +25,20 @@ public class Ciudad{
     private Ladron ladron;
     private Edificio edificio;
     private Pista IPista;
+    private String proximaCiudad;
 
     private Ciudad(String nombre) {
+
         this.nombre = nombre;
+        cargarEdificios();
+    }
+
+    private void cargarEdificios(){
+        listaEdificios = new ArrayList<>();
+        listaEdificios.add(new AeroPuerto());
+        listaEdificios.add(new Banco());
+        listaEdificios.add(new Biblioteca());
+
     }
 
     public static Ciudad crear(String ciudadDeOrigen) {
@@ -56,6 +72,11 @@ public class Ciudad{
         this.coordenadas = coordenadas;
     }
 
+    public List<Edificio> mostrarEdificios(){
+        List <Edificio> copiaListaEdificios = listaEdificios.stream().collect(Collectors.toList());
+        return copiaListaEdificios;
+    }
+
     
  /*
     public Edificio setEdificio(Edificio edificio) {
@@ -78,7 +99,13 @@ public class Ciudad{
         return this.coordenadas;
     }
 
-    public Pista visitarEdificio(Reloj reloj, GradoPolicia grado) {
-        return IPista;
+    public String visitarEdificio(Edificio edificio, Reloj reloj, GradoPolicia grado) {
+        if(visitas < 3){
+            visitas += 1;
+        }
+
+        reloj.descontarhoras(visitas);
+
+        return edificio.visitarEdificio(proximaCiudad, grado);
     }
 }

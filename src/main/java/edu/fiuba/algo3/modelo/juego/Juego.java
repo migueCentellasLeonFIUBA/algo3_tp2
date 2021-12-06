@@ -14,19 +14,26 @@ import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Juego {
 
+    private List<Ladron> ladrones;
+    private List<Objeto> objs;
     private List<Ciudad> ciudades;
     private List<Jugador> jugadores;
     private Computadora pc;
     private Jugador jugadorActual;
 
     public Juego(){
-        this.jugadores = CargarJugadores();
+
+        cargarJugadores();
+        cargarCiudades();
+        cargarSospechosos();
+        cargarObjetos();
     }
 
     private void setJugador(Jugador jugador) {
@@ -34,9 +41,9 @@ public class Juego {
     }
 
     //Operations
-    private List<Jugador> CargarJugadores() {
+    private void cargarJugadores() {
         JSONParser parser = new JSONParser();
-        List<Jugador> jugadores = new ArrayList<Jugador>();
+
 
         try{
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json"));
@@ -57,20 +64,69 @@ public class Juego {
         } catch (ParseException e) {
             System.out.println(e.getMessage());
         }
-        return jugadores;
+
     }
 
-    public void CargarSospechosos() {
-        //TODO
+    public void cargarSospechosos() {
+        JSONParser parser = new JSONParser();
+
+
+        try{
+            Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
+            JSONArray array = (JSONArray) ob;
+
+            for (int i = 0; i < array.size(); i++) {
+                JSONObject js = (JSONObject) array.get(i);
+                List<String> caracteristicas = new ArrayList<>();
+
+                caracteristicas.add(js.get("Nombre").toString());
+                caracteristicas.add(js.get("Sexo").toString());
+                caracteristicas.add(js.get("Hobby").toString());
+                caracteristicas.add(js.get("Cabello").toString());
+                caracteristicas.add(js.get("Seña").toString());
+                caracteristicas.add(js.get("Vehiculo").toString());
+
+                Ladron nuevoLadron = Ladron.crear(caracteristicas);
+
+
+                ladrones.add(nuevoLadron);
+            }
+
+        } catch (java.io.FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    public void CargarCiudades() {
-        //TODO
+    public void cargarCiudades() {
+        JSONParser parser = new JSONParser();
+
+        try{
+            Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
+            JSONArray array = (JSONArray) ob;
+
+            for (int i = 0; i < array.size(); i++) {
+                JSONObject js = (JSONObject) array.get(i);
+
+                Ciudad ciudad=Ciudad.crear((String) js.get("Ciudad"));
+
+                ciudades.add(ciudad);
+            }
+
+        } catch (java.io.FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
-    public void CargarObjetos() {
-        //TODO
-    }
+
 
     public Jugador IdentificarJugador(String nombre) {
 
@@ -83,7 +139,7 @@ public class Juego {
 
         //IF de decisión del usuario
 
-        return Jugador.crearJugador(nombre,0);
+        return Jugador.crearJugador(nombre, 0);
 
         // Posible refactor -> return jugadores.stream().anyMatch("aaaa");;
     }
@@ -102,9 +158,8 @@ public class Juego {
         //TODO
     }
 
-    public List<Objeto> cargarObjetos() throws Exception{
+    public void cargarObjetos() throws Exception{
         JSONParser parser = new JSONParser();
-        List<Objeto> objs = new ArrayList<Objeto>();
 
         try{
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json"));
@@ -113,10 +168,11 @@ public class Juego {
             for (int i = 0; i < array.size(); i++) {
                 JSONObject js = (JSONObject) array.get(i);
 
-                Objeto obj=Objeto.crear((String) js.get("nombre"), Ciudad.crear((String) js.get("CiudadDeOrigen")));
+                Objeto obj=Objeto.crear((String) js.get("nombre"));
 
 
                 objs.add(obj);
+
             }
 
         } catch (java.io.FileNotFoundException e) {
@@ -126,15 +182,14 @@ public class Juego {
         } catch (ParseException e) {
             System.out.println(e.getMessage());
         }
-        return objs;
+
     }
 
 
     public void crearCaso() throws Exception {
-        List<Objeto> objs= this.cargarObjetos();
-        Ladron ladron = Ladron.crear(Arrays.asList("Femenino","Carmen Sandiego"));
 
-        jugadorActual.empezarCaso(Caso.crearCaso(ladron,objs.get(0)), objs.get(0).getCiudad());
+        jugadorActual.empezarCaso(Caso.crearCaso(ladrones.get(0),objs.get(0)), ciudades.get(0));
 
     }
+
 }

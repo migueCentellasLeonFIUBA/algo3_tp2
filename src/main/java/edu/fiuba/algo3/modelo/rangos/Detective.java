@@ -9,6 +9,8 @@ public class Detective implements GradoPolicia {
 
     }
 
+
+
     @Override
     public Integer CalcularTiempoViaje() {
         return 0;

@@ -3,8 +3,11 @@ package edu.fiuba.algo3.modelo.jugador;
 
 import edu.fiuba.algo3.modelo.Pistas.Pista;
 import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
+
+import java.util.List;
 
 public class Jugador {
 
@@ -46,7 +49,13 @@ public class Jugador {
         ciudadActual.VisitarEdificio(reloj); //estaba
     }
 
+    public List<Edificio> mostrarEdificios() {
+
+        return ciudadActual.mostrarEdificios();
+    }
+
     public void viajarACiudad(Ciudad destino) {
+
     }
 
     public void BuscarSospechoso() {
@@ -66,8 +75,9 @@ public class Jugador {
         this.ciudadActual=ciudad;
     }
 
-    public Pista visitarEdificio() {
-        return ciudadActual.visitarEdificio(reloj,grado); //estaba
+    public String visitarEdificio(Edificio edificio) {
+
+        return ciudadActual.visitarEdificio(edificio, reloj, grado);
     }
 
     public Ciudad getCiudadActual() {

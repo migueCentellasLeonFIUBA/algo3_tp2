@@ -1,8 +1,12 @@
 package CasosDeUso;
 
+import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -18,16 +22,21 @@ public class CasoDeUsoUno {
         assertTrue(1==jugador.getArrestos());
 
 
+
     }
 
     @Test
     public void CasoUnoBis() throws Exception {
+        List<Edificio> listaEdificios;
+
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Nico");
         assertEquals("Nico",jugador.getNombre());
 
         juego.crearCaso();
-        jugador.visitarEdificio();
+        listaEdificios = jugador.mostrarEdificios();
+        jugador.visitarEdificio(listaEdificios.get(0));
+
 
         /*nuevoCaso.setObjeto(new Objeto());
         Ladron femenino = new Ladron();
