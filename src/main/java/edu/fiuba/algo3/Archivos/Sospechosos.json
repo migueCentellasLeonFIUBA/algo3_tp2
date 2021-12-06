@@ -1,82 +1,11 @@
 [
   {
-    "Nombre": "Nick Brunch",
-    "Sexo": "Masculino",
-    "Hobby" : "Escalar Montanias",
-    "Cabello" : "Negro",
-    "Senia" : "Anilo",
-    "Vehiculo" : "Motocicleta"
-  },
-  {
-    "Nombre" : "Len Bulk",
-    "Sexo": "Masculino",
-    "Hobby" : "Escalar Montanias",
-    "Cabello" : "Rojo",
-    "Senia" : "Tatuaje",
-    "Vehiculo" : "Convertible"
-  },
-  {
-    "Nombre" : "Ihor Ihorovitch",
-    "Sexo": "Masculino",
-    "Hobby" : "Crocket",
-    "Cabello" : "Rubio",
-    "Senia" : "Tatuaje",
-    "Vehiculo" : "Limosina"
-  },
-  {
-    "Nombre": "Fast Eddie B.",
-    "Sexo": "Masculino",
-    "Hobby" : "Crocket",
-    "Cabello" : "Negro",
-    "Senia" : "Joyas",
-    "Vehiculo" : "Convertible"
-  },
-  {
-    "Nombre": "Scar Graynolt",
-    "Sexo": "Masculino",
-    "Hobby" : "Crocket",
-    "Cabello" : "Rojo",
-    "Senia" : "Anillo",
-    "Vehiculo" : "Limosina"
-  },
-  {
     "Nombre": "Merey Laroc",
     "Sexo": "Femenino",
     "Hobby" : "Escalar Montanias",
     "Cabello" : "Marron",
     "Senia" : "Joyas",
     "Vehiculo" : "Limosina"
-  },
-  {
-    "Nombre": "Lady Agatha",
-    "Sexo": "Femenino",
-    "Hobby" : "Tennis",
-    "Cabello" : "Rojo",
-    "Senia" : "Anillo",
-    "Vehiculo" : "Convertible"
-  },
-  {
-    "Nombre": "Katherine Drib",
-    "Sexo": "Femenino",
-    "Hobby" : "Escalar Montanias",
-    "Cabello" : "Marron",
-    "Senia" : "Tatuaje",
-    "Vehiculo" : "Motocicleta"
-  },
-  {
-    "Nombre": "Dazzle Annie",
-    "Sexo": "Femenino",
-    "Hobby" : "Tennis",
-    "Cabello" : "Rubio",
-    "Senia" : "Tatuaje",
-    "Vehiculo" : "Limosina"
-  },
-  {
-    "Nombre": "Carmen Sandiego",
-    "Sexo": "Femenino",
-    "Hobby" : "Tennis",
-    "Cabello" : "Marron",
-    "Senia" : "Joyas",
-    "Vehiculo" : "Convertible"
   }
+
 ]

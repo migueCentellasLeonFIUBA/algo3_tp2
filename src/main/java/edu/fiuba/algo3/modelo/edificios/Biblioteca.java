@@ -1,10 +1,13 @@
 package edu.fiuba.algo3.modelo.edificios;
 
 
+import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
+
 public class Biblioteca implements Edificio {
 
     @Override
-    public void visitarEdificio() {
+    public String visitarEdificio(String ciudad, GradoPolicia grado) {
 
     }
 

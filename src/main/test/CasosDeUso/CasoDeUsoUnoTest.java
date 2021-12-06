@@ -1,54 +1,48 @@
 package CasosDeUso;
 
-import edu.fiuba.algo3.modelo.pistas.Pista;
-import edu.fiuba.algo3.modelo.pistas.PistaEconomica;
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.juego.Juego;
-import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.ladron.Ladron;
-import edu.fiuba.algo3.modelo.objetos.Objeto;
-import edu.fiuba.algo3.modelo.objetos.RarezaComun;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
-public class CasoDeUsoUnoTest {
+public class CasoDeUsoUno {
 
     @Test
-    public void CasoUno() throws IOException, ParseException {
+    public void CasoUno() {
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Nico");
 
-        assertEquals("Nico", jugador.getNombre());
-        assertTrue(1==jugador.getArrestos()); //???
+        assertEquals("Nico",jugador.getNombre());
+        assertTrue(1==jugador.getArrestos());
 
-        Caso nuevoCaso= Caso.crearCaso();
+
+
     }
 
     @Test
-    public void CasoUnoBis() throws IOException, ParseException {
+    public void CasoUnoBis() throws Exception {
+        List<Edificio> listaEdificios;
 
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Nico");
-        assertEquals("Nico", jugador.getNombre());
-        Objeto objeto = new Objeto();
-        objeto.setRareza(new RarezaComun());
+        assertEquals("Nico",jugador.getNombre());
 
-        Caso nuevoCaso= Caso.crearCaso();
-        nuevoCaso.setObjeto(objeto);
+        juego.crearCaso();
+        listaEdificios = jugador.mostrarEdificios();
+        jugador.visitarEdificio(listaEdificios.get(0));
+
+
+        /*nuevoCaso.setObjeto(new Objeto());
         Ladron femenino = new Ladron();
         nuevoCaso.setLadron(femenino);
 
-        assertThat(nuevoCaso.getObjetoRobado().getRareza()).isInstanceOf(RarezaComun.class);
+        assertThat(nuevoCaso.getObjetoRobado()).isInstanceOf(Objeto.class);
         assertThat(nuevoCaso.getLadron()).isInstanceOf(Ladron.class);
 
         Ciudad ciudadMock = mock(Ciudad.class);
@@ -57,13 +51,14 @@ public class CasoDeUsoUnoTest {
         jugador.comienzaEnCiudad(ciudadMock);
 
         assertEquals("Montreal",jugador.getCiudadActual().getNombre());
-        //assertEquals(1,jugador.getArrestos()); //porque debe tener un arresto si recien se creo?
+        assertEquals(1,jugador.getArrestos());
 
         Pista IPista = new PistaEconomica();
         when(ciudadMock.visitarEdificio(any(),any())).thenReturn(IPista);
         Pista pista =jugador.visitarEdificio();
 
         assertThat(pista).isInstanceOf(PistaEconomica.class);
+        */
 
         /*
 
