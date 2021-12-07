@@ -15,7 +15,7 @@ public class Banco implements Edificio {
 
     @Override
     public String visitarEdificio(String proximaCiudad, GradoPolicia grado) {
-        JSONParser parser = new JSONParser();
+        /*JSONParser parser = new JSONParser();
 
         try{
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/PistasBanco.json"));
@@ -36,18 +36,11 @@ public class Banco implements Edificio {
             System.out.println(e.getMessage());
         } catch (ParseException e) {
             System.out.println(e.getMessage());
-        }
+        }*/
+
+        return "Pista Banco";
 
     }
 
-
-
 }
 
-    //                          Operations
-    @Override
-    public void DamePista() {
-        //TODO
-    }
-    
-}

@@ -88,4 +88,8 @@ public class Jugador {
         this.caso=caso;
         this.ciudadActual = ciudad;
     }
+
+    public int horasRestantes(){
+        return reloj.getHorasRestantes();
+    }
 }

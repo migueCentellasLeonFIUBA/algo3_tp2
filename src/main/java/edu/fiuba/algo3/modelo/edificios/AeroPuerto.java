@@ -9,6 +9,7 @@ public class AeroPuerto implements Edificio {
     @Override
     public String visitarEdificio(String ciudad, GradoPolicia grado) {
 
+        return "Pista Aeropuerto";
     }
 
     //                          Operations

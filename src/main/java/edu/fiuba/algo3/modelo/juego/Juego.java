@@ -186,7 +186,7 @@ public class Juego {
     }
 
 
-    public void crearCaso() throws Exception {
+    public void crearCaso() {
 
         jugadorActual.empezarCaso(Caso.crearCaso(ladrones.get(0),objs.get(0)), ciudades.get(0));
 
