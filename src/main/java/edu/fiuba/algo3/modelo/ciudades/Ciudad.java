@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.ciudades;
 
 
-import edu.fiuba.algo3.modelo.pistas.Pista;
 import edu.fiuba.algo3.modelo.edificios.*;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.*;
