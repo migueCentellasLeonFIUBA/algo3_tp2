@@ -46,9 +46,6 @@ public class Juego {
         cargarObjetos();
     }
 
-    private void setJugador(Jugador jugador) {
-        this.jugadorActual = jugador;
-    }
 
     //Operations
     private void cargarJugadores() {
@@ -211,4 +208,7 @@ public class Juego {
     public List<Objeto> getObjetos(){
         return objs;
     }
+    public List<Jugador> getJugadores(){return jugadores;}
+    public List<Ladron> getLadrones(){return ladrones;}
+    public List<Ciudad> getCiudades(){return ciudades;}
 }

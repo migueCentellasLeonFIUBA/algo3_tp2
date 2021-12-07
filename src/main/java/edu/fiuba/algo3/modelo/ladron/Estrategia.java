@@ -10,11 +10,12 @@ import java.util.List;
 public class Estrategia {
 
     private List<Ciudad> ciudades;
-    private Integer siguiente =0;
+    private Integer siguiente = 0;
 
     private Estrategia(int cantCiudades, Ciudad ciudad) {
         ciudades = new ArrayList<>();
         ciudades.add(ciudad);
+        //this.asignarEstrategia - SE ASIGNARÍA UNA ESTRATEGIA AL AZAR CON LA CANTIDAD DE CIUDADAS QUE SE PASÓ POR PARAMETRO
     }
 
     public static Estrategia crearEstrategia(int cantCiudades, Ciudad ciudad){
@@ -24,10 +25,6 @@ public class Estrategia {
     public Ciudad getProximaCiudad() {
         siguiente += 1;
         return ciudades.get(siguiente);
-    }
-
-    public void setCiudades(List<Ciudad> ciudades) {
-        this.ciudades.addAll(ciudades);
     }
 
 }

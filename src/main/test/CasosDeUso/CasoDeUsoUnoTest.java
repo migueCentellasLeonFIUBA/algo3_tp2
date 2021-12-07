@@ -27,6 +27,9 @@ public class CasoDeUsoUnoTest {
 
         Jugador jugador = Jugador.crearJugador("Nico", 0);
         assertEquals("Nico",jugador.getNombre());
+        assertEquals("Novato", jugador.getGrado());
+        assertEquals(0, jugador.getArrestos());
+
 
         Ciudad ciudad = Ciudad.crear("Montreal");
         listaEdificios.add(new Biblioteca());
@@ -35,6 +38,7 @@ public class CasoDeUsoUnoTest {
         ciudad.setEdificios(listaEdificios);
 
         List<String> caracteristicas = new ArrayList<>();
+        caracteristicas.add("Carmen Sandiego");
         caracteristicas.add("Mujer");
         Ladron ladron = Ladron.crear(caracteristicas);
 
@@ -47,7 +51,7 @@ public class CasoDeUsoUnoTest {
 
         listaEdificios = jugador.mostrarEdificios();
 
-        assertEquals(true, ladron.esMujer());
+        assertEquals(true, ladron.compararSexo("Mujer"));
 
         assertEquals("Pista Banco", jugador.visitarEdificio(listaEdificios.get(1)));
         assertEquals(167, jugador.horasRestantes());

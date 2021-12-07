@@ -4,6 +4,7 @@ public class Detective extends GradoPolicia {
 
     private Integer arrestos = 5;
     private Integer velocidad = 1100;
+    private String grado = "Detective";
 
     @Override
     public void cargarPistas() {
@@ -22,6 +23,14 @@ public class Detective extends GradoPolicia {
     @Override
     public Integer calcularTiempoViaje() {
         return velocidad;
+    }
+
+    public String getGrado(){
+        return "Detective";
+    }
+
+    public int getArrestos(){
+        return arrestos;
     }
     
 }

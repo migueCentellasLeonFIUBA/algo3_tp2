@@ -29,6 +29,8 @@ public class CasoDeUsoDosTest {
 
         Jugador jugador = Jugador.crearJugador("Nico", 0);
         assertEquals("Nico",jugador.getNombre());
+        assertEquals("Novato", jugador.getGrado());
+        assertEquals(0, jugador.getArrestos());
 
         Ciudad ciudad = Ciudad.crear("Montreal");
         listaEdificios.add(new Biblioteca());
@@ -42,7 +44,6 @@ public class CasoDeUsoDosTest {
         Caso caso = Caso.crearCaso(ladron, objeto, ciudad);
 
         jugador.empezarCaso(caso, ciudad);
-        //juego.crearCaso();
         listaEdificios = jugador.mostrarEdificios();
         assertEquals("Pista Banco", jugador.visitarEdificio(listaEdificios.get(1)));
         assertEquals(167, jugador.horasRestantes());

@@ -25,8 +25,10 @@ public class CasoDeUsoCincoTest {
         List<Edificio> listaEdificios = new ArrayList<>();
 
 
-        Jugador jugador = Jugador.crearJugador("Nico", 6);
+        Jugador jugador = Jugador.crearJugador("Nico", 5);
         assertEquals("Nico",jugador.getNombre());
+        assertEquals("Detective", jugador.getGrado());
+        assertEquals(5, jugador.getArrestos());
 
         Ladron ladron = Ladron.crear(new ArrayList<>());
         Objeto objeto= Objeto.crear("Tesoro Nacional De Montreal", "Comun");
@@ -41,7 +43,7 @@ public class CasoDeUsoCincoTest {
         Caso caso = Caso.crearCaso(ladron, objeto, ciudad);
 
         jugador.empezarCaso(caso, ciudad);
-        //juego.crearCaso();
+
         listaEdificios = jugador.mostrarEdificios();
 
 

@@ -4,7 +4,7 @@ package edu.fiuba.algo3.modelo.rangos;
 public class Sargento extends GradoPolicia {
 
     private Integer velocidad = 1500;
-    private Integer arrestos = 20;
+    private Integer arrestos = 20;;
 
     @Override
     public void cargarPistas() {
@@ -21,5 +21,13 @@ public class Sargento extends GradoPolicia {
     public Integer calcularTiempoViaje() {
         return velocidad;
     }
-    
+
+
+    public String getGrado(){
+        return "Sargento";
+    }
+
+    public int getArrestos(){
+        return arrestos;
+    }
 }

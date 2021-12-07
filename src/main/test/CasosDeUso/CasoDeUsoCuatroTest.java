@@ -22,9 +22,10 @@ public class CasoDeUsoCuatroTest {
 
         List<Edificio> listaEdificios = new ArrayList<>();
 
-        //Juego juego = new Juego();
         Jugador jugador = Jugador.crearJugador("Nico", 0);
         assertEquals("Nico",jugador.getNombre());
+        assertEquals("Novato", jugador.getGrado());
+        assertEquals(0, jugador.getArrestos());
 
         Ciudad ciudad = Ciudad.crear("Montreal");
         listaEdificios.add(new Puerto());
@@ -38,7 +39,7 @@ public class CasoDeUsoCuatroTest {
         Caso caso = Caso.crearCaso(ladron, objeto, ciudad);
 
         jugador.empezarCaso(caso, ciudad);
-        //juego.crearCaso();
+
         listaEdificios = jugador.mostrarEdificios();
         assertEquals("Pista Aeropuerto", jugador.visitarEdificio(listaEdificios.get(2)));
         assertEquals(167, jugador.horasRestantes());

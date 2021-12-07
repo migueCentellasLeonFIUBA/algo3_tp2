@@ -1,9 +1,6 @@
 [
   {
     "Ciudad": "Montreal",
-    "Bandera": "roja y blanca",
-    "Moneda": "Dolares",
-    "Geografia": "Montañoso",
-    "CiudadessAledanias": "Ottawa"
+    "Coordenadas": "Coordenadas"
   }
 ]

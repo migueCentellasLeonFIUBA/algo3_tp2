@@ -17,7 +17,6 @@ public class Ladron implements Secuaces {
         this.ataqueConCuchillo = 2;
     }
 
-    //hago los metodos para que compile
     public static Ladron crear(List<String> caracteristicas) {
         return new Ladron(caracteristicas);
     }
@@ -38,8 +37,29 @@ public class Ladron implements Secuaces {
         }
     }
 
-    public boolean esMujer(){
-        return (caracteristicas.get(0) == "Mujer");
+    public boolean compararSexo(String sexo){
+        return (caracteristicas.get(1) == sexo);
 
     }
+
+    public boolean compararNombre(String nombre){
+        return (caracteristicas.get(0) == nombre);
+    }
+
+    public boolean compararVehiculo(String vehiculo){
+        return (caracteristicas.get(5) == vehiculo);
+    }
+
+    public boolean compararSeña(String seña){
+        return (caracteristicas.get(4) == seña);
+    }
+
+    public boolean compararHobby(String hobby){
+        return (caracteristicas.get(2) == hobby);
+    }
+
+    public boolean compararCabello(String cabello){
+        return (caracteristicas.get(3) == cabello);
+    }
+
 }

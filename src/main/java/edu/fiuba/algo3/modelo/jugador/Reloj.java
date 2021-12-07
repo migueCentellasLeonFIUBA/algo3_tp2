@@ -16,22 +16,11 @@ public class Reloj {
         this.horasRestantes = horasRestantes;
     }
 
-    public Integer getHorasDeldia() {
-        return this.horasDeldia;
-    }
 
     public Integer getHorasRestantes() {
         return this.horasRestantes;
     }
 
-    //Metodos
-    public void ataqueConPistola() {
-        //TODO
-    }
-
-    public void ataqueConCuchillo() {
-        //TODO
-    }
 
         public void visitarEdificio () {
             //TODO

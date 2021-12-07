@@ -24,5 +24,13 @@ public class Investigador extends GradoPolicia{
     public Integer calcularTiempoViaje() {
         return velocidad;
     }
-    
+
+    @Override
+    public String getGrado() {
+        return "Investigador";
+    }
+
+    public int getArrestos(){
+        return arrestos;
+    }
 }

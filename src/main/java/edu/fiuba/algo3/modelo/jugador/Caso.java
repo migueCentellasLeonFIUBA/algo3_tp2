@@ -26,23 +26,6 @@ public class Caso {
         return new Caso(ladron, objeto, ciudad);
 }
 
-/*
-    public void setSospechosos(List<Secuaz> sospechosos) {
-        this.sospechosos.addAll(sospechosos);
-    }
-    public void setLadron(Ladron ladron){
-        this.ladron = ladron;
-    }
-
-
-    public void setObjeto(Objeto objeto) {
-        this.objetoRobado = objeto;
-    }
-
-    public void setObjetoRobado(Objeto objetoRobado) {
-        this.objetoRobado = objetoRobado;
-    }
-*/
     public Ladron getLadron() {
         return ladron;
     }

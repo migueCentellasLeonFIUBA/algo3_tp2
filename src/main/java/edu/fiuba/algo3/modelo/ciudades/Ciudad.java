@@ -63,28 +63,12 @@ public class Ciudad{
         return new Ciudad(ciudadDeOrigen);
     }
 
-    public void setVisitas(Integer visitas) {
-        this.visitas = visitas;
-    }
-
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String getNombre() {
         return this.nombre;
     }
 
-    public void set(Ladron ladron) {
-        this.ladron = ladron;
-    }
 
-/*
-    public void set(Estrategia estrategia) {
-        this.estrategia = estrategia;
-    }
-*/
 
     public void setCordenadas(Coordenadas coordenadas) {
         this.coordenadas = coordenadas;
@@ -96,17 +80,6 @@ public class Ciudad{
     }
 
 
- /*
-    public Edificio setEdificio(Edificio edificio) {
-        this.edificio = edificio;
-    }
- */
-
-    //                          Operations
-
-    public void VisitarEdificio(Reloj reloj) {
-        //TODO
-    }
 
     public int calcularDistancia(Ciudad destino) {
         return coordenadas.calcularDistancia(destino.getUbicacion());

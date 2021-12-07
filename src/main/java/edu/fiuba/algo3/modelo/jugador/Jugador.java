@@ -13,15 +13,11 @@ import java.util.List;
 public class Jugador {
 
     private String nombre;
-
     private Computadora pc;
     private Reloj reloj;
-
     private GradoPolicia grado;
     private Caso caso;
-
     private Orden orden;
-
     private Ciudad ciudadActual;
 
 
@@ -50,11 +46,15 @@ public class Jugador {
     public String getNombre(){
         return this.nombre;
     }
-/*
+
     public Integer getArrestos(){
-        return this.arrestos;
+        return grado.getArrestos();
     }
-*/
+
+    public String getGrado(){
+        return grado.getGrado();
+    }
+
     private void asignarGrado(int arrestos){
         for(int i = arrestos; i != 0; i--){
             this.grado = this.grado.arresto();
