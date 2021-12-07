@@ -42,6 +42,7 @@ public class Ciudad{
         listaEnteraEdificios.add(new Puerto());
         listaEnteraEdificios.add(new Bolsa());
 
+
         Integer h = 5;
         for(int i = 3; i != 0; i--){
             Integer random = rand.nextInt(h);
@@ -49,6 +50,7 @@ public class Ciudad{
             listaEnteraEdificios.remove(random);
             h--;
         }
+
     }
 
     public void setEdificios(List<Edificio> edificios){
@@ -94,6 +96,7 @@ public class Ciudad{
     }
 
     public String visitarEdificio(Edificio edificio, Reloj reloj, GradoPolicia grado) throws FileNotFoundException {
+
         if(visitas < 3){
             visitas += 1;
         }
@@ -104,6 +107,11 @@ public class Ciudad{
 
         reloj.descontarhoras(visitas);
 
+
         return edificio.visitarEdificio(proximaCiudad, grado);
+    }
+
+    public Edificio obtenerEdificio(int i) {
+        return listaEdificios.get(i);
     }
 }
