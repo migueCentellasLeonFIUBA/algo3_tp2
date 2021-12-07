@@ -61,7 +61,7 @@ public class CasoDeUsoCincoTest {
         assertEquals("Pista Biblioteca", jugador.visitarEdificio(listaEdificios.get(0)));
         assertEquals(154, jugador.horasRestantes());
 
-        //VIISTA DE 3H Y ATAQUE DE 1H
+        //VIISTA DE 3H Y ATAQUE DE 1H MAS DORMIR 8H
         assertEquals("Pista Biblioteca", jugador.visitarEdificio(listaEdificios.get(0)));
         assertEquals(142, jugador.horasRestantes());
     }
