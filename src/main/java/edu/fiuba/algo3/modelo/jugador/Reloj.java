@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-
 public class Reloj {
 
     private Integer horasRestantes;
@@ -34,6 +33,7 @@ public class Reloj {
     public void tiempoTerminado() {
         //TODO
     }
+
     public void descontarhoras(Integer horas){
         for (int i=0; i < horas; i+=1){
             this.descontarHora();

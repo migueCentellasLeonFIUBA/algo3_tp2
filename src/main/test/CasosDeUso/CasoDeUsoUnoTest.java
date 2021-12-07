@@ -11,17 +11,15 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CasoDeUsoUno {
+public class CasoDeUsoUnoTest {
 
     @Test
-    public void CasoUno() {
+    public void CasoUno() throws Exception {
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Nico");
 
         assertEquals("Nico",jugador.getNombre());
         assertTrue(1==jugador.getArrestos());
-
-
 
     }
 
@@ -71,4 +69,5 @@ public class CasoDeUsoUno {
 
          */
     }
+
 }

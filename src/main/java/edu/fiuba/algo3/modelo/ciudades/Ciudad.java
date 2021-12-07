@@ -1,12 +1,13 @@
-package edu.fiuba.algo3.modelo.ciudad;
+package edu.fiuba.algo3.modelo.ciudades;
 
 
-import edu.fiuba.algo3.modelo.Pistas.Pista;
+import edu.fiuba.algo3.modelo.pistas.Pista;
 import edu.fiuba.algo3.modelo.edificios.*;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -102,7 +103,7 @@ public class Ciudad{
         return coordenadas;
     }
 
-    public String visitarEdificio(Edificio edificio, Reloj reloj, GradoPolicia grado) {
+    public String visitarEdificio(Edificio edificio, Reloj reloj, GradoPolicia grado) throws FileNotFoundException {
         if(visitas < 3){
             visitas += 1;
         }

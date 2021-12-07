@@ -1,12 +1,12 @@
 package edu.fiuba.algo3.modelo.juego;
 
 
-import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Computadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
-import edu.fiuba.algo3.modelo.objeto.Objeto;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -28,25 +28,25 @@ import java.io.IOException;
 
 
 import java.net.URI;
-import java.text.ParseException;
+//import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Juego {
 
-    private List<Ladron> ladrones;
-    private List<Objeto> objs;
-    private List<Ciudad> ciudades;
-    private List<Jugador> jugadores;
+    private List<Ladron> ladrones = new ArrayList<>();
+    private List<Objeto> objs = new ArrayList<>();
+    private List<Ciudad> ciudades = new ArrayList<>();
+    private List<Jugador> jugadores = new ArrayList<>();
     private Computadora pc;
     private Jugador jugadorActual;
 
-    public Juego(){
+    public Juego() throws Exception {
 
         cargarJugadores();
         cargarCiudades();
         cargarSospechosos();
-        cargarObjetos();
+        //cargarObjetos();
     }
 
     private void setJugador(Jugador jugador) {
@@ -96,7 +96,7 @@ public class Juego {
                 caracteristicas.add(js.get("Sexo").toString());
                 caracteristicas.add(js.get("Hobby").toString());
                 caracteristicas.add(js.get("Cabello").toString());
-                caracteristicas.add(js.get("Seña").toString());
+                caracteristicas.add(js.get("Senia").toString());
                 caracteristicas.add(js.get("Vehiculo").toString());
 
                 Ladron nuevoLadron = Ladron.crear(caracteristicas);
@@ -172,5 +172,42 @@ public class Juego {
         jugadorActual.empezarCaso(Caso.crearCaso(ladrones.get(0),objs.get(0)), ciudades.get(0));
 
     }
-    
+
+    public List<Objeto> cargarObjetos() throws Exception{
+
+        //arreglar..
+        String dir = "src/main/java/edu/fiuba/algo3/Archivos/Objetos.json";
+        List<Objeto> objs = new ArrayList<Objeto>();
+
+        JSONParser parser = new JSONParser();
+
+        try{
+
+            /*
+            URI direccion = new URI(dir); //abro el archivo
+            JSONTokener tokener = new JSONTokener(new FileReader(dir));
+
+            JSONArray ja = (JSONArray) (tokener.nextValue());
+            JSONObject js = (JSONObject) ja.get(0);
+            */
+
+            Object ob = parser.parse(new FileReader(dir));
+            JSONArray array = (JSONArray) ob;
+
+            for (int i = 0; i < array.size(); i++) {
+                JSONObject js = (JSONObject) array.get(i);
+                Objeto obj = new Objeto();
+                obj.setNombre((String) js.get("Nombre"));
+                obj.setCiudad((String) js.get("CiudadDeOrigen"));
+                obj.setClase((String) js.get("Rareza"));
+                objs.add(obj);
+            }
+        } catch (java.io.FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return objs;
+    }
 }

@@ -1,9 +1,8 @@
 package CasosDeUso;
 
-import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
+import edu.fiuba.algo3.modelo.ciudades.*;
 import edu.fiuba.algo3.modelo.jugador.*;
 
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 import org.junit.jupiter.api.Test;
@@ -36,10 +35,10 @@ public class CasoDeUsoTresTest {
        //700,6609 + 624,5001 = 1325,161 , raiz = 36.4027608843 -> horas = 1h
        Integer horasviaje = Math.round((float) 1325.161 /velocidad);
 
-       Ciudad origen = new Ciudad("Montreal");
+       Ciudad origen = Ciudad.crear("Montreal");
        origen.setCordenadas(montreal);
 
-       Ciudad destino = new Ciudad("Mexico");
+       Ciudad destino = Ciudad.crear("Mexico");
        destino.setCordenadas(mexico);
 
        jugador.setCiudadActual(origen);

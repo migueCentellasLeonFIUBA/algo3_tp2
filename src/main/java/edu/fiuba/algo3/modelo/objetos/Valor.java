@@ -1,6 +1,6 @@
-package edu.fiuba.algo3.modelo.objeto;
+package edu.fiuba.algo3.modelo.objetos;
 
-import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 
 public interface Valor {
@@ -8,5 +8,3 @@ public interface Valor {
     Estrategia crearEstrategia(Ciudad ciudad);
 
 }
-
-

@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
-
 public class Novato implements GradoPolicia {
 
     private Integer velocidad = 900;
@@ -18,7 +17,11 @@ public class Novato implements GradoPolicia {
 
     public Boolean dificultadPista(String pista){
 
-        if(pista == "Facil")
+        //harcodeo
+        if(pista == "Facil"){
+            return true;
+        }
+        return false;
     }
     
 }

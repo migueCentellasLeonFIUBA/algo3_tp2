@@ -1,5 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
+/*
+//  se comenta para compilar.
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -23,4 +26,4 @@ public class LectorDeArchivo {
 
     }
 }
-
+*/

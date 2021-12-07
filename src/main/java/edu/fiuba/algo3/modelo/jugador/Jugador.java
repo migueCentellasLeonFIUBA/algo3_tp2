@@ -1,12 +1,13 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 
-import edu.fiuba.algo3.modelo.Pistas.Pista;
-import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.pistas.Pista;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Jugador {
@@ -62,7 +63,7 @@ public class Jugador {
 
         return ciudadActual.mostrarEdificios();
     }
-
+/*
     public void viajarACiudad(Ciudad destino) {
 
         Integer distancia = ciudadActual.calcularDistancia(destino);
@@ -93,7 +94,7 @@ public class Jugador {
         this.ciudadActual=ciudad;
     }
 
-    public String visitarEdificio(Edificio edificio) {
+    public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
 
         return ciudadActual.visitarEdificio(edificio, reloj, grado);
     }

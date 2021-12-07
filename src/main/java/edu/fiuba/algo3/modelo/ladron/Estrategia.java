@@ -1,3 +1,4 @@
+
 package edu.fiuba.algo3.modelo.ladron;
 
 
@@ -22,5 +23,5 @@ public class Estrategia {
     public void setCiudades(List<Ciudad> ciudades) {
         this.ciudades.addAll(ciudades);
     }
-    
+
 }

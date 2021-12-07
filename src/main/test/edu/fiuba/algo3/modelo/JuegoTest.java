@@ -28,12 +28,12 @@ public class JuegoTest{
 
         assertEquals(nombre, obj.get(0).getNombre());
         assertThat(rareza).isInstanceOf(RarezaComun.class);
-/*
+
         //Ultimo Objeto del archivo
         nombre = "Tocado del rey Watusi";
         rareza = obj.get(27).getRareza();
         assertEquals(nombre, obj.get(27).getNombre());
         assertThat(rareza).isInstanceOf(RarezaMuyValioso.class);
-*/
+
     }
 }

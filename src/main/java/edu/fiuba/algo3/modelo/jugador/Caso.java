@@ -1,9 +1,8 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-
-import edu.fiuba.algo3.modelo.ciudad.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ladron.*;
-import edu.fiuba.algo3.modelo.objeto.*;
+import edu.fiuba.algo3.modelo.objetos.*;
 
 import java.util.List;
 
@@ -22,8 +21,17 @@ public class Caso {
         this.estrategia = objeto. crearEstrategia(ciudad);
     }
 
+    public Caso(Ladron ladron, Objeto objeto) {
+        this.ladron = ladron;
+        this.objetoRobado = objeto;
+    }
+
     public static Caso crearCaso(Ladron ladron, Objeto objeto) {
         return new Caso(ladron, objeto);
+    } //falta ciudad??
+
+    public static Caso crearCaso(Ladron ladron, Objeto objeto, Ciudad ciudad) {
+        return new Caso(ladron, objeto, ciudad);
     }
 
 /*
