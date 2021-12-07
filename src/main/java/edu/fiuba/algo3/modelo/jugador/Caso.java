@@ -21,18 +21,10 @@ public class Caso {
         this.estrategia = objeto. crearEstrategia(ciudad);
     }
 
-    public Caso(Ladron ladron, Objeto objeto) {
-        this.ladron = ladron;
-        this.objetoRobado = objeto;
-    }
-
-    public static Caso crearCaso(Ladron ladron, Objeto objeto) {
-        return new Caso(ladron, objeto);
-    } //falta ciudad??
 
     public static Caso crearCaso(Ladron ladron, Objeto objeto, Ciudad ciudad) {
         return new Caso(ladron, objeto, ciudad);
-    }
+}
 
 /*
     public void setSospechosos(List<Secuaz> sospechosos) {

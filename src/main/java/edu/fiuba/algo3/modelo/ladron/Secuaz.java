@@ -8,9 +8,4 @@ public class Secuaz implements Secuaces{
         return false;
     }
 
-    @Override
-    public boolean Sospechar() {
-        //TODO
-        return true;
-    }
 }

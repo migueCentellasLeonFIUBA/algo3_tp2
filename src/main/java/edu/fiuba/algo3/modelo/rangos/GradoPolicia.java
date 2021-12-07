@@ -1,9 +1,12 @@
 package edu.fiuba.algo3.modelo.rangos;
 
-public interface GradoPolicia {
+public abstract class GradoPolicia {
 
-    void cargarPistas();
+    private Integer arrestos;
 
-    Integer calcularTiempoViaje();
+    abstract void cargarPistas();
+
+    abstract public Integer calcularTiempoViaje();
+    abstract public GradoPolicia arresto();
 
 }

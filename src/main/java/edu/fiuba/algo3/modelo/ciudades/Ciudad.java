@@ -10,36 +10,53 @@ import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Ciudad{
 
-    private Integer visitas;
     private String nombre;
-
+    private Integer visitas;
     private List<Edificio> listaEdificios;
     private Coordenadas coordenadas;
-    private AeroPuerto aeroPuerto;
-    private Banco banco;
-    private Biblioteca biblioteca;
-    private Estrategia estrategia;
+;
     private Ladron ladron;
-    private Edificio edificio;
-    private Pista IPista;
+
     private String proximaCiudad;
 
     private Ciudad(String nombre) {
 
+        this.visitas = 0;
         this.nombre = nombre;
+        listaEdificios = new ArrayList<>();
         cargarEdificios();
     }
 
     private void cargarEdificios(){
-        listaEdificios = new ArrayList<>();
-        listaEdificios.add(new AeroPuerto());
-        listaEdificios.add(new Banco());
-        listaEdificios.add(new Biblioteca());
 
+        Random rand = new Random();
+        List<Edificio> listaEnteraEdificios = new ArrayList<>();
+        listaEnteraEdificios.add(new AeroPuerto());
+        listaEnteraEdificios.add(new Banco());
+        listaEnteraEdificios.add(new Biblioteca());
+        listaEnteraEdificios.add(new Puerto());
+        listaEnteraEdificios.add(new Bolsa());
+
+        Integer h = 5;
+        for(int i = 3; i != 0; i--){
+            Integer random = rand.nextInt(h);
+            listaEdificios.add(listaEnteraEdificios.get(random));
+            listaEnteraEdificios.remove(random);
+            h--;
+        }
+    }
+
+    public void setEdificios(List<Edificio> edificios){
+        listaEdificios = edificios;
+    }
+
+    public void setLadron(Ladron ladron){
+        this.ladron = ladron;
     }
 
     public static Ciudad crear(String ciudadDeOrigen) {
@@ -63,11 +80,11 @@ public class Ciudad{
         this.ladron = ladron;
     }
 
-
+/*
     public void set(Estrategia estrategia) {
         this.estrategia = estrategia;
     }
-
+*/
 
     public void setCordenadas(Coordenadas coordenadas) {
         this.coordenadas = coordenadas;
@@ -106,6 +123,10 @@ public class Ciudad{
     public String visitarEdificio(Edificio edificio, Reloj reloj, GradoPolicia grado) throws FileNotFoundException {
         if(visitas < 3){
             visitas += 1;
+        }
+
+        if(ladron != null){
+            ladron.atacarConCuchillo(reloj);
         }
 
         reloj.descontarhoras(visitas);

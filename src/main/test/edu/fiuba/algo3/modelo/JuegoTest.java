@@ -1,11 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.juego.Juego;
-import edu.fiuba.algo3.modelo.objetos.Objeto;
-import edu.fiuba.algo3.modelo.objetos.Rareza;
-import edu.fiuba.algo3.modelo.objetos.RarezaComun;
+import edu.fiuba.algo3.modelo.objetos.*;
 
-import edu.fiuba.algo3.modelo.objetos.RarezaMuyValioso;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -20,20 +17,20 @@ public class JuegoTest{
     public void algunosObjetoSeCargaConParametrosEsperados() throws Exception {
 
         Juego juego = new Juego();
-        List<Objeto> obj = juego.cargarObjetos();
-        Rareza rareza = obj.get(0).getRareza();
+        List<Objeto> obj = juego.getObjetos();
+        Valor rareza = obj.get(0).getRareza();
 
         //Primer Objeto del archivo
         String nombre = "Huevo de 1000 años";
 
         assertEquals(nombre, obj.get(0).getNombre());
-        assertThat(rareza).isInstanceOf(RarezaComun.class);
+        assertThat(rareza).isInstanceOf(Comun.class);
 
         //Ultimo Objeto del archivo
         nombre = "Tocado del rey Watusi";
         rareza = obj.get(27).getRareza();
         assertEquals(nombre, obj.get(27).getNombre());
-        assertThat(rareza).isInstanceOf(RarezaMuyValioso.class);
+        assertThat(rareza).isInstanceOf(MuyValioso.class);
 
     }
 }

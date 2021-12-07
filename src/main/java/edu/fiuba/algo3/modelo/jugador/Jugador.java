@@ -13,12 +13,10 @@ import java.util.List;
 public class Jugador {
 
     private String nombre;
-    private Integer arrestos; //debe guardarlos el rango
 
     private Computadora pc;
     private Reloj reloj;
 
-    private Novato rango; //???
     private GradoPolicia grado;
     private Caso caso;
 
@@ -29,8 +27,10 @@ public class Jugador {
 
     private Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
-        this.arrestos=arrestos;
-        this.reloj= new Reloj();
+        this.grado = new Novato();
+
+
+        asignarGrado(arrestos);
     }
 
     public static Jugador crearJugador(String nombre,Integer arrestos)
@@ -50,29 +50,22 @@ public class Jugador {
     public String getNombre(){
         return this.nombre;
     }
-
+/*
     public Integer getArrestos(){
         return this.arrestos;
     }
-
-    public void VisitarEdificio() {
-        ciudadActual.VisitarEdificio(reloj); //estaba
+*/
+    private void asignarGrado(int arrestos){
+        for(int i = arrestos; i != 0; i--){
+            this.grado = this.grado.arresto();
+        }
     }
 
     public List<Edificio> mostrarEdificios() {
 
         return ciudadActual.mostrarEdificios();
     }
-/*
-    public void viajarACiudad(Ciudad destino) {
 
-        Integer distancia = ciudadActual.calcularDistancia(destino);
-        Integer horas = Math.round(distancia / grado.calcularTiempoViaje());
-        if (horas == 0)  horas = 1; //Filtro las dsitancias "0".
-        this.reloj.descontarhoras(horas);
-    }
-*/
-    //opcion 2: coordenadas calcula las horas.
     public void viajarACiudad(Ciudad destino) {
         ciudadActual.calcularDistancia(destino, grado.calcularTiempoViaje(), reloj);
     }
@@ -83,7 +76,15 @@ public class Jugador {
     public void ArrestarSospechoso() {
     }
 
-    public void TerminarJuego() {
+    public boolean tieneCasoAsignado(){
+        return caso != null;
+    }
+
+    public void terminarJuego() {
+        this.caso = null;
+        this.reloj = null;
+        this.ciudadActual = null;
+        //refactor: no debería tener atributos sin inicializar
     }
 
     public boolean compararJugador(String nombre) {
@@ -95,8 +96,12 @@ public class Jugador {
     }
 
     public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
+        String pista = ciudadActual.visitarEdificio(edificio, reloj, grado);
+        if(reloj.tiempoTerminado()){
+            terminarJuego();
+        }
 
-        return ciudadActual.visitarEdificio(edificio, reloj, grado);
+        return pista;
     }
 
     public Ciudad getCiudadActual() {
@@ -106,5 +111,10 @@ public class Jugador {
     public void empezarCaso(Caso caso, Ciudad ciudad) {
         this.caso=caso;
         this.ciudadActual = ciudad;
+        this.reloj= new Reloj();
+    }
+
+    public int horasRestantes(){
+        return reloj.getHorasRestantes();
     }
 }

@@ -9,8 +9,17 @@ public class Objeto{
 
     private String nombre;
     private String ciudad;
-    private Rareza rareza;
+
     private Valor valor;
+
+    private Objeto(String nombre, String valor) {
+        this.nombre = nombre;
+        setValor(valor);
+    }
+
+    public static Objeto crear(String nombre, String valor) {
+        return new Objeto(nombre, valor);
+    }
 
     public void setNombre(String nombre){
         this.nombre = nombre;
@@ -20,17 +29,14 @@ public class Objeto{
         this.ciudad = origen;
     }
 
-    public void setRareza(Rareza clase){
-        this.rareza = clase;
-    }
 
-    public void setClase(String clase){
+    public void setValor(String clase){
         if ( clase.equals("Comun"))
-            this.rareza = new RarezaComun();
+            this.valor = new Comun();
         else if (clase.equals("Valioso"))
-            this.rareza = new RarezaValioso();
+            this.valor = new Valioso();
         else
-            this.rareza = new RarezaMuyValioso();
+            this.valor = new MuyValioso();
     }
 
     public String getNombre(){
@@ -38,8 +44,9 @@ public class Objeto{
     }
 
     //borrar
-    public Rareza getRareza(){
-        return this.rareza;
+    public Valor getRareza(){
+
+        return this.valor;
     }
 
     public Estrategia crearEstrategia(Ciudad ciudad){

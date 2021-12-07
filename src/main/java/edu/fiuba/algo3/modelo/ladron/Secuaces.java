@@ -4,5 +4,4 @@ public interface Secuaces {
 
     boolean Arrestar();
 
-    boolean Sospechar();
 }
