@@ -81,14 +81,13 @@ public class Ciudad{
     }
 
 
-
     public int calcularDistancia(Ciudad destino) {
         return coordenadas.calcularDistancia(destino.getUbicacion());
     }
 
     //opcion2:
     public void calcularDistancia(Ciudad destino, Integer velocidad, Reloj reloj) {
-        coordenadas.calcularDistancia(destino.getUbicacion(), velocidad,reloj);
+        coordenadas.calcularDistancia(destino.getUbicacion(), velocidad, reloj);
     }
     private Coordenadas getUbicacion() {
         return coordenadas;

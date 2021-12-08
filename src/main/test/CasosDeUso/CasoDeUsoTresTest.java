@@ -33,7 +33,7 @@ public class CasoDeUsoTresTest {
        montreal.setLongitud((float) -73.58);
 
        //700,6609 + 624,5001 = 1325,161 , raiz = 36.4027608843 -> horas = 1h
-       Integer horasviaje = Math.round((float) 1325.161 /velocidad);
+       Integer horasviaje = Math.round((float) 1325.161 / velocidad);
 
        Ciudad origen = Ciudad.crear("Montreal");
        origen.setCordenadas(montreal);
