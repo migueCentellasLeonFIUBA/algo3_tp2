@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
-import edu.fiuba.algo3.modelo.CaracteristicasLadron.*;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 
 import java.lang.reflect.Array;
@@ -11,22 +10,18 @@ import java.util.List;
 public class Ladron implements Secuaces {
 
     private Integer ataqueConCuchillo;
-    private String nombre;
-    private String sexo;
-    private String hobby;
-    private String cabello;
-    private String senia;
-    private String vehiculo;
+    private List<String> caracteristicas;
 
-    public Ladron(String nombre, String sexo, String hobby, String cabello, String senia, String vehiculo){
-        this.nombre = nombre;
-        this.sexo = sexo;
-        this.hobby = hobby;
-        this.cabello = cabello;
-        this.senia = senia;
-        this.vehiculo = vehiculo;
+    private Ladron(List<String> caracteristicas){
+        this.caracteristicas =caracteristicas;
         this.ataqueConCuchillo = 2;
     }
+
+    //hago los metodos para que compile
+    public static Ladron crear(List<String> caracteristicas) {
+        return new Ladron(caracteristicas);
+    }
+
 
     //Operations
     @Override
@@ -43,4 +38,8 @@ public class Ladron implements Secuaces {
         }
     }
 
+    public boolean esMujer(){
+        return (caracteristicas.get(0) == "Mujer");
+
+    }
 }

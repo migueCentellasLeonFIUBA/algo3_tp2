@@ -23,7 +23,6 @@ public class CasoDeUsoUnoTest {
 
     @Test
     public void CasoUno() throws Exception {
-        /*
         List<Edificio> listaEdificios = new ArrayList<>();
 
         Jugador jugador = Jugador.crearJugador("Nico", 0);
@@ -37,6 +36,7 @@ public class CasoDeUsoUnoTest {
 
         List<String> caracteristicas = new ArrayList<>();
         caracteristicas.add("Mujer");
+        Ladron ladron = Ladron.crear(caracteristicas);
 
 
         Objeto objeto= Objeto.crear("Tesoro Nacional De Montreal", "Comun");
@@ -47,10 +47,11 @@ public class CasoDeUsoUnoTest {
 
         listaEdificios = jugador.mostrarEdificios();
 
+        assertEquals(true, ladron.esMujer());
 
         assertEquals("Pista Banco", jugador.visitarEdificio(listaEdificios.get(1)));
         assertEquals(167, jugador.horasRestantes());
-*/
+
         }
 }
 

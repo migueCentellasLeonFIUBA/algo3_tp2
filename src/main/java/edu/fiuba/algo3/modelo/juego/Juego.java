@@ -3,9 +3,8 @@ package edu.fiuba.algo3.modelo.juego;
 
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Caso;
+import edu.fiuba.algo3.modelo.jugador.Computadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.ladron.ConstructorLadronConcreto;
-import edu.fiuba.algo3.modelo.ladron.DirectorLadron;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import org.json.simple.JSONArray;
@@ -15,11 +14,18 @@ import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.*;
 
 //JSON
+import edu.fiuba.algo3.modelo.objetos.Objeto;
+import org.json.*;
+
+import java.io.FileReader;
+import java.io.IOException;
 
 
+import java.net.URI;
 //import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -72,24 +78,30 @@ public class Juego {
     }
 
     public void cargarSospechosos() {
-
-        ConstructorLadronConcreto constructor = new ConstructorLadronConcreto();
-        DirectorLadron director = new DirectorLadron();
-        director.setConstructorLadron(constructor);
-
         JSONParser parser = new JSONParser();
+
+
         try{
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
             JSONArray array = (JSONArray) ob;
 
             for (int i = 0; i < array.size(); i++) {
-
                 JSONObject js = (JSONObject) array.get(i);
-                director.construirLadron(js);
-                Ladron ladron = director.getLadron();
-                ladrones.add(ladron);
+                List<String> caracteristicas = new ArrayList<>();
 
+                caracteristicas.add(js.get("Nombre").toString());
+                caracteristicas.add(js.get("Sexo").toString());
+                caracteristicas.add(js.get("Hobby").toString());
+                caracteristicas.add(js.get("Cabello").toString());
+                caracteristicas.add(js.get("Senia").toString());
+                caracteristicas.add(js.get("Vehiculo").toString());
+
+                Ladron nuevoLadron = Ladron.crear(caracteristicas);
+
+
+                ladrones.add(nuevoLadron);
             }
+
         } catch (java.io.FileNotFoundException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {
@@ -97,7 +109,6 @@ public class Juego {
         } catch (ParseException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     public void cargarCiudades() {
@@ -199,9 +210,5 @@ public class Juego {
 
     public List<Objeto> getObjetos(){
         return objs;
-    }
-
-    public Ladron getLadronActual() {
-        return ladrones.get(0);
     }
 }

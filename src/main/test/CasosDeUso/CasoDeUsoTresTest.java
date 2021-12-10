@@ -16,7 +16,6 @@ public class CasoDeUsoTresTest {
     //Detective viaja de Montreal a México.
     @Test
     public void UnDetectiveViajaDeMontrealAMexicoYPierde_1_Hora(){
-        /*
         Integer horas = 24;
         Integer velocidad = 900; //novato vel.
 
@@ -48,8 +47,6 @@ public class CasoDeUsoTresTest {
        //ya se cargaron los objetos necesarios
         jugador.viajarACiudad(destino);
         assertEquals(horas - horasviaje, reloj.getHorasRestantes());
-
-         */
 
     }
 
