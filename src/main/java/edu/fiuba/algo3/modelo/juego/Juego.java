@@ -23,52 +23,36 @@ public class Juego {
 
     public Juego() throws Exception {
         gestorArchivos = new GestorDeArchivos();
-/*
-        cargarPistas("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json");
-        cargarObjetos("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json");
-        cargarJugadores("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json");
-        cargarSospechosos("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json");
-        cargarCiudades("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json");
-*/
-
-        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json", pistas);
-        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json", objetos);
-        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json", jugadores);
-        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json", sospechosos);
-        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json", ciudades);
-
-
+        cargarPistas();
+        cargarObjetos();
+        cargarJugadores();
+        cargarSospechosos();
+        cargarCiudades();
     }
 
-    public void cargarArchivo(String ruta, Archivo archivo) throws FileNotFoundException {
-        String texto = gestorArchivos.leerTextoCompleto(ruta);
-        //archivo = new Archivo(texto); //No se pueden crear objetos de la superclase
-        archivo.crearArchivo(texto);
 
-    }
-    public void cargarObjetos(String ruta) throws FileNotFoundException {
-        String texto = gestorArchivos.leerTextoCompleto(ruta);
-        objetos = new Objetos(texto);
+    private String obtenerTexto(String ruta) throws FileNotFoundException {
+        return gestorArchivos.leerTextoCompleto(ruta);
     }
 
-    public void cargarPistas(String ruta) throws FileNotFoundException {
-        String texto = gestorArchivos.leerTextoCompleto(ruta);
-        pistas = new Pistas(texto);
+    private void cargarObjetos() throws FileNotFoundException {
+        objetos = new Objetos(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json"));
     }
 
-    private void cargarJugadores(String ruta) throws FileNotFoundException {
-        String texto = gestorArchivos.leerTextoCompleto(ruta);
-        jugadores = new Jugadores(texto);
+    private void cargarPistas() throws FileNotFoundException {
+        pistas = new Pistas(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json"));
     }
 
-    public void cargarSospechosos(String ruta) throws FileNotFoundException {
-        String texto = gestorArchivos.leerTextoCompleto(ruta);
-        sospechosos = new Sospechosos(texto);
+    private void cargarJugadores() throws FileNotFoundException {
+        jugadores = new Jugadores(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json"));
     }
 
-    public void cargarCiudades(String ruta) throws FileNotFoundException {
-        String texto = gestorArchivos.leerTextoCompleto(ruta);
-        ciudades = new Ciudades(texto);
+    private void cargarSospechosos() throws FileNotFoundException {
+        sospechosos = new Sospechosos(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
+    }
+
+    private void cargarCiudades() throws FileNotFoundException {
+        ciudades = new Ciudades(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
     }
 
     public Jugador IdentificarJugador(String nombre) {

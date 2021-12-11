@@ -10,10 +10,6 @@ public abstract class Archivo {
         fachada = new Fachada(texto);
     }
 
-    public void crearArchivo(String texto){
-        fachada = new Fachada(texto);
-    }
-
     public void removerFiltros(){
         fachada.resetear();
     }
