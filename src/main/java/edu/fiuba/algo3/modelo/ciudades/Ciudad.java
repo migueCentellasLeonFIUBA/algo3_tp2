@@ -24,7 +24,7 @@ public class Ciudad{
 
     private String proximaCiudad;
 
-    private Ciudad(String nombre) {
+    public Ciudad(String nombre) {
 
         this.visitas = 0;
         this.nombre = nombre;
@@ -34,6 +34,11 @@ public class Ciudad{
 
     private void cargarEdificios(){
 
+        listaEdificios.add(new Banco());
+        listaEdificios.add(new Biblioteca());
+        listaEdificios.add(new Puerto());
+
+        /*
         Random rand = new Random();
         List<Edificio> listaEnteraEdificios = new ArrayList<>();
         listaEnteraEdificios.add(new AeroPuerto());
@@ -49,6 +54,7 @@ public class Ciudad{
             listaEnteraEdificios.remove(random);
             h--;
         }
+         */
     }
 
     public void setEdificios(List<Edificio> edificios){
@@ -57,10 +63,6 @@ public class Ciudad{
 
     public void setLadron(Ladron ladron){
         this.ladron = ladron;
-    }
-
-    public static Ciudad crear(String ciudadDeOrigen) {
-        return new Ciudad(ciudadDeOrigen);
     }
 
     public void setVisitas(Integer visitas) {

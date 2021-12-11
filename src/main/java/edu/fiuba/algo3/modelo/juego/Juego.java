@@ -13,6 +13,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -40,9 +41,6 @@ public class Juego {
         cargarObjetos();
     }
 
-    private void setJugador(Jugador jugador) {
-        this.jugadorActual = jugador;
-    }
 
     //Operations
     private void cargarJugadores() {
@@ -53,19 +51,15 @@ public class Juego {
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json"));
             JSONArray array = (JSONArray) ob;
 
-            for (int i = 0; i < array.size(); i++) {
-                JSONObject js = (JSONObject) array.get(i);
+            for (Object o : array) {
+                JSONObject js = (JSONObject) o;
 
-                Jugador nuevoPlayer = Jugador.crearJugador(js.get("Nombre").toString(),Integer.parseInt(js.get("Arrestos").toString()));
+                Jugador nuevoPlayer = new Jugador(js.get("Nombre").toString(), Integer.parseInt(js.get("Arrestos").toString()));
 
                 jugadores.add(nuevoPlayer);
             }
 
-        } catch (java.io.FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        } catch (ParseException e) {
+        } catch (IOException | ParseException e) {
             System.out.println(e.getMessage());
         }
 
@@ -82,19 +76,15 @@ public class Juego {
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
             JSONArray array = (JSONArray) ob;
 
-            for (int i = 0; i < array.size(); i++) {
+            for (Object o : array) {
 
-                JSONObject js = (JSONObject) array.get(i);
+                JSONObject js = (JSONObject) o;
                 director.construirLadron(js);
                 Ladron ladron = director.getLadron();
                 ladrones.add(ladron);
 
             }
-        } catch (java.io.FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        } catch (ParseException e) {
+        } catch (ParseException | IOException e) {
             System.out.println(e.getMessage());
         }
 
@@ -107,19 +97,15 @@ public class Juego {
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
             JSONArray array = (JSONArray) ob;
 
-            for (int i = 0; i < array.size(); i++) {
-                JSONObject js = (JSONObject) array.get(i);
+            for (Object o : array) {
+                JSONObject js = (JSONObject) o;
 
-                Ciudad ciudad=Ciudad.crear((String) js.get("Ciudad"));
+                Ciudad ciudad = new Ciudad((String) js.get("Ciudad"));
 
                 ciudades.add(ciudad);
             }
 
-        } catch (java.io.FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        } catch (ParseException e) {
+        } catch (IOException | ParseException e) {
             System.out.println(e.getMessage());
         }
 
@@ -138,7 +124,7 @@ public class Juego {
         }
 
         //IF de decisión del usuario
-        this.jugadorActual = Jugador.crearJugador(nombre, 0);
+        this.jugadorActual = new Jugador(nombre, 0);
 
         return (this.jugadorActual);
 
@@ -163,7 +149,9 @@ public class Juego {
         Ciudad ciudadRandom = ciudades.get(rand.nextInt(ciudades.size()));
         Objeto objetoRandom = objs.get(rand.nextInt(objs.size()));
 
-        jugadorActual.empezarCaso(Caso.crearCaso(ladronRandom, objetoRandom, ciudadRandom), ciudadRandom);
+        Caso nuevoCaso = new Caso(ladronRandom, objetoRandom, ciudadRandom);
+
+        jugadorActual.empezarCaso(nuevoCaso, ciudadRandom);
 
     }
 
@@ -174,24 +162,19 @@ public class Juego {
             Object ob = parser.parse(new FileReader("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json"));
             JSONArray array = (JSONArray) ob;
 
-            for (int i = 0; i < array.size(); i++) {
-                JSONObject js = (JSONObject) array.get(i);
+            for (Object o : array) {
+                JSONObject js = (JSONObject) o;
 
                 String rareza = (String) (js.get("Rareza"));
                 String nombre = (String) (js.get("Nombre"));
 
-                Objeto obj=Objeto.crear(nombre, rareza);
-
+                Objeto obj = new Objeto(nombre, rareza);
 
                 objs.add(obj);
 
             }
 
-        } catch (java.io.FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        } catch (ParseException e) {
+        } catch (IOException | ParseException e) {
             System.out.println(e.getMessage());
         }
 

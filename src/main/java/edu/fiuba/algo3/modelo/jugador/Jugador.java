@@ -25,17 +25,11 @@ public class Jugador {
     private Ciudad ciudadActual;
 
 
-    private Jugador(String nombre,Integer arrestos){
+    public Jugador(String nombre, Integer arrestos){
         this.nombre=nombre;
         this.grado = new Novato();
 
-
         asignarGrado(arrestos);
-    }
-
-    public static Jugador crearJugador(String nombre,Integer arrestos)
-    {
-        return new Jugador(nombre,arrestos);
     }
 
     public void setCiudadActual(Ciudad origen){

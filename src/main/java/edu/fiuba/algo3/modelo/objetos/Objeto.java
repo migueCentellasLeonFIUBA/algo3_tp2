@@ -12,13 +12,9 @@ public class Objeto{
 
     private Valor valor;
 
-    private Objeto(String nombre, String valor) {
+    public Objeto(String nombre, String valor) {
         this.nombre = nombre;
         setValor(valor);
-    }
-
-    public static Objeto crear(String nombre, String valor) {
-        return new Objeto(nombre, valor);
     }
 
     public void setNombre(String nombre){
