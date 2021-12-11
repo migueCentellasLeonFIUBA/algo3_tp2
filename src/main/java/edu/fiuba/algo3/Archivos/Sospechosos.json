@@ -1,6 +1,6 @@
-[
-  {
-    "Nombre": "Merey Laroc",
+{
+
+  "Merey Laroc":{
     "Sexo": "Femenino",
     "Hobby" : "Escalar Montanias",
     "Cabello" : "Marron",
@@ -8,4 +8,4 @@
     "Vehiculo" : "Limosina"
   }
 
-]
+}
