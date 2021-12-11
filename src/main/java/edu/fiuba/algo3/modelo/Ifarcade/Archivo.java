@@ -2,6 +2,9 @@ package edu.fiuba.algo3.modelo.Ifarcade;
 
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 public abstract class Archivo {
 
     protected Fachada fachada;
@@ -20,6 +23,8 @@ public abstract class Archivo {
 
     protected String pedirValor(String termino){return fachada.pedirValor(termino);}
 
-    public abstract Jugador pedirObjeto(String Objeto);
+    protected ArrayList<String> listaDeElementos(){
+        return fachada.listaDeElementos();
+    }
 
 }

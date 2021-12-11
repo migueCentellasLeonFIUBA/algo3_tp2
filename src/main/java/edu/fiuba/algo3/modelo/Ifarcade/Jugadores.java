@@ -8,10 +8,8 @@ public class Jugadores extends Archivo {
         super(texto);
     }
 
-    @Override
-    public Jugador pedirObjeto(String Objeto) {
 
+    public Jugador pedirJugador(String nombre) {
         return null;
     }
-
 }

@@ -10,12 +10,6 @@ public class Objetos extends Archivo {
         super(texto);
     }
 
-    @Override
-    public Jugador pedirObjeto(String Objeto) {
-
-        return null;
-    }
-
     public Objeto ObtenerRandom() {
         return null;
     }

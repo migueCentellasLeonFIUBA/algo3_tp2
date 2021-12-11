@@ -22,9 +22,4 @@ public class Ciudades extends Archivo {
         return null;
     }
 
-    @Override
-    public Jugador pedirObjeto(String Objeto) {
-
-        return null;
-    }
 }

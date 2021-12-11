@@ -57,7 +57,7 @@ public class Juego {
 
     public Jugador IdentificarJugador(String nombre) {
 
-        Jugador jugador = jugadores.pedirObjeto(nombre); //sería parte de la interfaz como pedir pista
+        Jugador jugador = jugadores.pedirJugador(nombre); //sería parte de la interfaz como pedir pista
 
         //IF de decisión del usuario
         this.jugadorActual = new Jugador(nombre, 0);

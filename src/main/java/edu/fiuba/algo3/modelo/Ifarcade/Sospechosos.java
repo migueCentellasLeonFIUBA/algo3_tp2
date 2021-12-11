@@ -4,6 +4,10 @@ import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
+
 public class Sospechosos extends Archivo {
 
     public Sospechosos(String texto) {
@@ -18,13 +22,10 @@ public class Sospechosos extends Archivo {
         return pedirValor("Banco");
     }
 
-    public Ladron ObtenerRandom() {
-        return null;
+    public Ladron ObtenerLadron() {
+        ArrayList<String> nombres = listaDeElementos();
+        filtrar(nombres.get(0));
+
     }
 
-    @Override
-    public Jugador pedirObjeto(String Objeto) {
-
-        return null;
-    }
 }

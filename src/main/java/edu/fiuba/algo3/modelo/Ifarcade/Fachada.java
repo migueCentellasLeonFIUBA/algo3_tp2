@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.Ifarcade;
 import org.json.*;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 public class Fachada {
@@ -12,6 +13,7 @@ public class Fachada {
         objeto = new JSONObject(texto);
         textoOriginal=texto;
     }
+
     public void filtrar(String termino){
         objeto=objeto.getJSONObject(termino);
     }
@@ -20,8 +22,8 @@ public class Fachada {
         return objeto.getString(termino);
     }
 
-    public Set<String> setDeElementos(){
-        return objeto.keySet();
+    public ArrayList<String> listaDeElementos(){
+        return  new ArrayList<String>(objeto.keySet());
     }
 
     public void resetear(){

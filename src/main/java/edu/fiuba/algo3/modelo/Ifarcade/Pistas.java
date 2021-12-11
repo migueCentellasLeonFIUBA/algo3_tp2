@@ -18,9 +18,4 @@ public class Pistas extends Archivo {
         return pedirValor("Banco");
     }
 
-    @Override
-    public Jugador pedirObjeto(String Objeto) {
-
-        return null;
-    }
 }
