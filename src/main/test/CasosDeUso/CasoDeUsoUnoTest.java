@@ -23,7 +23,7 @@ public class CasoDeUsoUnoTest {
 
     @Test
     public void CasoUno() throws Exception {
-        Jugador jugador = new Jugador("Nico", 0);
+        Juego juegoNuevo = new Juego();
 
         /*    Caso caso = new Caso();
 

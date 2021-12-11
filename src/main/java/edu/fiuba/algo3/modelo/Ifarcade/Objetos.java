@@ -1,26 +1,22 @@
 package edu.fiuba.algo3.modelo.Ifarcade;
 
-import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.jugador.Jugador;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 public class Objetos extends Archivo {
-    private Fachada fachada;
 
 
-    public Objetos(String texto){
-        fachada = new Fachada(texto);
+    public Objetos(String texto) {
+        super(texto);
     }
 
-    public void removerFiltros(){
-         fachada.resetear();
+    @Override
+    public Jugador pedirObjeto(String Objeto) {
+
+        return null;
     }
 
-    private void filtrar(String termino){
-        fachada.filtrar(termino);
+    public Objeto ObtenerRandom() {
+        return null;
     }
-
-    private String pedirValor(String termino){
-        return fachada.pedirValor(termino);
-    }
-
-
 }

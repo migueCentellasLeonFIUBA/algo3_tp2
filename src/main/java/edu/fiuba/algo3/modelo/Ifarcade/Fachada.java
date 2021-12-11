@@ -32,6 +32,4 @@ public class Fachada {
         return objeto.keySet().stream().count();
     }
 
-
-
 }

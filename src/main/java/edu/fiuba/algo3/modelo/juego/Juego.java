@@ -23,16 +23,28 @@ public class Juego {
 
     public Juego() throws Exception {
         gestorArchivos = new GestorDeArchivos();
+/*
         cargarPistas("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json");
         cargarObjetos("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json");
         cargarJugadores("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json");
         cargarSospechosos("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json");
         cargarCiudades("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json");
+*/
+
+        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json", pistas);
+        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json", objetos);
+        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json", jugadores);
+        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json", sospechosos);
+        cargarArchivo("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json", ciudades);
+
+
     }
 
     public void cargarArchivo(String ruta, Archivo archivo) throws FileNotFoundException {
         String texto = gestorArchivos.leerTextoCompleto(ruta);
-        archivo = new Archivo(texto);
+        //archivo = new Archivo(texto); //No se pueden crear objetos de la superclase
+        archivo.crearArchivo(texto);
+
     }
     public void cargarObjetos(String ruta) throws FileNotFoundException {
         String texto = gestorArchivos.leerTextoCompleto(ruta);
@@ -61,7 +73,7 @@ public class Juego {
 
     public Jugador IdentificarJugador(String nombre) {
 
-        Jugador jugador = jugadores.pedirItem(nombre); //sería parte de la interfaz como pedir pista
+        Jugador jugador = jugadores.pedirObjeto(nombre); //sería parte de la interfaz como pedir pista
 
         //IF de decisión del usuario
         this.jugadorActual = new Jugador(nombre, 0);
