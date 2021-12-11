@@ -75,7 +75,7 @@ public class Juego {
 
         //Serian de la misma interfaz.
 
-        Ladron ladronRandom = sospechosos.ObtenerRandom();
+        Ladron ladronRandom = sospechosos.ObtenerLadron();
         Ciudad ciudadRandom = ciudades.ObtenerRandom(); // esto no lo vamos a necesitar
         Objeto objetoRandom = objetos.ObtenerRandom();
 

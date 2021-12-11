@@ -5,42 +5,41 @@ import edu.fiuba.algo3.modelo.ladron.Ladron;
 
 public class ConstructorLadronConcreto implements ConstructorLadron {
 
-    private String nombre;
-    private String sexo;
-    private String hobby;
-    private String cabello;
-    private String senia;
-    private String vehiculo;
+    private Ladron ladron;
+
+    public ConstructorLadronConcreto(){
+        this.ladron = new Ladron();
+    }
 
     @Override
-    public void setNombre(String nombre){ this.nombre = nombre; }
+    public void setNombre(String nombre){ ladron.setNombre(nombre); }
 
     @Override
     public void setSexo(String sexo){
-        this.sexo = sexo;
+        ladron.setSexo(sexo);
     }
 
     @Override
     public void setHobby(String hobby){
-        this.hobby = hobby;
+        ladron.setHobby(hobby);
     }
 
     @Override
     public void setCabello(String cabello){
-        this.cabello = cabello;
+        ladron.setCabello(cabello);
     }
 
     @Override
     public void setSenia(String senia){
-        this.senia = senia;
+        ladron.setSenia(senia);
     }
 
     @Override
     public void setVehiculo(String vehiculo){
-        this.vehiculo = vehiculo;
+        ladron.setVehiculo(vehiculo);
     }
 
     @Override
-    public Ladron getLadron(){return new Ladron(nombre, sexo, hobby, cabello, senia, vehiculo);}
+    public Ladron getLadron(){return ladron;}
 
 }

@@ -8,10 +8,14 @@ import java.util.List;
 public class Ladron implements Secuaces {
 
     private Integer ataqueConCuchillo;
-    private List<String> caracteristicas;
+    private String nombre;
+    private String sexo;
+    private String hobby;
+    private String cabello;
+    private String senia;
+    private String vehiculo;
 
-    public Ladron(List<String> caracteristicas){
-        this.caracteristicas = this.caracteristicas;
+    public Ladron(){
         this.ataqueConCuchillo = 2;
     }
     //Operations
@@ -29,29 +33,28 @@ public class Ladron implements Secuaces {
         }
     }
 
-    public boolean compararSexo(String sexo){
-        return (caracteristicas.get(1) == sexo);
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public boolean compararNombre(String nombre){
-        return (caracteristicas.get(0) == nombre);
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
-    public boolean compararVehiculo(String vehiculo){
-        return (caracteristicas.get(5) == vehiculo);
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
     }
 
-    public boolean compararSeña(String seña){
-        return (caracteristicas.get(4) == seña);
+    public void setCabello(String cabello) {
+        this.cabello = cabello;
     }
 
-    public boolean compararHobby(String hobby){
-        return (caracteristicas.get(2) == hobby);
+    public void setSenia(String senia) {
+        this.senia = senia;
     }
 
-    public boolean compararCabello(String cabello){
-        return (caracteristicas.get(3) == cabello);
+    public void setVehiculo(String vehiculo) {
+        this.vehiculo = vehiculo;
     }
-
 }

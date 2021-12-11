@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class pruebaUnitariasLectorYFachada {
+    /*
     @Test
     public void unLectorLeePistasYluegoDeFiltrarDanElValorCorrecto() throws IOException {
         GestorDeArchivos lector = new GestorDeArchivos();
@@ -24,5 +25,7 @@ public class pruebaUnitariasLectorYFachada {
         fachada.filtrar("Montreal");
         assertEquals("Dolares.", fachada.pedirValor("Banco"));
     }
+
+     */
 
 }
