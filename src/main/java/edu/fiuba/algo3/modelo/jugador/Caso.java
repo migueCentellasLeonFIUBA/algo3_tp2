@@ -15,16 +15,13 @@ public class Caso {
     private Estrategia estrategia;
 
 
-    private Caso(Ladron ladron, Objeto objeto, Ciudad ciudad){
+    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad){
         this.ladron = ladron;
         this.objetoRobado = objeto;
-        this.estrategia = objeto. crearEstrategia(ciudad);
+        this.estrategia = objeto.crearEstrategia(ciudad);
     }
 
 
-    public static Caso crearCaso(Ladron ladron, Objeto objeto, Ciudad ciudad) {
-        return new Caso(ladron, objeto, ciudad);
-}
 
     public Ladron getLadron() {
         return ladron;

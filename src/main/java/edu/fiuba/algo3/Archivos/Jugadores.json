@@ -1,22 +1,9 @@
-[
-  {
-    "Nombre": "Tomas",
-    "GradoPolicial": "Novato",
-    "Arrestos": "1"
-  },
-  {
-    "Nombre": "Alexis",
-    "GradoPolicial": "Detective",
-    "Arrestos": "1"
-  },
-  {
-    "Nombre": "Miguel",
-    "GradoPolicial": "Novato",
-    "Arrestos": "1"
-  },
-  {
-    "Nombre": "Nico",
-    "GradoPolicial": "Investigador",
-    "Arrestos": "15"
+{
+  "Tomas":{
+  "Arrestos": "0"
+    },
+
+  "Lucio":{
+    "Arrestos": "0"
   }
-]
+}

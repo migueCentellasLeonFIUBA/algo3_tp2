@@ -3,8 +3,6 @@ package edu.fiuba.algo3.modelo.ladron;
 
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Ladron implements Secuaces {
@@ -12,16 +10,10 @@ public class Ladron implements Secuaces {
     private Integer ataqueConCuchillo;
     private List<String> caracteristicas;
 
-    private Ladron(List<String> caracteristicas){
-        this.caracteristicas =caracteristicas;
+    public Ladron(List<String> caracteristicas){
+        this.caracteristicas = this.caracteristicas;
         this.ataqueConCuchillo = 2;
     }
-
-    public static Ladron crear(List<String> caracteristicas) {
-        return new Ladron(caracteristicas);
-    }
-
-
     //Operations
     @Override
     public boolean Arrestar() {

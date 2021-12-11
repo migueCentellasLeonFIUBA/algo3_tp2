@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
@@ -20,17 +19,12 @@ public class Jugador {
     private Ciudad ciudadActual;
 
 
-    private Jugador(String nombre,Integer arrestos){
+    public Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
         this.grado = new Novato();
 
 
         asignarGrado(arrestos);
-    }
-
-    public static Jugador crearJugador(String nombre,Integer arrestos)
-    {
-        return new Jugador(nombre,arrestos);
     }
 
     public void setCiudadActual(Ciudad origen){
@@ -42,17 +36,6 @@ public class Jugador {
     }
     public void setGrado(GradoPolicia rango){this.grado = rango;}
 
-    public String getNombre(){
-        return this.nombre;
-    }
-
-    public Integer getArrestos(){
-        return grado.getArrestos();
-    }
-
-    public String getGrado(){
-        return grado.getGrado();
-    }
 
     private void asignarGrado(int arrestos){
         for(int i = arrestos; i != 0; i--){

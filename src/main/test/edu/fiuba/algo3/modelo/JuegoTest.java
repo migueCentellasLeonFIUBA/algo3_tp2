@@ -45,16 +45,7 @@ public class JuegoTest{
         List<Jugador> jugadores = juego.getJugadores();
         Jugador jugador = jugadores.get(0);
 
-        //Primer Jugador del archivo
-        assertEquals(1, jugador.getArrestos());
-        assertEquals("Novato", jugador.getGrado());
 
-
-        jugador = jugadores.get(4);
-
-        //Ultimo Jugador del archivo
-        assertEquals(15, jugador.getArrestos());
-        assertEquals("Investigador", jugador.getGrado());
         String nombre = "Huevo de 1000 años";
 
     }

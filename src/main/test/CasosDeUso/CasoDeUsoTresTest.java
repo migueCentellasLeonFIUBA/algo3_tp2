@@ -19,7 +19,7 @@ public class CasoDeUsoTresTest {
         Integer horas = 24;
         Integer velocidad = 900; //novato vel.
 
-       Jugador jugador = Jugador.crearJugador("juan", 0);
+       Jugador jugador = new Jugador("juan", 0);
        Reloj reloj = new Reloj();
        reloj.setHorasRestantes(horas);
        jugador.setReloj(reloj);
@@ -35,10 +35,10 @@ public class CasoDeUsoTresTest {
        //700,6609 + 624,5001 = 1325,161 , raiz = 36.4027608843 -> horas = 1h
        Integer horasviaje = Math.round((float) 1325.161 /velocidad);
 
-       Ciudad origen = Ciudad.crear("Montreal");
+       Ciudad origen = new Ciudad("Montreal");
        origen.setCordenadas(montreal);
 
-       Ciudad destino = Ciudad.crear("Mexico");
+       Ciudad destino = new Ciudad("Mexico");
        destino.setCordenadas(mexico);
 
        jugador.setCiudadActual(origen);
