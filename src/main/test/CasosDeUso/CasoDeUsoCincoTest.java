@@ -18,9 +18,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CasoDeUsoCincoTest {
 
+    /*
+        Detective sufre una herida de cuchillo.
+        Detective duerme.
+     */
+
     @Test
     public void casoDeUsoCinco() throws Exception {
-
 
         List<Edificio> listaEdificios = new ArrayList<>();
 
@@ -63,7 +67,8 @@ public class CasoDeUsoCincoTest {
         //VIISTA DE 3H Y ATAQUE DE 1H MAS DORMIR 8H
         assertEquals("Pista Biblioteca", jugador.visitarEdificio(listaEdificios.get(0)));
         assertEquals(142, jugador.horasRestantes());
-    */
+
+*/
     }
 
 }

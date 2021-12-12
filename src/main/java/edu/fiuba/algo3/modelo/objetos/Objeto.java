@@ -8,18 +8,16 @@ import edu.fiuba.algo3.modelo.ladron.Estrategia;
 public class Objeto{
 
     private String nombre;
+    private String origen;
     private Valor valor;
 
-    private Objeto(String nombre, String valor) {
+    public void setNombre(String nombre){
         this.nombre = nombre;
-        setValor(valor);
     }
 
-    public static Objeto crear(String nombre, String valor) {
-        return new Objeto(nombre, valor);
+    public void setOrigen(String origen){
+        this.origen = origen;
     }
-
-
 
     public void setValor(String clase){
         if ( clase.equals("Comun"))
@@ -30,12 +28,7 @@ public class Objeto{
             this.valor = new MuyValioso();
     }
 
-    public String getNombre(){
-        return nombre;
-    }
-
     public Valor getRareza(){
-
         return this.valor;
     }
 

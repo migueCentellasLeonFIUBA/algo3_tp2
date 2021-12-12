@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.edificios;
 
 
-import edu.fiuba.algo3.modelo.Ifarcade.Pistas;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
 import java.io.FileNotFoundException;

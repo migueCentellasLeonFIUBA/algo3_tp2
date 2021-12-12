@@ -1,9 +1,8 @@
 package edu.fiuba.algo3.IBuilder;
 
 
-import edu.fiuba.algo3.modelo.Ifarcade.Fachada;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
-
 
 public class DirectorLadron {
 
@@ -20,12 +19,12 @@ public class DirectorLadron {
     public void construirLadron(Fachada fachada, String nombreLadron){
 
         constructor.setNombre(fachada.pedirValor("Nombre"));
+        //constructor.setNombre(nombreLadron);
         constructor.setSexo(fachada.pedirValor("Sexo"));
         constructor.setHobby(fachada.pedirValor("Hobby"));
         constructor.setCabello(fachada.pedirValor("Cabello"));
         constructor.setSenia(fachada.pedirValor("Senia"));
         constructor.setVehiculo(fachada.pedirValor("Vehiculo"));
-
     }
 
 }

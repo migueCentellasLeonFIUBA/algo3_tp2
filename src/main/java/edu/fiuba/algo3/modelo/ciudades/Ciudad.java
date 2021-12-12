@@ -17,45 +17,45 @@ public class Ciudad{
     private Integer visitas;
     private List<Edificio> listaEdificios;
     private Coordenadas coordenadas;
-;
+    private String descripcion;
+
     private Ladron ladron;
 
     private String proximaCiudad;
 
-    public Ciudad(String ciudad){
-        this.visitas = 0;
-        this.nombre = nombre;
+    public Ciudad(){
         listaEdificios = new ArrayList<>();
     }
 
-
-
-
-    public String getNombre() {
-        return this.nombre;
+    public void setNombre(String nombre){
+        this.nombre = nombre;
     }
 
-
-
-    public void setCordenadas(Coordenadas coordenadas) {
+    public void setCoordenadas(Coordenadas coordenadas) {
         this.coordenadas = coordenadas;
     }
+
+    public void setCoordenadas(String latitud, String longitud) {
+        this.coordenadas = new Coordenadas(Double.parseDouble(latitud), Double.parseDouble(longitud));
+    }
+
+    public void setDescripcion(String descripcion){
+        this.descripcion = descripcion;
+    }
+
 
     public List<Edificio> mostrarEdificios(){
         List <Edificio> copiaListaEdificios = listaEdificios.stream().collect(Collectors.toList());
         return copiaListaEdificios;
     }
 
-
-
-    public int calcularDistancia(Ciudad destino) {
-        return coordenadas.calcularDistancia(destino.getUbicacion());
-    }
-
-    //opcion2:
     public void calcularDistancia(Ciudad destino, Integer velocidad, Reloj reloj) {
-        coordenadas.calcularDistancia(destino.getUbicacion(), velocidad,reloj);
+       double distancia = coordenadas.calcularDistancia(destino.getUbicacion());
+       int horas = (int) distancia / velocidad;
+       if (horas == 0) horas +=1;
+       reloj.descontarhoras(horas);
     }
+
     private Coordenadas getUbicacion() {
         return coordenadas;
     }

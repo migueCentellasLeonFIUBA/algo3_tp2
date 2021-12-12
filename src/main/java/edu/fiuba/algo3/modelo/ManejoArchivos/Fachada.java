@@ -1,8 +1,7 @@
-package edu.fiuba.algo3.modelo.Ifarcade;
+package edu.fiuba.algo3.modelo.ManejoArchivos;
 import org.json.*;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 public class Fachada {
 
@@ -23,7 +22,7 @@ public class Fachada {
     }
 
     public ArrayList<String> listaDeElementos(){
-        return  new ArrayList<String>(objeto.keySet());
+        return  new ArrayList<>(objeto.keySet());
     }
 
     public void resetear(){
@@ -31,7 +30,7 @@ public class Fachada {
     }
 
     public long cantidad(){
-        return objeto.keySet().stream().count();
+        return objeto.keySet().size();
     }
 
 }

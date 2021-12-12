@@ -1,14 +1,11 @@
-package edu.fiuba.algo3.modelo.Ifarcade;
+package edu.fiuba.algo3.modelo.ManejoArchivos;
 
 import edu.fiuba.algo3.IBuilder.ConstructorLadronConcreto;
 import edu.fiuba.algo3.IBuilder.DirectorLadron;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
-import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 
 import java.util.ArrayList;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class Sospechosos extends Archivo {
 
@@ -24,9 +21,11 @@ public class Sospechosos extends Archivo {
         return pedirValor("Banco");
     }
 
-    public Ladron ObtenerLadron() {
+    public Ladron ObtenerLadronRandom() {
         ArrayList<String> nombres = listaDeElementos();
-        filtrar(nombres.get(0));
+        Random random = new Random();
+        int posicionRandom =  random.obtenerNumeroRandom(nombres);
+        filtrar(nombres.get(posicionRandom));
 
         ConstructorLadronConcreto constructor = new ConstructorLadronConcreto();
         DirectorLadron director = new DirectorLadron();

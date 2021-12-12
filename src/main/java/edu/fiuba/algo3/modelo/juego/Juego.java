@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.juego;
 
-import edu.fiuba.algo3.modelo.Ifarcade.*;
+import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
@@ -29,7 +29,6 @@ public class Juego {
         cargarSospechosos();
         cargarCiudades();
     }
-
 
     private String obtenerTexto(String ruta) throws FileNotFoundException {
         return gestorArchivos.leerTextoCompleto(ruta);
@@ -64,7 +63,7 @@ public class Juego {
 
         return (this.jugadorActual);
 
-        // Posible refactor -> return jugadores.stream().anyMatch("aaaa");;
+        //Posible refactor -> return jugadores.stream().anyMatch("aaaa");;
     }
 
     public void TerminarJuego() {
@@ -74,10 +73,9 @@ public class Juego {
     public void crearCaso() throws Exception {
 
         //Serian de la misma interfaz.
-
-        Ladron ladronRandom = sospechosos.ObtenerLadron();
-        Ciudad ciudadRandom = ciudades.ObtenerRandom(); // esto no lo vamos a necesitar
-        Objeto objetoRandom = objetos.ObtenerRandom();
+        Ladron ladronRandom = sospechosos.ObtenerLadronRandom();
+        Ciudad ciudadRandom = ciudades.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
+        Objeto objetoRandom = objetos.ObtenerObjetoRandom();
 
         jugadorActual.empezarCaso(new Caso(ladronRandom, objetoRandom, ciudadRandom), ciudadRandom);
 

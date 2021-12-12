@@ -17,6 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CasoDeUsoCuatroTest {
 
+    /*
+        Vista un Aeropuerto (3 veces):
+        Se despliega una pista.
+        Vista un Puerto (55 veces):
+        Se despliega una pista.
+     */
+
     @Test
     public void casoDeUsoCuatro() throws Exception {
 /*

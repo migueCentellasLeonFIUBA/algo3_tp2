@@ -20,6 +20,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CasoDeUsoDosTest {
 
+    /*
+        Detective novato comienza en Montreal.
+        Vista un Banco (nuevamente):
+        Se despliega una pista
+        Vista una Biblioteca:
+        Se despliega una pista.
+     */
+
     @Test
     public void casoDeUsoDos() throws Exception {
 

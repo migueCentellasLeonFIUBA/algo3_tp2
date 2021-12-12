@@ -21,22 +21,28 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CasoDeUsoUnoTest {
 
+/*
+    Robaron el tesoro Nacional de Montreal.
+    Sospechoso femenino.
+    Detective novato comienza en Montreal.
+    Vista un Banco:
+    Se despliega una pista.
+ */
+
     @Test
     public void CasoUno() throws Exception {
+
         Juego juegoNuevo = new Juego();
-
-        /*    Caso caso = new Caso();
-
-
-
+        /*
+        Caso caso = new Caso();
         jugador.empezarCaso(caso);
-
         listaEdificios = jugador.mostrarEdificios();
-
         assertEquals(true, ladron.compararSexo("Mujer"));
-*/
+        */
 
-        }
+
+    }
+
 }
 
 

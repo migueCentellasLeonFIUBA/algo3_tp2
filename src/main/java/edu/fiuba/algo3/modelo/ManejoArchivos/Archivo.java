@@ -1,9 +1,6 @@
-package edu.fiuba.algo3.modelo.Ifarcade;
-
-import edu.fiuba.algo3.modelo.jugador.Jugador;
+package edu.fiuba.algo3.modelo.ManejoArchivos;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 public abstract class Archivo {
 

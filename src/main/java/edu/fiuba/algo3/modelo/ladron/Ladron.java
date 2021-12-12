@@ -15,9 +15,6 @@ public class Ladron implements Secuaces {
     private String senia;
     private String vehiculo;
 
-    public Ladron(){
-        this.ataqueConCuchillo = 2;
-    }
     //Operations
     @Override
     public boolean Arrestar() {
@@ -25,14 +22,12 @@ public class Ladron implements Secuaces {
         return true;
     }
 
-
     public void atacarConCuchillo(Reloj reloj){
         reloj.descontarhoras(ataqueConCuchillo);
         if(ataqueConCuchillo == 2){
             ataqueConCuchillo--;
         }
     }
-
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

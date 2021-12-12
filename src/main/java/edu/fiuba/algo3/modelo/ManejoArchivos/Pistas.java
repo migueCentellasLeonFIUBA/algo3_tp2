@@ -1,7 +1,6 @@
-package edu.fiuba.algo3.modelo.Ifarcade;
+package edu.fiuba.algo3.modelo.ManejoArchivos;
 
 import edu.fiuba.algo3.modelo.edificios.Edificio;
-import edu.fiuba.algo3.modelo.jugador.Jugador;
 
 public class Pistas extends Archivo {
     private Fachada fachada;
