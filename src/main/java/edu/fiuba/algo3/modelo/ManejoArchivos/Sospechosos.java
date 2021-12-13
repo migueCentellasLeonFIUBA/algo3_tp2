@@ -13,12 +13,27 @@ public class Sospechosos extends Archivo {
         super(texto);
     }
 
-    public String ObtenerPista(Edificio edificio){
-        return pedirValor("");
-    }
-
-    public String PistasDeCiudad(Edificio Banco){
-        return pedirValor("Banco");
+    public ArrayList<String> buscarSospechosos(ArrayList<String> terminos,ArrayList<String> valores){
+        ArrayList<String> nombres = listaDeElementos();
+        ArrayList<String> resultado = null;
+        int indice =0;
+        for(String n: nombres){
+            filtrar(n);
+            for(String termino: terminos){
+                String valorA=pedirValor(termino);
+                if(valorA==valores.get(indice)){
+                    indice++;
+                    continue;
+                }
+                break;
+            }
+            if(indice==valores.size()){
+                resultado.add(n);
+            }
+            indice=0;
+            removerFiltros();
+        }
+        return resultado;
     }
 
     public Ladron ObtenerLadronRandom() {

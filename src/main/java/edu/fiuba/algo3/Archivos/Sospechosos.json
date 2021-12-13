@@ -1,6 +1,12 @@
 {
-
   "Merey Laroc":{
+    "Sexo": "Femenino",
+    "Hobby" : "Escalar Montanias",
+    "Cabello" : "Marron",
+    "Senia" : "Joyas",
+    "Vehiculo" : "Limosina"
+  },
+  "Carmen":{
     "Sexo": "Femenino",
     "Hobby" : "Escalar Montanias",
     "Cabello" : "Marron",
