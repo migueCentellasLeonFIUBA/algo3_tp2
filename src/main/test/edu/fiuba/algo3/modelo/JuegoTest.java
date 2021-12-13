@@ -70,7 +70,7 @@ public class JuegoTest{
             assertEquals(true, ladron.compararNombre("Merey Laroc"));
             assertEquals(true, ladron.compararHobby("Escalar Montañas"));
             assertEquals(true, ladron.compararCabello("Marron"));
-            assertEquals(true, ladron.compararSeña("Joyas"));
+            assertEquals(true, ladron.compararSenia("Joyas"));
             assertEquals(true, ladron.compararVehiculo("Limusina"));
 
 
