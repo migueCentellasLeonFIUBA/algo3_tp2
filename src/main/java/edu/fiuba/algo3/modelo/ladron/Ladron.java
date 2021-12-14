@@ -2,6 +2,11 @@ package edu.fiuba.algo3.modelo.ladron;
 
 
 import edu.fiuba.algo3.modelo.jugador.Reloj;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Cabello.Cabello;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Hobby.Hobby;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Sexo.Sexo;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Seña.Seña;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Vehiculo.Vehiculo;
 
 import java.util.List;
 
@@ -14,6 +19,16 @@ public class Ladron implements Secuaces {
     private String cabello;
     private String senia;
     private String vehiculo;
+
+    private Ladron(List<String> caracteristicas){
+
+        //sexo = caracteristicas.get(0);
+        //hobby = caracteristicas.get(1);
+        //cabello = caracteristicas.get(2);
+        //senia = caracteristicas.get(3);
+        //vehiculo = caracteristicas.get(4);
+        ataqueConCuchillo = 2;
+    }
 
     //Operations
     @Override
@@ -29,27 +44,4 @@ public class Ladron implements Secuaces {
         }
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
-    }
-
-    public void setCabello(String cabello) {
-        this.cabello = cabello;
-    }
-
-    public void setSenia(String senia) {
-        this.senia = senia;
-    }
-
-    public void setVehiculo(String vehiculo) {
-        this.vehiculo = vehiculo;
-    }
 }
