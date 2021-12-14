@@ -53,7 +53,7 @@ public class Ladron implements Secuaces {
             ataqueConCuchillo--;
         }
     }
-
+/*
     public boolean compararSexo(Sexo sexo){
         return sexo.compararSexo(this.sexo);
 
@@ -104,5 +104,5 @@ public class Ladron implements Secuaces {
 
         return true;
     }
-
+*/
 }

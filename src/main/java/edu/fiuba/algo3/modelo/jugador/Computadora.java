@@ -17,44 +17,56 @@ public class Computadora {
     private Hobby hobby;
     private Cabello cabello;
     private Vehiculo vehiculo;
-    private Seña senia;
+    private Seña seña;
 
-    private List<Ladron> baseDeDatos;
+    private Sospechosos baseDeDatos;
 
 
-    public Computadora(List<Ladron> sospechosos){
+    public Computadora(Sospechosos sospechosos){
 
         baseDeDatos = sospechosos;
     }
 
     public List<Ladron> BuscarSospechoso() {
-        List<Ladron> sospechosos = new ArrayList<>();
-        for (Ladron ladron: baseDeDatos) {
-            if(ladron.compararLadrones(sexo, hobby, cabello, vehiculo, senia)){
-                sospechosos.add(ladron);
-            }
-        }
 
-        return sospechosos;
+
+         List<String> caracteristicas = new ArrayList<>();
+         caracteristicas.add("Sexo");
+         caracteristicas.add("Hobby");
+         caracteristicas.add("Cabello");
+         caracteristicas.add("Vehiculo");
+         caracteristicas.add("Cabello");
+         caracteristicas.add("Seña");
+
+         List<String> datos = new ArrayList<>();
+         datos.add(sexo.sexo());
+         datos.add(hobby.hobby());
+         datos.add(cabello.cabello());
+         datos.add(seña.seña());
+         datos.add(vehiculo.vehiculo());
+
+         return sospechosos.buscarSospechosos(caracteristicas, datos);
+
+
     }
 
-    public void establecerSexo(String caracteristica) {
+    public void siguienteSexo() {
         //TODO
     }
 
-    public void establecerHobby(String caracteristica) {
+    public void siguienteHobby() {
         //TODO
     }
 
-    public void establecerCabello(String caracteristica) {
+    public void siguienteCabello() {
         //TODO
     }
 
-    public void establecerVehiculo(String caracteristica) {
+    public void siguienteVehiculo() {
         //TODO
     }
 
-    public void establecerSenia(String caracteristica) {
+    public void siguienteSenia() {
         //TODO
     }
 
