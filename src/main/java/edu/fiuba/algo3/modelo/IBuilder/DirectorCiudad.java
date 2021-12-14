@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.IBuilder;
+package edu.fiuba.algo3.modelo.IBuilder;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;

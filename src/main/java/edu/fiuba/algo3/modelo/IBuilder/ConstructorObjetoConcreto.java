@@ -1,6 +1,5 @@
-package edu.fiuba.algo3.IBuilder;
+package edu.fiuba.algo3.modelo.IBuilder;
 
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 public class ConstructorObjetoConcreto implements ConstructorObjeto{

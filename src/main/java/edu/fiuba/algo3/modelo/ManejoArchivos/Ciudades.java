@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.ManejoArchivos;
 
-import edu.fiuba.algo3.IBuilder.ConstructorCiudadConcreta;
-import edu.fiuba.algo3.IBuilder.DirectorCiudad;
+import edu.fiuba.algo3.modelo.IBuilder.ConstructorCiudadConcreta;
+import edu.fiuba.algo3.modelo.IBuilder.DirectorCiudad;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 

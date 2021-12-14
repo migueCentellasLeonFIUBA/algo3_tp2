@@ -1,8 +1,7 @@
 package edu.fiuba.algo3.modelo.ManejoArchivos;
 
-import edu.fiuba.algo3.IBuilder.ConstructorLadronConcreto;
-import edu.fiuba.algo3.IBuilder.DirectorLadron;
-import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.IBuilder.ConstructorLadronConcreto;
+import edu.fiuba.algo3.modelo.IBuilder.DirectorLadron;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 
 import java.util.ArrayList;

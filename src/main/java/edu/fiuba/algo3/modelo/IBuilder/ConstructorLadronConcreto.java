@@ -1,6 +1,5 @@
-package edu.fiuba.algo3.IBuilder;
+package edu.fiuba.algo3.modelo.IBuilder;
 
-import edu.fiuba.algo3.IBuilder.ConstructorLadron;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 
 public class ConstructorLadronConcreto implements ConstructorLadron {

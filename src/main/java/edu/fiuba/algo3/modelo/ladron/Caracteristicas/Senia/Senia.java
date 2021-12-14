@@ -1,16 +1,14 @@
-package edu.fiuba.algo3.modelo.ladron.Caracteristicas.Seña;
-
-import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Vehiculo.Vehiculo;
+package edu.fiuba.algo3.modelo.ladron.Caracteristicas.Senia;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Seña {
+public class Senia {
 
     private List<String> señas = new ArrayList<>();
     private Integer señaActual;
 
-    public Seña() {
+    public Senia() {
         señaActual = 0;
         señas.add("Sin Asignar");
         señas.add("Joyas");
@@ -20,7 +18,7 @@ public class Seña {
 
     }
 
-    public Boolean compararSeña(Seña seña) {
+    public Boolean compararSeña(Senia seña) {
         return (seña.seña() == this.seña());
     }
 
