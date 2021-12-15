@@ -1,4 +1,4 @@
-package CasosDeUso;
+package CasosDeUsoEntrega1;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

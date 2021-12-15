@@ -1,4 +1,4 @@
-package CasosDeUso;
+package CasosDeUsoEntrega1;
 
 import edu.fiuba.algo3.modelo.ciudades.*;
 import edu.fiuba.algo3.modelo.jugador.*;
