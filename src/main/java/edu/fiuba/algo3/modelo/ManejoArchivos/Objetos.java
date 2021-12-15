@@ -1,8 +1,8 @@
 package edu.fiuba.algo3.modelo.ManejoArchivos;
 
 
-import edu.fiuba.algo3.IBuilder.ConstructorObjetoConcreto;
-import edu.fiuba.algo3.IBuilder.DirectorObjeto;
+import edu.fiuba.algo3.modelo.IBuilder.ConstructorObjetoConcreto;
+import edu.fiuba.algo3.modelo.IBuilder.DirectorObjeto;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.ArrayList;
