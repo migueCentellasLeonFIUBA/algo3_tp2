@@ -5,33 +5,37 @@ import java.util.List;
 
 public class Senia {
 
-    private List<String> señas = new ArrayList<>();
-    private Integer señaActual;
+    private List<String> senias = new ArrayList<>();
+    private Integer seniaActual;
 
     public Senia() {
-        señaActual = 0;
-        señas.add("Sin Asignar");
-        señas.add("Joyas");
-        señas.add("Cicatriz");
-        señas.add("Tatuaje");
-        señas.add("Anillo");
+        seniaActual = 0;
+        senias.add("Sin Asignar");
+        senias.add("Joyas");
+        senias.add("Cicatriz");
+        senias.add("Tatuaje");
+        senias.add("Anillo");
 
     }
 
     public Boolean compararSeña(Senia seña) {
-        return (seña.seña() == this.seña());
+        return (seña.senia() == this.senia());
     }
 
 
-    public String seña() {
-        return señas.get(señaActual);
+    public String senia() {
+        return senias.get(seniaActual);
     }
 
-    public void siguienteSeña() {
-        señaActual++;
-        if (señaActual >= señas.size()) {
-            señaActual = 0;
+    public void siguienteSenia() {
+        seniaActual++;
+        if (seniaActual >= senias.size()) {
+            seniaActual = 0;
         }
 
+    }
+
+    public Boolean estaAsignado(){
+        return seniaActual == 0;
     }
 }

@@ -35,5 +35,9 @@ public class Sexo {
             sexoActual = 0;
         }
     }
+
+    public Boolean estaAsignado(){
+        return sexoActual == 0;
+    }
 }
 

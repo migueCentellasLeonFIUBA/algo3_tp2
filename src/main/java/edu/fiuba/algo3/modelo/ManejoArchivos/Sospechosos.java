@@ -14,7 +14,7 @@ public class Sospechosos extends Archivo {
 
     public ArrayList<String> buscarSospechosos(ArrayList<String> terminos,ArrayList<String> valores){
         ArrayList<String> nombres = listaDeElementos();
-        ArrayList<String> resultado = null;
+        ArrayList<String> resultado = new ArrayList<>();
         int indice =0;
         for(String n: nombres){
             filtrar(n);

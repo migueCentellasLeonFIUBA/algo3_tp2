@@ -32,5 +32,9 @@ public class Cabello {
         }
     }
 
+    public Boolean estaAsignado(){
+        return cabelloActual == 0;
+    }
+
 }
 

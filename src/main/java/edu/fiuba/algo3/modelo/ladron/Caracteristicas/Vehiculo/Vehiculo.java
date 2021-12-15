@@ -34,4 +34,8 @@ public class Vehiculo{
         }
 
     }
+
+    public Boolean estaAsignado(){
+        return vehiculoActual == 0;
+    }
 }

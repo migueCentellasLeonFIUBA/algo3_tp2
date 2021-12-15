@@ -35,4 +35,8 @@ public class Hobby {
             hobbyActual = 0;
         }
     }
+
+    public Boolean estaAsignado(){
+        return hobbyActual == 0;
+    }
 }
