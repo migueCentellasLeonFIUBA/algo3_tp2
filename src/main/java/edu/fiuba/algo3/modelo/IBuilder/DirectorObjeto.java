@@ -16,8 +16,7 @@ public class DirectorObjeto {
 
     public void construirObjeto(Fachada fachada, String nombreObjeto){
 
-        constructor.setNombre(fachada.pedirValor("nombre")); //???
-        //constructor.setNombre(nombreObjeto);
+        constructor.setNombre(nombreObjeto);
         constructor.setNombre(fachada.pedirValor("CiudadDeOrigen"));
         constructor.setNombre(fachada.pedirValor("Rareza"));
     }

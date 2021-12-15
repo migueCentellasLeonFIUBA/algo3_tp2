@@ -44,7 +44,7 @@ public class Sospechosos extends Archivo {
         ConstructorLadronConcreto constructor = new ConstructorLadronConcreto();
         DirectorLadron director = new DirectorLadron();
         director.setConstructorLadron(constructor);
-        director.construirLadron(super.fachada, nombres.get(0));
+        director.construirLadron(super.fachada, nombres.get(posicionRandom));
 
         return (director.getLadron());
     }

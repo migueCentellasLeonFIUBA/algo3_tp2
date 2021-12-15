@@ -1,12 +1,12 @@
 {
   "Montreal":{
-    "latitud": 45.50884,
-    "longitud": -73.58781,
+    "latitud": "45.50884",
+    "longitud": "-73.58781",
     "descripcion": "ciudad de montreal"
   },
   "Mexico":{
-    "latitud": 23.634501,
-    "longitud": -102.552784,
+    "latitud": "23.634501",
+    "longitud": "-102.552784",
     "descripcion": "ciudad de mexico"
   }
 }

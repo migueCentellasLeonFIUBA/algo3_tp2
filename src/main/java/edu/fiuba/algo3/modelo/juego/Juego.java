@@ -82,5 +82,7 @@ public class Juego {
     }
 
 
-
+    public Jugador getJugador() {
+        return jugadorActual;
+    }
 }

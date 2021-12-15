@@ -18,8 +18,7 @@ public class DirectorLadron {
 
     public void construirLadron(Fachada fachada, String nombreLadron){
 
-        constructor.setNombre(fachada.pedirValor("Nombre"));
-        //constructor.setNombre(nombreLadron);
+        constructor.setNombre(nombreLadron);
         constructor.setSexo(fachada.pedirValor("Sexo"));
         constructor.setHobby(fachada.pedirValor("Hobby"));
         constructor.setCabello(fachada.pedirValor("Cabello"));

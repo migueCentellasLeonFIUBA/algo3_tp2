@@ -79,4 +79,7 @@ public class Ciudad{
     public Edificio obtenerEdificio(int i) {
         return listaEdificios.get(i);
     }
+
+    public void setLadron(Ladron ladronActual){
+    }
 }
