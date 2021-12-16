@@ -54,9 +54,7 @@ public class Computadora {
         ArrayList<String> caracteristicas = parametros.get(0);
         ArrayList<String> datos = parametros.get(1);
 
-
         return baseDeDatos.buscarSospechosos(caracteristicas, datos);
-
 
     }
 
@@ -65,8 +63,6 @@ public class Computadora {
         List<ArrayList<String>> parametros = new ArrayList<>();
         ArrayList<String> caracteristicas = new ArrayList<>();
         ArrayList<String> datos = new ArrayList<>();
-
-
 
         if(sexo.estaAsignado()){
             caracteristicas.add("Sexo");

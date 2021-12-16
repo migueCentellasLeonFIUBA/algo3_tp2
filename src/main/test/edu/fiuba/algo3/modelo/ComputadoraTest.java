@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ComputadoraTest {
 
     @Test
-    public void TestComputadoraSinParametrosDevuelveNingunSospechoso() throws FileNotFoundException {
+    public void TestComputadoraSinParametrosDevuelveTodosLosSospechoso() throws FileNotFoundException {
 
         GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
         Sospechosos sospechosos = new Sospechosos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
@@ -23,7 +23,7 @@ public class ComputadoraTest {
         ArrayList<String> sospechososFiltrados = computadora.BuscarSospechoso();
 
 
-        assertEquals(0, sospechososFiltrados.size());
+        assertEquals(2, sospechososFiltrados.size());
     }
 
     @Test
@@ -70,30 +70,45 @@ public class ComputadoraTest {
         GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
         Sospechosos sospechosos = new Sospechosos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
         Computadora computadora = new Computadora(sospechosos);
+
+        int tenis = 6;
+        int rojo = 2;
+        int deportivo = 3;
+        int tatuaje = 3;
+        /*
+         "Merey Laroc":{
+            "Sexo": "Femenino",
+            "Hobby" : "Tenis",
+            "Cabello" : "Rojo",
+            "Senia" : "Tatuaje",
+            "Vehiculo" : "Deportivo"
+          },
+         */
         //SETEO SEXO
-        computadora.siguienteSexo();
+        computadora.siguienteSexo(); //femenino
+
         //SETEO HOBBY
-        for(hobby = 6; hobby > 0; hobby--){
+        for(hobby = tenis; hobby > 0; hobby--){
             computadora.siguienteHobby();
         }
+
         //SETEO CABELLO
-        for(cabello = 2; cabello > 0; cabello--){
+        for(cabello = rojo; cabello > 0; cabello--){
             computadora.siguienteCabello();
         }
+
         //SETEO VEHICULO
-        for(vehiculo = 3; vehiculo > 0; vehiculo--){
+        for(vehiculo = deportivo; vehiculo > 0; vehiculo--){
             computadora.siguienteVehiculo();
         }
+
         //SETEO SEÑA
-        for(senia = 3; senia > 0; senia--){
+        for(senia = tatuaje; senia > 0; senia--){
             computadora.siguienteSenia();
         }
 
         ArrayList<String> sospechosoFiltrados = computadora.BuscarSospechoso();
         assertEquals(1, sospechosoFiltrados.size());
-
-
-
 
     }
 }

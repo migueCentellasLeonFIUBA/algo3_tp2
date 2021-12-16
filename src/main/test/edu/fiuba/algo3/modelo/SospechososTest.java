@@ -59,4 +59,45 @@ public class SospechososTest {
         assert(obtenidos.get(1).equals("Carmen"));
     }
 
+    @Test
+    public void losDatosExatosDeUnLadronDejanUnSoloSospechoso() throws FileNotFoundException {
+        GestorDeArchivos gestorArchivos;
+        String ruta = "src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json";
+        String leido;
+
+        gestorArchivos = new GestorDeArchivos();
+        leido = gestorArchivos.leerTextoCompleto(ruta);
+
+        assert(leido.contains("Merey Laroc"));
+        assert(leido.contains("Carmen"));
+
+        /*
+        "Merey Laroc":{
+            "Sexo": "Femenino",
+            "Hobby" : "Tenis",
+            "Cabello" : "Rojo",
+            "Senia" : "Tatuaje",
+            "Vehiculo" : "Deportivo"
+          }
+         */
+        ArrayList<String> caracteristicas= new ArrayList<>();
+        caracteristicas.add("Sexo");
+        caracteristicas.add("Hobby");
+        caracteristicas.add("Cabello");
+        caracteristicas.add("Senia");
+        caracteristicas.add("Vehiculo");
+
+        ArrayList<String> valores = new ArrayList<>();
+        valores.add("Femenino");
+        valores.add("Tenis");
+        valores.add("Rojo");
+        valores.add("Tatuaje");
+        valores.add("Deportivo");
+
+        Sospechosos sospechosos = new Sospechosos(leido);
+        ArrayList<String> obtenidos = sospechosos.buscarSospechosos(caracteristicas, valores);
+
+        assert(obtenidos.get(0).equals("Merey Laroc"));
+        assertEquals(1, obtenidos.size());
+    }
 }

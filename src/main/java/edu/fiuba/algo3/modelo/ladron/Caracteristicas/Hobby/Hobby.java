@@ -12,15 +12,13 @@ public class Hobby {
 
     public Hobby() {
         hobbyActual = 0;
-        hobbys.add("Sin Asignar");
-        hobbys.add("Alpinismo");
-        hobbys.add("Croquet");
-        hobbys.add("Musica");
-        hobbys.add("Natacion");
-        hobbys.add("Paracaidismo");
-        hobbys.add("Tenis");
-
-
+        hobbys.add("Sin Asignar"); //0
+        hobbys.add("Alpinismo"); //1
+        hobbys.add("Croquet"); //2
+        hobbys.add("Musica"); //3
+        hobbys.add("Natacion"); //4
+        hobbys.add("Paracaidismo"); //5
+        hobbys.add("Tenis"); //6
     }
 
 
@@ -37,6 +35,6 @@ public class Hobby {
     }
 
     public Boolean estaAsignado(){
-        return hobbyActual == 0;
+        return hobbyActual != 0;
     }
 }

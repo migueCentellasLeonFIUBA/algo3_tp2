@@ -12,11 +12,11 @@ public class Cabello {
 
     public Cabello() {
         cabelloActual = 0;
-        cabellos.add("Sin Asignar");
-        cabellos.add("Castaño");
-        cabellos.add("Rojo");
-        cabellos.add("Negro");
-        cabellos.add("Rubio");
+        cabellos.add("Sin Asignar"); //0
+        cabellos.add("Castaño"); //1
+        cabellos.add("Rojo"); //2
+        cabellos.add("Negro"); //3
+        cabellos.add("Rubio"); //4
     }
 
 
@@ -33,7 +33,7 @@ public class Cabello {
     }
 
     public Boolean estaAsignado(){
-        return cabelloActual == 0;
+        return cabelloActual != 0;
     }
 
 }

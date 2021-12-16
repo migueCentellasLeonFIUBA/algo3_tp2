@@ -10,11 +10,11 @@ public class Senia {
 
     public Senia() {
         seniaActual = 0;
-        senias.add("Sin Asignar");
-        senias.add("Joyas");
-        senias.add("Cicatriz");
-        senias.add("Tatuaje");
-        senias.add("Anillo");
+        senias.add("Sin Asignar"); //0
+        senias.add("Joyas"); //1
+        senias.add("Cicatriz"); //2
+        senias.add("Tatuaje"); //3
+        senias.add("Anillo"); //4
 
     }
 
@@ -32,10 +32,9 @@ public class Senia {
         if (seniaActual >= senias.size()) {
             seniaActual = 0;
         }
-
     }
 
     public Boolean estaAsignado(){
-        return seniaActual == 0;
+        return seniaActual != 0;
     }
 }
