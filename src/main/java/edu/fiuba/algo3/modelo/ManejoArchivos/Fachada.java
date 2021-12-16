@@ -5,32 +5,28 @@ import java.util.ArrayList;
 
 public class Fachada {
 
-    private JSONObject objeto;
-    private String textoOriginal;
+    private JSONObject objetoFiltrado;
+    private JSONObject objetoOriginal;
 
     public Fachada(String texto) {
-        objeto = new JSONObject(texto);
-        textoOriginal=texto;
+        objetoFiltrado=new JSONObject();
+        objetoOriginal=new JSONObject(texto);
     }
 
     public void filtrar(String termino){
-        objeto=objeto.getJSONObject(termino);
+        objetoFiltrado=objetoOriginal.getJSONObject(termino);
     }
 
     public String pedirValor(String termino){
-        return objeto.getString(termino);
+        return objetoFiltrado.getString(termino);
     }
 
     public ArrayList<String> listaDeElementos(){
-        return  new ArrayList<>(objeto.keySet());
-    }
-
-    public void resetear(){
-        new JSONObject(textoOriginal);
+        return  new ArrayList<>(objetoOriginal.keySet());
     }
 
     public long cantidad(){
-        return objeto.keySet().size();
+        return objetoOriginal.keySet().size();
     }
 
 }

@@ -20,7 +20,7 @@ public class Sospechosos extends Archivo {
             filtrar(n);
             for(String termino: terminos){
                 String valorA=pedirValor(termino);
-                if(valorA==valores.get(indice)){
+                if(valorA.equals(valores.get(indice))){
                     indice++;
                     continue;
                 }
@@ -30,7 +30,6 @@ public class Sospechosos extends Archivo {
                 resultado.add(n);
             }
             indice=0;
-            removerFiltros();
         }
         return resultado;
     }

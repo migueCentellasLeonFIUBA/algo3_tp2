@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ComputadoraTest {
 
     @Test
-    public void TestComputadoraSinParametrosDevuelveTodosLosSospechosos() throws FileNotFoundException {
+    public void TestComputadoraSinParametrosDevuelveNingunSospechoso() throws FileNotFoundException {
 
         GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
         Sospechosos sospechosos = new Sospechosos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
@@ -23,7 +23,7 @@ public class ComputadoraTest {
         ArrayList<String> sospechososFiltrados = computadora.BuscarSospechoso();
 
 
-        assertEquals(2, sospechososFiltrados.size());
+        assertEquals(0, sospechososFiltrados.size());
     }
 
     @Test

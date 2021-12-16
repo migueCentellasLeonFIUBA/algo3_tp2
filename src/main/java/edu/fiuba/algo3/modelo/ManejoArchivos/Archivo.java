@@ -10,10 +10,6 @@ public abstract class Archivo {
         fachada = new Fachada(texto);
     }
 
-    public void removerFiltros(){
-        fachada.resetear();
-    }
-
     protected void filtrar(String termino){
         fachada.filtrar(termino);
     }
