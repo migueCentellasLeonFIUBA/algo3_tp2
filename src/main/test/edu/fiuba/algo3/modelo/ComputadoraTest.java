@@ -88,28 +88,75 @@ public class ComputadoraTest {
         computadora.siguienteSexo(); //femenino
 
         //SETEO HOBBY
-        for(hobby = tenis; hobby > 0; hobby--){
+        for (hobby = tenis; hobby > 0; hobby--) {
             computadora.siguienteHobby();
         }
 
         //SETEO CABELLO
-        for(cabello = rojo; cabello > 0; cabello--){
+        for (cabello = rojo; cabello > 0; cabello--) {
             computadora.siguienteCabello();
         }
 
         //SETEO VEHICULO
-        for(vehiculo = deportivo; vehiculo > 0; vehiculo--){
+        for (vehiculo = deportivo; vehiculo > 0; vehiculo--) {
             computadora.siguienteVehiculo();
         }
 
         //SETEO SEÑA
-        for(senia = tatuaje; senia > 0; senia--){
+        for (senia = tatuaje; senia > 0; senia--) {
             computadora.siguienteSenia();
         }
 
         ArrayList<String> sospechosoFiltrados = computadora.BuscarSospechoso();
         assertEquals(1, sospechosoFiltrados.size());
+        assertEquals("Merey Laroc", sospechosoFiltrados.get(0));
 
     }
-}
+
+        @Test
+        public void TestComputadoraConParametrosErroneosNoDevuelveSospechosos() throws FileNotFoundException {
+            Integer hobby = 1;
+            Integer cabello = 1;
+            Integer vehiculo = 1;
+            Integer senia = 1;
+
+            GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
+            Sospechosos sospechosos = new Sospechosos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
+            Computadora computadora = new Computadora(sospechosos);
+
+            int alpinismo = 1;
+            int castaño = 1;
+            int moto = 1;
+            int joyas = 1;
+        /*
+         Sospechoso Inexistente:{
+            "Sexo": "Femenino",
+            "Hobby" : "Alpinismo",
+            "Cabello" : "Castaño",
+            "Senia" : "Joyas",
+            "Vehiculo" : "Moto"
+          },
+         */
+            //SETEO SEXO
+            computadora.siguienteSexo(); //femenino
+
+            //SETEO HOBBY
+            computadora.siguienteHobby();
+
+
+            //SETEO CABELLO
+            computadora.siguienteCabello();
+
+            //SETEO VEHICULO
+            computadora.siguienteVehiculo();
+
+            //SETEO SEÑA
+            computadora.siguienteSenia();
+
+            ArrayList<String> sospechosoFiltrados = computadora.BuscarSospechoso();
+            assertEquals(0, sospechosoFiltrados.size());
+        }
+
+    }
+
 

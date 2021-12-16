@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.jugador;
 
+import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.*;
@@ -15,10 +16,10 @@ public class Caso {
     private Estrategia estrategia;
 
 
-    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad){
+    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades){
         this.ladron = ladron;
         this.objetoRobado = objeto;
-        this.estrategia = objeto.crearEstrategia(ciudad);
+        this.estrategia = objeto.crearEstrategia(ciudad, ciudades);
     }
 
 

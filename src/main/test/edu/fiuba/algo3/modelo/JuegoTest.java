@@ -18,6 +18,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JuegoTest{
+
+    @Test
+    public void TestJuegoCargaCorrectamenteLosArchivos() throws Exception {
+
+        Juego juego = new Juego();
+    }
+
+    @Test
+    public void TestJuegoCreaCasoCreaCorrectamente() throws Exception {
+
+        Juego juego = new Juego();
+        juego.IdentificarJugador("Nico");
+        juego.crearCaso();
+    }
+
     /*
     @Test
     public void ObjetoSeCargaConParametrosEsperados() throws Exception {

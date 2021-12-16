@@ -48,7 +48,7 @@ public class SospechososTest {
         valores.add("Femenino");
 
         assert(leido.contains("Merey Laroc"));
-        assert(leido.contains("Carmen"));
+        assert(leido.contains("Carmen Sandiego"));
 
         //System.out.println(leido);
         Sospechosos sospechosos = new Sospechosos(leido);
@@ -56,7 +56,7 @@ public class SospechososTest {
         ArrayList<String> obtenidos = sospechosos.buscarSospechosos(caracteristicas, valores);
 
         assert(obtenidos.get(0).equals("Merey Laroc"));
-        assert(obtenidos.get(1).equals("Carmen"));
+        assert(obtenidos.get(1).equals("Carmen Sandiego"));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class SospechososTest {
         leido = gestorArchivos.leerTextoCompleto(ruta);
 
         assert(leido.contains("Merey Laroc"));
-        assert(leido.contains("Carmen"));
+        assert(leido.contains("Carmen Sandiego"));
 
         /*
         "Merey Laroc":{

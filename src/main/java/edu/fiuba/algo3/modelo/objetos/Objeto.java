@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.objetos;
 
+import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 import edu.fiuba.algo3.modelo.objetos.Valor;
@@ -32,7 +33,7 @@ public class Objeto{
         return this.valor;
     }
 
-    public Estrategia crearEstrategia(Ciudad ciudad){
-        return(valor.crearEstrategia(ciudad));
+    public Estrategia crearEstrategia(Ciudad ciudad, Ciudades ciudades){
+        return(valor.crearEstrategia(ciudad, ciudades));
     }
 }

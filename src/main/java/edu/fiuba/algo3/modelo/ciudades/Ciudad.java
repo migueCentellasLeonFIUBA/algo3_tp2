@@ -82,4 +82,14 @@ public class Ciudad{
 
     public void setLadron(Ladron ladronActual){
     }
+
+    public boolean compararCiudad(Ciudad ciudad){
+        return this.nombre == ciudad.getNombre();
+    }
+
+    public String getNombre(){
+        return this.nombre;
+    }
+
+
 }

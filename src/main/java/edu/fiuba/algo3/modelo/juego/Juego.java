@@ -56,14 +56,9 @@ public class Juego {
 
     public Jugador IdentificarJugador(String nombre) {
 
-        Jugador jugador = jugadores.pedirJugador(nombre); //sería parte de la interfaz como pedir pista
-
-        //IF de decisión del usuario
-        this.jugadorActual = new Jugador(nombre, 0);
-
+        jugadorActual = jugadores.pedirJugador(nombre); //sería parte de la interfaz como pedir pista
         return (this.jugadorActual);
 
-        //Posible refactor -> return jugadores.stream().anyMatch("aaaa");;
     }
 
     public void TerminarJuego() {
@@ -77,7 +72,7 @@ public class Juego {
         Ciudad ciudadRandom = ciudades.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
         Objeto objetoRandom = objetos.ObtenerObjetoRandom();
 
-        jugadorActual.empezarCaso(new Caso(ladronRandom, objetoRandom, ciudadRandom), ciudadRandom);
+        jugadorActual.empezarCaso(new Caso(ladronRandom, objetoRandom, ciudadRandom, ciudades), ciudadRandom);
 
     }
 
