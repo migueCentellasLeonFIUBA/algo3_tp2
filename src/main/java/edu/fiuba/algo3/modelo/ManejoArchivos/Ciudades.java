@@ -21,22 +21,28 @@ public class Ciudades extends Archivo {
         return pedirValor("Banco");
     }
 
-    public Ciudad ObtenerCiudadRandom() {
-
+    public int ObtenerPosicionCiudadRandom() {
         ArrayList<String> nombres = listaDeElementos();
         Random random = new Random();
-        int posicionRandom =  random.obtenerNumeroRandom(nombres);
 
-        filtrar(nombres.get(posicionRandom)); //nombres solo se queda con los valores del nombre pasado.
+        return (random.obtenerNumeroRandom(nombres));
+
+    }
+
+    public ArrayList<Ciudad> crearCiudades() {
+        ArrayList<String> nombres = listaDeElementos();
+        ArrayList<Ciudad> ciudades = new ArrayList<>();
 
         ConstructorCiudadConcreta constructor = new ConstructorCiudadConcreta();
         DirectorCiudad director = new DirectorCiudad();
         director.setConstructorCiudad(constructor);
 
-        director.construirCiudad(super.fachada, nombres.get(0)); //el unico nombre
-        //director.construirCiudad(super.fachada, nombres.get(posicionRandom)); //probar sin el filtro.
+        for(String nombre: nombres){
+            filtrar(nombre);
+            director.construirCiudad(super.fachada, nombre);
+            ciudades.add(director.getCiudad());
+        }
 
-        return (director.getCiudad());
+        return ciudades;
     }
-
 }

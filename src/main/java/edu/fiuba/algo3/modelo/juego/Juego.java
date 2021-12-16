@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Juego {
 
@@ -17,6 +18,7 @@ public class Juego {
     private Pistas pistas;
     private Objetos objetos;
 
+    private ArrayList<Ciudad> listaCiudades;
     private Jugador jugadorActual;
     private GestorDeArchivos gestorArchivos;
 
@@ -51,7 +53,8 @@ public class Juego {
     }
 
     private void cargarCiudades() throws FileNotFoundException {
-        ciudades = new Ciudades(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
+       ciudades = new Ciudades(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
+       listaCiudades = ciudades.crearCiudades();
     }
 
     public Jugador IdentificarJugador(String nombre) {
@@ -69,11 +72,16 @@ public class Juego {
 
         //Serian de la misma interfaz.
         Ladron ladronRandom = sospechosos.ObtenerLadronRandom();
-        Ciudad ciudadRandom = ciudades.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
+        Ciudad ciudadRandom = this.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
         Objeto objetoRandom = objetos.ObtenerObjetoRandom();
 
         jugadorActual.empezarCaso(new Caso(ladronRandom, objetoRandom, ciudadRandom, ciudades), ciudadRandom);
 
+    }
+
+    private Ciudad ObtenerCiudadRandom() {
+        int posicionRandom = ciudades.ObtenerPosicionCiudadRandom();
+        return listaCiudades.get(posicionRandom);
     }
 
 

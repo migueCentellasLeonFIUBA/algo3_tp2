@@ -33,8 +33,8 @@ public class Computadora {
 
     public ArrayList<String> BuscarSospechoso() {
 
-
-/*        ArrayList<String> caracteristicas = new ArrayList<>();
+/*
+        ArrayList<String> caracteristicas = new ArrayList<>();
         caracteristicas.add("Sexo");
         caracteristicas.add("Hobby");
         caracteristicas.add("Cabello");
