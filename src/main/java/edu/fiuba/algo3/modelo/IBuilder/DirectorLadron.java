@@ -18,6 +18,7 @@ public class DirectorLadron {
 
     public void construirLadron(Fachada fachada, String nombreLadron){
 
+        fachada.filtrar(nombreLadron);
         constructor.setNombre(nombreLadron);
         constructor.setSexo(fachada.pedirValor("Sexo"));
         constructor.setHobby(fachada.pedirValor("Hobby"));

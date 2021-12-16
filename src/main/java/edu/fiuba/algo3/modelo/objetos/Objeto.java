@@ -3,8 +3,7 @@ package edu.fiuba.algo3.modelo.objetos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
-import edu.fiuba.algo3.modelo.objetos.Valor;
-import edu.fiuba.algo3.modelo.ladron.Estrategia;
+
 
 public class Objeto{
 
@@ -35,5 +34,9 @@ public class Objeto{
 
     public Estrategia crearEstrategia(Ciudad ciudad, Ciudades ciudades){
         return(valor.crearEstrategia(ciudad, ciudades));
+    }
+
+    public Boolean esElMismoObjeto(String nombre){
+        return this.nombre.equals(nombre); //Se usará para capturar la ruta.
     }
 }

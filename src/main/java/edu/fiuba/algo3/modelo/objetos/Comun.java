@@ -11,4 +11,5 @@ public class Comun implements Valor {
 
         return (new Estrategia(4, ciudad, ciudades));
     }
+
 }

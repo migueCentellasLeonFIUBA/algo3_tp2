@@ -16,6 +16,7 @@ public class DirectorCiudad {
 
     public void construirCiudad(Fachada fachada, String nombreCiudad){
 
+        fachada.filtrar(nombreCiudad);
         constructor.setNombre(nombreCiudad);
         constructor.setCoordenadas( fachada.pedirValor("latitud"), fachada.pedirValor("longitud"));
         constructor.setDescripcion(fachada.pedirValor("descripcion"));

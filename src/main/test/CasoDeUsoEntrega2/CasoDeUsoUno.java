@@ -14,6 +14,11 @@ import static org.mockito.Mockito.when;
 
 public class CasoDeUsoUno {
     /*
+        Detective sufre una herida de cuchillo.
+        Detective duerme.
+     */
+
+/*
     @Test
     public void Test01DetectiveSufreHeridaCuchillo() throws Exception {
         Juego juegoActual = new Juego();
@@ -22,6 +27,7 @@ public class CasoDeUsoUno {
         Ciudad ciudadActual = jugadorActual.getCiudadActual();
         Ladron ladronActual = new Ladron();
         ciudadActual.setLadron(ladronActual);
+
         Banco bancoMock = Mockito.spy(Banco.class);
         when(bancoMock.visitarEdificio(any(), any())).thenReturn("Pista Banco");
         jugadorActual.visitarEdificio(bancoMock);
@@ -29,10 +35,10 @@ public class CasoDeUsoUno {
         int horasEsperadas = 165;
         assertEquals(jugadorActual.horasRestantes(), horasEsperadas);
     }
-    */
+
     @Test
     public void Test02DetectiveDuerme(){
 
     }
-
+*/
 }

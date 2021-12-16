@@ -23,7 +23,6 @@ public class Caso {
     }
 
 
-
     public Ladron getLadron() {
         return ladron;
     }

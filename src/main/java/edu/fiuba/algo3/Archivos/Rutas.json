@@ -1,0 +1,206 @@
+{
+  "Huevo de 1000 años": {
+    "Ciudad1" : "Pekin",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Bagdad",
+    "Ciudad4" : "Bamako"
+  },
+  "Tablilla babilonica":{
+    "Ciudad1" : "Bagdad",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Budapest",
+    "Ciudad4" : "Buenos Aires"
+  },
+  "Colmillo de jabali":{
+    "Ciudad1" : "Port Moresby",
+    "Ciudad2" : "Colombo",
+    "Ciudad3" : "Bagdad",
+    "Ciudad4" : "Cairo"
+  },
+  "Araña de la Opera" :{
+    "Ciudad1" : "Sydney ",
+    "Ciudad2" : "Budapest",
+    "Ciudad3" : "Buenos Aires",
+    "Ciudad4" : "Atenas"
+  },
+  "Cruz enjoyada de Constantino":{
+    "Ciudad1" : "Estambul",
+    "Ciudad2" : "Bamako",
+    "Ciudad3" : "El Cairo",
+    "Ciudad4" : "Istanbul"
+  },
+  "Joyas de la corona ":{
+    "Ciudad1" : "Londres ",
+    "Ciudad2" : "Budapest",
+    "Ciudad3" : "Katnnmandu",
+    "Ciudad4" : "Kigali"
+  },
+  "Alfombra voladora" :{
+    "Ciudad1" : "Bagdad ",
+    "Ciudad2" : "Lima",
+    "Ciudad3" : "Londres",
+    "Ciudad4" : "Ciudad de Mexico"
+  },
+  "Buda de oro":{
+    "Ciudad1" : "Bangkok",
+    "Ciudad2" : "Montreal",
+    "Ciudad3" : "Buenos Aires",
+    "Ciudad4" : "Moroni"
+  },
+  "Mascara Inca de Oro" :{
+    "Ciudad1" : "Lima",
+    "Ciudad2" : "Moscu",
+    "Ciudad3" : "Bagdad",
+    "Ciudad4" : "Nueva Deli"
+  },
+  "Manuscrito islámico":{
+    "Ciudad1" : "Bamako",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Atenas",
+    "Ciudad4" : "Nueva York"
+  },
+  "Corona de Ivan el Terrible":{
+    "Ciudad1" : "Moscu",
+    "Ciudad2" : "Lima",
+    "Ciudad3" : "Atenas",
+    "Ciudad4" : "Nueva York",
+    "Ciudad5" : "Oslo"
+  },
+  "Mascara del rey Tut":{
+    "Ciudad1" : "El Cairo",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Paris",
+    "Ciudad4" : "Nueva York",
+    "Ciudad5" : "Moscu"
+  },
+  "Mascara de Montezuma":{
+    "Ciudad1" : "Ciudad de Mexico",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Paris",
+    "Ciudad4" : "Nueva York",
+    "Ciudad5" : "Londres"
+  },
+  "Mascara de Priamo":{
+    "Ciudad1" : "Atenas",
+    "Ciudad2" : "Lima",
+    "Ciudad3" : "Paris",
+    "Ciudad4" : "Nueva Deli",
+    "Ciudad5" : "Moscu"
+  },
+  "Merlion the Golden Lion":{
+    "Ciudad1" : "Singapur",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Pekin",
+    "Ciudad4" : "Port Moresby",
+    "Ciudad5" : "Rio de Janeiro"
+  },
+  "Pintura del Kremlin":{
+    "Ciudad1" : "Moscu",
+    "Ciudad2" : "Bagdad",
+    "Ciudad3" : "Pekin",
+    "Ciudad4" : "Bangkok",
+    "Ciudad5" : "Bamako"
+  },
+  "Anillo del Papa":{
+    "Ciudad1" : "Roma",
+    "Ciudad2" : "Lima",
+    "Ciudad3" : "Rio de Janeiro",
+    "Ciudad4" : "Atenas",
+    "Ciudad5" : "Buenos Aires"
+  },
+  "Ceramica rara del Imperio de Mali":{
+    "Ciudad1" : "Bamako",
+    "Ciudad2" : "San Marino",
+    "Ciudad3" : "Pekin",
+    "Ciudad4" : "Singapur",
+    "Ciudad5" : "Sydney"
+  },
+  "Planta de te rara":{
+    "Ciudad1" : "Colombo",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Nueva York",
+    "Ciudad4" : "Bamako",
+    "Ciudad5" : "Tokio"
+  },
+  "Colección Royal Quartz":{
+    "Ciudad1" : "Katmandu",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Bangkok",
+    "Ciudad4" : "Bamako",
+    "Ciudad5" : "Bagdad",
+    "Ciudad6" : "Moscu",
+    "Ciudad7" : "Bamako"
+  },
+  "Sernedip Ruby":{
+    "Ciudad1" : "Colombo",
+    "Ciudad2" : "Katmandu",
+    "Ciudad3" : "Nueva Deli",
+    "Ciudad4" : "Rio de Janeiro",
+    "Ciudad5" : "Port Moresby",
+    "Ciudad6" : "Bagdad",
+    "Ciudad7" : "Bamako"
+  },
+  "LLama Plata":{
+    "Ciudad1" : "Lima",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Nueva York",
+    "Ciudad4" : "Bagdad",
+    "Ciudad5" : "Oslo",
+    "Ciudad6" : "Tokio",
+    "Ciudad7" : "Rio de Janeiro"
+  },
+  "Bola de oro macizo":{
+    "Ciudad1" : "Buenos Aires",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Lima",
+    "Ciudad4" : "Londres",
+    "Ciudad5" : "Montreal",
+    "Ciudad6" : "Tokio",
+    "Ciudad7" : "Moscu"
+  },
+  "Copa Stanley":{
+    "Ciudad1" : "Montreal",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Nueva Deli",
+    "Ciudad4" : "Nueva York",
+    "Ciudad5" : "Bagdad",
+    "Ciudad6" : "Bamako",
+    "Ciudad7" : "Oslo"
+  },
+  "Loro relleno":{
+    "Ciudad1" : "Rio de Janeiro",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Nueva York",
+    "Ciudad4" : "Bagdad",
+    "Ciudad5" : "Buenos Aires",
+    "Ciudad6" : "Kigali",
+    "Ciudad7" : "Tokio"
+  },
+  "Las Rockettes":{
+    "Ciudad1" : "Nueva York",
+    "Ciudad2" : "Nueva Deli",
+    "Ciudad3" : "Lima",
+    "Ciudad4" : "Londres",
+    "Ciudad5" : "Moscu",
+    "Ciudad6" : "Bagdad",
+    "Ciudad7" : "Port Moresby"
+  },
+  "Casco vikingo":{
+    "Ciudad1" : "Oslo",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Nueva York",
+    "Ciudad4" : "Bagdad",
+    "Ciudad5" : "Kigali",
+    "Ciudad6" : "Oslo",
+    "Ciudad7" : "Nueva Deli"
+  },
+  "Tocado del rey Watusi":{
+    "Ciudad1" : "Kigali",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Buenos Aires",
+    "Ciudad4" : "Bagdad",
+    "Ciudad5" : "Londres",
+    "Ciudad6" : "Sydney",
+    "Ciudad7" : "Rio de Janeiro"
+  }
+}
