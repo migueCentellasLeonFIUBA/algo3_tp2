@@ -10,7 +10,9 @@ public class Pistas extends Archivo {
     }
 
     public String ObtenerPista(String edificio){
-        return pedirValor(edificio);
+        String pista = pedirValor(edificio);
+
+        return pista;
     }
 
     public void filtrarGrados(String unGrado){fachada.filtrar(unGrado);}

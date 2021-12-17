@@ -28,7 +28,10 @@ public abstract class GradoPolicia {
     }
 
     public String obtenerPistas(String edificio){
-        return pistas.ObtenerPista(edificio);
+        String pista = pistas.ObtenerPista(edificio);
+        //pistas.filtrarGrados();
+        cargarPistas();
+        return pista;
     }
 
     public void filtrarCiudad(String proximaCiudad) {
