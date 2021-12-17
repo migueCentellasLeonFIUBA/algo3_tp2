@@ -22,8 +22,6 @@ public class Ciudad{
 
     private Ladron ladron;
 
-    private String proximaCiudad;
-
     public Ciudad(){
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
@@ -33,9 +31,6 @@ public class Ciudad{
         this.nombre = nombre;
     }
 
-    public void setCoordenadas(Coordenadas coordenadas) {
-        this.coordenadas = coordenadas;
-    }
 
     public void setCoordenadas(String latitud, String longitud) {
         this.coordenadas = new Coordenadas(Double.parseDouble(latitud), Double.parseDouble(longitud));
@@ -52,8 +47,8 @@ public class Ciudad{
     }
 
     public void calcularDistancia(Ciudad destino, Integer velocidad, Reloj reloj) {
-       double distancia = coordenadas.calcularDistancia(destino.getUbicacion());
-       int horas = (int) distancia / velocidad;
+       double distanciaKm = coordenadas.calcularDistancia(destino.getUbicacion());
+       int horas = (int) distanciaKm / velocidad;
        if (horas == 0) horas +=1;
        reloj.descontarhoras(horas);
     }
@@ -83,15 +78,20 @@ public class Ciudad{
     }
 
     public void setLadron(Ladron ladronActual){
+        ladron = ladronActual;
     }
 
-    public boolean compararCiudad(Ciudad ciudad){
-        return this.nombre == ciudad.getNombre();
-    }
 
     public String getNombre(){
         return this.nombre;
     }
 
+    public boolean esLaMismaCiudad(Ciudad ciudad){
+        return this.nombre.equals(ciudad.getNombre());
+    }
+
+    public boolean esLaMismaCiudad(String nombre){
+        return this.nombre.equals(nombre);
+    }
 
 }

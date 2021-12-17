@@ -19,7 +19,7 @@ public class CiudadesTest {
         Ciudades ciudades = new Ciudades(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
         ArrayList<Ciudad> listaCiudades = ciudades.crearCiudades();
 
-        assertEquals(2, listaCiudades.size());
+        assertEquals(8, listaCiudades.size());
     }
 
 }

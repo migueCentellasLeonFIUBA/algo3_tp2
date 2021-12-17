@@ -75,7 +75,7 @@ public class Juego {
         Ciudad ciudadRandom = this.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
         Objeto objetoRandom = objetos.ObtenerObjetoRandom();
 
-        jugadorActual.empezarCaso(new Caso(ladronRandom, objetoRandom, ciudadRandom, ciudades), ciudadRandom);
+        jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadRandom, ciudades, sospechosos);
 
     }
 

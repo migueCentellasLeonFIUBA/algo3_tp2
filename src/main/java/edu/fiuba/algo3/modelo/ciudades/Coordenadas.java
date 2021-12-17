@@ -19,7 +19,8 @@ public class Coordenadas {
     //Operations
     public double calcularDistancia(Coordenadas destino) {
         //Calculo las distancias con la distancia euclidea.
-        double distancia = sqrt( Math.pow(Math.abs(latitud) - Math.abs(destino.getLatitud()), 2) + Math.pow(Math.abs(longitud) - Math.abs(destino.getLongitud()), 2) ) ;
+        Integer pasajeAKm = 100;
+        double distancia = pasajeAKm * (sqrt( Math.pow(Math.abs(latitud) - Math.abs(destino.getLatitud()), 2) + Math.pow(Math.abs(longitud) - Math.abs(destino.getLongitud()), 2) ));
         return Math.round(distancia);
     }
 
