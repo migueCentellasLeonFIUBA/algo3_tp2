@@ -8,7 +8,9 @@ public class Pistas extends Archivo {
         super(texto);
     }
 
-    public void filtrarPistas(String unaCaracteristica){fachada.filtrar(unaCaracteristica);}
+    public void filtrarGrados(String unGrado){fachada.filtrar(unGrado);}
+
+    public void filtrarCiudades(String unaCiudad){fachada.volverAFiltrar(unaCiudad);}
 
     public String ObtenerPista(String edificio){
         return pedirValor(edificio);

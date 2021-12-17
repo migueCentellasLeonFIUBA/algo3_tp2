@@ -4,11 +4,11 @@ package edu.fiuba.algo3.modelo.rangos;
 public class Sargento extends GradoPolicia {
 
     private Integer velocidad = 1500;
-    private Integer arrestos = 20;;
+    private Integer arrestos = 20;
 
     @Override
     public void cargarPistas() {
-        pistas.filtrarPistas("Sargento");
+        pistas.filtrarGrados("Sargento");
     }
 
     public GradoPolicia arresto() {

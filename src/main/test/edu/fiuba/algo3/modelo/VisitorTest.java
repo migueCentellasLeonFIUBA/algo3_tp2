@@ -20,6 +20,6 @@ public class VisitorTest {
         juego.crearCaso();
         String pista = jugador.visitarEdificio(new Banco());
 
-        assertEquals("Pista Banco", pista);
+        assertEquals("Dolares.", pista);
     }
 }

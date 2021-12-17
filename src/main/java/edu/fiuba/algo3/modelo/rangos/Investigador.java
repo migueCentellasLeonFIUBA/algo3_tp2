@@ -9,7 +9,7 @@ public class Investigador extends GradoPolicia{
 
     @Override
     public void cargarPistas() {
-        pistas.filtrarPistas("Investigador");
+        pistas.filtrarGrados("Investigador");
     }
 
     public GradoPolicia arresto() {

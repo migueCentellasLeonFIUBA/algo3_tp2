@@ -27,6 +27,6 @@ public abstract class GradoPolicia {
     }
 
     public void filtrarCiudad(String proximaCiudad) {
-        pistas.filtrarPistas(proximaCiudad);
+        pistas.filtrarCiudades(proximaCiudad);
     }
 }
