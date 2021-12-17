@@ -1,9 +1,6 @@
 package CasoDeUsoEntrega2;
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
-import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
+import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Banco;
 import edu.fiuba.algo3.modelo.juego.Juego;
@@ -24,15 +21,20 @@ public class CasoDeUsoUno {
 
     @Test
     public void Test01DetectiveSufreHeridaCuchillo() throws Exception {
-        Jugador jugador = new Jugador("Miguel", 5);
+        Juego juego = new Juego();
+        Jugador jugador = juego.IdentificarJugador("Miguel");//MIGUEL TIENE 5 ARRESTOS
+
 
         //CARGA DE ARCHIVOS
         GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
         Sospechosos sospechosos = new Sospechosos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
         Ciudades ciudades = new Ciudades(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
         Objetos objetos = new Objetos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json"));
+        Pistas pistas = new Pistas(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json"));
+
 
         //CARGA DE OBJETOS
+        jugador.cargarPistas(pistas);
         Ciudad ciudad = ciudades.ObtenerCiudadRandom();
         Objeto objeto = jugador.obtenerObjetoRandom(objetos);
         Ladron ladron = sospechosos.ObtenerLadronRandom();
@@ -55,11 +57,13 @@ public class CasoDeUsoUno {
         Sospechosos sospechosos = new Sospechosos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
         Ciudades ciudades = new Ciudades(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
         Objetos objetos = new Objetos(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json"));
+        Pistas pistas = new Pistas(gestorDeArchivos.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json"));
 
         //CARGA DE OBJETOS
         Ciudad ciudad = ciudades.ObtenerCiudadRandom();
         Objeto objeto = objetos.ObtenerObjetoRandom();
         Ladron ladron = sospechosos.ObtenerLadronRandom();
+        jugador.cargarPistas(pistas);
 
         jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
 

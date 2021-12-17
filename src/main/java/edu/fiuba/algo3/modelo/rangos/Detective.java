@@ -11,7 +11,7 @@ public class Detective extends GradoPolicia {
 
     @Override
     public void cargarPistas() {
-        pistas.filtrarGrados("Detective");
+        pistas.filtrarGrados("Media");
     }
 
     @Override
