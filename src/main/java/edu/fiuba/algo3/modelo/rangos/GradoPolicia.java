@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.rangos;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
 
 import java.lang.annotation.Inherited;
 
@@ -9,8 +10,9 @@ public abstract class GradoPolicia {
 
     private Integer arrestos;
     private Integer velocidad;
+    protected Pistas pistas;
 
-    abstract void cargarPistas();
+    public abstract void cargarPistas();
 
     abstract public Integer calcularTiempoViaje();
 
@@ -20,4 +22,16 @@ public abstract class GradoPolicia {
 
 //    abstract public String getGrado();
     abstract public Objeto obtenerObjetoRandom(Objetos objetos);
+
+    public void establecerPistas(Pistas pistas) {
+        this.pistas = pistas;
+    }
+
+    public String obtenerPistas(String edificio){
+        return pistas.ObtenerPista(edificio);
+    }
+
+    public void filtrarCiudad(String proximaCiudad) {
+        pistas.filtrarCiudades(proximaCiudad);
+    }
 }

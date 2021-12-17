@@ -3,15 +3,19 @@
   {
     "Montreal":
       {
-      "Banco":"Dolares.",
-      "AeroPuerto":"AeroQuebec.",
-      "Biblioteca":"Iroqueses"
+      "Banco":"Dolares",
+      "AeroPuerto":"AeroQuebec",
+      "Biblioteca":"Iroqueses",
+        "Bolsa": "Bolsa de Montreal",
+        "Puerto": "Puerto de Montreal"
       },
     "Mexico":
     {
-      "Banco":"Pesos.",
-      "AeroPuerto":"AeroMexico.",
-      "Biblioteca":"Aztecas"
+      "Banco":"Pesos",
+      "AeroPuerto":"AeroMexico",
+      "Biblioteca":"Aztecas",
+      "Bolsa": "Bolsa de Mexico",
+      "Puerto": "Puerto de Mexico"
     }
   }
 }

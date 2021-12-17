@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo.jugador;
 import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
@@ -80,5 +81,10 @@ public class Jugador {
 
     public Objeto obtenerObjetoRandom(Objetos objetos){
         return grado.obtenerObjetoRandom(objetos);
+    }
+
+    public void cargarPistas(Pistas pistas) {
+        grado.establecerPistas(pistas);
+        grado.cargarPistas();
     }
 }

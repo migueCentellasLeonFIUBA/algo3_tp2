@@ -3,7 +3,9 @@ package edu.fiuba.algo3.modelo;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.edificios.AeroPuerto;
 import edu.fiuba.algo3.modelo.edificios.Banco;
+import edu.fiuba.algo3.modelo.edificios.Biblioteca;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import org.junit.jupiter.api.Test;
@@ -18,8 +20,8 @@ public class VisitorTest {
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Tomas");
         juego.crearCaso();
-        String pista = jugador.visitarEdificio(new Banco());
+        String pista = jugador.visitarEdificio(new AeroPuerto());
 
-        assertEquals("Pista Banco", pista);
+        assertEquals("AeroMexico", pista);
     }
 }

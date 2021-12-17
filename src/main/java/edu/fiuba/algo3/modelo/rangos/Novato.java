@@ -14,7 +14,7 @@ public class Novato extends GradoPolicia {
 
     @Override
     public void cargarPistas() {
-
+        pistas.filtrarGrados("Facil");
     }
 
     public GradoPolicia arresto() {
