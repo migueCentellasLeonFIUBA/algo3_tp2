@@ -39,6 +39,7 @@ public class CasoDeUsoTresTest {
             "Vehiculo" : "Limusina"
           },
          */
+
         //SETEO SEXO
         computadora.siguienteSexo(); //femenino
 

@@ -17,8 +17,6 @@ public class CiudadesRandom {
             //dado un nombre obtengo ciudades random..
             //uso una lista auxiliar:
 
-
-
             ArrayList<Ciudad> ciudadesRandom = new ArrayList<>();
             ArrayList<Ciudad> ciudadesAux = ciudades;
             Random random = new Random();

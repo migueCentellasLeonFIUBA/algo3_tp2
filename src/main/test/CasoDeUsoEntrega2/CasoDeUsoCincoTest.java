@@ -22,12 +22,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     Emite la orden.
     Atrapa al sospechoso.
  */
+
 public class CasoDeUsoCincoTest {
 
     @Test
     public void unJugadorPuedeArrestarAUnLadron_6_veces() throws FileNotFoundException {
 
-        Jugador jugador = new Jugador("Miguel", 5);
+        Jugador jugador = new Jugador("Miguel", 0);
 
         //CARGA DE ARCHIVOS
         GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
@@ -60,6 +61,7 @@ public class CasoDeUsoCincoTest {
 
         caracteristicas.add("Vehiculo");
         valores.add("Deportivo");
+
         //devuelve uno solo, que resutla ser el ladron...
         assertEquals(1, jugador.buscarSospechosos(caracteristicas, valores).size() );
 
@@ -73,10 +75,10 @@ public class CasoDeUsoCincoTest {
         assert(jugador.arrestarLadron(ladron));
 
         /*
-                Toma un caso de un sospechoso que robó un Incan Gold Mask.
-                Realiza la investigación.
-                Emite la orden.
-                Atrapa al sospechoso.
+            Toma un caso de un sospechoso que robó un Incan Gold Mask.
+            Realiza la investigación.
+            Emite la orden.
+            Atrapa al sospechoso.
          */
 
         //Se asigna un nuevo caso

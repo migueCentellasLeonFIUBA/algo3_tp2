@@ -89,9 +89,10 @@ public class Jugador {
     //****Ordenes****
     public boolean arrestarLadron(Secuaces ladron){  //lo arresta cuando entra en una ciudad.
         if(orden.arrestarLadron(ladron)){
-           grado = grado.arresto(); //se actualiza el grado si corresponde
+           grado = grado.arresto(); //se actual
+            return true;
         }
-        return orden.arrestarLadron(ladron);
+        return false;
     }
 
     //metodo original...

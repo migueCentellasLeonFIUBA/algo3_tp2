@@ -76,6 +76,7 @@ public class JugadorTest {
         assert (jugador.arrestarLadron(ladron));
 
     }
+
     @Test
     public void unJugadorPuedeArrestarAUnLadron_6_veces() throws FileNotFoundException {
 

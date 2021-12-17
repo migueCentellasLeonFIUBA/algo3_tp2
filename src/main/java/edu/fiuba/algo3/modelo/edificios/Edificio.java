@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 
 public interface Edificio {
 
-     String getNombre();
+    String getNombre();
 
     String aceptar(Visitante unVisitante);
 }

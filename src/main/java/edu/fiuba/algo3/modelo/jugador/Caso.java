@@ -7,6 +7,8 @@ import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.*;
+import edu.fiuba.algo3.modelo.orden.OrdenDeArresto;
+import edu.fiuba.algo3.modelo.orden.Ordenes;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
 import java.io.FileNotFoundException;
@@ -92,7 +94,7 @@ public class Caso {
 
     //si solo queda un sospechoso, se devuelve una orden automaticamente,
     //por default el Jugador tiene una "NoOrden".
-    public Orden emitirOrden(){
+    public Ordenes emitirOrden(){
         return new OrdenDeArresto(); //hardcodeado
     }
 }
