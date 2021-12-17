@@ -14,4 +14,6 @@ public interface Visitante {
 
     String visitar(Puerto puerto);
 
+    void filtrarCiudad(String proximaCiudad);
+
 }

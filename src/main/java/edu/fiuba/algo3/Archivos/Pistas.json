@@ -3,15 +3,57 @@
   {
     "Montreal":
       {
-      "Banco":"Dolares.",
-      "AeroPuerto":"AeroQuebec.",
-      "Biblioteca":"Iroqueses"
+      "Banco":"Dolares",
+      "AeroPuerto":"AeroQuebec",
+      "Biblioteca":"Iroqueses",
+        "Bolsa": "Bolsa de Montreal",
+        "Puerto": "Puerto de Montreal"
       },
     "Mexico":
     {
-      "Banco":"Pesos.",
-      "AeroPuerto":"AeroMexico.",
-      "Biblioteca":"Aztecas"
+      "Banco":"Pesos",
+      "AeroPuerto":"AeroMexico",
+      "Biblioteca":"Aztecas",
+      "Bolsa": "Bolsa de Mexico",
+      "Puerto": "Puerto de Mexico"
+    }
+  },
+  "Media":
+  {"Montreal":
+   {
+    "Banco":"Dolares Media",
+    "AeroPuerto":"AeroQuebec Media",
+    "Biblioteca":"Iroqueses Media",
+    "Bolsa": "Bolsa de Montreal Media",
+    "Puerto": "Puerto de Montreal Media"
+  },
+    "Mexico":
+    {
+      "Banco":"Pesos Media",
+      "AeroPuerto":"AeroMexico Media",
+      "Biblioteca":"Aztecas Media",
+      "Bolsa": "Bolsa de Mexico Media",
+      "Puerto": "Puerto de Mexico Media"
+    }
+
+  },
+  "Dificil":
+  {
+    "Montreal":
+    {
+      "Banco":"Dolares Dificl",
+      "AeroPuerto":"AeroQuebec Dificil",
+      "Biblioteca":"Iroqueses Dificil",
+      "Bolsa": "Bolsa de Montreal Dificil",
+      "Puerto": "Puerto de Montreal Dificil"
+    },
+    "Mexico":
+    {
+      "Banco":"Pesos Dificil",
+      "AeroPuerto":"AeroMexico Dificil",
+      "Biblioteca":"Aztecas Dificil",
+      "Bolsa": "Bolsa de Mexico Dificil",
+      "Puerto": "Puerto de Mexico Dificil"
     }
   }
 }

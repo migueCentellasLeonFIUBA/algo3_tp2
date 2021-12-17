@@ -15,7 +15,6 @@ public class Juego {
     private Sospechosos sospechosos;
     private Jugadores jugadores;
     private Ciudades ciudades;
-    private Pistas pistas;
     private Objetos objetos;
 
     private ArrayList<Ciudad> listaCiudades;
@@ -25,7 +24,6 @@ public class Juego {
 
     public Juego() throws Exception {
         gestorArchivos = new GestorDeArchivos();
-        cargarPistas();
         cargarObjetos();
         cargarJugadores();
         cargarSospechosos();
@@ -41,7 +39,8 @@ public class Juego {
     }
 
     private void cargarPistas() throws FileNotFoundException {
-        pistas = new Pistas(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json"));
+        Pistas pistas = new Pistas(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json"));
+        jugadorActual.cargarPistas(pistas);
     }
 
     private void cargarJugadores() throws FileNotFoundException {
@@ -75,6 +74,7 @@ public class Juego {
         Ciudad ciudadRandom = this.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
         Objeto objetoRandom = jugadorActual.obtenerObjetoRandom(objetos);
 
+        cargarPistas();
         jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadRandom, ciudades, sospechosos);
 
     }
