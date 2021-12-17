@@ -85,8 +85,12 @@ public class Ciudad{
     public void setLadron(Ladron ladronActual){
     }
 
-    public boolean compararCiudad(Ciudad ciudad){
-        return this.nombre == ciudad.getNombre();
+    public boolean esLaMismaCiudad(Ciudad ciudad){
+        return this.nombre.equals(ciudad.getNombre());
+    }
+
+    public boolean esLaMismaCiudad(String nombre){
+        return this.nombre.equals(nombre);
     }
 
     public String getNombre(){

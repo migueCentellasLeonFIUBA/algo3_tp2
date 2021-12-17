@@ -2,11 +2,41 @@
   "Montreal":{
     "latitud": "45.50884",
     "longitud": "-73.58781",
-    "descripcion": "ciudad de montreal"
+    "descripcion": "Ciudad de montreal"
   },
-  "Mexico":{
+  "Ciudad de Mexico":{
     "latitud": "23.634501",
     "longitud": "-102.552784",
-    "descripcion": "ciudad de mexico"
+    "descripcion": "Ciudad de mexico"
+  },
+  "Buenos Aires":{
+    "latitud": "-34.6083",
+    "longitud": "-58.3712",
+    "descripcion": "Ciudad de Buenos Aires"
+  },
+  "Pekin":{
+    "latitud": "39.9035",
+    "longitud": "116.388",
+    "descripcion": "Ciudad de Pekin"
+  },
+  "Bagdad":{
+    "latitud": "33.3245",
+    "longitud": "44.4214",
+    "descripcion": "Ciudad de Bagdad"
+  },
+  "Port Moresby":{
+    "latitud": "-9.47979",
+    "longitud": "147.19",
+    "descripcion": "Ciudad de Port Moresby"
+  },
+  "Sydney":{
+    "latitud": "-33.8667",
+    "longitud": "151.2",
+    "descripcion": "Ciudad de Sydney"
+  },
+  "Estambul":{
+    "latitud": "41.0122",
+    "longitud": "28.976",
+    "descripcion": "Ciudad de Estambul"
   }
 }

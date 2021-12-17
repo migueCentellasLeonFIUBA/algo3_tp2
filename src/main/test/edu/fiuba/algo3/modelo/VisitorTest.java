@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VisitorTest {
     @Test
-    void Test01DetectiveVisitaBancoYrecibeUnaPista() throws Exception {
+    public void Test01DetectiveVisitaBancoYrecibeUnaPista() throws Exception {
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Tomas");
         juego.crearCaso();
