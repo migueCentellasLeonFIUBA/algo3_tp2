@@ -8,7 +8,7 @@ public class Sargento extends GradoPolicia {
 
     @Override
     public void cargarPistas() {
-
+        pistas.filtrarPistas("Sargento");
     }
 
     public GradoPolicia arresto() {

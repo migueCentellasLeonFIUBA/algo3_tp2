@@ -1,8 +1,6 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
-import java.lang.annotation.Inherited;
-
 public class Novato extends GradoPolicia {
 
     private Integer velocidad = 900;
@@ -11,7 +9,7 @@ public class Novato extends GradoPolicia {
 
     @Override
     public void cargarPistas() {
-
+        pistas.filtrarPistas("Facil");
     }
 
     public GradoPolicia arresto() {

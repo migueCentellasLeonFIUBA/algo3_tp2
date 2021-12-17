@@ -27,6 +27,7 @@ public class Ciudad{
     public Ciudad(){
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
+        proximaCiudad = "Montreal";
     }
 
     public void setNombre(String nombre){
@@ -74,7 +75,7 @@ public class Ciudad{
 
         reloj.descontarhoras(visitas);
 
-
+        visitante.filtrarCiudad(proximaCiudad);
         return edificio.aceptar(visitante);
     }
 

@@ -18,9 +18,10 @@ public class CasoDeUsoUno {
         Detective duerme.
      */
 
-/*
+
     @Test
     public void Test01DetectiveSufreHeridaCuchillo() throws Exception {
+        /*
         Juego juegoActual = new Juego();
         Jugador jugadorActual = juegoActual.IdentificarJugador("Nico");
         juegoActual.crearCaso();
@@ -28,17 +29,19 @@ public class CasoDeUsoUno {
         Ladron ladronActual = new Ladron();
         ciudadActual.setLadron(ladronActual);
 
-        Banco bancoMock = Mockito.spy(Banco.class);
-        when(bancoMock.visitarEdificio(any(), any())).thenReturn("Pista Banco");
+        Banco bancoMock = Mockito.mock();
+        when(bancoMock.aceptar(any())).thenReturn("Pista Banco");
         jugadorActual.visitarEdificio(bancoMock);
 
         int horasEsperadas = 165;
         assertEquals(jugadorActual.horasRestantes(), horasEsperadas);
+        */
+
     }
 
     @Test
     public void Test02DetectiveDuerme(){
 
     }
-*/
+
 }
