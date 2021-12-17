@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class CasoDeUsoTres {
+public class CasoDeUsoTresTest {
 
     @Test
     public void TestComputadoraBuscaSospechosos() throws FileNotFoundException {

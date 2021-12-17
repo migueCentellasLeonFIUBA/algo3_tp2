@@ -2,12 +2,12 @@
   "Montreal":{
     "latitud": "45.50884",
     "longitud": "-73.58781",
-    "descripcion": "ciudad de montreal"
+    "descripcion": "Ciudad de montreal"
   },
   "Mexico":{
     "latitud": "23.634501",
     "longitud": "-102.552784",
-    "descripcion": "ciudad de mexico"
+    "descripcion": "Ciudad de mexico"
   },
   "Buenos Aires":{
     "latitud": "-34.6083",

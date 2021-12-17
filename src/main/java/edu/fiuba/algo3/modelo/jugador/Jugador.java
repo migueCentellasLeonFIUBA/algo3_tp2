@@ -7,7 +7,10 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
+import edu.fiuba.algo3.modelo.ladron.Secuaces;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
+import edu.fiuba.algo3.modelo.orden.OrdenSinJurisdiccion;
+import edu.fiuba.algo3.modelo.orden.Ordenes;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
@@ -20,11 +23,12 @@ public class Jugador {
     private String nombre;
     private GradoPolicia grado;
     private Caso caso;
+    private Ordenes orden;
 
     public Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
         this.grado = new Novato();
-
+        this.orden = new OrdenSinJurisdiccion();
         asignarGrado(arrestos);
     }
 
@@ -39,9 +43,7 @@ public class Jugador {
     }
 
     public ArrayList<String> BuscarSospechoso() {
-
         return caso.buscarSospechosos();
-
     }
 
     public void terminarJuego() {
@@ -81,4 +83,11 @@ public class Jugador {
     public Objeto obtenerObjetoRandom(Objetos objetos){
         return grado.obtenerObjetoRandom(objetos);
     }
+
+    //****Ordenes****
+    public boolean arrestarLadron(Secuaces ladron){
+        return orden.arrestarLadron(ladron);
+    }
+
+
 }

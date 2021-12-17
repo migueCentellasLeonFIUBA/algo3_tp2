@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CasoDeUsoDos {
+public class CasoDeUsoDosTest {
 
     @Test
     public void TestInvestigadorViajaDeMontrealAMexico() throws FileNotFoundException {

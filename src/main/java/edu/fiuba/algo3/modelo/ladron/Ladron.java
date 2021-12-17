@@ -6,6 +6,8 @@ import edu.fiuba.algo3.modelo.jugador.Reloj;
 public class Ladron implements Secuaces {
 
     private Integer ataqueConCuchillo;
+    private Integer ataqueConArma;
+
     private String nombre;
     private String sexo;
     private String hobby;
@@ -14,27 +16,33 @@ public class Ladron implements Secuaces {
     private String vehiculo;
 
     public Ladron(){
-
-        //sexo = caracteristicas.get(0);
-        //hobby = caracteristicas.get(1);
-        //cabello = caracteristicas.get(2);
-        //senia = caracteristicas.get(3);
-        //vehiculo = caracteristicas.get(4);
         ataqueConCuchillo = 2;
+        ataqueConArma = 4;
     }
 
     //Operations
     @Override
-    public boolean Arrestar() {
-        //TODO
+    public boolean arrestar() {
         return true;
     }
+/*
+    @Override
+    public boolean esLadron(String nombre){
+        return this.nombre.equals(nombre);
+    }
+*/
 
+    @Override
     public void atacarConCuchillo(Reloj reloj){
         reloj.descontarhoras(ataqueConCuchillo);
         if(ataqueConCuchillo == 2){
             ataqueConCuchillo--;
         }
+    }
+
+    @Override
+    public void atacarConArma(Reloj reloj){
+        reloj.descontarhoras(ataqueConArma);
     }
 
     public void setNombre(String nombre) {
@@ -60,5 +68,4 @@ public class Ladron implements Secuaces {
     public void setVehiculo(String vehiculo) {
         this.vehiculo = vehiculo;
     }
-
 }

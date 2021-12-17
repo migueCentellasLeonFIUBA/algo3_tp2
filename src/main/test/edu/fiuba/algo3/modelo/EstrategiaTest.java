@@ -12,19 +12,19 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EstrategiaTest {
+
     @Test
-    public void seAsignaUnaEstrategia() throws FileNotFoundException {
+    public void seAsignaUnaEstrategia() {
 
         String ruta = "src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json";
 
         GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
-        Ciudades ciudadesCargadas = new Ciudades(gestorDeArchivos.leerTextoCompleto(ruta));
-/*        Ciudades ciudadesCargadas = null;
+        Ciudades ciudadesCargadas = null;
         try {
             ciudadesCargadas = new Ciudades(gestorDeArchivos.leerTextoCompleto(ruta));
         } catch (FileNotFoundException e) {
         }
-*/
+
         ArrayList<Ciudad> listaCiudades = ciudadesCargadas.crearCiudades();
 
         assertEquals(8, listaCiudades.size());

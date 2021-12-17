@@ -27,7 +27,6 @@ public class Caso {
     private GradoPolicia grado;
 
 
-
     public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos, GradoPolicia grado){
         this.ladron = ladron;
         this.objetoRobado = objeto;
@@ -40,10 +39,6 @@ public class Caso {
 
     }
 
-    public Secuaz BuscarSospechoso() {
-        //TODO
-        return new Secuaz();
-    }
 
     public ArrayList<String> buscarSospechosos(){
         return computadora.BuscarSospechoso();
@@ -88,5 +83,9 @@ public class Caso {
 
     public void siguienteSenia() {computadora.siguienteSenia();}
 
-
+    //si solo queda un sospechoso, se devuelve una orden automaticamente,
+    //por default el Jugador tiene una "NoOrden".
+    public Orden emitirOrden(){
+        return new OrdenDeArresto(); //hardcodeado
+    }
 }

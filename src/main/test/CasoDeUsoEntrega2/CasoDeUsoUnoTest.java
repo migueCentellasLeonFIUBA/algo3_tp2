@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-public class CasoDeUsoUno {
+public class CasoDeUsoUnoTest {
 
     @Test
     public void Test01DetectiveSufreHeridaCuchillo() throws Exception {
@@ -76,8 +76,6 @@ public class CasoDeUsoUno {
 
         horasEsperadas = 142;
         assertEquals(horasEsperadas, jugador.horasRestantes());
-
-
     }
 
 }
