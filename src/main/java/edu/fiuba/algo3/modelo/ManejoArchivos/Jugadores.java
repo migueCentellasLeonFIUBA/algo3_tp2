@@ -15,6 +15,7 @@ public class Jugadores extends Archivo {
         ArrayList<String> nombres = listaDeElementos();
 
         if(nombres.contains(nombre)){
+            fachada.filtrar(nombre);
             return (crearJugador(nombre, Integer.parseInt(fachada.pedirValor("Arrestos"))));
         }
 

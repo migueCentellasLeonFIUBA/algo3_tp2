@@ -38,7 +38,6 @@ public class Ciudades extends Archivo {
         director.setConstructorCiudad(constructor);
 
         for(String nombre: nombres){
-            filtrar(nombre);
             director.construirCiudad(super.fachada, nombre);
             ciudades.add(director.getCiudad());
         }

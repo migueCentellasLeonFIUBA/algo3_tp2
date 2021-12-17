@@ -8,9 +8,5 @@ public interface Edificio {
 
      String getNombre();
 
-    String visitarEdificio(Pistas pistas) throws FileNotFoundException;
-
-    String visitarEdificio(String proximaCiudad, GradoPolicia grado);
-
     String aceptar(Visitante unVisitante);
 }

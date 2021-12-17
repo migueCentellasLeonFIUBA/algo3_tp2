@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.jugador;
 
+import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
@@ -17,14 +18,15 @@ public class Jugador {
     private Caso caso;
     private Orden orden;
     private Ciudad ciudadActual;
+    private VisitanteConcreto visitante;
 
 
     public Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
         this.grado = new Novato();
 
-
         asignarGrado(arrestos);
+        visitante = new VisitanteConcreto(grado);
     }
 
     public void setCiudadActual(Ciudad origen){
@@ -78,7 +80,7 @@ public class Jugador {
     }
 
     public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
-        String pista = ciudadActual.visitarEdificio(edificio, reloj, grado);
+        String pista = ciudadActual.visitarEdificio(edificio, reloj, visitante);
         if(reloj.tiempoTerminado()){
             terminarJuego();
         }

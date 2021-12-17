@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.ciudades;
 
 
+import edu.fiuba.algo3.modelo.IVisitor.Visitante;
 import edu.fiuba.algo3.modelo.edificios.*;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.*;
@@ -25,6 +26,7 @@ public class Ciudad{
 
     public Ciudad(){
         listaEdificios = new ArrayList<>();
+        this.visitas = 0;
     }
 
     public void setNombre(String nombre){
@@ -60,7 +62,7 @@ public class Ciudad{
         return coordenadas;
     }
 
-    public String visitarEdificio(Edificio edificio, Reloj reloj, GradoPolicia grado) throws FileNotFoundException {
+    public String visitarEdificio(Edificio edificio, Reloj reloj, Visitante visitante) throws FileNotFoundException {
 
         if(visitas < 3){
             visitas += 1;
@@ -73,7 +75,7 @@ public class Ciudad{
         reloj.descontarhoras(visitas);
 
 
-        return edificio.visitarEdificio(proximaCiudad, grado);
+        return edificio.aceptar(visitante);
     }
 
     public Edificio obtenerEdificio(int i) {

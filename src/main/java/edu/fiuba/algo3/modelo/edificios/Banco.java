@@ -8,7 +8,7 @@ public class Banco implements Edificio {
     private String nombre;
 
 
-    private Banco(){
+    public Banco(){
         nombre="Banco";
     }
 
@@ -19,17 +19,6 @@ public class Banco implements Edificio {
     @Override
     public String getNombre() {
         return nombre;
-    }
-
-    @Override
-    public String visitarEdificio(Pistas pistas) throws FileNotFoundException {
-
-        return pistas.ObtenerPista(this);
-    }
-
-    @Override
-    public String visitarEdificio(String proximaCiudad, GradoPolicia grado) {
-        return null;
     }
 
     @Override

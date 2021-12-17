@@ -13,17 +13,6 @@ public class AeroPuerto implements Edificio {
     }
 
     @Override
-    public String visitarEdificio(Pistas pistas) throws FileNotFoundException {
-        return null;
-    }
-
-    @Override
-    public String visitarEdificio(String ciudad, GradoPolicia grado) {
-
-        return "Pista Aeropuerto"; //REFACTOR NECESARIO - SE DEBE COMUNICAR CON LA FACHADA DE JSON
-    }
-
-    @Override
     public String aceptar(Visitante unVisitante) {
         return unVisitante.visitar(this);
     }

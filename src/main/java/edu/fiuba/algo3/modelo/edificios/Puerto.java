@@ -14,16 +14,6 @@ public class Puerto implements Edificio {
     }
 
     @Override
-    public String visitarEdificio(Pistas pistas) throws FileNotFoundException {
-        return null;
-    }
-
-    @Override
-    public String visitarEdificio(String proximaCiudad, GradoPolicia grado) {
-
-        return "Pista Puerto";//REFACTOR NECESARIO - SE DEBE COMUNICAR CON LA FACHADA DE JSON
-    }
-    @Override
     public String aceptar(Visitante unVisitante) {
         return unVisitante.visitar(this);
     }

@@ -9,7 +9,9 @@
       },
     "Mexico":
     {
-
+      "Banco":"Pesos.",
+      "AeroPuerto":"AeroMexico.",
+      "Biblioteca":"Aztecas"
     }
   }
 }

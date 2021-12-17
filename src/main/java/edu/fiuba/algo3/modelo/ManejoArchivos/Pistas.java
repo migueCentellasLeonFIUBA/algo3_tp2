@@ -9,12 +9,8 @@ public class Pistas extends Archivo {
         super(texto);
     }
 
-    public String ObtenerPista(Edificio edificio){
-        return pedirValor("");
-    }
-
-    public String PistasDeCiudad(Edificio Banco){
-        return pedirValor("Banco");
+    public String ObtenerPista(String edificio){
+        return pedirValor(edificio);
     }
 
 }
