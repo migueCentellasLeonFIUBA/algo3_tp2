@@ -31,6 +31,7 @@ public class Computadora {
         baseDeDatos = sospechosos;
     }
 
+    //metodo original...
     public ArrayList<String> BuscarSospechoso() {
 
 /*
@@ -50,12 +51,18 @@ public class Computadora {
         datos.add(vehiculo.vehiculo());
 */
 
+        //estemetodo devuelve todos los sospechsos del caso
         List<ArrayList<String>> parametros = this.datosAsignados();
         ArrayList<String> caracteristicas = parametros.get(0);
         ArrayList<String> datos = parametros.get(1);
 
         return baseDeDatos.buscarSospechosos(caracteristicas, datos);
 
+    }
+
+    //este metodo devuelve los sospechosos correspondientes a las caracteristicas elegidas en el juego...
+    public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas,ArrayList<String> valores){
+        return baseDeDatos.buscarSospechosos(caracteristicas, valores);
     }
 
     private List<ArrayList<String>> datosAsignados(){

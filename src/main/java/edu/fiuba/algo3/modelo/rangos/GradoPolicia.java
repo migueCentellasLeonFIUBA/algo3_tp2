@@ -21,6 +21,7 @@ public abstract class GradoPolicia {
 //    abstract public int getArrestos();
 
 //    abstract public String getGrado();
+
     abstract public Objeto obtenerObjetoRandom(Objetos objetos);
 
     public void establecerPistas(Pistas pistas) {

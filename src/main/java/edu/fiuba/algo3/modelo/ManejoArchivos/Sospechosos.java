@@ -27,6 +27,7 @@ public class Sospechosos extends Archivo {
                 }
                 break;
             }
+
             if(indice==valores.size()){
                 resultado.add(n);
             }

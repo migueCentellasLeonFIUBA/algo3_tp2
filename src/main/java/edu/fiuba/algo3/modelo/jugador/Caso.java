@@ -38,10 +38,17 @@ public class Caso {
         this.visitante = new VisitanteConcreto(grado);
 
     }
-
-
+/*
+    public Secuaz BuscarSospechoso() {
+        return new Secuaz();
+    }
+*/
     public ArrayList<String> buscarSospechosos(){
         return computadora.BuscarSospechoso();
+    }
+
+    public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas,ArrayList<String> valores){
+        return computadora.buscarSospechosos(caracteristicas, valores);
     }
 
     public void viajarACiudad(Ciudad destino) {

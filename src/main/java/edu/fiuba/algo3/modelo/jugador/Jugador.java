@@ -10,6 +10,7 @@ import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.ladron.Secuaces;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
+import edu.fiuba.algo3.modelo.orden.OrdenDeArresto;
 import edu.fiuba.algo3.modelo.orden.OrdenSinJurisdiccion;
 import edu.fiuba.algo3.modelo.orden.Ordenes;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
@@ -62,7 +63,6 @@ public class Jugador {
         return pista;
     }
 
-
     public void empezarCaso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos) {
         this.caso= new Caso(ladron, objeto, ciudad, ciudades, sospechosos, grado);
     }
@@ -70,7 +70,6 @@ public class Jugador {
     public Integer horasRestantes(){
         return caso.horasRestantes();
     }
-
 
     public void siguienteSexo() {caso.siguienteSexo();}
 
@@ -86,12 +85,27 @@ public class Jugador {
         return grado.obtenerObjetoRandom(objetos);
     }
 
+
     //****Ordenes****
-    public boolean arrestarLadron(Secuaces ladron){
+    public boolean arrestarLadron(Secuaces ladron){  //lo arresta cuando entra en una ciudad.
+        if(orden.arrestarLadron(ladron)){
+           grado = grado.arresto(); //se actualiza el grado si corresponde
+        }
         return orden.arrestarLadron(ladron);
     }
 
+    //metodo original...
+    public ArrayList<String> buscarSospechosos(){
+        return caso.buscarSospechosos();
+    }
 
+    public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas,ArrayList<String> valores){
+        if(caso.buscarSospechosos(caracteristicas, valores).size() == 1){
+            //queda un solo sospechoso y debo emitir una orden de arresto...
+            orden = new OrdenDeArresto();
+        }
+        return caso.buscarSospechosos(caracteristicas, valores);
+    }
 
     public void cargarPistas(Pistas pistas) {
         grado.establecerPistas(pistas);

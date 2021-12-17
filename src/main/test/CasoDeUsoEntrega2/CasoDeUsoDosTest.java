@@ -17,6 +17,7 @@ public class CasoDeUsoDosTest {
 
     @Test
     public void TestInvestigadorViajaDeMontrealAMexico() throws FileNotFoundException {
+
         Jugador jugador = new Jugador("Alexis", 10);
 
         //CARGA DE ARCHIVOS
