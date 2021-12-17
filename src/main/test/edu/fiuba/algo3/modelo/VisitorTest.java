@@ -22,6 +22,6 @@ public class VisitorTest {
         juego.crearCaso();
         String pista = jugador.visitarEdificio(new AeroPuerto());
 
-        assertEquals("AeroMexico", pista);
+        assertEquals("AeroQuebec", pista);
     }
 }

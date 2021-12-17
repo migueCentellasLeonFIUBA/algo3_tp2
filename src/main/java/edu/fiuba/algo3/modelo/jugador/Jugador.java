@@ -52,6 +52,7 @@ public class Jugador {
     public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
 
         String pista = caso.visitarEdificio(edificio);
+
         if(caso.tiempoTerminado()){
             terminarJuego();
         }

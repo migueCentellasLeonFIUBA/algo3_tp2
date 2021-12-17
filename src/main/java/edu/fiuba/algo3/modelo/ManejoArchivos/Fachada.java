@@ -18,8 +18,10 @@ public class Fachada {
     }
 
     public void volverAFiltrar(String termino){
+
         objetoFiltrado = objetoFiltrado.getJSONObject(termino);
     }
+
 
     public String pedirValor(String termino){
         return objetoFiltrado.getString(termino);

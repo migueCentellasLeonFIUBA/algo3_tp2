@@ -30,4 +30,6 @@ public class Investigador extends GradoPolicia{
     public Objeto obtenerObjetoRandom(Objetos objetos) {
         return objetos.ObtenerObjetoRandom("Valioso");
     }
+
 }
+
