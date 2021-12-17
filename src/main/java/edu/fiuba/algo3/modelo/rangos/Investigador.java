@@ -1,6 +1,8 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
+import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 public class Investigador extends GradoPolicia{
 
@@ -25,12 +27,7 @@ public class Investigador extends GradoPolicia{
         return velocidad;
     }
 
-    @Override
-    public String getGrado() {
-        return "Investigador";
-    }
-
-    public int getArrestos(){
-        return arrestos;
+    public Objeto obtenerObjetoRandom(Objetos objetos) {
+        return objetos.ObtenerObjetoRandom("Valioso");
     }
 }

@@ -28,7 +28,7 @@ public class CasoDeUsoDos {
         //CARGA DE OBJETOS
         Ciudad montreal = crearCiudad("Montreal");
         Ciudad mexico = crearCiudad("Mexico");
-        Objeto objetoRandom = objetos.ObtenerObjetoRandom();
+        Objeto objetoRandom = jugador.obtenerObjetoRandom(objetos);
         Ladron ladronRandom = sospechosos.ObtenerLadronRandom();
 
         jugador.empezarCaso(ladronRandom, objetoRandom, montreal, ciudades, sospechosos);

@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.IBuilder.ConstructorObjetoConcreto;
 import edu.fiuba.algo3.modelo.IBuilder.DirectorObjeto;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import org.junit.jupiter.api.Test;
 
@@ -79,5 +80,19 @@ public class ObjetoTest {
         objeto = director.getObjeto();
 
         assert(objeto.getRareza() != null ) ;
+    }
+
+    @Test
+    public void TestObjetoRandomFiltradoPorValor() throws FileNotFoundException {
+        GestorDeArchivos gestorArchivos;
+        String ruta = "src/main/java/edu/fiuba/algo3/Archivos/Objetos.json";
+        gestorArchivos = new GestorDeArchivos();
+
+
+        Objetos objetos = new Objetos(gestorArchivos.leerTextoCompleto(ruta));
+        Objeto objeto = objetos.ObtenerObjetoRandom("Comun");
+        //EL OBJETO ES COMUN
+
+
     }
 }

@@ -29,4 +29,32 @@ public class Objetos extends Archivo {
 
         return (director.getObjeto());
     }
+
+    public Objeto ObtenerObjetoRandom(String valor) {
+
+        ArrayList<String> nombres = listaDeElementos();
+        ArrayList<String> nombresFiltrados = new ArrayList<>();
+
+        for (String nombre: nombres) {
+            filtrar(nombre);
+            String rarezaObjeto = pedirValor("Rareza");
+            if(rarezaObjeto.equals(valor)){
+                nombresFiltrados.add(nombre);
+            }
+        }
+
+        Random random = new Random();
+        int posicionRandom =  random.obtenerNumeroRandom(nombresFiltrados);
+
+        //filtrar(nombresFiltrados.get(posicionRandom)); //nombres solo se queda con los valores del nombre pasado.
+
+        ConstructorObjetoConcreto constructor = new ConstructorObjetoConcreto();
+        DirectorObjeto director = new DirectorObjeto();
+        director.setConstructorObjeto(constructor);
+
+        director.construirObjeto(super.fachada, nombresFiltrados.get(posicionRandom)); //el unico nombre
+        //director.construirCiudad(super.fachada, nombres.get(posicionRandom)); //probar sin filtrar.
+
+        return (director.getObjeto());
+    }
 }

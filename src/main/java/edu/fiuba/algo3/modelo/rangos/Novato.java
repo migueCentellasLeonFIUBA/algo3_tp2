@@ -1,6 +1,9 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
+import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
+
 import java.lang.annotation.Inherited;
 
 public class Novato extends GradoPolicia {
@@ -27,14 +30,7 @@ public class Novato extends GradoPolicia {
         return velocidad;
     }
 
-    @Override
-    public String getGrado(){
-        return "Novato";
+    public Objeto obtenerObjetoRandom(Objetos objetos) {
+        return objetos.ObtenerObjetoRandom("Comun");
     }
-
-    public int getArrestos(){
-        return arrestos;
-    }
-
-
 }

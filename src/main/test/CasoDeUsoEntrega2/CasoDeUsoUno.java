@@ -34,7 +34,7 @@ public class CasoDeUsoUno {
 
         //CARGA DE OBJETOS
         Ciudad ciudad = ciudades.ObtenerCiudadRandom();
-        Objeto objeto = objetos.ObtenerObjetoRandom();
+        Objeto objeto = jugador.obtenerObjetoRandom(objetos);
         Ladron ladron = sospechosos.ObtenerLadronRandom();
         ciudad.setLadron(ladron);
 

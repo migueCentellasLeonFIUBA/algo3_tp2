@@ -73,7 +73,7 @@ public class Juego {
         //Serian de la misma interfaz.
         Ladron ladronRandom = sospechosos.ObtenerLadronRandom();
         Ciudad ciudadRandom = this.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
-        Objeto objetoRandom = objetos.ObtenerObjetoRandom();
+        Objeto objetoRandom = jugadorActual.obtenerObjetoRandom(objetos);
 
         jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadRandom, ciudades, sospechosos);
 
