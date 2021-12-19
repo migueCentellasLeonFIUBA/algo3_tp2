@@ -7,7 +7,6 @@ import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
-import java.io.*;
 import java.util.ArrayList;
 
 public class Juego {
@@ -22,41 +21,20 @@ public class Juego {
     private GestorDeArchivos gestorArchivos;
 
 
-    public Juego() throws Exception {
-        gestorArchivos = new GestorDeArchivos();
-        cargarObjetos();
-        cargarJugadores();
-        cargarSospechosos();
-        cargarCiudades();
+    public Juego(IFachada fachada){
+        sospechosos = new Sospechosos(fachada.nuevoParser());
+
+        fachada.cargar(sospechosos)//habla con la fachada la fachada sabe que de sospechosos tiene que cargar un file en especifico
+
+        //a todo esto la fachada usa el gestor de archivos para leer la ruta y enviarle cargar a sospechosos que va a llenar al parser.
+
+
     }
 
-    private String obtenerTexto(String ruta) throws FileNotFoundException {
-        return gestorArchivos.leerTextoCompleto(ruta);
-    }
 
-    private void cargarObjetos() throws FileNotFoundException {
-        objetos = new Objetos(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Objetos.json"));
-    }
 
-    private void cargarPistas() throws FileNotFoundException {
-        Pistas pistas = new Pistas(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json"));
-        jugadorActual.cargarPistas(pistas);
-    }
 
-    private void cargarJugadores() throws FileNotFoundException {
-        jugadores = new Jugadores(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json"));
-    }
-
-    private void cargarSospechosos() throws FileNotFoundException {
-        sospechosos = new Sospechosos(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Sospechosos.json"));
-    }
-
-    private void cargarCiudades() throws FileNotFoundException {
-       ciudades = new Ciudades(obtenerTexto("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json"));
-       listaCiudades = ciudades.crearCiudades();
-    }
-
-    public Jugador IdentificarJugador(String nombre) throws FileNotFoundException {
+    public Jugador IdentificarJugador(String nombre) {
 
         jugadorActual = jugadores.pedirJugador(nombre); //sería parte de la interfaz como pedir pista
         return (this.jugadorActual);

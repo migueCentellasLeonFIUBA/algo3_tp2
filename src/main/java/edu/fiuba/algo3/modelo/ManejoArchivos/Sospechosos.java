@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Sospechosos extends Archivo {
 
-    public Sospechosos(String texto) {
-        super(texto);
+    public Sospechosos(IParser parser) {
+        super(parser);
     }
 
     public ArrayList<String> buscarSospechosos(ArrayList<String> terminos,ArrayList<String> valores){

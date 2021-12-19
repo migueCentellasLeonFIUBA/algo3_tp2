@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.IBuilder;
 
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
+import edu.fiuba.algo3.modelo.ManejoArchivos.ParserJson;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 
 public class DirectorLadron {
@@ -16,7 +16,7 @@ public class DirectorLadron {
         return constructor.getLadron();
     }
 
-    public void construirLadron(Fachada fachada, String nombreLadron){
+    public void construirLadron(ParserJson fachada, String nombreLadron){
 
         fachada.filtrar(nombreLadron);
         constructor.setNombre(nombreLadron);

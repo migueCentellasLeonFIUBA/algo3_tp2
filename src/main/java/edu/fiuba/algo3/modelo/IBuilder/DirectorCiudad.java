@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.IBuilder;
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
+import edu.fiuba.algo3.modelo.ManejoArchivos.ParserJson;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 
 public class DirectorCiudad {
@@ -14,7 +14,7 @@ public class DirectorCiudad {
         return constructor.getCiudad();
     }
 
-    public void construirCiudad(Fachada fachada, String nombreCiudad){
+    public void construirCiudad(ParserJson fachada, String nombreCiudad){
 
         fachada.filtrar(nombreCiudad);
         constructor.setNombre(nombreCiudad);

@@ -4,20 +4,20 @@ import java.util.ArrayList;
 
 public abstract class Archivo {
 
-    protected Fachada fachada;
+    protected IParser parser;
 
-    public Archivo(String texto) {
-        fachada = new Fachada(texto);
+    public Archivo(IParser parserNuevo) {
+        parser = parserNuevo;
     }
 
     protected void filtrar(String termino){
-        fachada.filtrar(termino);
+        parser.filtrar(termino);
     }
 
-    protected String pedirValor(String termino){return fachada.pedirValor(termino);}
+    protected String pedirValor(String termino){return parser.pedirValor(termino);}
 
     protected ArrayList<String> listaDeElementos(){
-        return fachada.listaDeElementos();
+        return parser.listaDeElementos();
     }
 
 }

@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.IBuilder.ConstructorObjetoConcreto;
 import edu.fiuba.algo3.modelo.IBuilder.DirectorObjeto;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
+import edu.fiuba.algo3.modelo.ManejoArchivos.ParserJson;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import org.junit.jupiter.api.Test;
@@ -44,7 +44,7 @@ public class ObjetoTest {
         DirectorObjeto director = new DirectorObjeto();
         director.setConstructorObjeto(constructor);
 
-        Fachada fachada = new Fachada(leido);
+        ParserJson fachada = new ParserJson(leido);
         director.construirObjeto(fachada, "Huevo de 1000 años");
         Objeto objeto = director.getObjeto();
 
@@ -69,7 +69,7 @@ public class ObjetoTest {
         DirectorObjeto director = new DirectorObjeto();
         director.setConstructorObjeto(constructor);
 
-        Fachada fachada = new Fachada(leido);
+        ParserJson fachada = new ParserJson(leido);
         director.construirObjeto(fachada, "Huevo de 1000 años");
         Objeto objeto = director.getObjeto();
 

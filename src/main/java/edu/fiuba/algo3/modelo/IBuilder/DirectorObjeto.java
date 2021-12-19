@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.IBuilder;
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
+import edu.fiuba.algo3.modelo.ManejoArchivos.ParserJson;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 public class DirectorObjeto {
@@ -14,7 +14,7 @@ public class DirectorObjeto {
         return constructor.getObjeto();
     }
 
-    public void construirObjeto(Fachada fachada, String nombreObjeto){
+    public void construirObjeto(ParserJson fachada, String nombreObjeto){
 
         fachada.filtrar(nombreObjeto);
         constructor.setNombre(nombreObjeto);

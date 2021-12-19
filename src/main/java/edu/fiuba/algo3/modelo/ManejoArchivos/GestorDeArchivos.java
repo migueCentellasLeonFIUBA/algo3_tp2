@@ -4,9 +4,7 @@ import java.io.*;
 
 import java.util.stream.Collectors;
 
-public class GestorDeArchivos {
-
-    private String carpetaArchivos;
+public class GestorDeArchivos implements IGestorDeArchivos {
 
     public GestorDeArchivos(){}
 
