@@ -6,8 +6,7 @@ public interface Secuaces {
 
     boolean arrestar();
     //boolean esLadron(String nombre);
+    void atacar(Reloj reloj);
 
-    void atacarConCuchillo(Reloj reloj);
-    void atacarConArma(Reloj reloj);
-
+    void setPistola();
 }

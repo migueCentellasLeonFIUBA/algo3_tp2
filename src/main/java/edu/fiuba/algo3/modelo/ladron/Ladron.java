@@ -2,11 +2,13 @@ package edu.fiuba.algo3.modelo.ladron;
 
 
 import edu.fiuba.algo3.modelo.jugador.Reloj;
+import edu.fiuba.algo3.modelo.ladron.Armas.Arma;
+import edu.fiuba.algo3.modelo.ladron.Armas.Cuchillo;
+import edu.fiuba.algo3.modelo.ladron.Armas.Pistola;
 
 public class Ladron implements Secuaces {
 
-    private Integer ataqueConCuchillo;
-    private Integer ataqueConArma;
+    public Arma arma;
 
     private String nombre;
     private String sexo;
@@ -16,8 +18,7 @@ public class Ladron implements Secuaces {
     private String vehiculo;
 
     public Ladron(){
-        ataqueConCuchillo = 2;
-        ataqueConArma = 4;
+        arma = new Cuchillo();
     }
 
     //Operations
@@ -32,17 +33,13 @@ public class Ladron implements Secuaces {
     }
 */
 
-    @Override
-    public void atacarConCuchillo(Reloj reloj){
-        reloj.descontarhoras(ataqueConCuchillo);
-        if(ataqueConCuchillo == 2){
-            ataqueConCuchillo--;
-        }
+    public void atacar(Reloj reloj){
+        arma.atacar(reloj);
     }
 
     @Override
-    public void atacarConArma(Reloj reloj){
-        reloj.descontarhoras(ataqueConArma);
+    public void setPistola() {
+        arma = new Pistola();
     }
 
     public void setNombre(String nombre) {

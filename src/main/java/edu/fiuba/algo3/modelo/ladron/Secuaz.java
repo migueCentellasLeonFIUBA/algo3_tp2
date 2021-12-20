@@ -20,22 +20,22 @@ public class Secuaz implements Secuaces{
         return false;
     }
 
+    @Override
+    public void atacar(Reloj reloj) {
+
+    }
+
+    @Override
+    public void setPistola() {
+
+    }
+
 /*
     @Override
     public boolean esLadron(String nombre){
         return false;
     }
 */
-
-    @Override
-    public void atacarConCuchillo(Reloj reloj){
-        //No hace nada.
-    }
-
-    @Override
-    public void atacarConArma(Reloj reloj){
-        //No hace nada.
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

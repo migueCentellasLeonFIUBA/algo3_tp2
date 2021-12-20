@@ -20,12 +20,13 @@ public class Ciudad{
     private Coordenadas coordenadas;
     private String descripcion;
     private String proximaCiudad;
-    private Ladron ladron;
+    private Secuaces ladron;
 
     public Ciudad(){
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
         proximaCiudad = "Montreal";
+        ladron = new nullLadron();
     }
 
     public void setNombre(String nombre){
@@ -64,9 +65,8 @@ public class Ciudad{
             visitas += 1;
         }
 
-        if(ladron != null){
-            ladron.atacarConCuchillo(reloj);
-        }
+        ladron.atacar(reloj);
+
 
         reloj.descontarhoras(visitas);
 
