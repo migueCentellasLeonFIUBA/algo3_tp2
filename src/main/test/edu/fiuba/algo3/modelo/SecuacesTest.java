@@ -15,17 +15,6 @@ public class SecuacesTest {
     @Test
     public void unSecuazNoAtacaAlJugador(){
 
-    /*
-        Secuaz sospechoso = new Secuaz("Merley");
-        Reloj reloj = new Reloj();
-
-        reloj.setHorasRestantes(4);
-
-        sospechoso.atacarConArma(reloj);
-        sospechoso.atacarConCuchillo(reloj);
-
-     */
-
         Secuaces ladron = new Secuaz("Martin");
         Jugador jugador = new Jugador("Nico", 0);
 
