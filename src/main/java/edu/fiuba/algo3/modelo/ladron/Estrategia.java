@@ -12,6 +12,7 @@ import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +49,12 @@ public class Estrategia {
                 break;
         }
         return;
+    }
+
+    public ArrayList<Ciudad> obtenerSiguientesDestinos(){
+         ArrayList<Ciudad> posiblesDestinos = ciudadesRandom.getCiudadesRandom(ciudades.get(siguiente), 3);
+         posiblesDestinos.add(ciudades.get(siguiente +1));
+         return posiblesDestinos;
     }
 
 /*

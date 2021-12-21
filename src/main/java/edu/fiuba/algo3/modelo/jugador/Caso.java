@@ -27,7 +27,7 @@ public class Caso {
     private Ciudad ciudadActual;
     private VisitanteConcreto visitante;
     private GradoPolicia grado;
-
+    String descripcion = "Descripcion del caso";
 
     public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos, GradoPolicia grado){
         this.ladron = ladron;
@@ -96,5 +96,25 @@ public class Caso {
     //por default el Jugador tiene una "NoOrden".
     public Ordenes emitirOrden(){
         return new OrdenDeArresto(); //hardcodeado
+    }
+
+    public String ciudadActual() {
+        return ciudadActual.getNombre();
+    }
+
+    public ArrayList<Ciudad> obtenerSiguientesDestinos(){
+        return estrategia.obtenerSiguientesDestinos();
+    }
+
+    public String getDescripcionCiudad(){
+        return ciudadActual.getDescripcion();
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String sexoComputadora() {
+        return computadora.getSexo();
     }
 }

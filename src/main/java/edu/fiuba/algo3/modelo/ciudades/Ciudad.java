@@ -26,6 +26,7 @@ public class Ciudad{
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
         proximaCiudad = "Montreal";
+        descripcion = "Descripcion ciudad";
     }
 
     public void setNombre(String nombre){
@@ -39,6 +40,10 @@ public class Ciudad{
 
     public void setDescripcion(String descripcion){
         this.descripcion = descripcion;
+    }
+
+    public String getDescripcion(){
+        return descripcion;
     }
 
 
