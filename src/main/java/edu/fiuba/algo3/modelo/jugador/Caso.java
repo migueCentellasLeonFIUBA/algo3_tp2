@@ -23,21 +23,15 @@ public class Caso {
     private Objeto objetoRobado;
     private Estrategia estrategia;
     private Computadora computadora;
-    private Reloj reloj;
     private Ciudad ciudadActual;
-    private VisitanteConcreto visitante;
-    private GradoPolicia grado;
 
 
-    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos, GradoPolicia grado){
+    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos){
         this.ladron = ladron;
         this.objetoRobado = objeto;
         this.estrategia = objeto.crearEstrategia(ciudad, ciudades);
-        this.reloj = new Reloj();
         this.computadora = new Computadora(sospechosos);
         this.ciudadActual = ciudad;
-        this.grado = grado;
-        this.visitante = new VisitanteConcreto(grado);
     }
 /*
     public Secuaz BuscarSospechoso() {
@@ -52,8 +46,8 @@ public class Caso {
         return computadora.buscarSospechosos(caracteristicas, valores); //devuelve algunos sospechosos o al ladron.
     }
 
-    public void viajarACiudad(Ciudad destino) {
-        ciudadActual.calcularDistancia(destino, grado.calcularTiempoViaje(), reloj);
+    public void viajarACiudad(Ciudad destino, Reloj reloj, GradoPolicia grado) {
+        reloj.descontarhoras(ciudadActual.calcularDistancia(destino, grado.calcularTiempoViaje()));
         ciudadActual = destino;
         //estrategia.actualizarCiudad(ciudadActual);
     }
@@ -64,23 +58,15 @@ public class Caso {
     }
 */
 
-    public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
+    public String visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
 
-        return ciudadActual.visitarEdificio(edificio, reloj, visitante);
+        return ciudadActual.visitarEdificio(edificio, jugador);
     }
 /*
     public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
         return estrategia.visitarEdificio(edificio, reloj, visitante);
     }
 */
-    public boolean tiempoTerminado(){
-
-        return reloj.tiempoTerminado();
-    }
-
-    public Integer horasRestantes(){
-        return reloj.getHorasRestantes();
-    }
 
     public void siguienteSexo() {computadora.siguienteSexo();}
 

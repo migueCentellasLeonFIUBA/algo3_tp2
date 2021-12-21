@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
+import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.Armas.Arma;
 import edu.fiuba.algo3.modelo.ladron.Armas.Cuchillo;
@@ -37,8 +38,8 @@ public class Ladron implements Secuaces {
         return this.nombre.equals(nombre);
     }
 */
-    public void atacar(Reloj reloj){
-        arma.atacar(reloj);
+    public void atacar(Jugador jugador){
+        arma.atacar(jugador);
     }
 
     @Override

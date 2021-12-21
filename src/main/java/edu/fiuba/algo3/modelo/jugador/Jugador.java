@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.jugador;
 
+import edu.fiuba.algo3.modelo.IVisitor.Visitante;
 import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
@@ -26,12 +27,16 @@ public class Jugador {
     private GradoPolicia grado;
     private Caso caso;
     private Ordenes orden;
+    private Reloj reloj;
+    private VisitanteConcreto visitante;
 
     public Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
+        this.reloj = new Reloj();
         this.grado = new Novato();
         this.orden = new OrdenSinJurisdiccion();
         asignarGrado(arrestos);
+        this.visitante = new VisitanteConcreto(grado);
     }
 
     private void asignarGrado(int arrestos){
@@ -41,7 +46,7 @@ public class Jugador {
     }
 
     public void viajarACiudad(Ciudad destino){
-        caso.viajarACiudad(destino);
+        caso.viajarACiudad(destino, reloj, grado);
     }
 
     public ArrayList<String> BuscarSospechoso() {
@@ -54,21 +59,25 @@ public class Jugador {
 
     public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
 
-        String pista = caso.visitarEdificio(edificio);
+        String pista = caso.visitarEdificio(edificio, this);
 
-        if(caso.tiempoTerminado()){
+        if(tiempoTerminado()){
             terminarJuego();
         }
 
         return pista;
     }
 
+    private boolean tiempoTerminado() {
+        return reloj.tiempoTerminado();
+    }
+
     public void empezarCaso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos) {
-        this.caso= new Caso(ladron, objeto, ciudad, ciudades, sospechosos, grado);
+        this.caso= new Caso(ladron, objeto, ciudad, ciudades, sospechosos);
     }
 
     public Integer horasRestantes(){
-        return caso.horasRestantes();
+        return reloj.getHorasRestantes();
     }
 
     public void siguienteSexo() {caso.siguienteSexo();}
@@ -111,5 +120,13 @@ public class Jugador {
     public void cargarPistas(Pistas pistas) {
         grado.establecerPistas(pistas);
         grado.cargarPistas();
+    }
+
+    public void descontarHoras(Integer horas) {
+        reloj.descontarhoras(horas);
+    }
+
+    public Visitante getVisitante() {
+        return visitante;
     }
 }

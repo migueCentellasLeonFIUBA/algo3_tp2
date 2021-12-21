@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.ladron;
 
+import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 
 public class Secuaz implements Secuaces{
@@ -21,7 +22,7 @@ public class Secuaz implements Secuaces{
     }
 
     @Override
-    public void atacar(Reloj reloj) {
+    public void atacar(Jugador jugador) {
 
     }
 

@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.ladron.Armas;
 
+import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 
 public class Pistola implements Arma{
@@ -11,7 +12,7 @@ public class Pistola implements Arma{
     }
 
     @Override
-    public void atacar(Reloj reloj) {
-        reloj.descontarhoras(ataqueConArma);
+    public void atacar(Jugador jugador) {
+        jugador.descontarHoras(ataqueConArma);
     }
 }
