@@ -28,6 +28,7 @@ public class BotonComputadoraEventHandler implements EventHandler<ActionEvent> {
         EscenaPrincipal escenaPrincipal = new EscenaPrincipal(stage, jugador, layoutComputadora);
         Scene escenaActulizada = new Scene(escenaPrincipal);
         stage.setScene(escenaActulizada);
+        stage.setFullScreen(true);
     }
 
     private LayoutComputadora crearLayoutComputadora(){

@@ -29,6 +29,7 @@ public class BotonViajarEventHandler implements EventHandler<ActionEvent> {
         EscenaPrincipal escenaPrincipal = new EscenaPrincipal(stage, jugador, layoutViajar);
         Scene escenaActulizada = new Scene(escenaPrincipal);
         stage.setScene(escenaActulizada);
+        stage.setFullScreen(true);
     }
 
     private LayoutViajar crearLayoutViajar(){

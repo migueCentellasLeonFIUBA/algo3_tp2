@@ -26,7 +26,7 @@ public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
         EscenaPrincipal escenaPrincipal = new EscenaPrincipal(stage, jugador, layoutInvestigar);
         Scene escenaActulizada = new Scene(escenaPrincipal);
         stage.setScene(escenaActulizada);
-
+        stage.setFullScreen(true);
     }
 
     private LayoutInvestigar crearLayoutInvestigar(){

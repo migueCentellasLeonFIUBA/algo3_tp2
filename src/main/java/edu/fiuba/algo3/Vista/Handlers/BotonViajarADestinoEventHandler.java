@@ -32,7 +32,7 @@ public class BotonViajarADestinoEventHandler implements EventHandler<ActionEvent
         EscenaPrincipal escenaPrincipal = new EscenaPrincipal(stage, jugador, center);
         Scene escenaActulizada = new Scene(escenaPrincipal);
         stage.setScene(escenaActulizada);
-
+        stage.setFullScreen(true);
 
     }
 
