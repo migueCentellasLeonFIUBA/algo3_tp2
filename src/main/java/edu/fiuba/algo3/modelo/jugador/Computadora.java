@@ -113,4 +113,7 @@ public class Computadora {
     public void siguienteSenia() {senia.siguienteSenia();}
 
 
+    public String getSexo() {
+        return sexo.sexo();
+    }
 }

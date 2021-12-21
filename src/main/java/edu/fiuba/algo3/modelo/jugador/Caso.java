@@ -24,6 +24,7 @@ public class Caso {
     private Estrategia estrategia;
     private Computadora computadora;
     private Ciudad ciudadActual;
+    private String descripcion;
 
 
     public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos){
@@ -32,6 +33,7 @@ public class Caso {
         this.estrategia = objeto.crearEstrategia(ciudad, ciudades);
         this.computadora = new Computadora(sospechosos);
         this.ciudadActual = ciudad;
+        this.descripcion = "Descripcion caso";
     }
 /*
     public Secuaz BuscarSospechoso() {
@@ -40,10 +42,10 @@ public class Caso {
 */
     public ArrayList<String> buscarSospechosos(){
         return computadora.BuscarSospechoso();
-    } //devuelve todos los sospechosos del caso
+    }
 
     public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas,ArrayList<String> valores){
-        return computadora.buscarSospechosos(caracteristicas, valores); //devuelve algunos sospechosos o al ladron.
+        return computadora.buscarSospechosos(caracteristicas, valores);
     }
 
     public void viajarACiudad(Ciudad destino, Reloj reloj, GradoPolicia grado) {
@@ -86,4 +88,24 @@ public class Caso {
         return new OrdenDeArresto(); //hardcodeado
     }
     */
+    public String ciudadActual() {
+        return ciudadActual.getNombre();
+    }
+
+    public ArrayList<Ciudad> obtenerSiguientesDestinos(){
+        return estrategia.obtenerSiguientesDestinos();
+    }
+
+    public String getDescripcionCiudad(){
+        return ciudadActual.getDescripcion();
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String sexoComputadora() {
+        return computadora.getSexo();
+    }
+
 }

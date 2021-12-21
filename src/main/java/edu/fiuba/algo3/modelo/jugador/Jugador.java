@@ -129,4 +129,26 @@ public class Jugador {
     public Visitante getVisitante() {
         return visitante;
     }
+
+    public String ciudadActual() {
+        return caso.ciudadActual();
+    }
+
+    public String getDescripcionCaso() {
+        return caso.getDescripcion();
+    }
+
+    public String getDescripcionCiudad(){
+        return caso.getDescripcionCiudad();
+    }
+
+    public ArrayList<Ciudad> obtenerSiguientesDestinos(){
+        return caso.obtenerSiguientesDestinos();
+    }
+
+    public String getSexoComputadora() {
+
+        return caso.sexoComputadora();
+    }
+
 }
