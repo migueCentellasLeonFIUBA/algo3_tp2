@@ -51,7 +51,7 @@ public class Caso {
     public void viajarACiudad(Ciudad destino, Reloj reloj, GradoPolicia grado) {
         reloj.descontarhoras(ciudadActual.calcularDistancia(destino, grado.calcularTiempoViaje()));
         ciudadActual = destino;
-        //estrategia.actualizarCiudad(ciudadActual);
+        estrategia.actualizarCiudad(ciudadActual);
     }
 
 /*
@@ -61,7 +61,7 @@ public class Caso {
 */
 
     public String visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
-
+        ciudadActual.setProximaCiudad(estrategia.getProximaCiudad());
         return ciudadActual.visitarEdificio(edificio, jugador);
     }
 /*

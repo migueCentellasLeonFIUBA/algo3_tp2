@@ -33,7 +33,7 @@ public class Estrategia {
     }
 
     public Ciudad getProximaCiudad() {
-        Ciudad siguienteCiudad = ciudades.get(siguiente);
+        Ciudad siguienteCiudad = ciudades.get(siguiente + 1);
         siguiente += 1;
         return siguienteCiudad;
     }

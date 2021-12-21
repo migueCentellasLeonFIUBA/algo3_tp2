@@ -25,12 +25,15 @@ public class Ciudad{
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
         ladron = new nullLadron();
-        proximaCiudad = "Montreal";
         descripcion = "Descripcion ciudad";
     }
 
     public void setNombre(String nombre){
         this.nombre = nombre;
+    }
+
+    public void setProximaCiudad(Ciudad proximaCiudad){
+        this.proximaCiudad = proximaCiudad.getNombre();
     }
 
 

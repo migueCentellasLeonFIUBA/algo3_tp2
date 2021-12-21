@@ -16,6 +16,54 @@
       "Biblioteca":"Aztecas",
       "Bolsa": "Bolsa de Mexico",
       "Puerto": "Puerto de Mexico"
+    },
+    "Buenos Aires":
+    {
+      "Banco":"Pesos",
+      "AeroPuerto":"AeroArg",
+      "Biblioteca":"Arg",
+      "Bolsa": "Bolsa de Arg",
+      "Puerto": "Puerto de Arg"
+    },
+    "Pekin":
+    {
+      "Banco":"Pesos pekin",
+      "AeroPuerto":"AeroPekin",
+      "Biblioteca":"Pekin",
+      "Bolsa": "Bolsa de Pekin",
+      "Puerto": "Puerto de Pekin"
+    },
+    "Bagdad":
+    {
+      "Banco":"Pesos bagdad",
+      "AeroPuerto":"AeroBagdad",
+      "Biblioteca":"bagdad",
+      "Bolsa": "Bolsa de Bagdad",
+      "Puerto": "Puerto de Bagdad"
+    },
+    "Port Moresby":
+    {
+      "Banco":"Pesos moresby",
+      "AeroPuerto":"AeroMoresby",
+      "Biblioteca":"Moresby",
+      "Bolsa": "Bolsa de Moresby",
+      "Puerto": "Puerto de Moresby"
+    },
+    "Sydney":
+    {
+      "Banco":"Pesos Sydey",
+      "AeroPuerto":"AeroSydney",
+      "Biblioteca":"sydney",
+      "Bolsa": "Bolsa de sydney",
+      "Puerto": "Puerto de sydney"
+    },
+    "Estambul":
+    {
+      "Banco":"Pesos estambuil",
+      "AeroPuerto":"AeroEstambul",
+      "Biblioteca":"estambul",
+      "Bolsa": "Bolsa de Estambul",
+      "Puerto": "Puerto de Estambul"
     }
   },
   "Media":
