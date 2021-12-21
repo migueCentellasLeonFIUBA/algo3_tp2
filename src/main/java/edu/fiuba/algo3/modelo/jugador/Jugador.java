@@ -100,7 +100,7 @@ public class Jugador {
         return caso.buscarSospechosos();
     }
 
-    public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas,ArrayList<String> valores){
+    public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas, ArrayList<String> valores){
         if(caso.buscarSospechosos(caracteristicas, valores).size() == 1){
             //queda un solo sospechoso y debo emitir una orden de arresto...
             orden = new OrdenDeArresto();

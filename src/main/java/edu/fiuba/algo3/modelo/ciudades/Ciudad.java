@@ -25,7 +25,7 @@ public class Ciudad{
     public Ciudad(){
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
-        proximaCiudad = "Montreal";
+        proximaCiudad = "Montreal";  //???
         ladron = new nullLadron();
     }
 

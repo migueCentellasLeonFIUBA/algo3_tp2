@@ -32,7 +32,7 @@ public class CasoDeUsoCuatroTest {
     @Test
     public void elJugadorIntentaArrestarAlLadronSinUnaOrdenYFalla() throws FileNotFoundException {
 
-        Jugador jugador = new Jugador("Miguel", 5);
+        Jugador jugador = new Jugador("Miguel", 0);
 
         //CARGA DE ARCHIVOS
         GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();

@@ -38,7 +38,6 @@ public class Caso {
         this.ciudadActual = ciudad;
         this.grado = grado;
         this.visitante = new VisitanteConcreto(grado);
-
     }
 /*
     public Secuaz BuscarSospechoso() {
@@ -47,10 +46,10 @@ public class Caso {
 */
     public ArrayList<String> buscarSospechosos(){
         return computadora.BuscarSospechoso();
-    }
+    } //devuelve todos los sospechosos del caso
 
     public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas,ArrayList<String> valores){
-        return computadora.buscarSospechosos(caracteristicas, valores);
+        return computadora.buscarSospechosos(caracteristicas, valores); //devuelve algunos sospechosos o al ladron.
     }
 
     public void viajarACiudad(Ciudad destino) {
@@ -58,6 +57,7 @@ public class Caso {
         ciudadActual = destino;
         //estrategia.actualizarCiudad(ciudadActual);
     }
+
 /*
     public void viajarACiudad(Ciudad destino){
         estrategia.viajarACiudad(destino, grado, reloj);
@@ -94,7 +94,10 @@ public class Caso {
 
     //si solo queda un sospechoso, se devuelve una orden automaticamente,
     //por default el Jugador tiene una "NoOrden".
+
+    /*
     public Ordenes emitirOrden(){
         return new OrdenDeArresto(); //hardcodeado
     }
+    */
 }
