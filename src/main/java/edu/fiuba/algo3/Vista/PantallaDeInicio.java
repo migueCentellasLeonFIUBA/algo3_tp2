@@ -1,49 +1,62 @@
 package edu.fiuba.algo3.Vista;
 
-import edu.fiuba.algo3.Vista.Handlers.BotonEntrarEventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.*;
 import javafx.scene.image.Image;
+import javafx.scene.text.FontPosture;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontSmoothingType;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 public class PantallaDeInicio extends VBox {
 
     Stage stage;
 
-    public PantallaDeInicio(Stage stage, Scene proximaEscena) {
+    public PantallaDeInicio(Stage stage, Scene proximaEscena) throws FileNotFoundException {
 
         super();
 
         this.stage = stage;
+        stage.setMaximized(true);
+        this.setAlignment(Pos.TOP_CENTER);
 
-        this.setAlignment(Pos.CENTER);
         this.setSpacing(20);
         this.setPadding(new Insets(25));
-        Image imagen = new Image("file:src/vista/imagenes/textura.png");
-        BackgroundImage imagenDeFondo = new BackgroundImage(imagen, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+
+        //InputStream stream = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\pantallaCarga.png");
+        Image imagen = new Image("https://www.mobygames.com/images/shots/l/491-where-in-the-world-is-carmen-sandiego-dos-screenshot-title-screen.gif");
+
+        BackgroundSize backgroundSize = new BackgroundSize(100, 100, true, true, true, true);
+        BackgroundImage imagenDeFondo = new BackgroundImage(imagen, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, backgroundSize);
         this.setBackground(new Background(imagenDeFondo));
 
-        Button botonEntrar = new Button();
-        botonEntrar.setText("Entrar");
+        GaussianBlur blur = new GaussianBlur();
+        blur.setRadius(2.5);
 
-        Label etiqueta = new Label();
-        etiqueta.setFont(Font.font("Tahoma", FontWeight.BOLD, 18));
+        Label nombre = new Label();
+        nombre.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 30));
+        nombre.setText("Carmen Sandiego");
+        nombre.setTextFill(Color.DARKGRAY);
+        nombre.setEffect(blur);
 
-        etiqueta.setText("Carmen Sandiego");
-        etiqueta.setTextFill(Color.web("#66A7C5"));
+        Label presioneCualquierTecla = new Label();
+        presioneCualquierTecla.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 17));
+        presioneCualquierTecla.setText("Presione Cualquier Tecla Para Continuar");
+        presioneCualquierTecla.setTextFill(Color.DARKGRAY);
+        presioneCualquierTecla.setEffect(blur);
 
-        BotonEntrarEventHandler botonEntrarHandler = new BotonEntrarEventHandler(stage, proximaEscena);
-        botonEntrar.setOnAction(botonEntrarHandler);
+        this.getChildren().addAll(nombre, presioneCualquierTecla);
 
-        this.getChildren().addAll(etiqueta, botonEntrar);
-        stage.setFullScreen(true);
     }
 
 }

@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.juego.Juego;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -15,11 +16,6 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        /*var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
-
-        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        var scene = new Scene(new StackPane(label), 640, 480);*/
         Juego juego = crearModelo();
 
         IdentificarJugador identificarJugador = new IdentificarJugador(stage, juego);
@@ -28,16 +24,19 @@ public class App extends Application {
         PantallaDeInicio pantallaDeInicio = new PantallaDeInicio(stage, escenaIdentificarJugador);
         Scene escenaPantallaDeInicio = new Scene(pantallaDeInicio);
 
+
+        escenaPantallaDeInicio.setOnKeyPressed((KeyEvent event) -> {
+            stage.setScene(escenaIdentificarJugador);
+        });
+
         stage.setScene(escenaPantallaDeInicio);
         stage.setTitle("Carmen Sandiego");
 
 
-        //PantallaDeCarga pantallaDeCarga = new PantallaDeCarga(stage);
-        //Scene escenaJuego = new Scene(pantallaDeCarga, 640, 480);
+        stage.setMaxHeight(600);
+        stage.setMaxWidth(960);
+        stage.setMaximized(true);
 
-
-
-        stage.setFullScreen(true);
 
         stage.show();
 
