@@ -2,6 +2,7 @@ package edu.fiuba.algo3.Vista.Handlers;
 
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
+import edu.fiuba.algo3.modelo.pistas.Pista;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
@@ -22,13 +23,13 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
 
     public void handle(ActionEvent actionEvent) {
 
-        String pista = null;
+        Pista pista = null;
         try {
             pista = jugador.visitarEdificio(edificio);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        label.setText(pista);
+        label.setText(String.valueOf(pista));
 
 
     }

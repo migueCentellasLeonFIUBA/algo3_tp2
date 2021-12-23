@@ -1,4 +1,4 @@
 package edu.fiuba.algo3.modelo.pistas;
 
-public class Dificil implements Dificultad{
+public class Dificil implements Pista {
 }

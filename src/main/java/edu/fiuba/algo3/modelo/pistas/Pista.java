@@ -1,4 +1,4 @@
 package edu.fiuba.algo3.modelo.pistas;
 
-public interface Dificultad {
+public interface Pista {
 }

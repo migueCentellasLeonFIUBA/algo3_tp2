@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.IVisitor.Visitante;
 import edu.fiuba.algo3.modelo.edificios.*;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.*;
+import edu.fiuba.algo3.modelo.pistas.Pista;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -66,7 +67,7 @@ public class Ciudad{
         return coordenadas;
     }
 
-    public String visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
+    public Pista visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
 
         if(visitas < 3){
             visitas += 1;
@@ -75,9 +76,7 @@ public class Ciudad{
         ladron.atacar(jugador);
 
         jugador.descontarHoras(visitas);
-        Visitante visitante = jugador.getVisitante();
-        visitante.filtrarCiudad(proximaCiudad);
-        return edificio.aceptar(visitante);
+        return edificio.aceptar(jugador);
     }
 
     public Edificio obtenerEdificio(int i) {

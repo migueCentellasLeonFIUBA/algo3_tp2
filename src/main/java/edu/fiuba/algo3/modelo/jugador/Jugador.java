@@ -1,12 +1,11 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-import edu.fiuba.algo3.modelo.IVisitor.Visitante;
-import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.edificios.AeroPuerto;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.ladron.Secuaces;
@@ -14,6 +13,7 @@ import edu.fiuba.algo3.modelo.objetos.Objeto;
 import edu.fiuba.algo3.modelo.orden.OrdenDeArresto;
 import edu.fiuba.algo3.modelo.orden.OrdenSinJurisdiccion;
 import edu.fiuba.algo3.modelo.orden.Ordenes;
+import edu.fiuba.algo3.modelo.pistas.Pista;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
@@ -28,7 +28,6 @@ public class Jugador {
     private Caso caso;
     private Ordenes orden;
     private Reloj reloj;
-    private VisitanteConcreto visitante;
 
     public Jugador(String nombre,Integer arrestos){
         this.nombre=nombre;
@@ -36,7 +35,6 @@ public class Jugador {
         this.grado = new Novato();
         this.orden = new OrdenSinJurisdiccion();
         asignarGrado(arrestos);
-        this.visitante = new VisitanteConcreto(grado);
     }
 
     private void asignarGrado(int arrestos){
@@ -57,9 +55,9 @@ public class Jugador {
         this.caso = null;
     }
 
-    public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
+    public Pista visitarEdificio(Edificio edificio) throws FileNotFoundException {
 
-        String pista = caso.visitarEdificio(edificio, this);
+        Pista pista = caso.visitarEdificio(edificio, this);
 
         if(tiempoTerminado()){
             terminarJuego();
@@ -126,10 +124,6 @@ public class Jugador {
         reloj.descontarhoras(horas);
     }
 
-    public Visitante getVisitante() {
-        return visitante;
-    }
-
     public String ciudadActual() {
         return caso.ciudadActual();
     }
@@ -151,4 +145,7 @@ public class Jugador {
         return caso.sexoComputadora();
     }
 
+    public Pista visitar(Edificio edificio) {
+        return grado.obtenerPista(edificio);
+    }
 }

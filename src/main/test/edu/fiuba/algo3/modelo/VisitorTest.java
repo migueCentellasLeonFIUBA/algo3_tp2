@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.edificios.Banco;
 import edu.fiuba.algo3.modelo.edificios.Biblioteca;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
+import edu.fiuba.algo3.modelo.pistas.Pista;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class VisitorTest {
         Juego juego = new Juego();
         Jugador jugador = juego.IdentificarJugador("Tomas");
         juego.crearCaso();
-        String pista = jugador.visitarEdificio(new AeroPuerto());
+        Pista pista = jugador.visitarEdificio(new AeroPuerto());
 
         assertEquals("AeroQuebec", pista);
     }

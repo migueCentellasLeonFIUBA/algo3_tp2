@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
@@ -9,6 +8,7 @@ import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.*;
 import edu.fiuba.algo3.modelo.orden.OrdenDeArresto;
 import edu.fiuba.algo3.modelo.orden.Ordenes;
+import edu.fiuba.algo3.modelo.pistas.Pista;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
 import java.io.FileNotFoundException;
@@ -60,7 +60,7 @@ public class Caso {
     }
 */
 
-    public String visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
+    public Pista visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
         ciudadActual.setProximaCiudad(estrategia.getProximaCiudad());
         return ciudadActual.visitarEdificio(edificio, jugador);
     }
