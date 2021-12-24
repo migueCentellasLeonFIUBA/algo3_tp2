@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo.jugador;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.*;
@@ -27,7 +28,7 @@ public class Caso {
     private String descripcion;
 
 
-    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos){
+    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, CiudadesMapa ciudades, Sospechosos sospechosos){
         this.ladron = ladron;
         this.objetoRobado = objeto;
         this.estrategia = objeto.crearEstrategia(ciudad, ciudades);

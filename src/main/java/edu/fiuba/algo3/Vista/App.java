@@ -15,11 +15,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        /*var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
+        /*
+            var javaVersion = SystemInfo.javaVersion();
+            var javafxVersion = SystemInfo.javafxVersion();
 
-        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        var scene = new Scene(new StackPane(label), 640, 480);*/
+            var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
+            var scene = new Scene(new StackPane(label), 640, 480);
+        */
+
         Juego juego = crearModelo();
 
         IdentificarJugador identificarJugador = new IdentificarJugador(stage, juego);
@@ -31,17 +34,11 @@ public class App extends Application {
         stage.setScene(escenaPantallaDeInicio);
         stage.setTitle("Carmen Sandiego");
 
-
         //PantallaDeCarga pantallaDeCarga = new PantallaDeCarga(stage);
         //Scene escenaJuego = new Scene(pantallaDeCarga, 640, 480);
 
-
-
         stage.setFullScreen(true);
-
         stage.show();
-
-
     }
 
     private Juego crearModelo() throws Exception {

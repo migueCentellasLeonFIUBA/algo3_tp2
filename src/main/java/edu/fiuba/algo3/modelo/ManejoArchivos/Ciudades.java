@@ -28,16 +28,11 @@ public class Ciudades extends Archivo {
         Random random = new Random();
 
         return (random.obtenerNumeroRandom(nombres));
-
     }
 
     public ArrayList<Ciudad> crearCiudades() {
         ArrayList<String> nombres = listaDeElementos();
         ArrayList<Ciudad> ciudades = new ArrayList<>();
-
-        //ConstructorCiudadConcreta constructor = new ConstructorCiudadConcreta();
-        //DirectorCiudad director = new DirectorCiudad();
-        //director.setConstructorCiudad(constructor);
 
         for(String nombre: nombres){
             ConstructorCiudadConcreta constructor = new ConstructorCiudadConcreta();
@@ -61,7 +56,6 @@ public class Ciudades extends Archivo {
         director.setConstructorCiudad(constructor);
 
         director.construirCiudad(super.fachada, nombres.get(0)); //el unico nombre
-        //director.construirCiudad(super.fachada, nombres.get(posicionRandom)); //probar sin filtrar.
 
         return (director.getCiudad());
     }

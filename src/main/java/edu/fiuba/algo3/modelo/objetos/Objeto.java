@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo.objetos;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 
 
@@ -19,6 +20,8 @@ public class Objeto{
         this.origen = origen;
     }
 
+    public String getCiudadOrigen(){ return origen;}
+
     public void setValor(String clase){
         if ( clase.equals("Comun"))
             this.valor = new Comun();
@@ -32,7 +35,7 @@ public class Objeto{
         return this.valor;
     }
 
-    public Estrategia crearEstrategia(Ciudad ciudad, Ciudades ciudades){
+    public Estrategia crearEstrategia(Ciudad ciudad, CiudadesMapa ciudades){
         return(valor.crearEstrategia(ciudad, ciudades));
     }
 

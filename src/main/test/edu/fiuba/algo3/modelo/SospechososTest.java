@@ -182,22 +182,6 @@ public class SospechososTest {
 
         assert(obtenidos.get(0).equals("Merey Laroc"));
 
-        /*
-        ArrayList<String> valores_ladron = new ArrayList<>();
-        valores_ladron.add("Femenino");
-        valores_ladron.add("Croquet");
-        valores_ladron.add("Negro");
-        valores_ladron.add("Joyas");
-        valores_ladron.add("Limusina");
-
-        Sospechosos ladron = new Sospechosos(leido);
-        ArrayList<String> ladron_obtenido = ladron.buscarSospechosos(caracteristicas, valores_ladron);
-        System.out.println(ladron_obtenido);
-
-        assert(ladron_obtenido.get(0).equals("Carmen SanDiego"));
-        assertEquals(1, ladron_obtenido.size());
-         */
-
         //******Creo lo necesario para crea el caso:******
 
         Jugador jugador = new Jugador("Tito", 0);
@@ -248,7 +232,6 @@ public class SospechososTest {
 
         Ciudades ciudades = new Ciudades(ciudadesLeidas);
 
-        //public void empezarCaso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos)
         jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos );
 
         //No tengo una orden entonces:

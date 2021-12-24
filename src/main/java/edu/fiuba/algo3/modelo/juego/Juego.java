@@ -2,6 +2,9 @@ package edu.fiuba.algo3.modelo.juego;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
+import edu.fiuba.algo3.modelo.ciudades.ControladorMapa;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
@@ -9,6 +12,7 @@ import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class Juego {
 
@@ -16,6 +20,9 @@ public class Juego {
     private Jugadores jugadores;
     private Ciudades ciudades;
     private Objetos objetos;
+
+    private Mapa mapa;
+    private CiudadesMapa ciudadesMapa;
 
     private ArrayList<Ciudad> listaCiudades;
     private Jugador jugadorActual;
@@ -28,6 +35,7 @@ public class Juego {
         cargarJugadores();
         cargarSospechosos();
         cargarCiudades();
+        //cargarMapa();
     }
 
     private String obtenerTexto(String ruta) throws FileNotFoundException {
@@ -56,34 +64,44 @@ public class Juego {
        listaCiudades = ciudades.crearCiudades();
     }
 
+    //crea toda la lista de ciudades del mapa, que se usará para todos los casos.
+    public Mapa cargarMapa(){
+        ciudadesMapa = new CiudadesMapa(listaCiudades);
+        mapa = new Mapa(ciudadesMapa);
+        return mapa;
+    }
+
     public Jugador IdentificarJugador(String nombre) {
 
         jugadorActual = jugadores.pedirJugador(nombre); //sería parte de la interfaz como pedir pista
         return (this.jugadorActual);
-
     }
 
     public void TerminarJuego() {
         //TODO
     }
 
-    public void crearCaso() throws Exception {
+    //crea el caso y devuelve la ciudad inicial para mostar el primer mapa.
+    public Ciudad crearCaso() throws Exception {
 
         //Serian de la misma interfaz.
         Ladron ladronRandom = sospechosos.ObtenerLadronRandom();
-        Ciudad ciudadRandom = this.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
+        //Ciudad ciudadOrigen = this.ObtenerCiudadRandom();       //esto no lo vamos a necesitar.
+
         Objeto objetoRandom = jugadorActual.obtenerObjetoRandom(objetos);
+        String origen = objetoRandom.getCiudadOrigen();
+        Ciudad ciudadOrigen = mapa.getCiudad(origen);
 
         cargarPistas();
-        jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadRandom, ciudades, sospechosos);
+        jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadOrigen, ciudades, sospechosos);
 
+        return ciudadOrigen;
     }
 
     private Ciudad ObtenerCiudadRandom() {
         int posicionRandom = ciudades.ObtenerPosicionCiudadRandom();
         return listaCiudades.get(posicionRandom);
     }
-
 
     public Jugador getJugador() {
         return jugadorActual;

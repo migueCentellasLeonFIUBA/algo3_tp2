@@ -2,17 +2,10 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
-import edu.fiuba.algo3.modelo.IVisitor.Visitante;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.ciudades.CiudadesRandom;
-import edu.fiuba.algo3.modelo.edificios.Edificio;
-import edu.fiuba.algo3.modelo.jugador.Reloj;
-import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
+import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
 
-import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,26 +13,33 @@ public class Estrategia {
 
     private List<Ciudad> ciudades;
     private Integer siguiente = 0;
-    private CiudadesRandom ciudadesRandom;
-//    private Ciudad ciudadActual;
+    private CiudadesMapa ciudadesMapa;
+    //private Ciudad ciudadActual;
 
-
-    public Estrategia(Integer cantCiudades, Ciudad ciudad, Ciudades ciudades) {
+    public Estrategia(Integer cantCiudades, Ciudad ciudad, CiudadesMapa ciudades) {
         this.ciudades = new ArrayList<>();
         this.ciudades.add(ciudad);
-        this.ciudadesRandom = new CiudadesRandom(ciudades.crearCiudades());
-//        this.ciudadActual = ciudad;
+        this.ciudadesMapa = ciudades; //le pasa una lista de las ciudades cargadas....
+        //this.ciudadActual = ciudad;
         this.asignarEstrategia(cantCiudades, ciudad);
     }
 
+    //devuelve la proxima ciudad en la ruta.
     public Ciudad getProximaCiudad() {
-        Ciudad siguienteCiudad = ciudades.get(siguiente + 1);
         siguiente += 1;
+        Ciudad siguienteCiudad = new Ciudad();
+
+        if(siguiente < ciudades.size()){
+           siguienteCiudad = ciudades.get(siguiente);
+        }
         return siguienteCiudad;
     }
 
     private void asignarEstrategia(Integer cantCiudades, Ciudad ciudadOrigen){
-        this.ciudades = ciudadesRandom.getCiudadesRandom(ciudadOrigen, cantCiudades);
+        this.ciudades = ciudadesMapa.getCiudadesRandom(ciudadOrigen, cantCiudades); //este debe cambiar a getCiudadesRuta...
+
+        //agrego las ciudades de la ruta a seguir...
+
     }
 
     public void actualizarCiudad(Ciudad ciudad){
@@ -52,7 +52,7 @@ public class Estrategia {
     }
 
     public ArrayList<Ciudad> obtenerSiguientesDestinos(){
-         ArrayList<Ciudad> posiblesDestinos = ciudadesRandom.getCiudadesRandom(ciudades.get(siguiente), 3);
+         ArrayList<Ciudad> posiblesDestinos = ciudadesMapa.getCiudadesRandom(ciudades.get(siguiente), 3);
          posiblesDestinos.add(ciudades.get(siguiente +1));
          return posiblesDestinos;
     }
@@ -68,6 +68,5 @@ public class Estrategia {
 
         return ciudadActual.visitarEdificio(edificio, reloj, visitante);
     }
-
 */
 }

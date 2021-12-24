@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.ciudades;
 
-
 import edu.fiuba.algo3.modelo.IVisitor.Visitante;
 import edu.fiuba.algo3.modelo.edificios.*;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
@@ -21,12 +20,14 @@ public class Ciudad{
     private String descripcion;
     private String proximaCiudad;
     private Secuaces ladron;
+    private Conexiones ciudadesConectadas;
 
     public Ciudad(){
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
         ladron = new nullLadron();
         descripcion = "Descripcion ciudad";
+        ciudadesConectadas = new Conexiones();
     }
 
     public void setNombre(String nombre){
@@ -35,8 +36,11 @@ public class Ciudad{
 
     public void setProximaCiudad(Ciudad proximaCiudad){
         this.proximaCiudad = proximaCiudad.getNombre();
-    }
+    } //No se usa mas.
 
+    public void setCiudadConexion(Ciudad conexion){
+        ciudadesConectadas.setConexiones(conexion);
+    }
 
     public void setCoordenadas(String latitud, String longitud) {
         this.coordenadas = new Coordenadas(Double.parseDouble(latitud), Double.parseDouble(longitud));
@@ -50,6 +54,9 @@ public class Ciudad{
         return descripcion;
     }
 
+    public Conexiones getConexiones(){
+        return ciudadesConectadas;
+    }
 
     public List<Edificio> mostrarEdificios(){
         List <Edificio> copiaListaEdificios = listaEdificios.stream().collect(Collectors.toList());
@@ -86,7 +93,6 @@ public class Ciudad{
     public void setLadron(Ladron ladronActual){
         ladron = ladronActual;
     }
-
 
     public String getNombre(){
         return this.nombre;

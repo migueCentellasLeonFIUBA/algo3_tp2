@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 
-import edu.fiuba.algo3.modelo.ciudades.CiudadesRandom;
+import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
 
 import org.junit.jupiter.api.Test;
 
@@ -26,7 +26,7 @@ public class CiudadesTest {
 
             assertEquals(8, listaCiudades.size());
 
-            CiudadesRandom ciudades = new CiudadesRandom(listaCiudades);
+            CiudadesMapa ciudades = new CiudadesMapa(listaCiudades);
             ArrayList<Ciudad> ciudadesRandom = ciudades.getCiudadesRandom(listaCiudades.get(0), 4);
 
             assertEquals(4, ciudadesRandom.size());

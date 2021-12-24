@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
 import edu.fiuba.algo3.modelo.edificios.AeroPuerto;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
@@ -71,7 +72,8 @@ public class Jugador {
     }
 
     public void empezarCaso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades, Sospechosos sospechosos) {
-        this.caso= new Caso(ladron, objeto, ciudad, ciudades, sospechosos);
+        CiudadesMapa ciudadesMapa = new CiudadesMapa(ciudades.crearCiudades());
+        this.caso= new Caso(ladron, objeto, ciudad, ciudadesMapa, sospechosos);
     }
 
     public Integer horasRestantes(){
@@ -136,6 +138,7 @@ public class Jugador {
         return caso.getDescripcionCiudad();
     }
 
+    //modificar para que no sea random...
     public ArrayList<Ciudad> obtenerSiguientesDestinos(){
         return caso.obtenerSiguientesDestinos();
     }

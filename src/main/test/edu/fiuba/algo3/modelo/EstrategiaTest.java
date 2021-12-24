@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 import org.junit.jupiter.api.Test;
 
@@ -27,9 +28,10 @@ public class EstrategiaTest {
 
         ArrayList<Ciudad> listaCiudades = ciudadesCargadas.crearCiudades();
 
+        CiudadesMapa ciudades = new CiudadesMapa(ciudadesCargadas.crearCiudades());
         assertEquals(8, listaCiudades.size());
 
-        Estrategia estrategia = new Estrategia(4, listaCiudades.get(0),ciudadesCargadas);
+        Estrategia estrategia = new Estrategia(4, listaCiudades.get(0),ciudades);
         ArrayList<Ciudad> ciudadesRandom = new ArrayList<>();
 
         for (int i = 0; i < 4 ; i++) {
