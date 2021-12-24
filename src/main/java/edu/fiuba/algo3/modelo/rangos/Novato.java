@@ -33,4 +33,9 @@ public class Novato extends GradoPolicia {
     public Objeto obtenerObjetoRandom(Objetos objetos) {
         return objetos.ObtenerObjetoRandom("Comun");
     }
+
+    public String obtenerGrado(){
+        return "Novato";
+    }
+
 }

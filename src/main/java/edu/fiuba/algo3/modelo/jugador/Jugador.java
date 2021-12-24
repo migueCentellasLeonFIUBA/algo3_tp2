@@ -151,4 +151,11 @@ public class Jugador {
         return caso.sexoComputadora();
     }
 
+    public String rango() {
+        return grado.obtenerGrado();
+    }
+
+    public String getCiudad() {
+        return caso.ciudadActual();
+    }
 }

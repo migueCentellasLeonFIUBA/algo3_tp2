@@ -32,11 +32,19 @@ public class Objeto{
         return this.valor;
     }
 
+    public String getValor(){
+        return valor.getRareza();
+    }
+
     public Estrategia crearEstrategia(Ciudad ciudad, Ciudades ciudades){
         return(valor.crearEstrategia(ciudad, ciudades));
     }
 
     public Boolean esElMismoObjeto(String nombre){
         return this.nombre.equals(nombre); //Se usará para capturar la ruta.
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }

@@ -19,7 +19,8 @@ public class BotonEntrarEventHandler implements EventHandler<ActionEvent> {
 
         stage.setScene(proximaEscena);
         //stage.setFullScreen(true);
-        stage.setMaxHeight(500);
-        stage.setMaxWidth(500);
+        //this.stage.setHeight(600);
+        //this.stage.setWidth(960);
+        //this.stage.setMaximized(true);
     }
 }

@@ -21,9 +21,10 @@ public class IdentificarJugador extends VBox {
 
     public IdentificarJugador(Stage stage, Juego juego) throws Exception {
 
-        super();
+        /*super();
         this.stage = stage;
         this.juego = juego;
+
 
 
         this.setAlignment(Pos.CENTER);
@@ -47,10 +48,10 @@ public class IdentificarJugador extends VBox {
         botonAceptar.setOnAction(botonEntrarEventHandler);
 
 
-        this.getChildren().addAll(texto, textField, botonAceptar);
+        this.getChildren().addAll(texto, textField, botonAceptar);*/
 
     }
-
+/*
     private EscenaPrincipal crearEscenaPrincipal(String nombre) throws Exception {
         Jugador jugador = juego.IdentificarJugador(nombre);
         juego.crearCaso();
@@ -71,5 +72,5 @@ public class IdentificarJugador extends VBox {
 
         textArea.setText(descripcion);
         return textArea;
-    }
+    }*/
 }

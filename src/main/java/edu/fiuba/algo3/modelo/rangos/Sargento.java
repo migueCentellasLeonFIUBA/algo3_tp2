@@ -20,6 +20,11 @@ public class Sargento extends GradoPolicia {
         return this;
     }
 
+    public String obtenerGrado(){
+        return "Sargento";
+    }
+
+
     @Override
     public Integer calcularTiempoViaje() {
         return velocidad;

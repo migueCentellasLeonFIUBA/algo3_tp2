@@ -27,7 +27,9 @@ public class PantallaDeInicio extends VBox {
         super();
 
         this.stage = stage;
-        stage.setMaximized(true);
+        //this.stage.setMaxHeight(600);
+        //this.stage.setMaxWidth(960);
+        //this.stage.setMaximized(true);
         this.setAlignment(Pos.TOP_CENTER);
 
         this.setSpacing(20);

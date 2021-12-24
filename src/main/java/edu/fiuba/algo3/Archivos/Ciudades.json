@@ -2,41 +2,41 @@
   "Montreal":{
     "latitud": "45.50884",
     "longitud": "-73.58781",
-    "descripcion": "Ciudad de montreal"
+    "descripcion": "Montreal es la mayor ciudad de la provincia de Quebec, en Canadá y la segunda más poblada del país después de Toronto. Es también una región administrativa de Quebec. Se sitúa en la isla del mismo nombre entre el río San Lorenzo y la Rivière des Prairies. Es uno de los principales centros industriales, comerciales y culturales de Norteamérica. El clima de Montreal es continental húmedo, con cuatro estaciones bien definidas y variadas. En invierno, la temperatura media de la ciudad es de -8,2 °C y en verano, de 21 °C."
   },
   "Mexico":{
     "latitud": "23.634501",
     "longitud": "-102.552784",
-    "descripcion": "Ciudad de mexico"
+    "descripcion": "En el territorio de Ciudad De Mexico se encuentra tres bienes culturales de los treinta y cinco sitios Patrimonio de la Humanidad con los que cuenta el país: el Centro Histórico, Xochimilco, el Campus Central de la Ciudad Universitaria de la UNAM y la Casa y estudio de Luis Barragán. Cuenta con ciento cincuenta y un museos que la pone como la segunda ciudad con más museos en el mundo, detrás de Londres. Además, fue la primera ciudad de Latinoamérica en albergar unas olimpiadas al ser sede de los Juegos Olímpicos de 1968."
   },
   "Buenos Aires":{
     "latitud": "-34.6083",
     "longitud": "-58.3712",
-    "descripcion": "Ciudad de Buenos Aires"
+    "descripcion": "Buenos Aires, Ciudad de Buenos Aires o Ciudad Autónoma de Buenos Aires (CABA), también Capital Federal, es conocida por ser sede del gobierno nacional. Es la capital y ciudad más poblada de la República Argentina. Esta metrópolis es una ciudad autónoma que constituye uno de los 24 distritos, que conforman el país. Tiene sus propios poderes ejecutivo, legislativo y judicial. Está situada en la región centro-este del país, sobre la orilla sur del Río de la Plata, en la región pampeana. Posee clima templado."
   },
   "Pekin":{
     "latitud": "39.9035",
     "longitud": "116.388",
-    "descripcion": "Ciudad de Pekin"
+    "descripcion": "Pekín, también conocida como Pequín o Beijing, literalmente capital del Norte, es uno de los cuatro municipios que, junto con las veintidós provincias, cinco regiones autónomas y dos regiones administrativas especiales, conforman la República Popular China. Además, Pekín es la capital del país y una de las ciudades más pobladas del mundo con 21.710.000 habitantes en 2013. Los centros turisticos más visitados son la ampliación de Badaling de la Gran Muralla China, el Palacio de Verano, la Ciudad Prohibida."
   },
   "Bagdad":{
     "latitud": "33.3245",
     "longitud": "44.4214",
-    "descripcion": "Ciudad de Bagdad"
+    "descripcion":"Ubicada a orillas del río Tigris, la ciudad de Bagdad fue fundada en el siglo viii y se convirtió en capital del Califato abasí. En poco tiempo se convirtió en un centro cultural, comercial e intelectual de gran relevancia del mundo islámico. Esto, y el hecho de ser sede de varias instituciones académicas relevantes, como la Casa de la sabiduría, le sirvieron a la ciudad para ganarse una reputación mundial de Centro de Enseñanza. Algunos puntos de interés son el Museo Nacional de Irak, y los arcos denominados Manos de la Victoria."
   },
   "Port Moresby":{
     "latitud": "-9.47979",
     "longitud": "147.19",
-    "descripcion": "Ciudad de Port Moresby"
+    "descripcion": "Pekín, también conocida como Pequín o Beijing, literalmente capital del Norte, es uno de los cuatro municipios que, junto con las veintidós provincias, cinco regiones autónomas y dos regiones administrativas especiales, conforman la República Popular China. Además, Pekín es la capital del país y una de las ciudades más pobladas del mundo con 21.710.000 habitantes en 2013. Los centros turisticos más visitados son la ampliación de Badaling de la Gran Muralla China, el Palacio de Verano, la Ciudad Prohibida."
   },
   "Sydney":{
     "latitud": "-33.8667",
     "longitud": "151.2",
-    "descripcion": "Ciudad de Sydney"
+    "descripcion": "Sydney es la ciudad más grande y poblada de Australia y Oceanía, con una población en su área metropolitana cercana a los 4,92 millones, según una estimación de 2015. Está situada al sureste de Australia, a orillas de la amplia bahía de Sídney (Puerto Jackson). En la ciudad destaca la Casa de la Ópera y el puente de la bahía de Sídney. La ciudad ha acogido eventos internacionales deportivos como los Juegos Olímpicos de Sídney 2000, la final de la Copa Mundial de Rugby de 2003y los Juegos de la Mancomunidad de 1938."
   },
   "Estambul":{
     "latitud": "41.0122",
     "longitud": "28.976",
-    "descripcion": "Ciudad de Estambul"
+    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos."
   }
 }

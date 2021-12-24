@@ -10,4 +10,8 @@ public class Valioso implements Valor{
     public Estrategia crearEstrategia(Ciudad ciudad, Ciudades ciudades) {
         return (new Estrategia(5, ciudad, ciudades));
     }
+
+    public String getRareza(){
+        return "Valioso";
+    }
 }

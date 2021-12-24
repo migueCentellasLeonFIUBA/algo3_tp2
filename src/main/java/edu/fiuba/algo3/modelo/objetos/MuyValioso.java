@@ -11,4 +11,8 @@ public class MuyValioso implements Valor{
 
         return (new Estrategia(7, ciudad, ciudades));
     }
+
+    public String getRareza(){
+        return "Muy Valioso";
+    }
 }

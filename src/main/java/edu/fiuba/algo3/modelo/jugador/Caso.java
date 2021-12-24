@@ -33,13 +33,9 @@ public class Caso {
         this.estrategia = objeto.crearEstrategia(ciudad, ciudades);
         this.computadora = new Computadora(sospechosos);
         this.ciudadActual = ciudad;
-        this.descripcion = "Descripcion caso";
+        this.descripcion = "Ha desapaecido un tesoro en el museo de la ciudad de " + ciudadActual.getNombre() + ".\n\n El tesoro fue identificado como " + objetoRobado.getNombre() + ", calificado como " + objetoRobado.getValor() + ".\n\n Tu misión: atrapar al ladrón. Tienes hasta el siguiente Lunes 9 a.m.\n\n ¡A TRABAJAR!";
     }
-/*
-    public Secuaz BuscarSospechoso() {
-        return new Secuaz();
-    }
-*/
+
     public ArrayList<String> buscarSospechosos(){
         return computadora.BuscarSospechoso();
     }
@@ -54,21 +50,10 @@ public class Caso {
         estrategia.actualizarCiudad(ciudadActual);
     }
 
-/*
-    public void viajarACiudad(Ciudad destino){
-        estrategia.viajarACiudad(destino, grado, reloj);
-    }
-*/
-
     public String visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
         ciudadActual.setProximaCiudad(estrategia.getProximaCiudad());
         return ciudadActual.visitarEdificio(edificio, jugador);
     }
-/*
-    public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
-        return estrategia.visitarEdificio(edificio, reloj, visitante);
-    }
-*/
 
     public void siguienteSexo() {computadora.siguienteSexo();}
 

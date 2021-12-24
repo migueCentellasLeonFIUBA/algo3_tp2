@@ -25,7 +25,7 @@ public class Ciudad{
         listaEdificios = new ArrayList<>();
         this.visitas = 0;
         ladron = new nullLadron();
-        descripcion = "Descripcion ciudad";
+        descripcion = "Puerto Moresby, es la capital de Papúa Nueva Guinea, y su mayor aglomeración de población contando su área metropolitana que se extiende por todo el Distrito Capital Nacional. La ciudad está situada en las costas del golfo de Papúa, en la costa sureste de la isla de Nueva Guinea. Esta ciudad es considerada la ciudad más peligrosa del mundo, según un informe presentado por el programa de la ONU para los Asentamientos Humanos. Puerto Moresby tiene un clima tropical húmedo y seco con temperaturas relativamente constantes todo el año.TM";
     }
 
     public void setNombre(String nombre){

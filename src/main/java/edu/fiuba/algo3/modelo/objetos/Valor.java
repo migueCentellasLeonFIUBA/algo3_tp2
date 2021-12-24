@@ -7,5 +7,6 @@ import edu.fiuba.algo3.modelo.ladron.Estrategia;
 public interface Valor {
 
     Estrategia crearEstrategia(Ciudad ciudad, Ciudades ciudades);
+    String getRareza();
 
 }
