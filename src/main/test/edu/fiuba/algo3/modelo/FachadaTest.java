@@ -6,11 +6,9 @@ import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CiudadTest {
+public class FachadaTest {
 
     @Test
-    public void Test01SeCarganLasCiudades() throws FileNotFoundException {
-
+    public void Test01CreaSospechosos() throws FileNotFoundException {
     }
-
 }

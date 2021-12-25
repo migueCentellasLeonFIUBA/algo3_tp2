@@ -1,17 +1,41 @@
 {
-  "Facil":
-  {
-    "Montreal":
+ "Montreal": {
+   "Banco":
+   {
+     "facil":"",
+     "media":"",
+     "dificil":""
+   },
+   "Puerto":
+   {
+     "facil":"",
+     "media":"",
+     "dificil":""
+   },"Biblioteca":
+   {
+     "facil":"",
+     "media":"",
+     "dificil":""
+   }
+  },
+    "MEXICO":{
+      "Banco":
       {
-      "Banco":"Dolares.",
-      "AeroPuerto":"AeroQuebec.",
-      "Biblioteca":"Iroqueses"
+        "facil":"",
+        "media":"",
+        "dificil":""
       },
-    "Mexico":
-    {
-      "Banco":"Pesos.",
-      "AeroPuerto":"AeroMexico.",
-      "Biblioteca":"Aztecas"
+      "Puerto":
+      {
+        "facil":"",
+        "media":"",
+        "dificil":""
+      },"Biblioteca":
+      {
+        "facil":"",
+        "media":"",
+        "dificil":""
+      }
     }
   }
 }

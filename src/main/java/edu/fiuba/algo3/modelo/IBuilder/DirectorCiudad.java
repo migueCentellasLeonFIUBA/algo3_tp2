@@ -1,25 +1,23 @@
 package edu.fiuba.algo3.modelo.IBuilder;
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.ParserJson;
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 
 public class DirectorCiudad {
     private ConstructorCiudad constructor;
 
-    public void setConstructorCiudad(ConstructorCiudad constructor){
+    public DirectorCiudad(ConstructorCiudad constructor){
         this.constructor = constructor;
     }
 
-    public Ciudad getCiudad(){
+    public CiudadNoEstrategia getCiudad(){
         return constructor.getCiudad();
     }
 
-    public void construirCiudad(ParserJson fachada, String nombreCiudad){
+    public void construirCiudad(String nombre,Double latitud,Double longitud, String descripcion){
 
-        fachada.filtrar(nombreCiudad);
-        constructor.setNombre(nombreCiudad);
-        constructor.setCoordenadas( fachada.pedirValor("latitud"), fachada.pedirValor("longitud"));
-        constructor.setDescripcion(fachada.pedirValor("descripcion"));
+        constructor.setNombre(nombre);
+        constructor.setCoordenadas( latitud, longitud);
+        constructor.setDescripcion(descripcion);
     }
 
 }

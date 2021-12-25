@@ -11,34 +11,4 @@ public class VisitanteConcreto implements Visitante{
         this.grado = unGrado;
     }
 
-    @Override
-    public String visitar(AeroPuerto aeropuerto){
-        return grado.obtenerPistas("Aeropuerto");
-    }
-
-    @Override
-    public String visitar(Banco banco) {
-        return grado.obtenerPistas("Banco");
-    }
-
-    @Override
-    public String visitar(Biblioteca biblioteca) {
-        return grado.obtenerPistas("Biblioteca");
-    }
-
-    @Override
-    public String  visitar(Bolsa bolsa) {
-        return grado.obtenerPistas("Bolsa");
-    }
-
-    @Override
-    public String  visitar(Puerto puerto) {
-        return grado.obtenerPistas("Puerto");
-    }
-
-    @Override
-    public void filtrarCiudad(String proximaCiudad) {
-        grado.filtrarCiudad(proximaCiudad);
-    }
-
 }

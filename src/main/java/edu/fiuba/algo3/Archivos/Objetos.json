@@ -1,114 +1,86 @@
 {
   "Huevo de 1000 años": {
-      "CiudadDeOrigen": "Pekin",
-      "Rareza": "Comun"
-    },
+    "Rareza": "Comun"
+  },
   "Tablilla babilonica":{
-    "CiudadDeOrigen" : "Bagdad"  ,
     "Rareza" : "Comun"
-    },
+  },
   "Colmillo de jabali" :{
-    "CiudadDeOrigen" : "Port Moresby" ,
     "Rareza" : "Comun"
-    },
+  },
   "Araña de la Opera" :{
-    "CiudadDeOrigen" : "Sydney" ,
     "Rareza" : "Comun"
-    },
+  },
   "Cruz enjoyada de Constantino":{
-    "CiudadDeOrigen" : "Estambul" ,
     "Rareza" : "Comun"
-    },
+  },
   "Joyas de la corona":{
-    "CiudadDeOrigen" : "Londres" ,
     "Rareza" : "Comun"
-    },
+  },
   "Alfombra voladora" :{
-    "CiudadDeOrigen" : "Bagdad" ,
     "Rareza" : "Comun"
-    },
+  },
   "Buda de oro":{
-    "CiudadDeOrigen" : "Bangkok" ,
-    "Rareza" :  "Comun"
-    },
+    "Rareza" : "Comun"
+  },
   "Mascara Inca de Oro" :{
-    "CiudadDeOrigen" : "Lima" ,
     "Rareza" : "Comun"
-    },
+  },
   "Manuscrito islámico":{
-    "CiudadDeOrigen" : "Bamako" ,
     "Rareza" : "Comun"
-    },
+  },
   "Corona de Ivan el Terrible":{
-    "CiudadDeOrigen" : "Moscu" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Mascara del rey Tut":{
-    "CiudadDeOrigen" : "El Cairo" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Mascara de Montezuma":{
-    "CiudadDeOrigen" : "Ciudad de México" ,
-    "Rareza" : " Valioso "
-    },
+    "Rareza" : "Valioso"
+  },
   "Mascara de Priamo":{
-    "CiudadDeOrigen" : "Atenas" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Merlion the Golden Lion":{
-    "CiudadDeOrigen" : "Singapur" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Pintura del Kremlin":{
-    "CiudadDeOrigen" : "Moscu" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Anillo del Papa":{
-    "CiudadDeOrigen" : "Roma" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Ceramica rara del Imperio de Mali":{
-    "CiudadDeOrigen" : "Bamako" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Planta de te rara":{
-    "CiudadDeOrigen" : "Colombo" ,
     "Rareza" : "Valioso"
-    },
+  },
   "Colección Royal Quartz":{
-    "CiudadDeOrigen" : "Katmandú" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "Sernedip Ruby":{
-    "CiudadDeOrigen" : "Colombo" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "LLama Plata":{
-    "CiudadDeOrigen" :" Lima" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "Bola de oro macizo":{
-    "CiudadDeOrigen" : "Buenos Aires" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "Copa Stanley":{
-    "CiudadDeOrigen" : "Montreal" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "Loro relleno":{
-    "CiudadDeOrigen" : "Río de Janeiro" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "Las Rockettes":{
-    "CiudadDeOrigen" : "Nueva York" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "Casco vikingo":{
-    "CiudadDeOrigen" : "Oslo" ,
-    "Rareza" : "MuyValioso"
-    },
+    "Rareza" : "Muy Valioso"
+  },
   "Tocado del rey Watusi":{
-    "CiudadDeOrigen" : "Kigali" ,
-    "Rareza" : "MuyValioso"
-    }
+    "Rareza" : "Muy Valioso"
   }
+}

@@ -1,16 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.edificios.Edificio;
-import edu.fiuba.algo3.modelo.juego.Juego;
-import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.ladron.Ladron;
-import edu.fiuba.algo3.modelo.objetos.*;
-
 import org.junit.jupiter.api.Test;
-
-import java.io.FileNotFoundException;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -22,15 +12,11 @@ public class JuegoTest{
     @Test
     public void TestJuegoCargaCorrectamenteLosArchivos() throws Exception {
 
-        Juego juego = new Juego();
     }
 
     @Test
     public void TestJuegoCreaCasoCreaCorrectamente() throws Exception {
 
-        Juego juego = new Juego();
-        juego.IdentificarJugador("Nico");
-        juego.crearCaso();
     }
 
     /*

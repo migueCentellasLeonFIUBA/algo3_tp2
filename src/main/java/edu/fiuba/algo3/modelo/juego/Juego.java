@@ -2,31 +2,27 @@ package edu.fiuba.algo3.modelo.juego;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.jugador.Caso;
+import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Juego {
 
     private Sospechosos sospechosos;
-    private Jugadores jugadores;
-    private Ciudades ciudades;
-    private Objetos objetos;
+    private Map<String,Objeto> objetos;
+    private Map<String, Ciudad> ciudades;
 
-    private ArrayList<Ciudad> listaCiudades;
     private Jugador jugadorActual;
-    private GestorDeArchivos gestorArchivos;
+    private Fachada fachada;
 
-
-    public Juego(IFachada fachada){
-        sospechosos = new Sospechosos(fachada.nuevoParser());
-
-        fachada.cargar(sospechosos)//habla con la fachada la fachada sabe que de sospechosos tiene que cargar un file en especifico
-
-        //a todo esto la fachada usa el gestor de archivos para leer la ruta y enviarle cargar a sospechosos que va a llenar al parser.
+    public Juego(Fachada fachada){
+        this.fachada = fachada;
+        this.objetos = fachada.cargarObjetos();
+        this.ciudades = fachada.cargarCiudades();
+        sospechosos = fachada.cargarSospechosos();
 
 
     }
@@ -36,9 +32,7 @@ public class Juego {
 
     public Jugador IdentificarJugador(String nombre) {
 
-        jugadorActual = jugadores.pedirJugador(nombre); //sería parte de la interfaz como pedir pista
         return (this.jugadorActual);
-
     }
 
     public void TerminarJuego() {
@@ -47,21 +41,18 @@ public class Juego {
 
     public void crearCaso() throws Exception {
 
-        //Serian de la misma interfaz.
-        Ladron ladronRandom = sospechosos.ObtenerLadronRandom();
-        Ciudad ciudadRandom = this.ObtenerCiudadRandom(); // esto no lo vamos a necesitar
-        Objeto objetoRandom = objetos.ObtenerObjetoRandom();
+        //jugador Empezar caso -> al caso le paso mi grado.
+        //Caso le dice a grado -> dame un objeto robado.
+        //Grado policia le dice al Juego dame un objeto robado
+        //Juego a la fachada dame un objeto aleatorio con tipo "comun"
+        //fachada dame uno aleatorio "comun"
 
-        cargarPistas();
-        jugadorActual.empezarCaso(new Caso(ladronRandom, objetoRandom, ciudadRandom, ciudades), ciudadRandom);
 
     }
 
-    private Ciudad ObtenerCiudadRandom() {
-        int posicionRandom = ciudades.ObtenerPosicionCiudadRandom();
-        return listaCiudades.get(posicionRandom);
+    public Objeto ObjetoAleatorio(String tipo) {
+        return fachada.ObjetoAleatorio(tipo);
     }
-
 
     public Jugador getJugador() {
         return jugadorActual;

@@ -1,11 +1,11 @@
 package edu.fiuba.algo3.modelo.IBuilder;
 
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 
 public interface ConstructorCiudad {
 
     void setNombre(String nombre);
-    void setCoordenadas(String latitud, String longitud);
+    void setCoordenadas(Double latitud, Double longitud);
     void setDescripcion(String descripcion);
-    Ciudad getCiudad();
+    CiudadNoEstrategia getCiudad();
 }

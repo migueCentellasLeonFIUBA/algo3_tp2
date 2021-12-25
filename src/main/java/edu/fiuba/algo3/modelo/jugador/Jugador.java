@@ -1,9 +1,8 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
+import edu.fiuba.algo3.modelo.edificios.IEdificio;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
@@ -18,7 +17,7 @@ public class Jugador {
     private GradoPolicia grado;
     private Caso caso;
     private Orden orden;
-    private Ciudad ciudadActual;
+    private CiudadNoEstrategia ciudadActual;
     private VisitanteConcreto visitante;
 
 
@@ -30,7 +29,7 @@ public class Jugador {
         visitante = new VisitanteConcreto(grado);
     }
 
-    public void setCiudadActual(Ciudad origen){
+    public void setCiudadActual(CiudadNoEstrategia origen){
         this.ciudadActual = origen;
     }
 
@@ -42,17 +41,15 @@ public class Jugador {
 
     private void asignarGrado(int arrestos){
         for(int i = arrestos; i != 0; i--){
-            this.grado = this.grado.arresto();
         }
     }
 
-    public List<Edificio> mostrarEdificios() {
+    public List<IEdificio> mostrarEdificios() {
 
         return ciudadActual.mostrarEdificios();
     }
 
-    public void viajarACiudad(Ciudad destino) {
-        ciudadActual.calcularDistancia(destino, grado.calcularTiempoViaje(), reloj);
+    public void viajarACiudad(CiudadNoEstrategia destino) {
     }
 
     public void BuscarSospechoso() {
@@ -76,11 +73,11 @@ public class Jugador {
         return nombre.equals(this.nombre);
     }
 
-    public void comienzaEnCiudad(Ciudad ciudad) {
+    public void comienzaEnCiudad(CiudadNoEstrategia ciudad) {
         this.ciudadActual=ciudad;
     }
 
-    public String visitarEdificio(Edificio edificio) throws FileNotFoundException {
+    public String visitarEdificio(IEdificio edificio) throws FileNotFoundException {
         String pista = ciudadActual.visitarEdificio(edificio, reloj, visitante);
         if(reloj.tiempoTerminado()){
             terminarJuego();
@@ -89,22 +86,14 @@ public class Jugador {
         return pista;
     }
 
-    public Ciudad getCiudadActual() {
+    public CiudadNoEstrategia getCiudadActual() {
         return ciudadActual;
     }
 
-    public void empezarCaso(Caso caso, Ciudad ciudad) {
+    public void empezarCaso(Caso caso, CiudadNoEstrategia ciudad) {
         this.caso=caso;
         this.ciudadActual = ciudad;
         this.reloj= new Reloj();
     }
 
-    public int horasRestantes(){
-        return reloj.getHorasRestantes();
-    }
-
-    public void cargarPistas(Pistas pistas) {
-        grado.establecerPistas(pistas);
-        grado.cargarPistas();
-    }
 }

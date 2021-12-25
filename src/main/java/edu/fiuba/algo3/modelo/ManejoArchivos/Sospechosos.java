@@ -2,39 +2,19 @@ package edu.fiuba.algo3.modelo.ManejoArchivos;
 
 import edu.fiuba.algo3.modelo.IBuilder.ConstructorLadronConcreto;
 import edu.fiuba.algo3.modelo.IBuilder.DirectorLadron;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.ISospechable;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 
 import java.util.ArrayList;
+import java.util.Map;
 
-public class Sospechosos extends Archivo {
-
-    public Sospechosos(IParser parser) {
-        super(parser);
-    }
+public class Sospechosos{
+    Map<String, ISospechable> sospechosos;
 
     public ArrayList<String> buscarSospechosos(ArrayList<String> terminos,ArrayList<String> valores){
-        ArrayList<String> nombres = listaDeElementos();
-        ArrayList<String> resultado = new ArrayList<>();
-        int indice =0;
-
-        for(String n: nombres){
-            filtrar(n);
-            for(String termino: terminos){
-                String valorA=pedirValor(termino);
-                if(valorA.equals(valores.get(indice))){
-                    indice++;
-                    continue;
-                }
-                break;
-            }
-            if(indice==valores.size()){
-                resultado.add(n);
-            }
-            indice=0;
-        }
-        return resultado;
+        return null;
     }
-
+/*
     public Ladron ObtenerLadronRandom() {
         ArrayList<String> nombres = listaDeElementos();
         Random random = new Random();
@@ -48,5 +28,5 @@ public class Sospechosos extends Archivo {
 
         return (director.getLadron());
     }
-
+*/
 }

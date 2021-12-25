@@ -1,28 +1,17 @@
 package edu.fiuba.algo3.modelo.edificios;
 import edu.fiuba.algo3.modelo.IVisitor.Visitante;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
-import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
-import java.io.FileNotFoundException;
+import edu.fiuba.algo3.modelo.Pistas.IPistas;
+import edu.fiuba.algo3.modelo.Pistas.SinPista;
+import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
 
-public class Banco implements Edificio {
-    private String nombre;
+import java.util.ArrayList;
 
+public class Banco implements IEdificio {
+    IPistas pista;
 
-    public Banco(){
-        nombre="Banco";
+    public Banco() {
+        this.pista = new SinPista();
     }
 
-    public static Banco crearBanco() {
-        return new Banco();
-    }
 
-    @Override
-    public String getNombre() {
-        return nombre;
-    }
-
-    @Override
-    public String aceptar(Visitante unVisitante) {
-        return unVisitante.visitar(this);
-    }
 }

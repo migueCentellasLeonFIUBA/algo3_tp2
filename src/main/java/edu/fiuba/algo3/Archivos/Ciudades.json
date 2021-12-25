@@ -2,41 +2,49 @@
   "Montreal":{
     "latitud": "45.50884",
     "longitud": "-73.58781",
-    "descripcion": "Ciudad de montreal"
+    "descripcion": "Ciudad de montreal",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Ciudad de Mexico":{
     "latitud": "23.634501",
     "longitud": "-102.552784",
-    "descripcion": "Ciudad de mexico"
+    "descripcion": "Ciudad de mexico",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Buenos Aires":{
     "latitud": "-34.6083",
     "longitud": "-58.3712",
-    "descripcion": "Ciudad de Buenos Aires"
+    "descripcion": "Ciudad de Buenos Aires",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Pekin":{
     "latitud": "39.9035",
     "longitud": "116.388",
-    "descripcion": "Ciudad de Pekin"
+    "descripcion": "Ciudad de Pekin",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Bagdad":{
     "latitud": "33.3245",
     "longitud": "44.4214",
-    "descripcion": "Ciudad de Bagdad"
+    "descripcion": "Ciudad de Bagdad",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Port Moresby":{
     "latitud": "-9.47979",
     "longitud": "147.19",
-    "descripcion": "Ciudad de Port Moresby"
+    "descripcion": "Ciudad de Port Moresby",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Sydney":{
     "latitud": "-33.8667",
     "longitud": "151.2",
-    "descripcion": "Ciudad de Sydney"
+    "descripcion": "Ciudad de Sydney",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Estambul":{
     "latitud": "41.0122",
     "longitud": "28.976",
-    "descripcion": "Ciudad de Estambul"
+    "descripcion": "Ciudad de Estambul",
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   }
 }

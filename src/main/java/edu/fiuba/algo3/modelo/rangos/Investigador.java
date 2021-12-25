@@ -7,10 +7,6 @@ public class Investigador extends GradoPolicia{
     private Integer arrestos = 10;
     private Integer velocidad =1300;
 
-    @Override
-    public void cargarPistas() {
-        pistas.filtrarGrados("Investigador");
-    }
 
     public GradoPolicia arresto() {
         this.arrestos = this.arrestos + 1;
@@ -20,15 +16,6 @@ public class Investigador extends GradoPolicia{
         return this;
     }
 
-    @Override
-    public Integer calcularTiempoViaje() {
-        return velocidad;
-    }
-
-    @Override
-    public String getGrado() {
-        return "Investigador";
-    }
 
     public int getArrestos(){
         return arrestos;

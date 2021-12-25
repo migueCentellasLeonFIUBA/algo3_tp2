@@ -1,20 +1,13 @@
 package edu.fiuba.algo3.modelo.edificios;
 
 import edu.fiuba.algo3.modelo.IVisitor.Visitante;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Pistas;
-import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
+import edu.fiuba.algo3.modelo.Pistas.IPistas;
+import edu.fiuba.algo3.modelo.Pistas.SinPista;
 
-import java.io.FileNotFoundException;
+public class Bolsa implements IEdificio {
+    IPistas pista;
 
-public class Bolsa implements Edificio {
-    @Override
-    public String getNombre() {
-        return null;
+    public Bolsa() {
+        this.pista = new SinPista();
     }
-
-    @Override
-    public String aceptar(Visitante unVisitante) {
-        return unVisitante.visitar(this);
-    }
-
 }
