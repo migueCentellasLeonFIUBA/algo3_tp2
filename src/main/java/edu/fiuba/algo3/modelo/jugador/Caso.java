@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
+import edu.fiuba.algo3.modelo.ciudades.Ruta;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.*;
@@ -27,11 +28,21 @@ public class Caso {
     private Ciudad ciudadActual;
     private String descripcion;
 
-
+/*
     public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, CiudadesMapa ciudades, Sospechosos sospechosos){
         this.ladron = ladron;
         this.objetoRobado = objeto;
         this.estrategia = objeto.crearEstrategia(ciudad, ciudades);
+        this.computadora = new Computadora(sospechosos);
+        this.ciudadActual = ciudad;
+        this.descripcion = "Descripcion caso";
+    }
+ */
+
+    public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Sospechosos sospechosos, Ruta ruta){
+        this.ladron = ladron;
+        this.objetoRobado = objeto;
+        this.estrategia = objeto.crearEstrategia(ruta);
         this.computadora = new Computadora(sospechosos);
         this.ciudadActual = ciudad;
         this.descripcion = "Descripcion caso";
@@ -52,7 +63,11 @@ public class Caso {
     public void viajarACiudad(Ciudad destino, Reloj reloj, GradoPolicia grado) {
         reloj.descontarhoras(ciudadActual.calcularDistancia(destino, grado.calcularTiempoViaje()));
         ciudadActual = destino;
-        estrategia.actualizarCiudad(ciudadActual);
+
+        //cuando viajo, actualizo la ruta, si es viajo a la ciudad correcta:
+        estrategia.viajarASiguienteCiudad(destino);
+
+        //estrategia.actualizarCiudad(ciudadActual);
     }
 
 /*
@@ -62,7 +77,9 @@ public class Caso {
 */
 
     public Pista visitarEdificio(Edificio edificio, Jugador jugador) throws FileNotFoundException {
-        ciudadActual.setProximaCiudad(estrategia.getProximaCiudad());
+        //ciudadActual.setProximaCiudad(estrategia.getProximaCiudad());
+
+        ciudadActual.setProximaCiudad(estrategia.getProximaCiudadEnRuta());
         return ciudadActual.visitarEdificio(edificio, jugador);
     }
 /*
@@ -93,9 +110,12 @@ public class Caso {
         return ciudadActual.getNombre();
     }
 
+    /*
     public ArrayList<Ciudad> obtenerSiguientesDestinos(){
         return estrategia.obtenerSiguientesDestinos();
     }
+    */
+
 
     public String getDescripcionCiudad(){
         return ciudadActual.getDescripcion();

@@ -1,10 +1,7 @@
 package edu.fiuba.algo3.modelo.juego;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
-import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
-import edu.fiuba.algo3.modelo.ciudades.ControladorMapa;
-import edu.fiuba.algo3.modelo.ciudades.Mapa;
+import edu.fiuba.algo3.modelo.ciudades.*;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
@@ -12,6 +9,8 @@ import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class Juego {
@@ -27,15 +26,22 @@ public class Juego {
     private ArrayList<Ciudad> listaCiudades;
     private Jugador jugadorActual;
     private GestorDeArchivos gestorArchivos;
-
+    private Map<String, Ruta> rutas;
 
     public Juego() throws Exception {
         gestorArchivos = new GestorDeArchivos();
+        rutas = new HashMap<>();
         cargarObjetos();
         cargarJugadores();
         cargarSospechosos();
         cargarCiudades();
-        //cargarMapa();
+        cargarMapa();
+        cargarRutas();
+    }
+
+    private void cargarRutas() {
+        //lee todas las rutas del archivo.
+        //rutas = fachada.algo ("src/main/java/edu/fiuba/algo3/Archivos/Rutas.json");
     }
 
     private String obtenerTexto(String ruta) throws FileNotFoundException {
@@ -66,8 +72,9 @@ public class Juego {
 
     //crea toda la lista de ciudades del mapa, que se usará para todos los casos.
     public Mapa cargarMapa(){
+        //Para cargar el mapa necesito que esten cargadas las conexiones en cada ciudad...
         ciudadesMapa = new CiudadesMapa(listaCiudades);
-        mapa = new Mapa(ciudadesMapa);
+        this.mapa = new Mapa(ciudadesMapa);
         return mapa;
     }
 
@@ -92,9 +99,13 @@ public class Juego {
         String origen = objetoRandom.getCiudadOrigen();
         Ciudad ciudadOrigen = mapa.getCiudad(origen);
 
-        cargarPistas();
-        jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadOrigen, ciudades, sospechosos);
+        //Rutas, las rutas quedan definidas por el objeto:
+        Ruta ruta = rutas.get(objetoRandom.getNombre());
 
+        cargarPistas();
+        //jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadOrigen, ciudades, sospechosos);
+
+        jugadorActual.empezarCaso(ladronRandom, objetoRandom, ciudadOrigen, sospechosos, ruta);
         return ciudadOrigen;
     }
 

@@ -59,12 +59,12 @@ public class MapaTest {
         //cargo las ciudades a mostrar en el turno:
         mapa.cargarCiudades(ciudad1);
 
-        ArrayList<String> mostradas = mapa.getCiudadesDisponibles();
+        ArrayList<Ciudad> mostradas = mapa.getCiudadesDisponibles();
 
-        assert(mostradas.get(0).equals("Montreal"));
-        assert(mostradas.get(1).equals("Mexico"));
-        assert(mostradas.get(2).equals("Buenos Aires"));
-        assert(mostradas.get(3).equals("Pekin"));
+        assert(mostradas.get(0).getNombre().equals("Montreal"));
+        assert(mostradas.get(1).getNombre().equals("Mexico"));
+        assert(mostradas.get(2).getNombre().equals("Buenos Aires"));
+        assert(mostradas.get(3).getNombre().equals("Pekin"));
     }
 
 /*
@@ -188,7 +188,6 @@ public class MapaTest {
         jugador.empezarCaso(ladron, objeto, ciudad1, ciudadesArchivo, sospechosos );
         jugador.viajarACiudad(proxima);
     }
-
  */
 
 }

@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ruta;
 import edu.fiuba.algo3.modelo.jugador.Computadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
@@ -232,7 +233,19 @@ public class SospechososTest {
 
         Ciudades ciudades = new Ciudades(ciudadesLeidas);
 
-        jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos );
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos );
+
+        //carga de ruta:
+        Ruta ruta = new Ruta();
+        ArrayList<Ciudad> ciudadesCargadas = ciudades.crearCiudades();
+
+        ruta.setCiudadEnRuta(ciudadesCargadas.get(0));
+        ruta.setCiudadEnRuta(ciudadesCargadas.get(1));
+        ruta.setCiudadEnRuta(ciudadesCargadas.get(2));
+        ruta.setCiudadEnRuta(ciudadesCargadas.get(3));
+
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+        jugador.empezarCaso(ladron, objeto, ciudad, sospechosos, ruta);
 
         //No tengo una orden entonces:
             //No puedo arrestar sospechosos:

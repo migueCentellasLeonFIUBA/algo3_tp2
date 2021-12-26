@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.ArrayList;
 import java.util.Random;
 
-//guarda una lista de ciudades y devuelve la cantidad de ciudades necesarias.
+//guarda una lista de ciudades y devuelve la cantidad de ciudades necesarias (de forma random).
+//devuelve la instancia correcta de una ciudad, dado su nombre.
 public class CiudadesMapa {
 
         ArrayList<Ciudad> ciudades;
@@ -24,16 +25,18 @@ public class CiudadesMapa {
             return new Ciudad(); //nunca llega a esta instancia.
         }
 
+        //indica si la ciudad pasada se encuentra en la ruta o no... ??
         private Boolean perteneceAEstrategia(ArrayList<Ciudad> estrategia, Ciudad ciudad){
-            Integer ciudadActual;
-            for(ciudadActual = estrategia.size() - 1; ciudadActual >= 0; ciudadActual--){
-                if(ciudad.esLaMismaCiudad(estrategia.get(ciudadActual))){
+
+            for (Ciudad ciudadActual : estrategia){
+                if(ciudad.esLaMismaCiudad(ciudadActual)){
                     return true;
                 }
             }
             return false;
         }
 
+        //por las dudas, para comtemplar el caso random.
         public ArrayList<Ciudad> getCiudadesRandom(Ciudad ciudadOrigen, int cantCiudades){
             //dado un nombre obtengo ciudades random..
             //uso una lista auxiliar:

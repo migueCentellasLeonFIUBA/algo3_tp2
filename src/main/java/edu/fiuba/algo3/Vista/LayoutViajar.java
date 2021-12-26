@@ -2,6 +2,7 @@ package edu.fiuba.algo3.Vista;
 
 import edu.fiuba.algo3.Vista.Handlers.BotonViajarADestinoEventHandler;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Border;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 public class LayoutViajar extends VBox {
 
     Jugador jugador;
+    Mapa mapa;
     BorderPane borderPane;
     Stage stage;
 
@@ -33,7 +35,8 @@ public class LayoutViajar extends VBox {
 
     private HBox crearBotones(){
 
-        ArrayList<Ciudad> posiblesDestinos = jugador.obtenerSiguientesDestinos();
+        //ArrayList<Ciudad> posiblesDestinos = jugador.obtenerSiguientesDestinos();
+        ArrayList<Ciudad> posiblesDestinos = mapa.getCiudadesDisponibles();
         HBox botones = new HBox();
 
         Button destinoUno = new Button((posiblesDestinos.get(0).getNombre()));

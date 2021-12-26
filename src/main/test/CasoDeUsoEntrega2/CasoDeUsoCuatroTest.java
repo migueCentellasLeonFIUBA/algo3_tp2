@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Objetos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ruta;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
@@ -12,6 +13,7 @@ import edu.fiuba.algo3.modelo.orden.OrdenSinJurisdiccion;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
@@ -46,7 +48,19 @@ public class CasoDeUsoCuatroTest {
         Ladron ladron = sospechosos.ObtenerLadronRandom();
         ciudad.setLadron(ladron);
 
-        jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+
+        //carga de ruta:
+        Ruta ruta = new Ruta();
+        ArrayList<Ciudad> ciudadesLeidas = ciudades.crearCiudades();
+
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(0));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(1));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(2));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(3));
+
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+        jugador.empezarCaso(ladron, objeto, ciudad, sospechosos, ruta);
 
         assertNotEquals(true, jugador.arrestarLadron(ladron));
     }

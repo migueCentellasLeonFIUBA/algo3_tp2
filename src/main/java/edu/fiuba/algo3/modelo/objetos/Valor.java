@@ -3,10 +3,12 @@ package edu.fiuba.algo3.modelo.objetos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadesMapa;
+import edu.fiuba.algo3.modelo.ciudades.Ruta;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 
 public interface Valor {
 
-    Estrategia crearEstrategia(Ciudad ciudad, CiudadesMapa ciudades);
+    //Estrategia crearEstrategia(Ciudad ciudad, CiudadesMapa ciudades);
 
+    Estrategia crearRutaEstrategia(Ruta ruta);
 }

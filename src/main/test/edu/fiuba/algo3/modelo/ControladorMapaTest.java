@@ -25,7 +25,7 @@ public class ControladorMapaTest {
         mapa.cargarCiudades(origen);
 
         controladorMapa = new ControladorMapa(mapa, jugador, juego);
-        String destino = (mapa.getCiudadesDisponibles()).get(0);    //debo implementar las ciudades enlazadas.
+        String destino = (mapa.getCiudadesDisponibles()).get(0).getNombre();    //debo implementar las ciudades enlazadas.
         //String destino = mapa.getCiudadesDisponibles().get(2); //descomentar cuando se implmenten las conexiones.
 
         Integer horasRestantes = jugador.horasRestantes();

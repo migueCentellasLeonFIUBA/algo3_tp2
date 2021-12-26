@@ -41,7 +41,6 @@ public class Ciudades extends Archivo {
             director.construirCiudad(super.fachada, nombre);
             ciudades.add(director.getCiudad());
         }
-
         return ciudades;
     }
 

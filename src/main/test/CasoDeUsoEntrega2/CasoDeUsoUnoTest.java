@@ -2,6 +2,7 @@ package CasoDeUsoEntrega2;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ruta;
 import edu.fiuba.algo3.modelo.edificios.Banco;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
@@ -35,12 +37,27 @@ public class CasoDeUsoUnoTest {
 
         //CARGA DE OBJETOS
         jugador.cargarPistas(pistas);
-        Ciudad ciudad = ciudades.ObtenerCiudadRandom();
+        //Ciudad ciudad = ciudades.ObtenerCiudadRandom();
         Objeto objeto = jugador.obtenerObjetoRandom(objetos);
         Ladron ladron = sospechosos.ObtenerLadronRandom();
+
+
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+
+        //carga de ruta:
+        Ruta ruta = new Ruta();
+        ArrayList<Ciudad> ciudadesLeidas = ciudades.crearCiudades();
+
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(0));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(1));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(2));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(3));
+
+        Ciudad ciudad = ciudadesLeidas.get(0);
         ciudad.setLadron(ladron);
 
-        jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+        jugador.empezarCaso(ladron, objeto, ciudad, sospechosos, ruta);
         jugador.visitarEdificio(new Banco());
 
         //1 HORA POR ENTRAR AL EDIFICIO Y DOS POR EL ATAQUE CON CUCHILLO
@@ -65,7 +82,19 @@ public class CasoDeUsoUnoTest {
         Ladron ladron = sospechosos.ObtenerLadronRandom();
         jugador.cargarPistas(pistas);
 
-        jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+
+        //carga de ruta:
+        Ruta ruta = new Ruta();
+        ArrayList<Ciudad> ciudadesLeidas = ciudades.crearCiudades();
+
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(0));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(1));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(2));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(3));
+
+        //jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
+        jugador.empezarCaso(ladron, objeto, ciudad, sospechosos, ruta);
 
         //15 HORAS POR ENTRAR AL EDIFICIO 6 VECES
         Integer visitasAlEdificio;

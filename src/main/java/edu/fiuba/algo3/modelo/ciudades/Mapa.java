@@ -1,12 +1,9 @@
 package edu.fiuba.algo3.modelo.ciudades;
 
-import edu.fiuba.algo3.modelo.jugador.Jugador;
-
 import java.util.ArrayList;
 
 /*
     Muestra en cada turno las ciudades disponibles, la correcta junto con las 3 de conexión.
-    El mapa es el encargado de pasarle la ciudad al jugador, para que este haga el viaje.
  */
 public class Mapa {
 
@@ -20,10 +17,10 @@ public class Mapa {
     //dada una ciudad, la carga, junto con sus conexiones:
     public void cargarCiudades(Ciudad ciudad){
 
-        //primero carga la ciudad:
+        //primero carga la ciudad actual:
         this.setCiudadPosible(ciudad);
 
-        //carga las conexiones:
+        //carga sus conexiones:
         for (Ciudad conexion : ciudad.getConexiones().getCiudadesConexion()){
             this.setCiudadPosible(conexion);
         }
@@ -35,12 +32,12 @@ public class Mapa {
         //la primera es siempre la indicada, las otras se obtienen por Conexiones de ciudad.
     }
 
-    //Se muestran las ciudades posibles:
-    public ArrayList<String> getCiudadesDisponibles(){
-        ArrayList<String> nombreCiudades = new ArrayList<>();
+    //Se muestran las ciudades posibles a la interfaz:
+    public ArrayList<Ciudad> getCiudadesDisponibles(){
+        ArrayList<Ciudad> nombreCiudades = new ArrayList<>();
 
         for (Ciudad ciudad : ciudadesTurno){
-            nombreCiudades.add(ciudad.getNombre());
+            nombreCiudades.add(ciudad);
         }
         return nombreCiudades; //se envia a la interfaz, la interfaz debe ubicarlas previamente en el mapa.
     }

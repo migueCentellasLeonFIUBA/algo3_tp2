@@ -34,6 +34,7 @@ public class Ciudad{
         this.nombre = nombre;
     }
 
+    //borrar
     public void setProximaCiudad(Ciudad proximaCiudad){
         this.proximaCiudad = proximaCiudad.getNombre();
     } //No se usa mas.

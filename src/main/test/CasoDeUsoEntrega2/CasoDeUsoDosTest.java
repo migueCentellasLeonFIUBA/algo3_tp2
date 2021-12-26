@@ -4,12 +4,14 @@ import edu.fiuba.algo3.modelo.IBuilder.ConstructorCiudadConcreta;
 import edu.fiuba.algo3.modelo.IBuilder.DirectorCiudad;
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Ruta;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -32,7 +34,18 @@ public class CasoDeUsoDosTest {
         Objeto objetoRandom = jugador.obtenerObjetoRandom(objetos);
         Ladron ladronRandom = sospechosos.ObtenerLadronRandom();
 
-        jugador.empezarCaso(ladronRandom, objetoRandom, montreal, ciudades, sospechosos);
+        //carga de ruta:
+        Ruta ruta = new Ruta();
+        ArrayList<Ciudad> ciudadesLeidas = ciudades.crearCiudades();
+
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(0));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(1));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(2));
+        ruta.setCiudadEnRuta(ciudadesLeidas.get(3));
+
+        //jugador.empezarCaso(ladronRandom, objetoRandom, montreal, ciudades, sospechosos);
+        jugador.empezarCaso(ladronRandom, objetoRandom, montreal, sospechosos, ruta);
+
         jugador.viajarACiudad(mexico);
 
         //2 HORAS DE VIAJE APROX
