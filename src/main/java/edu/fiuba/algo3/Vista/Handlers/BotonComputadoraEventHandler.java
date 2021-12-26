@@ -1,42 +1,56 @@
 package edu.fiuba.algo3.Vista.Handlers;
 
-import edu.fiuba.algo3.Vista.EscenaPrincipal;
-import edu.fiuba.algo3.Vista.LayoutComputadora;
+import edu.fiuba.algo3.Vista.LayoutDerechoComputadora;
+import edu.fiuba.algo3.Vista.LayoutIzquierdoComputadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.SplitPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.Node;
+import javafx.scene.control.Label;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
+
+import java.io.FileNotFoundException;
 
 public class BotonComputadoraEventHandler implements EventHandler<ActionEvent> {
 
     Stage stage;
-    HBox hbox;
+    VBox leftSide;
+    VBox rightSide;
     Jugador jugador;
 
-    public BotonComputadoraEventHandler(HBox hbox, Jugador jugador, Stage stage){
-        this.hbox = hbox;
+    public BotonComputadoraEventHandler(VBox leftSide, VBox rightSide, Stage stage, Jugador jugador){
+        this.leftSide = leftSide;
+        this.rightSide = rightSide;
         this.jugador = jugador;
         this.stage = stage;
     }
 
     public void handle(ActionEvent actionEvent){
-        /*LayoutComputadora layoutComputadora = crearLayoutComputadora();
-        //BorderPane newBorderPane = new BorderPane(layoutComputadora, borderPane.getTop(), borderPane.getRight(), borderPane.getBottom(), borderPane.getLeft());
-        EscenaPrincipal escenaPrincipal = new EscenaPrincipal(stage, jugador, layoutComputadora);
-        Scene escenaActulizada = new Scene(escenaPrincipal);
-        stage.setScene(escenaActulizada);
-        stage.setFullScreen(true);*/
+
+        leftSide.getChildren().remove(4);
+        //leftSide.getChildren().remove((3));
+        LayoutIzquierdoComputadora layoutIzquierdoComputadora = new LayoutIzquierdoComputadora(jugador, leftSide);
+
+        //leftSide.getChildren().add(layoutIzquierdoComputadora);
+
+
+        LayoutDerechoComputadora layoutDerechoComputadora = null;
+        try {
+            layoutDerechoComputadora = crearLayoutComputadora();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        rightSide.getChildren().remove(2);
+        rightSide.getChildren().remove(2);
+        rightSide.getChildren().addAll(layoutDerechoComputadora);
     }
 
-    private LayoutComputadora crearLayoutComputadora(){
+    private LayoutDerechoComputadora crearLayoutComputadora() throws FileNotFoundException {
 
-        LayoutComputadora layoutComputadora = new LayoutComputadora(jugador);
+        LayoutDerechoComputadora layoutDerechoComputadora = new LayoutDerechoComputadora(jugador, stage, leftSide);
 
-        return layoutComputadora;
+        return layoutDerechoComputadora;
     }
 }

@@ -1,11 +1,8 @@
 package edu.fiuba.algo3.Vista;
 
-import edu.fiuba.algo3.Vista.Handlers.EnterEscenaAsignarCasoEventHandler;
-import edu.fiuba.algo3.Vista.Handlers.LayoutGeneral;
+import edu.fiuba.algo3.Vista.Handlers.*;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.effect.*;
@@ -30,8 +27,9 @@ public class EscenaPrincipal extends HBox {
         private VBox rightSide;
 
        public EscenaPrincipal(Stage stage, Jugador jugador) throws FileNotFoundException {
-           //this.stage = stage;
+
            this.jugador = jugador;
+           this.stage = stage;
 
            LayoutGeneral layoutGeneral = new LayoutGeneral();
            leftSide = layoutGeneral.crearLeftSide();
@@ -48,9 +46,6 @@ public class EscenaPrincipal extends HBox {
            rightSide = crearRightSide(rightSide);
            leftSide = crearLeftSide(leftSide);
 
-           //EnterEscenaAsignarCasoEventHandler siguiente = new EnterEscenaAsignarCasoEventHandler(stage, jugador, leftSide);
-           //this.setOnKeyPressed(siguiente);
-
            this.getChildren().addAll(leftSide, rightSide);
 
        }
@@ -66,10 +61,11 @@ public class EscenaPrincipal extends HBox {
            lugar.setTranslateY(-505);
            lugar.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 25));
 
-           Label tiempoRestante = new Label("Miercoles, 9 a.m.");
+           Label tiempoRestante = new Label(jugador.diaYHora());
            tiempoRestante.setTranslateX(115);
            tiempoRestante.setTranslateY(-505);
            tiempoRestante.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 20));
+           //tiempoRestante.setPrefWidth(300);
 
 
 
@@ -77,9 +73,6 @@ public class EscenaPrincipal extends HBox {
            Image image = new Image(stream);
            ImageView imageView = new ImageView();
            imageView.setImage(image);
-
-           Rectangle2D rectangle2D = new Rectangle2D(380, 400, 380, 400);
-
 
            imageView.setTranslateX(20);
            imageView.setTranslateY(-475);
@@ -120,6 +113,15 @@ public class EscenaPrincipal extends HBox {
            computadora.setTranslateY(-450);
            computadora.setTranslateX(45);
            computadora.setBackground(fondo);
+           computadora.setEffect(new InnerShadow());
+
+           MouseHoverEnterEventHandler mouseHoverEventHandlerComputadora = new MouseHoverEnterEventHandler(computadora);
+           MouseHoverExitEventHandler mouseHoverExitEventHandlerComputadora = new MouseHoverExitEventHandler(computadora);
+           computadora.setOnMouseEntered(mouseHoverEventHandlerComputadora);
+           computadora.setOnMouseExited(mouseHoverExitEventHandlerComputadora);
+
+           BotonComputadoraEventHandler botonComputadoraEventHandler = new BotonComputadoraEventHandler(leftSide, rightSide, stage, jugador);
+           computadora.setOnAction(botonComputadoraEventHandler);
 
            FileInputStream inputEdificio = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenEdificio.jpg");
            Image imagenEdificio = new Image(inputEdificio);
@@ -130,6 +132,15 @@ public class EscenaPrincipal extends HBox {
            edificio.setTranslateY(-450);
            edificio.setTranslateX(40);
            edificio.setBackground(fondo);
+           edificio.setEffect(new InnerShadow());
+
+           MouseHoverEnterEventHandler mouseHoverEventHandlerEdificio = new MouseHoverEnterEventHandler(edificio);
+           MouseHoverExitEventHandler mouseHoverExitEventHandlerEdificio = new MouseHoverExitEventHandler(edificio);
+           edificio.setOnMouseEntered(mouseHoverEventHandlerEdificio);
+           edificio.setOnMouseExited(mouseHoverExitEventHandlerEdificio);
+
+           BotonInvestigarEventHandler botonInvestigarEventHandler = new BotonInvestigarEventHandler(jugador, stage, rightSide);
+           edificio.setOnAction(botonInvestigarEventHandler);
 
            FileInputStream inputAeropuerto = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenAeropuerto.jpg");
            Image imagenAeropuerto = new Image(inputAeropuerto);
@@ -140,8 +151,16 @@ public class EscenaPrincipal extends HBox {
            aeropuerto.setTranslateY(-450);
            aeropuerto.setTranslateX(35);
            aeropuerto.setBackground(fondo);
+           //aeropuerto.setEffect(new Glow());
+           aeropuerto.setEffect(new InnerShadow());
 
+           MouseHoverEnterEventHandler mouseHoverEventHandlerAeropuerto = new MouseHoverEnterEventHandler(aeropuerto);
+           MouseHoverExitEventHandler mouseHoverExitEventHandlerAeropuerto = new MouseHoverExitEventHandler(aeropuerto);
+           aeropuerto.setOnMouseEntered(mouseHoverEventHandlerAeropuerto);
+           aeropuerto.setOnMouseExited(mouseHoverExitEventHandlerAeropuerto);
 
+           BotonViajarEventHandler botonViajarEventHandler = new BotonViajarEventHandler(rightSide, jugador, stage);
+           aeropuerto.setOnAction(botonViajarEventHandler);
 
            botones.getChildren().addAll(aeropuerto, edificio, computadora);
            rightSide.getChildren().addAll(descripcion, botones);

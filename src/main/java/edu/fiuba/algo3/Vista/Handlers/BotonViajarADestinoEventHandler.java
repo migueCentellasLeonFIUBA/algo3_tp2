@@ -1,15 +1,10 @@
 package edu.fiuba.algo3.Vista.Handlers;
 
-import edu.fiuba.algo3.Vista.EscenaPrincipal;
-import edu.fiuba.algo3.Vista.LayoutComputadora;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 

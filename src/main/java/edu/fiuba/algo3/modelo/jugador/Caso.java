@@ -93,4 +93,11 @@ public class Caso {
         return computadora.getSexo();
     }
 
+    public String cabelloComputadora() {return computadora.getCabello();}
+
+    public String hobbyComputadora() {return computadora.getHobby();}
+
+    public String vehiculoComputadora() {return computadora.getVehiculo();}
+
+    public String seniaComputadora() {return computadora.getSenia();}
 }

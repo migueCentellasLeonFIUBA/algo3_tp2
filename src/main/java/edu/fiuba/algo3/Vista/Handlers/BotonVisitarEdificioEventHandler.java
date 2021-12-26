@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 
 import java.io.FileNotFoundException;
 
@@ -12,12 +13,12 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
 
     Edificio edificio;
     Jugador jugador;
-    Label label;
+    VBox rightSide;
 
-    public BotonVisitarEdificioEventHandler(Edificio edificio, Jugador jugador, Label label){
+    public BotonVisitarEdificioEventHandler(Edificio edificio, Jugador jugador, VBox rightSide){
         this.edificio = edificio;
         this.jugador = jugador;
-        this.label = label;
+        this.rightSide = rightSide;
     }
 
     public void handle(ActionEvent actionEvent) {
@@ -28,7 +29,7 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        label.setText(pista);
+
 
 
     }

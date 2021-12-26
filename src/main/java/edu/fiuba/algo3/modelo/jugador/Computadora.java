@@ -56,8 +56,11 @@ public class Computadora {
         ArrayList<String> caracteristicas = parametros.get(0);
         ArrayList<String> datos = parametros.get(1);
 
-        return baseDeDatos.buscarSospechosos(caracteristicas, datos);
-
+        ArrayList<String> sospechosos = baseDeDatos.buscarSospechosos(caracteristicas, datos);
+        if(sospechosos.isEmpty()){
+            sospechosos.add("No hay coincidencias");
+        }
+        return sospechosos;
     }
 
     //este metodo devuelve los sospechosos correspondientes a las caracteristicas elegidas en el juego...
@@ -116,4 +119,12 @@ public class Computadora {
     public String getSexo() {
         return sexo.sexo();
     }
+
+    public String getCabello() {return cabello.cabello();}
+
+    public String getVehiculo() {return vehiculo.vehiculo();}
+
+    public String getSenia() {return senia.senia();}
+
+    public String getHobby() {return hobby.hobby();}
 }

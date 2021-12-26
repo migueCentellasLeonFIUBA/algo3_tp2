@@ -106,6 +106,8 @@ public class Jugador {
 
     //metodo original...
     public ArrayList<String> buscarSospechosos(){
+
+        reloj.descontarhoras(3);
         return caso.buscarSospechosos();
     }
 
@@ -146,16 +148,20 @@ public class Jugador {
         return caso.obtenerSiguientesDestinos();
     }
 
-    public String getSexoComputadora() {
+    public String rango() {return grado.obtenerGrado();}
 
-        return caso.sexoComputadora();
-    }
+    public String getCiudad() {return caso.ciudadActual();}
 
-    public String rango() {
-        return grado.obtenerGrado();
-    }
+    public String diaYHora() {return reloj.diaYHora();}
 
-    public String getCiudad() {
-        return caso.ciudadActual();
-    }
+    public String getSexoComputadora() {return caso.sexoComputadora();}
+
+
+    public String getCabelloComputadora() {return caso.cabelloComputadora();}
+
+    public String getHobbyComputadora() {return caso.hobbyComputadora();}
+
+    public String getVehiculoComputadora() {return caso.vehiculoComputadora();}
+
+    public String getSeniaComputadora() {return caso.seniaComputadora();}
 }

@@ -10,15 +10,16 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
 
-    HBox hbox;
+    VBox rightSide;
     Jugador jugador;
     Stage stage;
-    public BotonInvestigarEventHandler(HBox hbox, Jugador jugador, Stage stage){
-        this.hbox = hbox;
+    public BotonInvestigarEventHandler(Jugador jugador, Stage stage, VBox rightSide){
+        this.rightSide = rightSide;
         this.jugador = jugador;
         this.stage = stage;
     }
@@ -30,11 +31,17 @@ public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
         Scene escenaActulizada = new Scene(escenaPrincipal);
         stage.setScene(escenaActulizada);
         stage.setFullScreen(true);*/
+        rightSide.getChildren().remove(2);
+        rightSide.getChildren().remove(2);
+        LayoutInvestigar layoutInvestigar = crearLayoutInvestigar();
+
+
+
     }
 
     private LayoutInvestigar crearLayoutInvestigar(){
 
-        LayoutInvestigar layoutInvestigar = new LayoutInvestigar(jugador);
+        LayoutInvestigar layoutInvestigar = new LayoutInvestigar(jugador, rightSide, stage);
 
         return layoutInvestigar;
     }
