@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Banco implements IEdificio {
     IPistas pista;
 
-    public Banco() {
-        this.pista = new SinPista();
+    public Banco(IPistas pista) {
+        this.pista = pista;
     }
 
 

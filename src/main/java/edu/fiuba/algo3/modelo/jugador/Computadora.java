@@ -6,9 +6,11 @@ import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Hobby.Hobby;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Sexo.Sexo;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Senia.Senia;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Vehiculo.Vehiculo;
+import edu.fiuba.algo3.modelo.ladron.ISospechable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Computadora {
 
@@ -18,44 +20,23 @@ public class Computadora {
     private Vehiculo vehiculo;
     private Senia senia;
 
-    private Sospechosos baseDeDatos;
+    private Map<String, ISospechable> sospechosos;
 
 
-    public Computadora(Sospechosos sospechosos) {
+    public Computadora(Map<String, ISospechable> sospechosos) {
 
-        sexo = new Sexo();
-        hobby = new Hobby();
-        cabello = new Cabello();
-        vehiculo = new Vehiculo();
-        senia = new Senia();
-        baseDeDatos = sospechosos;
+        this.sexo = new Sexo();
+        this.hobby = new Hobby();
+        this.cabello = new Cabello();
+        this.vehiculo = new Vehiculo();
+        this.senia = new Senia();
+        this.sospechosos = sospechosos;
     }
 
     public ArrayList<String> BuscarSospechoso() {
 
-/*
-        ArrayList<String> caracteristicas = new ArrayList<>();
-        caracteristicas.add("Sexo");
-        caracteristicas.add("Hobby");
-        caracteristicas.add("Cabello");
-        caracteristicas.add("Vehiculo");
-        caracteristicas.add("Cabello");
-        caracteristicas.add("Seña");
 
-        ArrayList<String> datos = new ArrayList<>();
-        datos.add(sexo.sexo());
-        datos.add(hobby.hobby());
-        datos.add(cabello.cabello());
-        datos.add(senia.senia());
-        datos.add(vehiculo.vehiculo());
-*/
-
-        List<ArrayList<String>> parametros = this.datosAsignados();
-        ArrayList<String> caracteristicas = parametros.get(0);
-        ArrayList<String> datos = parametros.get(1);
-
-        return baseDeDatos.buscarSospechosos(caracteristicas, datos);
-
+        return null;
     }
 
     private List<ArrayList<String>> datosAsignados(){

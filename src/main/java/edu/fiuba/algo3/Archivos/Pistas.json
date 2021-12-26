@@ -11,14 +11,15 @@
      "facil":"",
      "media":"",
      "dificil":""
-   },"Biblioteca":
+   },
+   "Biblioteca":
    {
      "facil":"",
      "media":"",
      "dificil":""
    }
   },
-    "MEXICO":{
+    "México":{
       "Banco":
       {
         "facil":"",
@@ -30,7 +31,8 @@
         "facil":"",
         "media":"",
         "dificil":""
-      },"Biblioteca":
+      },
+      "Biblioteca":
       {
         "facil":"",
         "media":"",
@@ -38,6 +40,6 @@
       }
     }
   }
-}
+
 
 

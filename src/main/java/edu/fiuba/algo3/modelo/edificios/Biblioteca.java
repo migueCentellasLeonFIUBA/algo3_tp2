@@ -6,10 +6,9 @@ import edu.fiuba.algo3.modelo.Pistas.IPistas;
 import edu.fiuba.algo3.modelo.Pistas.SinPista;
 
 public class Biblioteca implements IEdificio {
-
     IPistas pista;
 
-    public Biblioteca() {
-        this.pista = new SinPista();
+    public Biblioteca(IPistas pista) {
+        this.pista = pista;
     }
 }

@@ -6,8 +6,8 @@ import edu.fiuba.algo3.modelo.Pistas.SinPista;
 public class AeroPuerto implements IEdificio {
     IPistas pista;
 
-    public AeroPuerto() {
-        this.pista = new SinPista();
+    public AeroPuerto(IPistas pista) {
+        this.pista = pista;
     }
 
 }

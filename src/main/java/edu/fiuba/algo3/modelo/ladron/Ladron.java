@@ -3,7 +3,7 @@ package edu.fiuba.algo3.modelo.ladron;
 
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 
-public class Ladron implements Secuaces {
+public class Ladron implements ISospechable{
 
     private Integer ataqueConCuchillo;
     private String nombre;
@@ -24,7 +24,6 @@ public class Ladron implements Secuaces {
     }
 
     //Operations
-    @Override
     public boolean Arrestar() {
         //TODO
         return true;

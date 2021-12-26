@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Caso {
 
-    private List<Secuaz> sospechosos;
     private Ladron ladron;
     private Objeto objetoRobado;
     private Estrategia estrategia;
@@ -30,9 +29,4 @@ public class Caso {
     }
     //Operations
 
-    public Secuaz BuscarSospechoso() {
-        //TODO
-        return new Secuaz();
-    }
-    
 }

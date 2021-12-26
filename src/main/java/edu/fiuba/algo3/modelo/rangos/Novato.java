@@ -24,7 +24,8 @@ public class Novato extends GradoPolicia {
     public Objeto solicitarObjeto(Juego juego){
 
         //POSIBLE REFATOR UNA CLASE POR TIPO Y PEDIRLE A ELLA.
-        return juego.ObjetoAleatorio("Comun");
+        //return juego.ObjetoAleatorio("Comun");
+        return null;
     }
 
 

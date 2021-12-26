@@ -3,11 +3,14 @@ package edu.fiuba.algo3.modelo.jugador;
 import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
+import edu.fiuba.algo3.modelo.ladron.ISospechable;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
 import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Map;
 
 public class Jugador {
 
@@ -49,14 +52,6 @@ public class Jugador {
         return ciudadActual.mostrarEdificios();
     }
 
-    public void viajarACiudad(CiudadNoEstrategia destino) {
-    }
-
-    public void BuscarSospechoso() {
-    }
-
-    public void ArrestarSospechoso() {
-    }
 
     public boolean tieneCasoAsignado(){
         return caso != null;
@@ -86,13 +81,8 @@ public class Jugador {
         return pista;
     }
 
-    public CiudadNoEstrategia getCiudadActual() {
-        return ciudadActual;
-    }
-
-    public void empezarCaso(Caso caso, CiudadNoEstrategia ciudad) {
-        this.caso=caso;
-        this.ciudadActual = ciudad;
+    public void empezarCaso(Map<String, Objeto> objetos, Map<String, ISospechable> sospechosos) {
+        //this.ciudadActual = ciudad;
         this.reloj= new Reloj();
     }
 
