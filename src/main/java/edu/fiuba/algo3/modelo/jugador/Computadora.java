@@ -7,6 +7,7 @@ import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Sexo.Sexo;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Senia.Senia;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Vehiculo.Vehiculo;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
+import edu.fiuba.algo3.modelo.ladron.Sospechoso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class Computadora {
 
     private Map<String, ISospechable> sospechosos;
 
+    private ArrayList<String> caracteristicasBuscadas;
 
     public Computadora(Map<String, ISospechable> sospechosos) {
 
@@ -33,10 +35,19 @@ public class Computadora {
         this.sospechosos = sospechosos;
     }
 
-    public ArrayList<String> BuscarSospechoso() {
+    public ArrayList<Sospechoso> BuscarSospechoso() {
+        ArrayList<String> listaNombreSospechosos = (ArrayList<String>) sospechosos.keySet();
 
+        ArrayList<Sospechoso> listaSospechosos = new ArrayList<>();
 
-        return null;
+        for(String nombre : listaNombreSospechosos){
+            Sospechoso sospechoso = (Sospechoso) sospechosos.get(nombre);
+            if(sospechoso.comparar(caracteristicasBuscadas)!=null){
+                listaSospechosos.add(sospechoso);
+            }
+        }
+
+        return listaSospechosos;
     }
 
     private List<ArrayList<String>> datosAsignados(){
@@ -44,32 +55,39 @@ public class Computadora {
         List<ArrayList<String>> parametros = new ArrayList<>();
         ArrayList<String> caracteristicas = new ArrayList<>();
         ArrayList<String> datos = new ArrayList<>();
+        ArrayList<String> caracteristicasABuscar = new ArrayList<>();
 
         if(sexo.estaAsignado()){
             caracteristicas.add("Sexo");
             datos.add(sexo.sexo());
+            caracteristicasABuscar.add(sexo.sexo());
         }
 
         if(hobby.estaAsignado()){
             caracteristicas.add("Hobby");
             datos.add(hobby.hobby());
+            caracteristicasABuscar.add(hobby.hobby());
         }
 
         if(cabello.estaAsignado()){
             caracteristicas.add("Cabello");
             datos.add(cabello.cabello());
+            caracteristicasABuscar.add(cabello.cabello());
         }
 
         if(senia.estaAsignado()){
             caracteristicas.add("Senia");
             datos.add(senia.senia());
+            caracteristicasABuscar.add(senia.senia());
         }
 
         if(vehiculo.estaAsignado()){
             caracteristicas.add("Vehiculo");
             datos.add(vehiculo.vehiculo());
+            caracteristicasABuscar.add(vehiculo.vehiculo());
         }
 
+        caracteristicasBuscadas = caracteristicasABuscar;
         parametros.add(caracteristicas);
         parametros.add(datos);
 

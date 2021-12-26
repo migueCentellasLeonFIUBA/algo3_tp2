@@ -33,7 +33,9 @@ public class Fachada{
             ArrayList<String> sospechososNombres = parser.listaDeElementos();
             Map<String, ISospechable> resultado = new HashMap<>();
             for (String nombre : sospechososNombres){
-                Sospechoso sospechoso = new Sospechoso(nombre, new Cualidades());
+                ArrayList<String> caracteristicas = parser.pedirArreglo(nombre);
+                Cualidades cualidades = new Cualidades(caracteristicas);
+                Sospechoso sospechoso = new Sospechoso(nombre, cualidades);
                 resultado.put(nombre, sospechoso);
             }
 
