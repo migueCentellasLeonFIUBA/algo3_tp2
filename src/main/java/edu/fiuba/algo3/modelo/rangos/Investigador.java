@@ -1,6 +1,12 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
+import edu.fiuba.algo3.modelo.jugador.Caso;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
+
+import java.util.ArrayList;
+import java.util.Map;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Random;
 
 public class Investigador extends GradoPolicia{
 
@@ -15,9 +21,8 @@ public class Investigador extends GradoPolicia{
         }
         return this;
     }
-
-
-    public int getArrestos(){
-        return arrestos;
+    public Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos){
+        return null;
     }
+
 }

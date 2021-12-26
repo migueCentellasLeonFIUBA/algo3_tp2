@@ -3,9 +3,13 @@ package edu.fiuba.algo3.modelo.juego;
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
+import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Computadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
+import edu.fiuba.algo3.modelo.jugador.NoOrden;
+import edu.fiuba.algo3.modelo.ladron.Estrategia;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
+import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.ArrayList;
@@ -17,7 +21,6 @@ public class Juego {
     private Map<String, ArrayList<Objeto>> objetos;
     private Map<String, Ciudad> ciudades;
     private Map<String, Jugador> jugadores;
-    //private Map<String, Jugador> jugadores;
 
     private Jugador jugadorActual;
 
@@ -35,14 +38,28 @@ public class Juego {
             return jugadorActual;
         }
 
-        jugadorActual = new Jugador(nombre,0);
+        jugadorActual = new Jugador(nombre,0,new NoOrden());
         return jugadorActual;
     }
 
-    public void crearCaso(){
-        Computadora computadora = new Computadora(fachada.cargarSospechosos());
-        jugadorActual.empezarCaso();
+    private Ladron crearLadron(Map<String, ISospechable> sospechosos){
+        Random random = new Random();
+        String nombre = random.obtenerValorRandom((ArrayList<String>) sospechosos.keySet());
+        Ladron ladron = new Ladron(sospechosos.get(nombre));
+        sospechosos.put(nombre,ladron);
+        return ladron;
+    }
 
+    public void crearCaso(){
+        Map<String, ISospechable> sospechosos = fachada.cargarSospechosos();
+        Computadora computadora = new Computadora(sospechosos);
+        Ladron ladron = crearLadron(sospechosos);
+        Objeto objeto = jugadorActual.ObjetoRobado(objetos);
+        //
+        objeto.aplicarEstrategia(estrategias);
+        //
+        Caso caso = new Caso(objeto,ladron);
+        jugadorActual.empezarCaso(caso,computadora);
 
         //jugador Empezar caso -> al caso le paso mi grado.
         //Caso le dice a grado -> dame un objeto robado.

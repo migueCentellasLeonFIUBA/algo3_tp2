@@ -1,86 +1,114 @@
 {
   "Huevo de 1000 años": {
-    "Rareza": "Comun"
+    "Rareza": "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Tablilla babilonica":{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Colmillo de jabali" :{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Araña de la Opera" :{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Cruz enjoyada de Constantino":{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Joyas de la corona":{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Alfombra voladora" :{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Buda de oro":{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Mascara Inca de Oro" :{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Manuscrito islámico":{
-    "Rareza" : "Comun"
+    "Rareza" : "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Corona de Ivan el Terrible":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Mascara del rey Tut":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Mascara de Montezuma":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Mascara de Priamo":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Merlion the Golden Lion":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Pintura del Kremlin":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Anillo del Papa":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Ceramica rara del Imperio de Mali":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Planta de te rara":{
-    "Rareza" : "Valioso"
+    "Rareza" : "Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Colección Royal Quartz":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Sernedip Ruby":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "LLama Plata":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Bola de oro macizo":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Copa Stanley":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Loro relleno":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Las Rockettes":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Casco vikingo":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   },
   "Tocado del rey Watusi":{
-    "Rareza" : "Muy Valioso"
+    "Rareza" : "Muy Valioso",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Bamako"]
   }
 }

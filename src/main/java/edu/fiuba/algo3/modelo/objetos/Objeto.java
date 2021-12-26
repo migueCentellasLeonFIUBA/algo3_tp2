@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.objetos;
 
 
+import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 
 public class Objeto{
@@ -11,7 +12,7 @@ public class Objeto{
         this.nombre = nombre;
     }
 
-    public Estrategia crearEstrategia(){
+    public Estrategia crearEstrategia(Juego juego){
         return null;// valor.crearEstrategia(ciudad, ciudades);
     }
 

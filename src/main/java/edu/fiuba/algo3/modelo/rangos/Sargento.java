@@ -1,6 +1,13 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
+import edu.fiuba.algo3.modelo.ManejoArchivos.Random;
+import edu.fiuba.algo3.modelo.jugador.Caso;
+import edu.fiuba.algo3.modelo.objetos.Objeto;
+
+import java.util.ArrayList;
+import java.util.Map;
+
 public class Sargento extends GradoPolicia {
 
     private Integer velocidad = 1500;
@@ -13,12 +20,8 @@ public class Sargento extends GradoPolicia {
         return this;
     }
 
-
-    public String getGrado(){
-        return "Sargento";
+    public Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos){
+        return null;
     }
 
-    public int getArrestos(){
-        return arrestos;
-    }
 }

@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
 import edu.fiuba.algo3.modelo.edificios.ComandoCreadorEdficios;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
+import edu.fiuba.algo3.modelo.jugador.NoOrden;
 import edu.fiuba.algo3.modelo.ladron.Cualidades;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
@@ -81,7 +82,7 @@ public class Fachada{
         for (String nombreObjeto: nombreObjetos){
             parser.filtrar(nombreObjeto);
             String tipo = parser.pedirValor("Rareza");
-            Objeto objeto = new Objeto(nombreObjeto);
+            Objeto objeto = new Objeto(nombreObjeto);//cargar con ciudad tambien
             ArrayList<Objeto> aux = resultado.getOrDefault(tipo,new ArrayList<>());
             aux.add(objeto);
             resultado.put(parser.pedirValor("Rareza"),aux);
@@ -96,7 +97,7 @@ public class Fachada{
 
             for (String nombreJugador: jugadores){
                 parser.filtrar(nombreJugador);
-                Jugador jugador = new Jugador(nombreJugador,Integer.parseInt(parser.pedirValor("Arrestos")));
+                Jugador jugador = new Jugador(nombreJugador,Integer.parseInt(parser.pedirValor("Arrestos")), new NoOrden());
                 resultado.put(nombreJugador,jugador);
             }
 
@@ -108,20 +109,9 @@ public class Fachada{
         ArrayList<String> pistas=parser.listaDeElementos();
 
         for (String nombrePistas:pistas){
-
         }
         return null;
-    }
-
-    public Map<String, Estrategia> cargarEstrategias(){
-        parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Estrategia.json");
-        ArrayList<String> estretegias=parser.listaDeElementos();
-        Map<String, Estrategia> resultado = new HashMap<>();
-
-        for (String nombreEstretegias: estretegias){
-            Estrategia estrategia = new Estrategia();
-            resultado.put(nombreEstretegias,estrategia);
         }
-        return resultado;
-    }
+
+
 }

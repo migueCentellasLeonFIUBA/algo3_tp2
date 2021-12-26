@@ -12,23 +12,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CiudadNoEstrategia extends Ciudad{
+    Coordenadas coordenadas;
+    String nombreCiudad;
+    String descripcion;
+    ArrayList<IEdificio> edificios;
 
-    private String nombre;
-    private Integer visitas;
-    private List<IEdificio> listaEdificios;
-    private Coordenadas coordenadas;
-    private String descripcion;
-    private Ladron ladron;
-
-    public CiudadNoEstrategia(String nombre, String descripcion, Coordenadas coordenadas, List<IEdificio> Edificios ){
-
-        listaEdificios = new ArrayList<>();
-        this.visitas = 0;
+    public CiudadNoEstrategia(String nombreCiudad,String descripcion,Coordenadas coordenadas,ArrayList<IEdificio> edificios) {
+        this.nombreCiudad = nombreCiudad;
+        this.descripcion = descripcion;
+        this.coordenadas = coordenadas;
+        this.edificios = edificios;
     }
 
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
 
     public void setCoordenadas(Coordenadas coordenadas) {
         this.coordenadas = coordenadas;
@@ -40,12 +35,6 @@ public class CiudadNoEstrategia extends Ciudad{
 
     public void setDescripcion(String descripcion){
         this.descripcion = descripcion;
-    }
-
-
-    public List<IEdificio> mostrarEdificios(){
-        List <IEdificio> copiaListaEdificios = listaEdificios.stream().collect(Collectors.toList());
-        return copiaListaEdificios;
     }
 
     public void calcularDistancia(CiudadNoEstrategia destino, Integer velocidad, Reloj reloj) {
@@ -61,32 +50,14 @@ public class CiudadNoEstrategia extends Ciudad{
 
     public String visitarEdificio(IEdificio edificio, Reloj reloj, Visitante visitante) throws FileNotFoundException {
 
-        if(visitas < 3){
-            visitas += 1;
-        }
-
-        if(ladron != null){
-            ladron.atacarConCuchillo(reloj);
-        }
-
-        reloj.descontarhoras(visitas);
         return null;
     }
 
-    public IEdificio obtenerEdificio(int i) {
-        return listaEdificios.get(i);
-    }
 
     public void setLadron(Ladron ladronActual){
     }
 
-    public boolean MostraSecuaz(String nombre){
-        return this.nombre.equals(nombre);
-    }
 
-    public String getNombre(){
-        return this.nombre;
-    }
 
 
 }
