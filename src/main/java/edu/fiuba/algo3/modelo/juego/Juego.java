@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo.juego;
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.jugador.Caso;
 import edu.fiuba.algo3.modelo.jugador.Computadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
@@ -21,6 +22,8 @@ public class Juego {
     private Map<String, ArrayList<Objeto>> objetos;
     private Map<String, Ciudad> ciudades;
     private Map<String, Jugador> jugadores;
+    private Map<Ciudad, ArrayList<Ciudad>> conexiones;
+    private Mapa mapa;
 
     private Jugador jugadorActual;
 
@@ -29,7 +32,11 @@ public class Juego {
         this.objetos = fachada.cargarObjetos();
         this.ciudades = fachada.cargarCiudades();
         this.jugadores = fachada.cargarJugadores();
+        this.conexiones = fachada.cargarConexiones(ciudades);
+    }
 
+    private Mapa cargarMapa(Map<Ciudad, ArrayList<Ciudad>> conexiones, Jugador jugador){
+        return new Mapa(conexiones, jugador);
     }
 
     public Jugador IdentificarJugador(String nombre) {
@@ -38,7 +45,9 @@ public class Juego {
             return jugadorActual;
         }
 
-        jugadorActual = new Jugador(nombre,0,new NoOrden());
+        jugadorActual = new Jugador(nombre,0, new NoOrden());
+
+        this.mapa = this.cargarMapa(conexiones, jugadorActual); //depende del jugador.
         return jugadorActual;
     }
 

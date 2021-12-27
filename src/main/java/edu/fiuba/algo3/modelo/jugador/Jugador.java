@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
@@ -82,5 +83,9 @@ public class Jugador {
     public void empezarCaso(Caso caso,Computadora computadora) {
         this.caso = caso;
         this.computadora = computadora;
+    }
+
+    public void viajarACiudad(Ciudad destino) {
+
     }
 }

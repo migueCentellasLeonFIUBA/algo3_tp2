@@ -1,8 +1,5 @@
 package edu.fiuba.algo3.modelo.ciudades;
 
-
-import edu.fiuba.algo3.modelo.jugador.Reloj;
-
 import static java.lang.Math.sqrt;
 
 public class Coordenadas {
@@ -16,7 +13,6 @@ public class Coordenadas {
         this.longitud = longitud;
     }
 
-    //Operations
     public double calcularDistancia(Coordenadas destino) {
         //Calculo las distancias con la distancia euclidea.
         double distancia = sqrt( Math.pow(Math.abs(latitud) - Math.abs(destino.getLatitud()), 2) + Math.pow(Math.abs(longitud) - Math.abs(destino.getLongitud()), 2) ) ;

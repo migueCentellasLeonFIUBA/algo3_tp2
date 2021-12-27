@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.Pistas.SinPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.ComandoCreadorEdficios;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
@@ -64,6 +65,25 @@ public class Fachada{
         return resultado;
     }
 
+    public Map<Ciudad, ArrayList<Ciudad>> cargarConexiones(Map<String, Ciudad> ciudades){
+        parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Conexiones.json");
+        ArrayList<String> conexiones = parser.listaDeElementos();
+        Map<Ciudad, ArrayList<Ciudad>> resultado = new HashMap<>();
+        ArrayList<Ciudad> ciudadesMapa = new ArrayList<>();
+
+        //por cada nombre key en el archivo conexion:
+        for (String nombreCiudad : conexiones){
+
+            //por cada ciudad en el arreglo de conexiones:
+            for(String ciudad : parser.pedirArreglo(nombreCiudad)){
+                ciudadesMapa.add(ciudades.get(ciudad)); //devuelve la instancia de la ciudad.
+            }
+            resultado.put(ciudades.get(nombreCiudad), ciudadesMapa);
+        }
+
+        return resultado;
+    }
+
     private ArrayList<IEdificio> cargarEdificios(){
         List<String> edificios = parser.pedirArreglo("Edificios");
         ArrayList<IEdificio> resultado = new ArrayList<>();
@@ -110,10 +130,11 @@ public class Fachada{
         parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json");
         ArrayList<String> ciudades=parser.listaDeElementos();
 
-        for (String ciudad:ciudades){
-            parser.filtrar(ciudad);
-            //cada pista tiene un tipo y una dificultad
-        }
+            for (String ciudad:ciudades){
+                parser.filtrar(ciudad);
+                //cada pista tiene un tipo y una dificultad
+            }
+
         return null;
         }
 
