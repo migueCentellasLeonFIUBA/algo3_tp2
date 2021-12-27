@@ -66,12 +66,12 @@ public class Jugador {
     }
 
     public String visitarEdificio(IEdificio edificio) throws FileNotFoundException {
-        String pista = ciudadActual.visitarEdificio(edificio, reloj, visitante);
+        //String pista = ciudadActual.visitarEdificio(edificio, reloj, visitante);
         if(reloj.tiempoTerminado()){
             terminarJuego();
         }
 
-        return pista;
+        return "";
     }
 
     public Objeto ObjetoRobado(Map<String, ArrayList<Objeto>> objetos) {

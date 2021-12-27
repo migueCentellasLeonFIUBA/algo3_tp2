@@ -16,7 +16,7 @@ public class ConstructorCiudadConcreta {
         //ciudad.setCoordenadas(latitud, longitud);
     }
 
-    public void setDescripcion(String descripcion){ciudad.setDescripcion(descripcion);}
+    //public void setDescripcion(String descripcion){ciudad.setDescripcion(descripcion);}
 
     public CiudadNoEstrategia getCiudad(){return ciudad;}
 }

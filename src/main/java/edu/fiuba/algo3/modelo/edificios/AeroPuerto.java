@@ -1,12 +1,11 @@
 package edu.fiuba.algo3.modelo.edificios;
 
-import edu.fiuba.algo3.modelo.Pistas.IPistas;
-import edu.fiuba.algo3.modelo.Pistas.SinPista;
+import edu.fiuba.algo3.modelo.Pistas.IPista;
 
 public class AeroPuerto implements IEdificio {
-    IPistas pista;
+    IPista pista;
 
-    public AeroPuerto(IPistas pista) {
+    public AeroPuerto(IPista pista) {
         this.pista = pista;
     }
 

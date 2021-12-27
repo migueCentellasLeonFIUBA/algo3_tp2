@@ -55,9 +55,7 @@ public class Juego {
         Computadora computadora = new Computadora(sospechosos);
         Ladron ladron = crearLadron(sospechosos);
         Objeto objeto = jugadorActual.ObjetoRobado(objetos);
-        //
-        objeto.aplicarEstrategia(estrategias);
-        //
+        objeto.aplicarEstrategia(ciudades);
         Caso caso = new Caso(objeto,ladron);
         jugadorActual.empezarCaso(caso,computadora);
 

@@ -1,14 +1,12 @@
 package edu.fiuba.algo3.modelo.edificios;
 
 
-import edu.fiuba.algo3.modelo.IVisitor.Visitante;
-import edu.fiuba.algo3.modelo.Pistas.IPistas;
-import edu.fiuba.algo3.modelo.Pistas.SinPista;
+import edu.fiuba.algo3.modelo.Pistas.IPista;
 
 public class Biblioteca implements IEdificio {
-    IPistas pista;
+    IPista pista;
 
-    public Biblioteca(IPistas pista) {
+    public Biblioteca(IPista pista) {
         this.pista = pista;
     }
 }

@@ -2,11 +2,11 @@
 package edu.fiuba.algo3.modelo.ladron;
 
 
-import edu.fiuba.algo3.modelo.ciudades.CiudadEstrategia;
-import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Estrategia {
 
@@ -17,7 +17,10 @@ public class Estrategia {
         ciudades=listaCiudades;
     }
 
-    public void aplicarEstrategia() {
+    public void aplicarEstrategia(Map<String, Ciudad> ciudades) {
+        for(String ciudad: this.ciudades){
+            //ciudades.put(ciudad,);
+        }
     }
 
 

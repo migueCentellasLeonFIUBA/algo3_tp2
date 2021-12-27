@@ -8,7 +8,7 @@ public class pruebaUnitariasLectorYFachada {
     @Test
     public void unLectorLeePistasYluegoDeFiltrarDanElValorCorrecto() throws IOException {
         GestorDeArchivos lector = new GestorDeArchivos();
-        String pistasTexto = lector.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json");
+        String pistasTexto = lector.leerTextoCompleto("src/main/java/edu/fiuba/algo3/Archivos/PistasCiudades.json");
         Fachada fachada = new Fachada(pistasTexto);
         Long cantidadPistas = fachada.cantidad();
         assertEquals(1, cantidadPistas);

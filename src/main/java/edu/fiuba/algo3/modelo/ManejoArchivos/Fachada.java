@@ -1,8 +1,8 @@
 package edu.fiuba.algo3.modelo.ManejoArchivos;
 
-import edu.fiuba.algo3.modelo.Pistas.IPistas;
+import edu.fiuba.algo3.modelo.Pistas.IPista;
+import edu.fiuba.algo3.modelo.Pistas.SinPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.ciudades.CiudadEstrategia;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
 import edu.fiuba.algo3.modelo.edificios.ComandoCreadorEdficios;
@@ -38,7 +38,6 @@ public class Fachada{
                 Sospechoso sospechoso = new Sospechoso(nombre, cualidades);
                 resultado.put(nombre, sospechoso);
             }
-
         return resultado;
     }
 
@@ -70,7 +69,7 @@ public class Fachada{
         ArrayList<IEdificio> resultado = new ArrayList<>();
         for (String nombreEdificio: edificios){
             ComandoCreadorEdficios comando = new ComandoCreadorEdficios();
-            IEdificio edificio = comando.crearEdificio(nombreEdificio);
+            IEdificio edificio = comando.crearEdificio(nombreEdificio, new SinPista());
             resultado.add(edificio);
         }
         return resultado;
@@ -84,7 +83,8 @@ public class Fachada{
         for (String nombreObjeto: nombreObjetos){
             parser.filtrar(nombreObjeto);
             String tipo = parser.pedirValor("Rareza");
-            Objeto objeto = new Objeto(nombreObjeto);//cargar con ciudad tambien
+            Estrategia estrategia = new Estrategia(parser.pedirArreglo("Estrategia"));
+            Objeto objeto = new Objeto(nombreObjeto,estrategia);
             ArrayList<Objeto> aux = resultado.getOrDefault(tipo,new ArrayList<>());
             aux.add(objeto);
             resultado.put(parser.pedirValor("Rareza"),aux);
@@ -106,11 +106,13 @@ public class Fachada{
             return resultado;
         }
 
-        public Map<String, IPistas> cargarPistas(){
+        public Map<String,Map<String, IPista>> cargarPistas(){
         parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Pistas.json");
-        ArrayList<String> pistas=parser.listaDeElementos();
+        ArrayList<String> ciudades=parser.listaDeElementos();
 
-        for (String nombrePistas:pistas){
+        for (String ciudad:ciudades){
+            parser.filtrar(ciudad);
+            //cada pista tiene un tipo y una dificultad
         }
         return null;
         }

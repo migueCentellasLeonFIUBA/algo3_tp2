@@ -1,4 +1,4 @@
 package edu.fiuba.algo3.modelo.Pistas;
 
-public class Pista {
+public class Pista implements IPista {
 }
