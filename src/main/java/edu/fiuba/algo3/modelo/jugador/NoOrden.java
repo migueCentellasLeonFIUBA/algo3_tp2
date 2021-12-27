@@ -1,13 +1,8 @@
 package edu.fiuba.algo3.modelo.jugador;
 
+public class NoOrden implements IOrden{
 
-public class NoOrden implements Orden {
-
-    //                          Operations                                  
-    @Override
-    public boolean ArrestarSospechos() {
-        //TODO
+    public boolean arrestar(){
         return false;
     }
-    
 }

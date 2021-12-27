@@ -14,6 +14,11 @@ public interface IParser {
 
     public long cantidad();
 
-    public ArrayList<String> pedirArreglo(String termino);
+    public ArrayList<String> pedirArregloFiltrado(String termino);
 
-    }
+    public void filtrarDeNuevo(String termino);
+
+    public ArrayList<String> listaDeElementosFiltrados();
+
+    public ArrayList<String> pedirArreglo(String termino);
+}

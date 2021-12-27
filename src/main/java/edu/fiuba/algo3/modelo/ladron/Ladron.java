@@ -3,20 +3,16 @@ package edu.fiuba.algo3.modelo.ladron;
 
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 
-public class Ladron implements ISospechable{
+import java.util.ArrayList;
+
+public class Ladron implements ISospechable,ILadron{
 
     private Integer ataqueConCuchillo;
-    private Sospechoso sospechoso;
+    private ISospechable sospechoso;
 
     public Ladron(ISospechable sospechoso){
-        this.sospechoso = (Sospechoso) sospechoso;
+        this.sospechoso = sospechoso;
         this.ataqueConCuchillo = 2;
-    }
-
-    //Operations
-    public boolean Arrestar() {
-        //TODO
-        return true;
     }
 
     public void atacarConCuchillo(Reloj reloj){
@@ -26,5 +22,13 @@ public class Ladron implements ISospechable{
         }
     }
 
+    @Override
+    public Sospechoso comparar(ArrayList<String> caracteristicas) {
+        return this.sospechoso.comparar(caracteristicas);
+    }
 
+    @Override
+    public boolean arrestar() {
+        return true;
+    }
 }

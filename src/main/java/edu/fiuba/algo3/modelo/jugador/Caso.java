@@ -3,30 +3,23 @@ package edu.fiuba.algo3.modelo.jugador;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.*;
 
+import java.util.ArrayList;
+
 
 public class Caso {
 
     private Ladron ladron;
+    private Computadora computadora;
     String descripcion;//se genera con el objeto pidiendole a la ciudad.
     private Objeto objetoRobado;//No hace falta
-    private Estrategia estrategia;
 
-    public Caso(Objeto objetoRobado, Ladron ladron) {
+    public Caso(Computadora computadora, Ladron ladron, Objeto objeto){
         this.ladron = ladron;
-        this.objetoRobado = objetoRobado;
-
-
+        this.objetoRobado = objeto;
+        this.computadora= computadora;
     }
 
-    /*
-
-        public Caso(Ladron ladron, Objeto objeto, Ciudad ciudad, Ciudades ciudades){
-            this.ladron = ladron;
-            this.objetoRobado = objeto;
-            this.estrategia = objeto.crearEstrategia(ciudad, ciudades);
-        }
-
-    */
-
-
+    public String obtnerDescripcion() {
+        return "";
+    }
 }

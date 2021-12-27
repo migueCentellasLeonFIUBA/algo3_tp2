@@ -15,7 +15,7 @@ public class ParserTest {
         Parser parser = new Parser();
         parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json");
         parser.filtrar("Montreal");
-        List<String> listaDeEdificios = parser.pedirArreglo("Edificios");
+        List<String> listaDeEdificios = parser.pedirArregloFiltrado("Edificios");
         Assert.assertEquals(listaDeEdificios.size(),3);
         Assert.assertEquals(parser.pedirValor("descripcion"),"Ciudad de montreal");
 

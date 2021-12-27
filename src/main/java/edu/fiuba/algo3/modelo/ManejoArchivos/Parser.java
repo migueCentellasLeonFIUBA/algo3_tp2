@@ -31,11 +31,24 @@ public class Parser implements IParser{
         objetoFiltrado=objetoOriginal.getJSONObject(termino);
     }
 
+    public void filtrarDeNuevo(String termino){
+        objetoFiltrado=objetoFiltrado.getJSONObject(termino);
+    }
+
     public String pedirValor(String termino){
         return objetoFiltrado.getString(termino);
     }
 
+
     public ArrayList<String> pedirArreglo(String termino){
+        JSONArray jsonArray= objetoOriginal.getJSONArray(termino);
+        List<String> list = StreamSupport.stream(jsonArray.spliterator(), false)
+                .map(e -> (String)e)
+                .collect(Collectors.toList());
+        return new ArrayList<>(list);
+    }
+
+    public ArrayList<String> pedirArregloFiltrado(String termino){
         JSONArray jsonArray= objetoFiltrado.getJSONArray(termino);
         List<String> list = StreamSupport.stream(jsonArray.spliterator(), false)
                 .map(e -> (String)e)
@@ -45,6 +58,10 @@ public class Parser implements IParser{
 
     public ArrayList<String> listaDeElementos(){
         return  new ArrayList<>(objetoOriginal.keySet());
+    }
+
+    public ArrayList<String> listaDeElementosFiltrados(){
+        return  new ArrayList<>(objetoFiltrado.keySet());
     }
 
     public long cantidad(){

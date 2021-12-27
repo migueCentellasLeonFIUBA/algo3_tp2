@@ -1,8 +1,11 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.IBuilder.ConstructorJuegoConcreto;
+import edu.fiuba.algo3.modelo.IBuilder.DirectorJuego;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Parser;
 import edu.fiuba.algo3.modelo.juego.Juego;
+import edu.fiuba.algo3.modelo.jugador.Jugador;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -17,13 +20,11 @@ public class JuegoTest{
     public void TestJuegoCargaCorrectamenteLosArchivos() {
         Parser parser = new Parser();
         Fachada fachada = new Fachada(parser);
-        Juego juego = new Juego(fachada);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
         Assert.assertEquals("","");
-    }
-
-    @Test
-    public void TestJuegoCreaCasoCreaCorrectamente() throws Exception {
-
     }
 
 }

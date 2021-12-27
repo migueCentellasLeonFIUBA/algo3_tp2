@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
@@ -21,27 +21,20 @@ public class Jugador {
     private Reloj reloj;
     private GradoPolicia grado;
     private Caso caso;
-    private Orden orden;
-    private CiudadNoEstrategia ciudadActual;
-    private VisitanteConcreto visitante;
+    private Ciudad ciudadActual;
 
 
-    public Jugador(String nombre,Integer arrestos,Orden orden){
+    public Jugador(String nombre,Integer arrestos,Reloj reloj){
         this.nombre=nombre;
         this.grado = new Novato();
-        this.orden = orden;
         asignarGrado(arrestos);
-        visitante = new VisitanteConcreto(grado);
-    }
-
-    public void setCiudadActual(CiudadNoEstrategia origen){
-        this.ciudadActual = origen;
-    }
-
-    public void setReloj(Reloj reloj){
         this.reloj = reloj;
+        this.ciudadActual = ciudadActual;
     }
-    public void setGrado(GradoPolicia rango){this.grado = rango;}
+
+    public void setCiudadActual(Ciudad actual){
+        this.ciudadActual = actual;
+    }
 
 
     private void asignarGrado(int arrestos){
@@ -51,18 +44,7 @@ public class Jugador {
     }
 
     public void terminarJuego() {
-        this.caso = null;
-        this.reloj = null;
-        this.ciudadActual = null;
-        //refactor: no debería tener atributos sin inicializar
-    }
-
-    public boolean compararJugador(String nombre) {
-        return nombre.equals(this.nombre);
-    }
-
-    public void comienzaEnCiudad(CiudadNoEstrategia ciudad) {
-        this.ciudadActual=ciudad;
+        //refactor: no debería tener atributos sin inicializar Memento al juego
     }
 
     public String visitarEdificio(IEdificio edificio) throws FileNotFoundException {

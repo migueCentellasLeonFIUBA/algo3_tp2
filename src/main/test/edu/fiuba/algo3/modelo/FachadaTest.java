@@ -9,6 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FachadaTest {
 
     @Test
-    public void Test01CreaSospechosos() throws FileNotFoundException {
+    public void Test01CargoPistas() throws FileNotFoundException {
     }
 }

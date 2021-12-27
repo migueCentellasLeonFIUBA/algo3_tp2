@@ -1,12 +1,10 @@
 package edu.fiuba.algo3.modelo.juego;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
+import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
-import edu.fiuba.algo3.modelo.jugador.Caso;
-import edu.fiuba.algo3.modelo.jugador.Computadora;
-import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.jugador.NoOrden;
+import edu.fiuba.algo3.modelo.jugador.*;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
@@ -17,19 +15,37 @@ import java.util.Map;
 
 public class Juego {
 
-    private Fachada fachada;
     private Map<String, ArrayList<Objeto>> objetos;
     private Map<String, Ciudad> ciudades;
     private Map<String, Jugador> jugadores;
+    private  Map<String,Map<String, IPista>> pistas;
+    private Map<String, ISospechable> sospechosos;
+    private Map<Ciudad, ArrayList<Ciudad>> conexiones;
 
     private Jugador jugadorActual;
 
-    public Juego(Fachada fachada){
-        this.fachada = fachada;
-        this.objetos = fachada.cargarObjetos();
-        this.ciudades = fachada.cargarCiudades();
-        this.jugadores = fachada.cargarJugadores();
+    public void setObjetos(Map<String, ArrayList<Objeto>> objetos) {
+        this.objetos = objetos;
+    }
 
+    public void setPistas(Map<String,Map<String, IPista>> pistas) {
+        this.pistas = pistas;
+    }
+
+    public void setCiudades(Map<String, Ciudad> ciudades) {
+        this.ciudades = ciudades;
+    }
+
+    public void setJugadores(Map<String, Jugador> jugadores) {
+        this.jugadores = jugadores;
+    }
+
+    public void setConexiones(Map<Ciudad, ArrayList<Ciudad>> conexiones) {
+        this.conexiones = conexiones;
+    }
+
+    public void setSospechosos(Map<String, ISospechable> sospechosos) {
+        this.sospechosos = sospechosos;
     }
 
     public Jugador IdentificarJugador(String nombre) {
@@ -38,32 +54,33 @@ public class Juego {
             return jugadorActual;
         }
 
-        jugadorActual = new Jugador(nombre,0,new NoOrden());
+        jugadorActual = new Jugador(nombre,0,new Reloj());
         return jugadorActual;
     }
 
     private Ladron crearLadron(Map<String, ISospechable> sospechosos){
         Random random = new Random();
-        String nombre = random.obtenerValorRandom((ArrayList<String>) sospechosos.keySet());
+        String nombre = random.obtenerStringRandom((ArrayList<String>) sospechosos.keySet());
         Ladron ladron = new Ladron(sospechosos.get(nombre));
         sospechosos.put(nombre,ladron);
         return ladron;
     }
 
-    public void crearCaso(){
-        Map<String, ISospechable> sospechosos = fachada.cargarSospechosos();
+    public void comenzarCaso() throws Exception {
+        if(jugadorActual == null) throw new Exception("Identificar un jugador antes de crear un caso");
+
         Computadora computadora = new Computadora(sospechosos);
         Ladron ladron = crearLadron(sospechosos);
         Objeto objeto = jugadorActual.ObjetoRobado(objetos);
-        objeto.aplicarEstrategia(ciudades);
-        Caso caso = new Caso(objeto,ladron);
-        jugadorActual.empezarCaso(caso,computadora);
 
-        //jugador Empezar caso -> al caso le paso mi grado.
-        //Caso le dice a grado -> dame un objeto robado.
-        //Grado policia le dice al Juego dame un objeto robado
-        //Juego a la fachada dame un objeto aleatorio con tipo "comun"
-        //fachada dame uno aleatorio "comun"
+
+        Caso caso = new Caso(computadora,ladron,objeto);
+
+        objeto.aplicarEstrategia(ciudades,pistas,ladron);
+
+        //jugadorActual.empezarCaso(caso);
+
+
     }
 
 }

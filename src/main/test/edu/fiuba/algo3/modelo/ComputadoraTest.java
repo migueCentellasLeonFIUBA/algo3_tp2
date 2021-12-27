@@ -1,13 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
-import edu.fiuba.algo3.modelo.jugador.Computadora;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class ComputadoraTest {
 

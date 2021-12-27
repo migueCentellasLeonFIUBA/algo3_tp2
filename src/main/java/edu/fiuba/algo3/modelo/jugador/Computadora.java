@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Cabello.Cabello;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Hobby.Hobby;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Sexo.Sexo;
@@ -15,6 +14,7 @@ import java.util.Map;
 
 public class Computadora {
 
+    private IOrden ordenActual;
     private Sexo sexo;
     private Hobby hobby;
     private Cabello cabello;
@@ -33,9 +33,10 @@ public class Computadora {
         this.vehiculo = new Vehiculo();
         this.senia = new Senia();
         this.sospechosos = sospechosos;
+        this.ordenActual = new NoOrden();
     }
 
-    public ArrayList<Sospechoso> BuscarSospechoso() {
+    public ArrayList<Sospechoso> BuscarSospechoso(Reloj reloj) {
         ArrayList<String> listaNombreSospechosos = (ArrayList<String>) sospechosos.keySet();
 
         ArrayList<Sospechoso> listaSospechosos = new ArrayList<>();
@@ -47,6 +48,11 @@ public class Computadora {
             }
         }
 
+        if(listaSospechosos.size() == 1){
+            ordenActual = new Orden(listaSospechosos.get(0));
+        }
+
+        reloj.descontarhoras(3);
         return listaSospechosos;
     }
 
@@ -94,25 +100,26 @@ public class Computadora {
         return parametros;
     }
 
-    public void siguienteSexo() {
-        sexo.siguienteSexo();
+    public void siguienteSexo() {sexo.siguienteSexo();}
+
+    public void siguienteHobby() {hobby.siguienteHobby();}
+
+    public void siguienteCabello() {cabello.siguienteCabello();}
+
+    public void siguienteVehiculo() {vehiculo.siguienteVehiculo();}
+
+    public void siguienteSenia() {senia.siguienteSenia();}
+
+
+    public String getSexo() {
+        return sexo.sexo();
     }
 
-    public void siguienteHobby() {
-        hobby.siguienteHobby();
-    }
+    public String getCabello() {return cabello.cabello();}
 
-    public void siguienteCabello() {
-        cabello.siguienteCabello();
-    }
+    public String getVehiculo() {return vehiculo.vehiculo();}
 
-    public void siguienteVehiculo() {
-        vehiculo.siguienteVehiculo();
-    }
+    public String getSenia() {return senia.senia();}
 
-    public void siguienteSenia() {
-        senia.siguienteSenia();
-    }
-
-
+    public String getHobby() {return hobby.hobby();}
 }

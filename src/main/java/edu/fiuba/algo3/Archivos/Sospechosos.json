@@ -1,17 +1,4 @@
 {
-  "Merey Laroc":{
-    "Sexo": "Femenino",
-    "Hobby" : "Tenis",
-    "Cabello" : "Rojo",
-    "Senia" : "Tatuaje",
-    "Vehiculo" : "Deportivo"
-  },
-  "Carmen Sandiego":{
-    "Sexo": "Femenino",
-    "Hobby" : "Croquet",
-    "Cabello" : "Negro",
-    "Senia" : "Joyas",
-    "Vehiculo" : "Limusina"
-  }
-
+  "Merey Laroc":["Femenino","Tenis","Rojo","Tatuaje","Deportivo"],
+  "Carmen Sandiego":["Femenino","Croquet","Negro","Joyas","Limusina"]
 }

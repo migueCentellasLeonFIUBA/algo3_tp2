@@ -8,8 +8,12 @@ import java.util.Map;
 
 public class Random {
 
-    public String obtenerValorRandom(ArrayList<String> lista){
+    public String obtenerStringRandom(ArrayList<String> lista){
          return lista.get((int)(Math.random() * (lista.size() -1)));
+    }
+
+    public Integer obtenerIntegerRandom(Integer listaSize){
+        return (int)(Math.random() * (listaSize -1));
     }
 
     public Objeto obtenerObjetoRandom(ArrayList<Objeto> lista){

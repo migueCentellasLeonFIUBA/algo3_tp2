@@ -20,4 +20,10 @@ public class Sospechoso implements ISospechable{
         }
         return null;
     }
+
+    @Override
+    public boolean arrestar() {
+        return false;
+    }
+
 }
