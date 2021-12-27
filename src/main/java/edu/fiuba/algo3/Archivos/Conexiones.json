@@ -1,0 +1,137 @@
+{
+  "Pekin" :{
+    "Ciudad1" : "Sydney",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Bamako"
+  },
+  "Bagdad" :{
+      "Ciudad1" : "Atenas",
+      "Ciudad2" : "Lima",
+      "Ciudad3" : "El Cairo"
+    },
+  "Port Moresby" :{
+    "Ciudad1" : "Bagdad",
+    "Ciudad2" : "Colombo",
+    "Ciudad3" : "Londres"
+  },
+  "Sydney" :{
+    "Ciudad1" : "Budapest",
+    "Ciudad2" : "Montreal",
+    "Ciudad3" : "Atenas"
+  },
+  "Estambul" :{
+    "Ciudad1" : "Bamako",
+    "Ciudad2" : "Moscu",
+    "Ciudad3" : "Bagdad"
+  },
+  "Londres" :{
+    "Ciudad1" : "Oslo",
+    "Ciudad2" : "Budapest",
+    "Ciudad3" : "Nueva York"
+  },
+  "Bangkok" :{
+    "Ciudad1" : "Montreal",
+    "Ciudad2" : "Budapest",
+    "Ciudad3" : "Katnnmandu"
+  },
+  "Lima" :{
+    "Ciudad1" : "Moscu",
+    "Ciudad2" : "Rio de Janeiro",
+    "Ciudad3" : "Buenos Aires"
+  },
+  "Bamako":{
+    "Ciudad1" : "Moscu",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "San Marino"
+  },
+  "Moscu" :{
+    "Ciudad1" : "Roma",
+    "Ciudad2" : "Lima",
+    "Ciudad3" : "Bagdad"
+  },
+  "El Cairo" :{
+    "Ciudad1" : "Bamako",
+    "Ciudad2" : "San Marino",
+    "Ciudad3" : "Buenos Aires"
+  },
+  "Buenos Aires" :{
+    "Ciudad1" : "Port Moresby",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Londres"
+  },
+  "Ciudad de Mexico":{
+    "Ciudad1" : "Rio de janeiro",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Buenos Aires"
+  },
+  "Atenas" :{
+    "Ciudad1" : "Colombo",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Lima"
+  },
+  "Singapur":{
+    "Ciudad1" : "Katmandu",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Bangkok"
+  },
+  "Roma" :{
+    "Ciudad1" : "Colombo",
+    "Ciudad2" : "Katmandu",
+    "Ciudad3" : "Lima"
+  },
+  "Colombo" :{
+    "Ciudad1" : "Lima",
+    "Ciudad2" : "Katmandu",
+    "Ciudad3" : "Oslo"
+  },
+  "Katmandu" :{
+    "Ciudad1" : "Buenos Aires",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Atenas"
+  },
+  "Montreal": {
+    "Ciudad1" : "Pekin",
+    "Ciudad2" : "Mexico",
+    "Ciudad3" : "Buenos Aires"
+  },
+  "Rio de Janeiro" :{
+    "Ciudad1" : "El Cairo",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Oslo"
+  },
+  "Nueva York":{
+    "Ciudad1" : "Ciudad de Mexico",
+    "Ciudad2" : "Nueva Deli",
+    "Ciudad3" : "Paris"
+  },
+  "Oslo":{
+    "Ciudad1" : "Atenas",
+    "Ciudad2" : "Lima",
+    "Ciudad3" : "Buenos Aires"
+  },
+  "Kigali":{
+    "Ciudad1" : "Singapur",
+    "Ciudad2" : "Atenas",
+    "Ciudad3" : "Pekin"
+  },
+  "Budapest" :{
+    "Ciudad1" : "Montreal",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Nueva Deli"
+  },
+  "San Marino" :{
+    "Ciudad1" : "Rio de Janeiro",
+    "Ciudad2" : "Oslo",
+    "Ciudad3" : "Nueva York"
+  },
+  "Nueva Deli" :{
+    "Ciudad1" : "Bamako",
+    "Ciudad2" : "Londres",
+    "Ciudad3" : "Lima"
+  },
+  "Paris" :{
+    "Ciudad1" : "Oslo",
+    "Ciudad2" : "Buenos Aires",
+    "Ciudad3" : "Londres"
+  }
+}
