@@ -95,25 +95,26 @@ public class Computadora {
         return parametros;
     }
 
-    public void siguienteSexo() {
-        sexo.siguienteSexo();
+    public void siguienteSexo() {sexo.siguienteSexo();}
+
+    public void siguienteHobby() {hobby.siguienteHobby();}
+
+    public void siguienteCabello() {cabello.siguienteCabello();}
+
+    public void siguienteVehiculo() {vehiculo.siguienteVehiculo();}
+
+    public void siguienteSenia() {senia.siguienteSenia();}
+
+
+    public String getSexo() {
+        return sexo.sexo();
     }
 
-    public void siguienteHobby() {
-        hobby.siguienteHobby();
-    }
+    public String getCabello() {return cabello.cabello();}
 
-    public void siguienteCabello() {
-        cabello.siguienteCabello();
-    }
+    public String getVehiculo() {return vehiculo.vehiculo();}
 
-    public void siguienteVehiculo() {
-        vehiculo.siguienteVehiculo();
-    }
+    public String getSenia() {return senia.senia();}
 
-    public void siguienteSenia() {
-        senia.siguienteSenia();
-    }
-
-
+    public String getHobby() {return hobby.hobby();}
 }

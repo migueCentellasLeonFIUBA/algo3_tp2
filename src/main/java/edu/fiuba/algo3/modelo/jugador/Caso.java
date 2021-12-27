@@ -28,5 +28,39 @@ public class Caso {
 
     */
 
+    public ArrayList<String> buscarSospechosos(){
+        return computadora.BuscarSospechoso();
+    }
+
+    public ArrayList<String> buscarSospechosos(ArrayList<String> caracteristicas,ArrayList<String> valores){
+        return computadora.buscarSospechosos(caracteristicas, valores);
+    }
+
+    public void siguienteSexo() {computadora.siguienteSexo();}
+
+    public void siguienteHobby() {computadora.siguienteHobby();}
+
+    public void siguienteCabello() {computadora.siguienteCabello();}
+
+    public void siguienteVehiculo() {computadora.siguienteVehiculo();}
+
+    public void siguienteSenia() {computadora.siguienteSenia();}
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String sexoComputadora() {
+        return computadora.getSexo();
+    }
+
+    public String cabelloComputadora() {return computadora.getCabello();}
+
+    public String hobbyComputadora() {return computadora.getHobby();}
+
+    public String vehiculoComputadora() {return computadora.getVehiculo();}
+
+    public String seniaComputadora() {return computadora.getSenia();}
+
 
 }

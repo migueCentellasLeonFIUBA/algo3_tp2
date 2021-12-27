@@ -1,9 +1,13 @@
 {
   "Tomas":{
-  "Arrestos": "0"
+  "Arrestos": "10"
     },
 
   "Lucio":{
     "Arrestos": "0"
+  },
+
+  "Miguel": {
+    "Arrestos": "5"
   }
 }
