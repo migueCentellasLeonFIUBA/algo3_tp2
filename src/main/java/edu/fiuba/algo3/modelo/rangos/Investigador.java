@@ -25,4 +25,7 @@ public class Investigador extends GradoPolicia{
         return null;
     }
 
+    public Integer velocidad(){
+        return velocidad;
+    }
 }

@@ -35,7 +35,7 @@ public class Computadora {
         this.sospechosos = sospechosos;
     }
 
-    public ArrayList<Sospechoso> BuscarSospechoso() {
+    public ArrayList<Sospechoso> BuscarSospechoso(Reloj reloj) {
         ArrayList<String> listaNombreSospechosos = (ArrayList<String>) sospechosos.keySet();
 
         ArrayList<Sospechoso> listaSospechosos = new ArrayList<>();
@@ -47,6 +47,7 @@ public class Computadora {
             }
         }
 
+        reloj.descontarhoras(3);
         return listaSospechosos;
     }
 

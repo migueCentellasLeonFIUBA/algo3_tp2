@@ -16,6 +16,25 @@ public class CiudadNoEstrategia extends Ciudad{
         super(nombreCiudad,descripcion,coordenadas,edificios);
     }
 
+    /*public void setDescripcion(String descripcion){
+        this.descripcion = descripcion;
+    }*/
+
+    /*public void calcularDistancia(CiudadNoEstrategia destino, Integer velocidad, Reloj reloj) {
+       double distancia = coordenadas.calcularDistancia(destino.getUbicacion());
+       int horas = (int) distancia / velocidad;
+       if (horas == 0) horas +=1;
+       reloj.descontarhoras(horas);
+    }*/
+
+    /*private Coordenadas getUbicacion() {
+        return coordenadas;
+    }*/
+
+    /*public void setLadron(Ladron ladronActual){
+    }*/
+
+
 
 
 }

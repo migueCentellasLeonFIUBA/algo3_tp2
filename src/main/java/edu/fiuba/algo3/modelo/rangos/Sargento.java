@@ -24,4 +24,8 @@ public class Sargento extends GradoPolicia {
         return null;
     }
 
+    public Integer velocidad(){
+        return velocidad;
+    }
+
 }

@@ -42,10 +42,12 @@ public class Juego {
     public Jugador IdentificarJugador(String nombre) {
         if (jugadores.containsKey(nombre)){
             this.jugadorActual= jugadores.get(nombre);
-            return jugadorActual;
+        }
+        else{
+            jugadorActual = new Jugador(nombre,0, new NoOrden());
+            jugadores.put(nombre, jugadorActual);
         }
 
-        jugadorActual = new Jugador(nombre,0, new NoOrden());
 
         this.mapa = this.cargarMapa(conexiones, jugadorActual); //depende del jugador.
         return jugadorActual;

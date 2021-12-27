@@ -3,9 +3,11 @@ package edu.fiuba.algo3.modelo.jugador;
 import edu.fiuba.algo3.modelo.IVisitor.VisitanteConcreto;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
+import edu.fiuba.algo3.modelo.ladron.Sospechoso;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
@@ -25,30 +27,40 @@ public class Jugador {
     private Orden orden;
     private CiudadNoEstrategia ciudadActual;
     private VisitanteConcreto visitante;
+    private Mapa mapa;
 
-
-    public Jugador(String nombre,Integer arrestos,Orden orden){
-        this.nombre=nombre;
+    public Jugador(String nombre, Integer arrestos, Orden orden) {
+        this.nombre = nombre;
         this.grado = new Novato();
         this.orden = orden;
         asignarGrado(arrestos);
         visitante = new VisitanteConcreto(grado);
     }
 
-    public void setCiudadActual(CiudadNoEstrategia origen){
+    public void setCiudadActual(CiudadNoEstrategia origen) {
         this.ciudadActual = origen;
     }
 
-    public void setReloj(Reloj reloj){
+    public void setReloj(Reloj reloj) {
         this.reloj = reloj;
     }
-    public void setGrado(GradoPolicia rango){this.grado = rango;}
+
+    public void setGrado(GradoPolicia rango) {
+        this.grado = rango;
+    }
 
 
-    private void asignarGrado(int arrestos){
-        for(int i = arrestos; i != 0; i--){
+    private void asignarGrado(int arrestos) {
+        for (int i = arrestos; i != 0; i--) {
             this.grado = this.grado.arresto();
         }
+    }
+
+    public void viajarACiudad(CiudadNoEstrategia destino) {
+
+        mapa.viajarACiudad(destino, reloj, grado);
+        ciudadActual = destino;
+        mapa.actualizarCiudadActual(ciudadActual);
     }
 
     public void terminarJuego() {
@@ -63,12 +75,17 @@ public class Jugador {
     }
 
     public void comienzaEnCiudad(CiudadNoEstrategia ciudad) {
-        this.ciudadActual=ciudad;
+        this.ciudadActual = ciudad;
     }
 
     public String visitarEdificio(IEdificio edificio) throws FileNotFoundException {
+
         //String pista = ciudadActual.visitarEdificio(edificio, reloj, visitante);
-        if(reloj.tiempoTerminado()){
+
+        String pista = ciudadActual.visitarEdificio(edificio, reloj, visitante);
+        //reloj.descontarhoras(ciudadActual.descontarHorasVisitarEdificio());
+
+        if (reloj.tiempoTerminado()) {
             terminarJuego();
         }
 
@@ -80,12 +97,15 @@ public class Jugador {
         return objeto;
     }
 
-    public void empezarCaso(Caso caso,Computadora computadora) {
+    public void empezarCaso(Caso caso, Computadora computadora) {
         this.caso = caso;
         this.computadora = computadora;
     }
 
-    public void viajarACiudad(Ciudad destino) {
+
+    public ArrayList<Sospechoso> buscarSospechosos() {
+        return computadora.BuscarSospechoso(reloj);
 
     }
 }
+

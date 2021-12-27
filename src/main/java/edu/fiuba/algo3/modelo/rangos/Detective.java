@@ -26,5 +26,9 @@ public class Detective extends GradoPolicia {
         Objeto objetoRobado = random.obtenerObjetoRandom(objetos.get("Valioso"));
         return objetoRobado;
     }
+
+    public Integer velocidad(){
+        return velocidad;
+    }
     
 }

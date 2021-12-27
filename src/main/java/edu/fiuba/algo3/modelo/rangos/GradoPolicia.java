@@ -14,4 +14,6 @@ public abstract class GradoPolicia {
     //public abstract Caso crearCaso(Map<String, ArrayList<Objeto>> objetos);
 
     public abstract Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos);
+
+    public abstract Integer velocidad();
 }

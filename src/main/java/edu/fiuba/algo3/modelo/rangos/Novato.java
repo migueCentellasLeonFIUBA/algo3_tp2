@@ -26,6 +26,10 @@ public class Novato extends GradoPolicia {
         return null;
     }
 
+    public Integer velocidad(){
+        return velocidad;
+    }
+
 
 
 }
