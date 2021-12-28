@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.effect.*;
 import javafx.scene.image.Image;
+import javafx.scene.media.AudioClip;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.FontPosture;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -14,6 +17,7 @@ import javafx.scene.text.FontSmoothingType;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -25,6 +29,19 @@ public class PantallaDeInicio extends VBox {
     public PantallaDeInicio(Stage stage, Scene proximaEscena) throws FileNotFoundException {
 
         super();
+
+
+
+        String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\MusicaInicialDos.mp3";     // For example
+
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.isAutoPlay(true);
+        //mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+        //mediaPlayer.setAutoPlay(true);
+        mediaPlayer.play();
+
+
 
         this.stage = stage;
         //this.stage.setMaxHeight(600);

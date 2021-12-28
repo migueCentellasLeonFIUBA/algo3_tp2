@@ -26,11 +26,11 @@ public class App extends Application {
         PantallaDeInicio pantallaDeInicio = new PantallaDeInicio(stage, escenaBienvenida);
         Scene escenaPantallaDeInicio = new Scene(pantallaDeInicio, 960, 600);
 
-
         stage.setResizable(false);
 
         escenaPantallaDeInicio.setOnKeyPressed((KeyEvent event) -> {
             stage.setScene(escenaBienvenida);
+
 
         });
 

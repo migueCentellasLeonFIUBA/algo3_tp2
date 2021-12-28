@@ -105,8 +105,8 @@ public class LayoutInvestigar extends Pane{
         Background grisClaro = new Background(fondoGrisClaro);
 
         Button aeropuerto = new Button("Visitar Aeropuerto");
-        //BotonVisitarEdificioEventHandler botonAeropuertoHandler = new BotonVisitarEdificioEventHandler(new AeroPuerto(), jugador, pista);
-        //aeropuerto.setOnAction(botonAeropuertoHandler);
+        BotonVisitarEdificioEventHandler botonAeropuertoHandler = new BotonVisitarEdificioEventHandler(new AeroPuerto(), jugador, rightSide);
+        aeropuerto.setOnAction(botonAeropuertoHandler);
 
         aeropuerto.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         aeropuerto.setBackground(grisOscuro);
@@ -126,8 +126,8 @@ public class LayoutInvestigar extends Pane{
 
         Button banco = new Button("Visitar Banco");
 
-        //BotonVisitarEdificioEventHandler botonBancoHandler = new BotonVisitarEdificioEventHandler(new Banco(), jugador, rightSide);
-        //banco.setOnAction(botonBancoHandler);
+        BotonVisitarEdificioEventHandler botonBancoHandler = new BotonVisitarEdificioEventHandler(new Banco(), jugador, rightSide);
+        banco.setOnAction(botonBancoHandler);
         banco.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         banco.setBackground(grisClaro);
         banco.setTextAlignment(TextAlignment.CENTER);
@@ -142,8 +142,8 @@ public class LayoutInvestigar extends Pane{
         banco.setOnMouseExited(mouseHoverExitEventHandlerBanco);
 
         Button biblioteca = new Button("Visitar Biblioteca");
-        //BotonVisitarEdificioEventHandler botonBibliotecaHandler = new BotonVisitarEdificioEventHandler(new Biblioteca(), jugador, pista);
-        //biblioteca.setOnAction(botonBibliotecaHandler);
+        BotonVisitarEdificioEventHandler botonBibliotecaHandler = new BotonVisitarEdificioEventHandler(new Biblioteca(), jugador, rightSide);
+        biblioteca.setOnAction(botonBibliotecaHandler);
         biblioteca.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         biblioteca.setBackground(grisClaro);
         biblioteca.setTextAlignment(TextAlignment.CENTER);

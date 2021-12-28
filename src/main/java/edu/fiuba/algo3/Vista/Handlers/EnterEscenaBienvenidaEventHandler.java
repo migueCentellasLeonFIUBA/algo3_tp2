@@ -10,10 +10,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent> {
 
@@ -38,6 +42,12 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
     public void handle(KeyEvent keyEvent){
 
         if((keyEvent.getCode().equals(KeyCode.ENTER)) && cantidadEnters == 1){
+            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+
+            Media sound = new Media(new File(musicFile).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
+
             try {
                 juego.crearCaso();
             } catch (Exception e) {
@@ -52,6 +62,12 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
         }
 
         if((keyEvent.getCode().equals(KeyCode.ENTER)) && cantidadEnters == 0){
+            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+
+            Media sound = new Media(new File(musicFile).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
+
             jugador = juego.IdentificarJugador(textField.getText());
 
             Text texto = new Text(textField.getText() + ", su rango es " + jugador.rango() + ". Para subir de rango deberá arrestar ladrones ¡pero cuidado! la dificultad de los casos aumentará a medida que lo haga su rango.\n\n A continuación se le asignará un caso. Suerte y mucho cuidado!");

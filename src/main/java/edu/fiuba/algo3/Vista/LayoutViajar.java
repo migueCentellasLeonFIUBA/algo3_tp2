@@ -85,7 +85,7 @@ public class LayoutViajar extends Pane {
         Background grisClaro = new Background(fondoGrisClaro);
 
         Button destinoUno = new Button((posiblesDestinos.get(0).getNombre()));
-        //BotonViajarADestinoEventHandler botonViajarADestinoUnoEventHandler = new BotonViajarADestinoEventHandler(jugador, hbox, stage, posiblesDestinos.get(0));
+        //BotonViajarADestinoEventHandler botonViajarADestinoUnoEventHandler = new BotonViajarADestinoEventHandler(jugador, stage, posiblesDestinos.get(0));
         //destinoUno.setOnAction(botonViajarADestinoUnoEventHandler);
         destinoUno.setBackground(grisClaro);
         destinoUno.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
@@ -102,7 +102,7 @@ public class LayoutViajar extends Pane {
         destinoUno.setOnMouseExited(mouseHoverExitEventHandlerDestinoUno);
 
         Button destinoDos = new Button((posiblesDestinos.get(1).getNombre()));
-        //BotonViajarADestinoEventHandler botonViajarADestinoDosEventHandler = new BotonViajarADestinoEventHandler(jugador, hbox, stage, posiblesDestinos.get(1));
+        //BotonViajarADestinoEventHandler botonViajarADestinoDosEventHandler = new BotonViajarADestinoEventHandler(jugador, stage, posiblesDestinos.get(1));
         //destinoDos.setOnAction(botonViajarADestinoDosEventHandler);
         destinoDos.setBackground(grisClaro);
         destinoDos.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
@@ -118,7 +118,7 @@ public class LayoutViajar extends Pane {
         destinoDos.setOnMouseExited(mouseHoverExitEventHandlerDestinoDos);
 
         Button destinoTres = new Button((posiblesDestinos.get(2).getNombre()));
-        //BotonViajarADestinoEventHandler botonViajarADestinoTresEventHandler = new BotonViajarADestinoEventHandler(jugador, hbox, stage, posiblesDestinos.get(2));
+        //BotonViajarADestinoEventHandler botonViajarADestinoTresEventHandler = new BotonViajarADestinoEventHandler(jugador, stage, posiblesDestinos.get(2));
         //destinoTres.setOnAction(botonViajarADestinoTresEventHandler);
         destinoTres.setBackground(grisClaro);
         destinoTres.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));

@@ -6,6 +6,7 @@ import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.layout.*;
+import javafx.scene.media.Media;
 import javafx.stage.Stage;
 
 import javafx.scene.media.MediaPlayer;
@@ -13,6 +14,8 @@ import javafx.scene.media.MediaView;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
+import java.net.MalformedURLException;
 
 
 
@@ -28,17 +31,15 @@ public class BotonComputadoraEventHandler implements EventHandler<ActionEvent> {
         this.rightSide = rightSide;
         this.jugador = jugador;
         this.stage = stage;
-
-        String musicFile = "StayTheNight.mp3";     // For example
-
-        File mediaFile = new File("assets/media/Golden-48569.mp4");
-        Media media = new Media(mediaFile.toURI().toURL().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(media);
-        MediaView mediaView = new MediaView(mediaPlayer);
-        mediaPlayer.play();
     }
 
     public void handle(ActionEvent actionEvent){
+
+        String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
 
         leftSide.getChildren().remove(4);
         //leftSide.getChildren().remove((3));
