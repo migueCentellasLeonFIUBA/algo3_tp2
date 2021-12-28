@@ -10,4 +10,6 @@ public interface ISospechable {
     String dameUnaPista();
 
     String obtenerSexo();
+
+    String getNombre();
 }

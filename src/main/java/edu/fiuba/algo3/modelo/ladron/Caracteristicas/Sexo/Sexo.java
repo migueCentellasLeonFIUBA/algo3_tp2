@@ -34,5 +34,9 @@ public class Sexo {
     public Boolean estaAsignado(){
         return sexoActual != 0;
     }
+
+    public String getCaracteristica(){
+        return sexos.get(sexoActual);
+    }
 }
 

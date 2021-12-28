@@ -38,4 +38,8 @@ public class Vehiculo{
     public Boolean estaAsignado(){
         return vehiculoActual != 0;
     }
+
+    public String getCaracteristica(){
+        return vehiculos.get(vehiculoActual);
+    }
 }

@@ -36,4 +36,8 @@ public class Hobby {
     public Boolean estaAsignado(){
         return hobbyActual != 0;
     }
+
+    public String getCaracteristica(){
+        return hobbys.get(hobbyActual);
+    }
 }

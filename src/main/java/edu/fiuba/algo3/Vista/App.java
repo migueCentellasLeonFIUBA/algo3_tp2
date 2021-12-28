@@ -31,7 +31,6 @@ public class App extends Application {
         escenaPantallaDeInicio.setOnKeyPressed((KeyEvent event) -> {
             stage.setScene(escenaBienvenida);
 
-
         });
 
         stage.setScene(escenaPantallaDeInicio);

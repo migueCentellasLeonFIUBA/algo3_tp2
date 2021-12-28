@@ -4,6 +4,11 @@ import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.juego.Juego;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Cabello.Cabello;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Hobby.Hobby;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Senia.Senia;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Sexo.Sexo;
+import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Vehiculo.Vehiculo;
 import edu.fiuba.algo3.modelo.ladron.ILadron;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
@@ -22,6 +27,13 @@ public class Jugador {
     private Mapa mapa;
     private Juego juego;
 
+    //caracteristicas computadora
+    private Cabello cabello;
+    private Hobby hobby;
+    private Senia senia;
+    private Sexo sexo;
+    private Vehiculo vehiculo;
+
     public Jugador(String nombre,Integer arrestos,Reloj reloj,Mapa mapa, Juego juego){
         this.nombre=nombre;
         this.grado = new Novato();
@@ -29,6 +41,12 @@ public class Jugador {
         this.reloj = reloj;
         this.mapa=mapa;
         this.juego = juego;
+
+        this.cabello = new Cabello();
+        this.hobby = new Hobby();
+        this.senia = new Senia();
+        this.sexo = new Sexo();
+        this.vehiculo = new Vehiculo();
     }
 
     public void viajarACiudad(Ciudad destino){
@@ -40,7 +58,6 @@ public class Jugador {
             this.grado = this.grado.arresto();
         }
     }
-
 
     public String visitarEdificio(Edificio edificio){
         if(reloj.tiempoTerminado()){
@@ -75,6 +92,27 @@ public class Jugador {
         return mapa.posiblesDestinos();
     }
 
+    public ArrayList<String> buscarSospechosos(){
+        ArrayList<String> nombresSospechosos = new ArrayList<>();
+
+        ArrayList<String> carateristicasComputadora = new ArrayList<>();
+
+        carateristicasComputadora.add(this.cabello.getCaracteristica());
+        carateristicasComputadora.add(this.hobby.getCaracteristica());
+        carateristicasComputadora.add(this.senia.getCaracteristica());
+        carateristicasComputadora.add(this.sexo.getCaracteristica());
+        carateristicasComputadora.add(this.vehiculo.getCaracteristica());
+
+        ArrayList<ISospechable> sospechosos = this.buscarSospechosos(carateristicasComputadora);
+
+        //cargo los nombres de cada sospechoso:
+        for(ISospechable sospechoso : sospechosos){
+            nombresSospechosos.add(sospechoso.getNombre());
+        }
+
+        return nombresSospechosos;
+    }
+
     public ArrayList<ISospechable> buscarSospechosos(ArrayList<String> caracteristicasBuscadas){
         reloj.descontarhoras(3);
         return caso.buscarSospechosos(caracteristicasBuscadas);
@@ -99,11 +137,9 @@ public class Jugador {
         juego.asignarOtroCaso();
     }
 
-    public void terminarJuego() {
-        //refactor: no debería tener atributos sin inicializar Memento al juego
-
+    public Boolean terminarJuego() {
+        return reloj.tiempoTerminado();
     }
-
 
     //intrefaz
     public String getDescripcionCaso() {
@@ -124,6 +160,48 @@ public class Jugador {
 
     public ArrayList<Ciudad> obtenerSiguientesDestinos() {
         return mapa.posiblesDestinos();
+    }
+
+
+    //"computadora interfaz"
+    public void siguienteCabello() {
+        cabello.siguienteCabello();
+    }
+
+    public String getCabelloComputadora() {
+        return cabello.getCaracteristica();
+    }
+
+    public void siguienteHobby() {
+        hobby.siguienteHobby();
+    }
+
+    public String getHobbyComputadora() {
+        return hobby.getCaracteristica();
+    }
+
+    public void siguienteSenia() {
+        senia.siguienteSenia();
+    }
+
+    public String getSeniaComputadora() {
+        return senia.getCaracteristica();
+    }
+
+    public void siguienteSexo() {
+        sexo.siguienteSexo();
+    }
+
+    public String getSexoComputadora() {
+        return sexo.getCaracteristica();
+    }
+
+    public void siguienteVehiculo() {
+        vehiculo.siguienteVehiculo();
+    }
+
+    public String getVehiculoComputadora() {
+        return vehiculo.getCaracteristica();
     }
 
 }

@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.ladron;
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.IParser;
 
 import java.util.ArrayList;
 
@@ -32,5 +31,10 @@ public class Sospechoso implements ISospechable{
     @Override
     public String obtenerSexo() {
         return cualidades.obtenerSexo();
+    }
+
+    @Override
+    public String getNombre(){
+        return nombre;
     }
 }

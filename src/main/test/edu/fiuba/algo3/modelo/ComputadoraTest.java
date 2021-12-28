@@ -26,6 +26,7 @@ public class ComputadoraTest {
         Juego juego = director.obtenerJuego();
         Jugador jugador = juego.IdentificarJugador("Lucio");
         juego.comenzarCaso();
+
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
         Assert.assertEquals(0, listaSospechosos.size());

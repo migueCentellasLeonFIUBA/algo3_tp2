@@ -18,8 +18,6 @@ public class Cabello {
         cabellos.add("Rubio"); //4
     }
 
-
-
     public String cabello() {
         return cabellos.get(cabelloActual);
     }
@@ -31,9 +29,13 @@ public class Cabello {
         }
     }
 
+
     public Boolean estaAsignado(){
         return cabelloActual != 0;
     }
 
+    public String getCaracteristica(){
+        return cabellos.get(cabelloActual);
+    }
 }
 

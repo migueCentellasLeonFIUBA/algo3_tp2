@@ -20,7 +20,7 @@ public class Reloj {
         agregarDias();
     }
 
-    public boolean tiempoTerminado () {
+    public boolean tiempoTerminado() {
         return (this.horasRestantes <= 0);
     }
 

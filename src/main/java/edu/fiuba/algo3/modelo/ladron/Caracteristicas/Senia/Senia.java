@@ -37,4 +37,8 @@ public class Senia {
     public Boolean estaAsignado(){
         return seniaActual != 0;
     }
+
+    public String getCaracteristica(){
+        return senias.get(seniaActual);
+    }
 }

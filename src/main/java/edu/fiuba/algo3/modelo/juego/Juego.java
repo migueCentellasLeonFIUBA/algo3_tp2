@@ -84,4 +84,8 @@ public class Juego {
 
         jugadorActual.empezarCaso(caso);
     }
+
+    public void terminarJuego(){
+
+    }
 }
