@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.effect.InnerShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -32,8 +33,8 @@ public class LayoutDerechoComputadora extends VBox {
 
         Label computadora = new Label("COMPUTADORA INTERPOL");
         computadora.setTranslateY(-480);
-        computadora.setTranslateX(80);
-        computadora.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
+        computadora.setTranslateX(70);
+        computadora.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 20));
         computadora.setTextFill(Color.BLACK);
 
 
@@ -66,8 +67,14 @@ public class LayoutDerechoComputadora extends VBox {
         buscarSospechoso.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         buscarSospechoso.setTranslateY(-430);
         buscarSospechoso.setBackground(grisClaro);
+        buscarSospechoso.setEffect(new InnerShadow());
         BotonBuscarSospechosoEventHandler botonBuscarSospechosoEventHandler = new BotonBuscarSospechosoEventHandler(jugador, leftSide);
         buscarSospechoso.setOnAction(botonBuscarSospechosoEventHandler);
+
+        MouseHoverEnterEventHandler mouseHoverEventHandlerBuscar = new MouseHoverEnterEventHandler(buscarSospechoso);
+        MouseHoverExitEventHandler mouseHoverExitEventHandlerBuscar = new MouseHoverExitEventHandler(buscarSospechoso);
+        buscarSospechoso.setOnMouseEntered(mouseHoverEventHandlerBuscar);
+        buscarSospechoso.setOnMouseExited(mouseHoverExitEventHandlerBuscar);
 
         BackgroundFill fondoGrisOscuro = new BackgroundFill(Color.DARKGRAY, CornerRadii.EMPTY, Insets.EMPTY);
         Background grisOscuro = new Background(fondoGrisOscuro);
@@ -76,8 +83,11 @@ public class LayoutDerechoComputadora extends VBox {
         Button volver = new Button("Volver");
         volver.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 35));
         volver.setTranslateY(-390);
-        volver.setTranslateX(120);
-        volver.setBackground(grisOscuro);
+        volver.setTranslateX(10);
+        volver.setBackground(grisClaro);
+        volver.setMaxHeight(350);
+        volver.setMaxWidth(400);
+        volver.setEffect(new InnerShadow());
         BotonVolverEventHandler botonVolverEventHandler = new BotonVolverEventHandler(stage, jugador);
         volver.setOnAction(botonVolverEventHandler);
 
@@ -98,7 +108,7 @@ public class LayoutDerechoComputadora extends VBox {
         hbox.setSpacing(10);
         hbox.setAlignment(Pos.CENTER);
 
-        BackgroundFill fondoGris = new BackgroundFill(Color.DARKGRAY, CornerRadii.EMPTY, Insets.EMPTY);
+        BackgroundFill fondoGris = new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY);
         Background fondo = new Background(fondoGris);
 
         FileInputStream inputSexo = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenFlechaDerecha.png");
@@ -109,9 +119,16 @@ public class LayoutDerechoComputadora extends VBox {
 
         Button siguienteSexo = new Button("", imageViewSexo);
         siguienteSexo.setBackground(fondo);
+
         siguienteSexo.setTranslateY(-450);
         siguienteSexo.setTranslateX(20);
         siguienteSexo.setOnAction(eventHandler);
+
+        //siguienteSexo.setEffect(new InnerShadow());
+        MouseHoverEnterEventHandlerAgrandarBoton mouseHoverEventHandlerSiguiente = new MouseHoverEnterEventHandlerAgrandarBoton(siguienteSexo);
+        MouseHoverExitEventHandlerAchicarBoton mouseHoverExitEventHandlerSiguiente = new MouseHoverExitEventHandlerAchicarBoton(siguienteSexo);
+        siguienteSexo.setOnMouseEntered(mouseHoverEventHandlerSiguiente);
+        siguienteSexo.setOnMouseExited(mouseHoverExitEventHandlerSiguiente);
 
         hbox.getChildren().addAll(label, siguienteSexo);
         return hbox;

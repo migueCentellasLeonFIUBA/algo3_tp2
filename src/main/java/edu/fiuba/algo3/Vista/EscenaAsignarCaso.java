@@ -1,10 +1,7 @@
 package edu.fiuba.algo3.Vista;
 
-import edu.fiuba.algo3.Vista.Handlers.EnterEscenaAsignarCasoEventHandler;
-import edu.fiuba.algo3.Vista.Handlers.LayoutGeneral;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;

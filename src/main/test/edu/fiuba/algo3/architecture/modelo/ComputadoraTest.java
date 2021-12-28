@@ -1,9 +1,10 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Sospechosos;
 import edu.fiuba.algo3.modelo.jugador.Computadora;
 import edu.fiuba.algo3.modelo.juego.Juego;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
@@ -23,7 +24,7 @@ public class ComputadoraTest {
         ArrayList<String> sospechososFiltrados = computadora.BuscarSospechoso();
 
 
-        assertEquals(2, sospechososFiltrados.size());
+        Assertions.assertEquals(2, sospechososFiltrados.size());
     }
 
     @Test
@@ -108,8 +109,8 @@ public class ComputadoraTest {
         }
 
         ArrayList<String> sospechosoFiltrados = computadora.BuscarSospechoso();
-        assertEquals(1, sospechosoFiltrados.size());
-        assertEquals("Merey Laroc", sospechosoFiltrados.get(0));
+        Assertions.assertEquals(1, sospechosoFiltrados.size());
+        Assertions.assertEquals("Merey Laroc", sospechosoFiltrados.get(0));
 
     }
 
@@ -154,7 +155,7 @@ public class ComputadoraTest {
             computadora.siguienteSenia();
 
             ArrayList<String> sospechosoFiltrados = computadora.BuscarSospechoso();
-            assertEquals(0, sospechosoFiltrados.size());
+            Assertions.assertEquals(0, sospechosoFiltrados.size());
         }
 
     }

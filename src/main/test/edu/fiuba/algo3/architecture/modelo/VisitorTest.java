@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.edificios.Banco;
 import edu.fiuba.algo3.modelo.edificios.Biblioteca;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -22,6 +23,6 @@ public class VisitorTest {
         juego.crearCaso();
         String pista = jugador.visitarEdificio(new AeroPuerto());
 
-        assertEquals("AeroQuebec", pista);
+        Assertions.assertEquals("AeroQuebec", pista);
     }
 }

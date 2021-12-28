@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
@@ -37,7 +38,7 @@ public class JugadorTest {
         jugador.empezarCaso(ladron, objeto, ciudad, ciudades, sospechosos);
 
         //devuelve todos los sospechosos del archivo...
-        assertEquals(2, jugador.buscarSospechosos().size());
+        Assertions.assertEquals(2, jugador.buscarSospechosos().size());
 
         /*
         "Merey Laroc":{
@@ -56,7 +57,7 @@ public class JugadorTest {
         valores.add("Femenino");
 
         //por ahora solo hay 2 coincidencias, que es la cantidad actual de sospechosos femeninos del archivo...
-        assertEquals(2, (jugador.buscarSospechosos(caracteristicas, valores)).size());
+        Assertions.assertEquals(2, (jugador.buscarSospechosos(caracteristicas, valores)).size());
 
         caracteristicas.add("Hobby");
         valores.add("Tenis");
@@ -70,7 +71,7 @@ public class JugadorTest {
         caracteristicas.add("Vehiculo");
         valores.add("Deportivo");
         //devuelve uno solo, que resutla ser el ladron...
-        assertEquals(1, jugador.buscarSospechosos(caracteristicas, valores).size());
+        Assertions.assertEquals(1, jugador.buscarSospechosos(caracteristicas, valores).size());
 
         //como queda un solo sospechoso, entonces puedo arrestarlo...
         assert (jugador.arrestarLadron(ladron));
@@ -114,7 +115,7 @@ public class JugadorTest {
         caracteristicas.add("Vehiculo");
         valores.add("Deportivo");
         //devuelve uno solo, que resutla ser el ladron...
-        assertEquals(1, jugador.buscarSospechosos(caracteristicas, valores).size() );
+        Assertions.assertEquals(1, jugador.buscarSospechosos(caracteristicas, valores).size() );
 
         //como queda un solo sospechoso, entonces puedo arrestarlo...
         //hardcodeo

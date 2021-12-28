@@ -12,6 +12,13 @@
     "Cabello" : "Negro",
     "Senia" : "Joyas",
     "Vehiculo" : "Limusina"
+  },
+  "Len Bulk":{
+    "Sexo": "Masculino",
+    "Hobby" : "Croquet",
+    "Cabello" : "Negro",
+    "Senia" : "Joyas",
+    "Vehiculo" : "Deportivo"
   }
 
 }

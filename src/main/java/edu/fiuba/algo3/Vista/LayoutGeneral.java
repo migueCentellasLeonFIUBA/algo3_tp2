@@ -1,8 +1,11 @@
-package edu.fiuba.algo3.Vista.Handlers;
+package edu.fiuba.algo3.Vista;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.Bloom;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.InnerShadow;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -35,6 +38,10 @@ public class LayoutGeneral extends HBox {
         hora.setStrokeType(StrokeType.CENTERED);
         hora.setArcHeight(25);
         hora.setArcWidth(25);
+        //hora.setStroke(Color.FLORALWHITE);
+        //hora.setEffect(new Bloom());
+        //hora.setStrokeWidth(4);
+        hora.setEffect(new InnerShadow(4, Color.BLACK));
 
 
         Rectangle computadora = new Rectangle();
@@ -48,6 +55,10 @@ public class LayoutGeneral extends HBox {
         computadora.setStrokeType(StrokeType.CENTERED);
         computadora.setArcHeight(25);
         computadora.setArcWidth(25);
+        //computadora.setStroke(Color.FLORALWHITE);
+//        computadora.setEffect(new Bloom());
+        //computadora.setStrokeWidth(4);
+        computadora.setEffect(new InnerShadow(4, Color.BLACK));
 
 
         leftSide.getChildren().addAll(hora, computadora);
@@ -71,6 +82,9 @@ public class LayoutGeneral extends HBox {
         pantalla.setStrokeType(StrokeType.CENTERED);
         pantalla.setArcHeight(25);
         pantalla.setArcWidth(25);
+        //pantalla.setStroke(Color.FLORALWHITE);
+        //pantalla.setStrokeWidth(4);
+        pantalla.setEffect(new InnerShadow(4, Color.BLACK));
 
         Rectangle botones = new Rectangle();
         botones.setHeight(80);
@@ -83,6 +97,8 @@ public class LayoutGeneral extends HBox {
         botones.setStrokeType(StrokeType.CENTERED);
         botones.setArcHeight(25);
         botones.setArcWidth(25);
+        botones.setEffect(new InnerShadow(4, Color.BLACK));
+        //botones.setStroke(Color.FLORALWHITE);
 
         leftSide.getChildren().addAll(pantalla, botones);
         return leftSide;

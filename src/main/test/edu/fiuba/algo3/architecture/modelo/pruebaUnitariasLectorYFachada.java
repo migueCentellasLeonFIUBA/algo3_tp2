@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

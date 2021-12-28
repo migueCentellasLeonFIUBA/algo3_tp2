@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
 import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
@@ -9,6 +9,7 @@ import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.ladron.Secuaz;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
@@ -115,7 +116,7 @@ public class SospechososTest {
         ArrayList<String> obtenidos = sospechosos.buscarSospechosos(caracteristicas, valores);
 
         assert(obtenidos.get(0).equals("Merey Laroc"));
-        assertEquals(1, obtenidos.size());
+        Assertions.assertEquals(1, obtenidos.size());
     }
 
     @Test
@@ -154,7 +155,7 @@ public class SospechososTest {
         ArrayList<String> ladron_obtenido = ladron.buscarSospechosos(caracteristicas, valores_ladron);
 
         assert(ladron_obtenido.get(0).equals("Carmen SanDiego"));
-        assertEquals(1, ladron_obtenido.size());
+        Assertions.assertEquals(1, ladron_obtenido.size());
     }
 
     @Test
@@ -253,10 +254,10 @@ public class SospechososTest {
 
         //No tengo una orden entonces:
             //No puedo arrestar sospechosos:
-        assertNotEquals(true, jugador.arrestarLadron(secuaz1));
+        Assertions.assertNotEquals(true, jugador.arrestarLadron(secuaz1));
 
             //No puedo arrestar a un ladron:
-        assertNotEquals(true, jugador.arrestarLadron(ladron));
+        Assertions.assertNotEquals(true, jugador.arrestarLadron(ladron));
 
         //Las pistas sólo me devuelven valores del ladron -> al buscar un sospechoso (como son todos distintos) el que queda es el ladron.
         //el ladron devuelve las pistas en el orden en que fueron colocadas entonces:
@@ -270,7 +271,7 @@ public class SospechososTest {
         //sólo puede darme 5 pistas
 
         ArrayList<String> ladronEncontrado = jugador.buscarSospechosos(caracteristicas, pistasLadron);
-        assertEquals(1, ladronEncontrado.size());
+        Assertions.assertEquals(1, ladronEncontrado.size());
 
         //Como queda un solo sospechoso -> ese es el ladron, se emite la orden,
         //entonces ya puedo arrestarlo:

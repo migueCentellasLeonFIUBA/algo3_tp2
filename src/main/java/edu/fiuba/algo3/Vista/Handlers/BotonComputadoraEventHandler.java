@@ -5,12 +5,16 @@ import edu.fiuba.algo3.Vista.LayoutIzquierdoComputadora;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Node;
-import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+
+import java.io.File;
 import java.io.FileNotFoundException;
+
+
 
 public class BotonComputadoraEventHandler implements EventHandler<ActionEvent> {
 
@@ -24,6 +28,14 @@ public class BotonComputadoraEventHandler implements EventHandler<ActionEvent> {
         this.rightSide = rightSide;
         this.jugador = jugador;
         this.stage = stage;
+
+        String musicFile = "StayTheNight.mp3";     // For example
+
+        File mediaFile = new File("assets/media/Golden-48569.mp4");
+        Media media = new Media(mediaFile.toURI().toURL().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        MediaView mediaView = new MediaView(mediaPlayer);
+        mediaPlayer.play();
     }
 
     public void handle(ActionEvent actionEvent){

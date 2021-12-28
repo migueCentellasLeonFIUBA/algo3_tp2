@@ -1,10 +1,11 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.ladron.Secuaz;
 import edu.fiuba.algo3.modelo.orden.OrdenDeArresto;
 import edu.fiuba.algo3.modelo.orden.OrdenSinJurisdiccion;
 import edu.fiuba.algo3.modelo.orden.Ordenes;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -18,7 +19,7 @@ public class OrdenesTest {
         Ladron ladron = new Ladron();
         OrdenSinJurisdiccion orden = new OrdenSinJurisdiccion();
 
-        assertNotEquals(true, orden.arrestarLadron(ladron));
+        Assertions.assertNotEquals(true, orden.arrestarLadron(ladron));
     }
 
     @Test
@@ -36,7 +37,7 @@ public class OrdenesTest {
         Secuaz ladron = new Secuaz("Juan");
         OrdenDeArresto orden = new OrdenDeArresto();
 
-        assertNotEquals(true, orden.arrestarLadron(ladron));
+        Assertions.assertNotEquals(true, orden.arrestarLadron(ladron));
     }
 
     @Test
@@ -45,7 +46,7 @@ public class OrdenesTest {
         Ladron ladron = new Ladron();
         OrdenSinJurisdiccion ordenFalsa = new OrdenSinJurisdiccion();
 
-        assertNotEquals(true, ordenFalsa.arrestarLadron(ladron));
+        Assertions.assertNotEquals(true, ordenFalsa.arrestarLadron(ladron));
 
         Ordenes orden = ordenFalsa.emitirOrden(ladron);
 
