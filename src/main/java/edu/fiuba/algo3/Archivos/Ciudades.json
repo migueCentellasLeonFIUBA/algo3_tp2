@@ -3,7 +3,7 @@
     "latitud": "45.50884",
     "longitud": "-73.58781",
     "descripcion": "Montreal es la mayor ciudad de la provincia de Quebec, en Canadá y la segunda más poblada del país después de Toronto. Es también una región administrativa de Quebec. Se sitúa en la isla del mismo nombre entre el río San Lorenzo y la Rivière des Prairies. Es uno de los principales centros industriales, comerciales y culturales de Norteamérica. El clima de Montreal es continental húmedo, con cuatro estaciones bien definidas y variadas. En invierno, la temperatura media de la ciudad es de -8,2 °C y en verano, de 21 °C.",
-    "Edificios": ["Aeropuerto","Biblioteca","Banco"],
+    "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Mexico":{
     "latitud": "23.634501",

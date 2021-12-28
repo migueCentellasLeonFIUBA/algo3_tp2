@@ -20,7 +20,7 @@
   "Montreal": ["Pekin", "Mexico","Buenos Aires" ],
   "Rio De Janeiro" : ["El Cairo", "Buenos Aires", "Oslo" ],
   "Nueva York": ["Ciudad de Mexico", "Nueva Deli", "Paris"],
-  "Oslo": ["Atenas", "Lima","Buenos Aires" ],
+  "Oslo": ["Atenas", "Lima","Buenos Aires"],
   "Kigali": ["Singapur", "Atenas", "Pekin"],
   "Budapest" : ["Montreal", "Buenos Aires","Nueva Deli"],
   "San Marino" : ["Rio De Janeiro", "Oslo", "Nueva York"],

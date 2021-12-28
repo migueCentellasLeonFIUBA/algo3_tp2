@@ -31,7 +31,7 @@ public class JuegoTest{
         Juego juego = director.obtenerJuego();
         Jugador jugador = juego.IdentificarJugador("Lucio");
         juego.comenzarCaso();
-
+//----------------------------------------------------CIUDAD1------------------------------------------------
         ArrayList<Edificio> edificios1 = jugador.verEdificios();
         Edificio edificio1 = edificios1.get(0);
         Edificio edificio2 = edificios1.get(1);
@@ -46,7 +46,7 @@ public class JuegoTest{
         Ciudad ciudad1 =  ciudades.get(1);
 
         jugador.viajarACiudad(ciudad1);
-
+//----------------------------------------------------CIUDAD2------------------------------------------------
         ArrayList<Edificio> edificios2 = jugador.verEdificios();
         edificio1 = edificios2.get(0);
         edificio2 = edificios2.get(1);
@@ -58,7 +58,7 @@ public class JuegoTest{
 
 
 
-
+//----------------------------------------------------CIUDAD2------------------------------------------------
         Assert.assertEquals("","");
 
     }
