@@ -81,6 +81,11 @@ public class LayoutDerechoComputadora extends VBox {
         BotonVolverEventHandler botonVolverEventHandler = new BotonVolverEventHandler(stage, jugador);
         volver.setOnAction(botonVolverEventHandler);
 
+        MouseHoverEnterEventHandler mouseHoverEventHandlerVolver = new MouseHoverEnterEventHandler(volver);
+        MouseHoverExitEventHandler mouseHoverExitEventHandlerVolver = new MouseHoverExitEventHandler(volver);
+        volver.setOnMouseEntered(mouseHoverEventHandlerVolver);
+        volver.setOnMouseExited(mouseHoverExitEventHandlerVolver);
+
         this.getChildren().addAll(computadora, sexo, cabello, hobby, senia, vehiculo, buscarSospechoso, volver);
 
 

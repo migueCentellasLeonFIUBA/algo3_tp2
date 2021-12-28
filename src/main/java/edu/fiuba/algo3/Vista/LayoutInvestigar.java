@@ -2,6 +2,8 @@ package edu.fiuba.algo3.Vista;
 
 import edu.fiuba.algo3.Vista.Handlers.BotonVisitarEdificioEventHandler;
 import edu.fiuba.algo3.Vista.Handlers.BotonVolverEventHandler;
+import edu.fiuba.algo3.Vista.Handlers.MouseHoverEnterEventHandler;
+import edu.fiuba.algo3.Vista.Handlers.MouseHoverExitEventHandler;
 import edu.fiuba.algo3.modelo.edificios.*;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.geometry.Insets;
@@ -54,6 +56,10 @@ public class LayoutInvestigar extends Pane{
         //volver.setTranslateX(120);
         volver.setLayoutX(120);
         volver.setLayoutY(-90);
+        MouseHoverEnterEventHandler mouseHoverEventHandlerVolver = new MouseHoverEnterEventHandler(volver);
+        MouseHoverExitEventHandler mouseHoverExitEventHandlerVolver = new MouseHoverExitEventHandler(volver);
+        volver.setOnMouseEntered(mouseHoverEventHandlerVolver);
+        volver.setOnMouseExited(mouseHoverExitEventHandlerVolver);
 
         volver.setBackground(grisOscuro);
         BotonVolverEventHandler botonVolverEventHandler = new BotonVolverEventHandler(stage, jugador);
