@@ -18,4 +18,8 @@ public class Biblioteca extends Edificio  {
         this.pista = pistasEdificios.get("Biblioteca");
         this.pista.setLadron(ladron);
     }
+
+    public String getNombre(){
+        return "Biblioteca";
+    }
 }

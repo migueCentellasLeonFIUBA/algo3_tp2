@@ -92,7 +92,7 @@ public class Jugador {
         return mapa.posiblesDestinos();
     }
 
-    public ArrayList<String> buscarSospechosos(){
+/*    public ArrayList<String> buscarSospechosos(){
         ArrayList<String> nombresSospechosos = new ArrayList<>();
 
         ArrayList<String> carateristicasComputadora = new ArrayList<>();
@@ -112,7 +112,7 @@ public class Jugador {
 
         return nombresSospechosos;
     }
-
+*/
     public ArrayList<ISospechable> buscarSospechosos(ArrayList<String> caracteristicasBuscadas){
         reloj.descontarhoras(3);
         return caso.buscarSospechosos(caracteristicasBuscadas);
@@ -162,6 +162,12 @@ public class Jugador {
         return mapa.posiblesDestinos();
     }
 
+    public ArrayList<ISospechable> buscarSospechosos(){
+
+        reloj.descontarhoras(3);
+        return caso.buscarSospechosos();
+    }
+
 
     //"computadora interfaz"
     public void siguienteCabello() {
@@ -204,4 +210,7 @@ public class Jugador {
         return vehiculo.getCaracteristica();
     }
 
+    public String rango() {
+        return grado.rango();
+    }
 }

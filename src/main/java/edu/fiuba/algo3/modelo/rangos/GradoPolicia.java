@@ -20,4 +20,6 @@ public abstract class GradoPolicia {
     public abstract Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos);
 
     public abstract String obtenerPista(Edificio edificio);
+
+    public abstract String rango();
 }

@@ -16,6 +16,10 @@ public class Novato extends GradoPolicia {
         super.grado = "Novato";
     }
 
+    public String rango(){
+        return "Novato";
+    }
+
     public GradoPolicia arresto() {
         this.arrestos = this.arrestos + 1;
         if(this.arrestos == 5){

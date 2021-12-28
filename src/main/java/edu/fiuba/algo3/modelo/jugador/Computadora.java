@@ -47,6 +47,28 @@ public class Computadora {
         return listaSospechosos;
     }
 
+    public ArrayList<ISospechable> buscarSospechoso(){
+        ArrayList<String> listaNombreSospechosos = new ArrayList<>(sospechosos.keySet());;
+        ArrayList<ISospechable> listaSospechosos = new ArrayList<>();
+        ArrayList<String> caracteristicasBuscadas = new ArrayList<>();
+
+        caracteristicasBuscadas.add(sexo.sexo());
+        caracteristicasBuscadas.add(cabello.cabello());
+        caracteristicasBuscadas.add(senia.senia());
+        caracteristicasBuscadas.add(vehiculo.vehiculo());
+        caracteristicasBuscadas.add(hobby.hobby());
+
+
+        for(String nombre : listaNombreSospechosos){
+            ISospechable sospechoso =  sospechosos.get(nombre);
+            if(sospechoso.comparar(caracteristicasBuscadas)!=null){
+                listaSospechosos.add(sospechoso);
+            }
+        }
+
+        return listaSospechosos;
+    }
+
     private List<ArrayList<String>> datosAsignados(){
 
         List<ArrayList<String>> parametros = new ArrayList<>();

@@ -21,6 +21,10 @@ public class Caso {
         this.computadora= computadora;
     }
 
+    public ArrayList<ISospechable> buscarSospechosos(){
+        return computadora.buscarSospechoso();
+    }
+
     public String obtnerDescripcion(){
         String descripcionObjeto = this.obtenerDescripicionObjeto();
         String descripcionLadron = this.obtenerDescripicionLadron();

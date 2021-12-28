@@ -12,4 +12,5 @@ public interface ISospechable {
     String obtenerSexo();
 
     String getNombre();
+
 }

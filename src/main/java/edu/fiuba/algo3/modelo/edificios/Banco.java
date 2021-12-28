@@ -16,4 +16,8 @@ public class Banco  extends Edificio {
         this.pista = pistasEdificios.get("Banco");
         this.pista.setLadron(ladron);
     }
+
+    public String getNombre(){
+        return "Banco";
+    }
 }

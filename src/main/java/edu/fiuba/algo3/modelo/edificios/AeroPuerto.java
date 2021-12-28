@@ -19,5 +19,8 @@ public class AeroPuerto  extends Edificio {
         this.pista.setLadron(ladron);
     }
 
+    public String getNombre(){
+        return "Aeropuerto";
+    }
 }
 
