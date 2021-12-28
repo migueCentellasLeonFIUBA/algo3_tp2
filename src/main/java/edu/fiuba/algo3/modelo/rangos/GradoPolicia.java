@@ -16,6 +16,10 @@ public abstract class GradoPolicia {
 
     abstract public Integer calcularTiempoViaje();
 
+    public Integer calcularDistancia(Integer distancia){
+        return distancia/velocidad;
+    }
+
     abstract public GradoPolicia arresto();
 
 //    abstract public int getArrestos();

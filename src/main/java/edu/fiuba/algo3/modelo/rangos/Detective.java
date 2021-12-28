@@ -28,6 +28,7 @@ public class Detective extends GradoPolicia {
         return velocidad;
     }
 
+
     @Override
     public Objeto obtenerObjetoRandom(Objetos objetos) {
         return objetos.ObtenerObjetoRandom("Valioso");

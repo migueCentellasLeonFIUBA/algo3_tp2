@@ -1,109 +1,128 @@
 {
-  "Facil":
-  {
-    "Montreal":
-      {
-      "Banco":"Dolares",
-      "AeroPuerto":"AeroQuebec",
-      "Biblioteca":"Iroqueses",
-        "Bolsa": "Bolsa de Montreal",
-        "Puerto": "Puerto de Montreal"
+  "Montreal": {
+    "Aeropuerto":
+    {
+      "facil":"Co-Piloto: le ví llevar una bandera con una roja y blanca, con una hoja de maple en el centro",
+      "media":"Co-Piloto: creo haberle visto practicar su francés,¡No era muy bueno!",
+      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar las cataratas Montgomery por primera vez"
+    },
+    "Puerto":
+    {
+      "facil":"Co-Piloto: Definivamente le escuché decir que iba a cazar alces",
+      "media":"Co-Piloto: le escuché mencionar que iba a visitar la peninsula de Gaspe,¡Tenía planeado esconder allí su botín!",
+      "dificil":"Co-Piloto: Mencionó estar en viaje hacia una ex colonia francesa"
+    },
+    "Bolsa":
+    {
+      "facil":"Analista: le escuche decir que quería acuñar dolares,¡Llevaba un gran botín!",
+      "media":"Analista: le escuché mencionar que iba a visitar uno de las naciones más ricas del mundo",
+      "dificil":"Analista: dijo que iba a viajar a uno de los mayor exportadores de energía en el mundo"
+    }
+  },
+  "México":{
+    "Bolsa":
+    {
+      "facil":"Analista: escuché que estaba buscando cambiar pesos",
+      "media":"Analista: escuché que quería visitar una republica representativa, laica y federal",
+      "dificil":"Analista: escuché que iba a viajar a decimo país más poblado del mundo"
+    },
+    "Aeroperto":
+    {
+      "facil":"Piloto: creo haberle visto con una bandera verde, roja y blanca en su espalda",
+      "media":"Piloto: definitivamente le oí decir que iba a visitar el Autodromo Hermanos Rodriguez",
+      "dificil":"Piloto: escuché que dijo que estaba con ansias de visitsr la Sierra Madre"
+    },
+    "Biblioteca":
+    {
+      "facil":"Librero: le ví cargar una reliquia Azteca en su mochila",
+      "media":"Librero: me preguntó donde estaban los libros de historia antigua Maya",
+      "dificil":"Librero: me dijo que querá investigar sobre la Charrería"
+    }
+  },
+  "Atenas": {
+    "Banco": {
+      "facil": "Dijo que estaba buscando acuñar Euros",
+      "media": "Dijo que estaba buscando un lugar con altos estandares de vida",
+      "dificil": "Dijo que estaba buscando unlugar con una economía avanzada"
+    },
+    "Puerto": {
+      "facil": "Mencionó que estaba con ansias de visitar el Mar Egeo",
+      "media": "Mencionó que estaba cona ansias de visitar la cumbre del monte Mytikas",
+      "dificil": "Mencionó que estaba con ansias de visitar la coordillera del Pindo"
+    },
+    "Biblioteca": {
+      "facil": "Se le vio caminar con un escudo espartano en su espalda",
+      "media": "Mencionó que iba a visitar un país vecino a Bulgaria",
+      "dificil": "Dijo que estaba buscando coleccionar Dracmas"
+    }
+  },
+  "Bagdad": {
+    "Bolsa": {
+      "facil": "Analista: le escuché decir que estaba buscando cambiar libras",
+      "media": "Analista: creo haberle escuchado decir que iba a visitar una región petrolifera",
+      "dificil": "Analista: dijo que iba a visitar una republica semipresidencialista"
+    },
+    "Puerto": {
+      "facil": "Capitán: creo haberle visto llevar una bandera negra , roja y blanca",
+      "media": "Capitán: me parece haberle oído decir que iba a visitar un clima desierto, ¡Al parecer no le gusta el calor!",
+      "dificil": "Capitán: estoy seguro de haber escuchado algo sobre el Rio Eufrates, si es que no me falla la memoria"
+    },
+    "Aeropuerto": {
+      "facil": "Conserje: creo haberle escuchado decir que estaba estudiando al pueblo sumerio.",
+      "media": "Conserje: no estoy seguro, pero creo haberle visto leyendo un libro sobre la región mesopotámica",
+      "dificil": "Conserje: le oí decir que iba a visitar un país limitrofe a Sudan Del Sur"
+    }
+  },
+  "Bamako": {
+    "Biblioteca": {
+      "facil": "Librera: le ví leyendo libros y viendo imagenes sobre el desierto del Sahara",
+      "media": "Librera: creo haberle escuchado mencionar algo sobre el monte Hombori",
+      "dificil": "Librera: estoy muy seguro de haberle oído mencionar que iba a visitar una ex colonia francesa"
+    },
+    "Banco": {
+      "facil": "Cajero: definitavente le vi acuñar Francos",
+      "media": "Cajero: me parece haberle oído decir que iba a viajar a una nación presidencialista",
+      "dificil": "Cajero: estoy bastante seguro de escuchar que iba a visitar un país con predominante industria arrocera"
+    },
+    "Puerto": {
+      "facil": "Marinera: estoy segura de haberle visto llevar una bandera verde, amarilla y roja",
+      "media": "Marinera: creo haberle visto leyendo un libro con imagenes del río Niger, pero no estoy segura",
+      "dificil": "Marinera: le oí decir que estaba viajando hacia un importante puerto fluvial y comercial de la región"
+    }
+  },
+  "Budapest": {
+    "Banco": {
+      "facil" : "Analista: estoy bastante segura de haberle visto intercambiando Fiorintos",
+      "media": "Analista: le oí decir que iba a visitar un país con una fuerte industria en Viticultura",
+      "dificil": "Analista: estoy muy segura de haberle oído decir que iba visitar un importe centro financiero de Europa Central"
+    },
+    "Aeropuerto": {
+      "facil": "Pescador: le ví abordar un barco que llevaba una bandera verde, roja y blanca",
+      "media": "Pescador: le escuché decir que estaba con ansías de ver por primera vez el rio Danubio",
+      "dificil": "Pescador: estoy bastante seguro de haberle oído decir que esperaba poder adentrarse en la cultura gitana",
+    },
+    "Biblioteca": {
+      "facil": "Guardia: le oí decir que iba a visitar un país vecino de Austria",
+      "media": "Guardia: me parece haberle oído decir que iba su ruta de escape sería a través de la llanura Panónica",
+      "dificil": "Guardia: creo haberle escuchado decir que iba a visitar una nación que estuvo bajo el régimen socialista"
+    }
+  },
+  "Buenos Aires": {
+    "Banco":{
+      "facil": "Banquera: estoy bastante seguro de haberle visto cambiar Pesos",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las mayores metropolis de america",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar una ex colonia española"
       },
-    "Mexico":
-    {
-      "Banco":"Pesos",
-      "AeroPuerto":"AeroMexico",
-      "Biblioteca":"Aztecas",
-      "Bolsa": "Bolsa de Mexico",
-      "Puerto": "Puerto de Mexico"
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera celeste y blanca, con un sol en el medio",
+      "medio": "Piloto: estoy seguro de haberle oído decir que quería nadar en el Río De La Plata, ¡Llevaba un traje de baño de lo más feo!",
+      "dificil": "Piloto: no estoy seguro, pero creo que dijo que iba intentar esconder "
     },
-    "Buenos Aires":
-    {
-      "Banco":"Pesos",
-      "AeroPuerto":"AeroArg",
-      "Biblioteca":"Arg",
-      "Bolsa": "Bolsa de Arg",
-      "Puerto": "Puerto de Arg"
-    },
-    "Pekin":
-    {
-      "Banco":"Pesos pekin",
-      "AeroPuerto":"AeroPekin",
-      "Biblioteca":"Pekin",
-      "Bolsa": "Bolsa de Pekin",
-      "Puerto": "Puerto de Pekin"
-    },
-    "Bagdad":
-    {
-      "Banco":"Pesos bagdad",
-      "AeroPuerto":"AeroBagdad",
-      "Biblioteca":"bagdad",
-      "Bolsa": "Bolsa de Bagdad",
-      "Puerto": "Puerto de Bagdad"
-    },
-    "Port Moresby":
-    {
-      "Banco":"Pesos moresby",
-      "AeroPuerto":"AeroMoresby",
-      "Biblioteca":"Moresby",
-      "Bolsa": "Bolsa de Moresby",
-      "Puerto": "Puerto de Moresby"
-    },
-    "Sydney":
-    {
-      "Banco":"Pesos Sydey",
-      "AeroPuerto":"AeroSydney",
-      "Biblioteca":"sydney",
-      "Bolsa": "Bolsa de sydney",
-      "Puerto": "Puerto de sydney"
-    },
-    "Estambul":
-    {
-      "Banco":"Pesos estambuil",
-      "AeroPuerto":"AeroEstambul",
-      "Biblioteca":"estambul",
-      "Bolsa": "Bolsa de Estambul",
-      "Puerto": "Puerto de Estambul"
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre los gauchos",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre el Río Paraná",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre la Enología"
     }
   },
-  "Media":
-  {"Montreal":
-   {
-    "Banco":"Dolares Media",
-    "AeroPuerto":"AeroQuebec Media",
-    "Biblioteca":"Iroqueses Media",
-    "Bolsa": "Bolsa de Montreal Media",
-    "Puerto": "Puerto de Montreal Media"
-  },
-    "Mexico":
-    {
-      "Banco":"Pesos Media",
-      "AeroPuerto":"AeroMexico Media",
-      "Biblioteca":"Aztecas Media",
-      "Bolsa": "Bolsa de Mexico Media",
-      "Puerto": "Puerto de Mexico Media"
-    }
-
-  },
-  "Dificil":
-  {
-    "Montreal":
-    {
-      "Banco":"Dolares Dificl",
-      "AeroPuerto":"AeroQuebec Dificil",
-      "Biblioteca":"Iroqueses Dificil",
-      "Bolsa": "Bolsa de Montreal Dificil",
-      "Puerto": "Puerto de Montreal Dificil"
-    },
-    "Mexico":
-    {
-      "Banco":"Pesos Dificil",
-      "AeroPuerto":"AeroMexico Dificil",
-      "Biblioteca":"Aztecas Dificil",
-      "Bolsa": "Bolsa de Mexico Dificil",
-      "Puerto": "Puerto de Mexico Dificil"
-    }
-  }
+  ""
 }
-
-
