@@ -8,6 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -31,14 +34,14 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
 
-        String pista = null;
-        try {
-            pista = jugador.visitarEdificio(edificio);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        Text pista = new Text(jugador.visitarEdificio(edificio));
+        pista.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
+        pista.setWrappingWidth(400);
 
+        pista.setTranslateY(-400);
+        pista.setTranslateX(20);
 
-
+        rightSide.getChildren().remove(3);
+        rightSide.getChildren().add(3, pista);
     }
 }

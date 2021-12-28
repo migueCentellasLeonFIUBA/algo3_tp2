@@ -19,6 +19,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 //public class LayoutInvestigar extends VBox {
 public class LayoutInvestigar extends Pane{
     Jugador jugador;
@@ -98,14 +100,18 @@ public class LayoutInvestigar extends Pane{
         vbox.setLayoutY(-250);
         vbox.setSpacing(1);
 
+        ArrayList<Edificio> edificios = jugador.verEdificios();
+
+
         BackgroundFill fondoGrisOscuro = new BackgroundFill(Color.DARKGRAY, CornerRadii.EMPTY, Insets.EMPTY);
         Background grisOscuro = new Background(fondoGrisOscuro);
 
         BackgroundFill fondoGrisClaro = new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY);
         Background grisClaro = new Background(fondoGrisClaro);
 
-        Button aeropuerto = new Button("Visitar Aeropuerto");
-        BotonVisitarEdificioEventHandler botonAeropuertoHandler = new BotonVisitarEdificioEventHandler(new AeroPuerto(), jugador, rightSide);
+        Button aeropuerto = new Button(edificios.get(0).getNombre());
+
+        BotonVisitarEdificioEventHandler botonAeropuertoHandler = new BotonVisitarEdificioEventHandler(edificios.get(0), jugador, rightSide);
         aeropuerto.setOnAction(botonAeropuertoHandler);
 
         aeropuerto.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
@@ -124,9 +130,9 @@ public class LayoutInvestigar extends Pane{
         aeropuerto.setOnMouseEntered(mouseHoverEventHandlerAeropuerto);
         aeropuerto.setOnMouseExited(mouseHoverExitEventHandlerAeropuerto);
 
-        Button banco = new Button("Visitar Banco");
+        Button banco = new Button(edificios.get(1).getNombre());
 
-        BotonVisitarEdificioEventHandler botonBancoHandler = new BotonVisitarEdificioEventHandler(new Banco(), jugador, rightSide);
+        BotonVisitarEdificioEventHandler botonBancoHandler = new BotonVisitarEdificioEventHandler(edificios.get(1), jugador, rightSide);
         banco.setOnAction(botonBancoHandler);
         banco.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         banco.setBackground(grisClaro);
@@ -141,8 +147,8 @@ public class LayoutInvestigar extends Pane{
         banco.setOnMouseEntered(mouseHoverEventHandlerBanco);
         banco.setOnMouseExited(mouseHoverExitEventHandlerBanco);
 
-        Button biblioteca = new Button("Visitar Biblioteca");
-        BotonVisitarEdificioEventHandler botonBibliotecaHandler = new BotonVisitarEdificioEventHandler(new Biblioteca(), jugador, rightSide);
+        Button biblioteca = new Button(edificios.get(2).getNombre());
+        BotonVisitarEdificioEventHandler botonBibliotecaHandler = new BotonVisitarEdificioEventHandler(edificios.get(2), jugador, rightSide);
         biblioteca.setOnAction(botonBibliotecaHandler);
         biblioteca.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         biblioteca.setBackground(grisClaro);
@@ -157,16 +163,6 @@ public class LayoutInvestigar extends Pane{
         MouseHoverExitEventHandler mouseHoverExitEventHandlerBiblioteca = new MouseHoverExitEventHandler(biblioteca);
         biblioteca.setOnMouseEntered(mouseHoverEventHandlerBiblioteca);
         biblioteca.setOnMouseExited(mouseHoverExitEventHandlerBiblioteca);
-
-
-        Button bolsa = new Button("Bolsa");
-        BotonVisitarEdificioEventHandler botonBolsaHandler = new BotonVisitarEdificioEventHandler(new Bolsa(), jugador, rightSide);
-        bolsa.setOnAction(botonBolsaHandler);
-
-        Button puerto = new Button("Puerto");
-        BotonVisitarEdificioEventHandler botonPuertoHandler = new BotonVisitarEdificioEventHandler(new Puerto(), jugador, rightSide);
-        puerto.setOnAction(botonPuertoHandler);
-
 
 
         vbox.getChildren().addAll(aeropuerto, biblioteca, banco);

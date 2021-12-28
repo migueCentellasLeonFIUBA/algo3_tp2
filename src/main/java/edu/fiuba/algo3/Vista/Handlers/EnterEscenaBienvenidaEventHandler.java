@@ -49,7 +49,7 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
             mediaPlayer.play();
 
             try {
-                juego.crearCaso();
+                juego.comenzarCaso();
             } catch (Exception e) {
                 e.printStackTrace();
             }

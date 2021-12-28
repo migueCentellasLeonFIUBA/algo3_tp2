@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.Vista.Handlers;
 
 import edu.fiuba.algo3.modelo.jugador.Jugador;
+import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
@@ -38,13 +39,14 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
 
-        //ArrayList<String> listaSospechosos = jugador.buscarSospechosos();
-        ArrayList<String> listaSospechosos = new ArrayList<>();
+
+        ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos();
+        //ArrayList<String> sospechosos = new ArrayList<>();
 
         String sospechosos = "";
         String texto = "";
-        for (String sospechoso: listaSospechosos) {
-            sospechosos = sospechosos + sospechoso + ", ";
+        for (ISospechable sospechoso: listaSospechosos) {
+            sospechosos = sospechosos + sospechoso.nombre() + ", ";
         }
 
         if(sospechosos.length() != 0){

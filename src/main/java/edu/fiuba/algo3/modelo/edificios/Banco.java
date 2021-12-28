@@ -9,6 +9,7 @@ public class Banco  extends Edificio {
     public Banco(IPista pista) {
         this.pista = pista;
         this.ladron= new LadronNulo();
+        super.nombre = "Banco";
     }
 
     @Override

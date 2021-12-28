@@ -56,7 +56,7 @@ public class EscenaPrincipal extends HBox {
            leftSide.setMaxWidth(420);
            leftSide.setMaxHeight(600);
 
-           Label lugar = new Label(jugador.getCiudad().toUpperCase());
+           Label lugar = new Label(jugador.obtenerNombreCiudad().toUpperCase());
            lugar.setTranslateX(135);
            lugar.setTranslateY(-505);
            lugar.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 25));

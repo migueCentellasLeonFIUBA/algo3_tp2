@@ -36,4 +36,8 @@ public class Investigador extends GradoPolicia{
         return edificio.obtenerPista(this);
     }
 
+
+    public String rango(){
+        return "Investigador";
+    }
 }

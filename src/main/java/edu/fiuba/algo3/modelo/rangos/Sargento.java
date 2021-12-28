@@ -34,4 +34,9 @@ public class Sargento extends GradoPolicia {
         return edificio.obtenerPista(this);
     }
 
+    public String rango(){
+        return "Sargento";
+    }
+
 }
+

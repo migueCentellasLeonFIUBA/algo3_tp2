@@ -36,5 +36,8 @@ public class Novato extends GradoPolicia {
         return edificio.obtenerPista(this);
     }
 
+    public String rango(){
+        return "Novato";
+    }
 
 }

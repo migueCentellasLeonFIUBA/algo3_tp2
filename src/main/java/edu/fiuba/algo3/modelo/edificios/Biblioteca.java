@@ -11,6 +11,7 @@ public class Biblioteca extends Edificio  {
     public Biblioteca(IPista pista) {
         this.pista = pista;
         this.ladron= new LadronNulo();
+        super.nombre = "Biblioteca";
     }
 
     @Override

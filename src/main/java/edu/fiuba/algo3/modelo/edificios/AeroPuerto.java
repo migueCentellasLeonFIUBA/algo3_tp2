@@ -11,6 +11,7 @@ public class AeroPuerto  extends Edificio {
     public AeroPuerto(IPista pista) {
         this.pista = pista;
         this.ladron= new LadronNulo();
+        super.nombre = "Aeropuerto";
     }
 
     @Override

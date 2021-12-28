@@ -22,13 +22,13 @@ public class Jugador {
     private Mapa mapa;
     private Juego juego;
 
-    public Jugador(String nombre,Integer arrestos,Reloj reloj,Mapa mapa, Juego juego){
+    public Jugador(String nombre,Integer arrestos,Reloj reloj,Mapa mapa){
         this.nombre=nombre;
         this.grado = new Novato();
         asignarGrado(arrestos);
         this.reloj = reloj;
         this.mapa=mapa;
-        this.juego = juego;
+        //this.juego = juego;
     }
 
     public void viajarACiudad(Ciudad destino){
@@ -79,6 +79,10 @@ public class Jugador {
         reloj.descontarhoras(3);
         return caso.buscarSospechosos(caracteristicasBuscadas);
     }
+    public ArrayList<ISospechable> buscarSospechosos(){
+        reloj.descontarhoras(3);
+        return caso.buscarSospechoso();
+    }
 
     public void atrapar(ILadron ladron) {
         if(ladron.atrapar(reloj)){
@@ -126,4 +130,47 @@ public class Jugador {
         return mapa.posiblesDestinos();
     }
 
+    public String rango() {
+        return grado.rango();
+    }
+
+    public void siguienteCabello() {
+        caso.siguienteCabello();
+    }
+
+    public void siguienteSexo() {
+        caso.siguienteSexo();
+    }
+
+    public void siguienteHobby() {
+        caso.siguienteHobby();
+    }
+
+    public void siguienteSenia() {
+        caso.siguienteSenia();
+    }
+
+    public void siguienteVehiculo() {
+        caso.siguienteVehiculo();
+    }
+
+    public String getCabelloComputadora() {
+        return caso.getCabello();
+    }
+
+    public String getSexoComputadora() {
+        return caso.getSexo();
+    }
+
+    public String getVehiculoComputadora() {
+        return caso.getVehiculo();
+    }
+
+    public String getHobbyComputadora() {
+        return caso.getHobby();
+    }
+
+    public String getSeniaComputadora() {
+        return caso.getSenia();
+    }
 }

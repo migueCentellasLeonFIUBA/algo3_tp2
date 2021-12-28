@@ -56,7 +56,7 @@ public class Juego {
             return jugadorActual;
         }
 
-        jugadorActual = new Jugador(nombre,0,new Reloj(),mapa, this);
+        jugadorActual = new Jugador(nombre,0,new Reloj(),mapa);
         return jugadorActual;
     }
 

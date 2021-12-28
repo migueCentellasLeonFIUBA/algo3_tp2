@@ -56,4 +56,48 @@ public class Caso {
         orden.revisarOrden(jugador);
 
     }
+
+    public ArrayList<ISospechable> buscarSospechoso(){
+        return computadora.buscarSospechoso();
+    }
+
+    public void siguienteSexo() {
+        computadora.siguienteSexo();
+    }
+
+    public void siguienteCabello() {
+        computadora.siguienteCabello();
+    }
+
+    public void siguienteVehiculo() {
+        computadora.siguienteVehiculo();
+    }
+
+    public void siguienteHobby() {
+        computadora.siguienteHobby();
+    }
+
+    public void siguienteSenia() {
+        computadora.siguienteSenia();
+    }
+
+    public String getSenia() {
+        return computadora.getSenia();
+    }
+
+    public String getCabello() {
+        return computadora.getCabello();
+    }
+
+    public String getVehiculo() {
+        return computadora.getVehiculo();
+    }
+
+    public String getHobby() {
+        return computadora.getHobby();
+    }
+
+    public String getSexo() {
+        return computadora.getSexo();
+    }
 }

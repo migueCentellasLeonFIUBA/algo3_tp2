@@ -40,4 +40,8 @@ public class Ladron implements ISospechable,ILadron{
     public String obtenerSexo() {
         return sospechoso.obtenerSexo();
     }
+
+    public String nombre(){
+        return sospechoso.nombre();
+    }
 }

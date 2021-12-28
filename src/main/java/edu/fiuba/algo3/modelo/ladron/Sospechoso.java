@@ -33,4 +33,8 @@ public class Sospechoso implements ISospechable{
     public String obtenerSexo() {
         return cualidades.obtenerSexo();
     }
+
+    public String nombre(){
+        return nombre;
+    }
 }

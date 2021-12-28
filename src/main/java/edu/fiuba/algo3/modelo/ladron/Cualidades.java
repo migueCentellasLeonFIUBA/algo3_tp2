@@ -29,10 +29,12 @@ public class Cualidades {
 
     public boolean comparar(ArrayList<String> caracteristicasABuscar){
 
-        boolean esSospechoso = false;
+        boolean esSospechoso = true;
 
-        for(String caracteristica : caracteristicasABuscar){
-            esSospechoso = caracteristicas.contains(caracteristica);
+        for(String caracteristica : caracteristicasABuscar) {
+            if (caracteristica != "Sin Asignar") {
+                esSospechoso = !(caracteristicas.contains(caracteristica));
+            }
         }
 
         return esSospechoso;

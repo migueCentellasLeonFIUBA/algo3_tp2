@@ -39,7 +39,7 @@ public class PantallaDeInicio extends VBox {
         //mediaPlayer.isAutoPlay(true);
         //mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         //mediaPlayer.setAutoPlay(true);
-        mediaPlayer.play();
+        //mediaPlayer.play();
 
 
 
