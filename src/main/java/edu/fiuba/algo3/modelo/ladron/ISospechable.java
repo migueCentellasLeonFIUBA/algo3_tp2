@@ -6,4 +6,6 @@ public interface ISospechable {
     public Sospechoso comparar(ArrayList<String> caracteristicas);
 
     public boolean arrestar();
+
+    String dameUnaPista();
 }

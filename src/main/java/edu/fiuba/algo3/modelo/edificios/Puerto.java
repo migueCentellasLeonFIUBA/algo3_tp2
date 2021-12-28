@@ -16,6 +16,7 @@ public class Puerto implements IEdificio {
 
     @Override
     public void cambiarPista(Map<String, IPista> pistasEdificios, ILadron ladron) {
-
+        this.pista = pistasEdificios.get("Puerto");
+        this.pista.setLadron(ladron);
     }
 }

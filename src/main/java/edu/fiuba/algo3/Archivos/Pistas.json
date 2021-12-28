@@ -1,45 +1,55 @@
 {
- "Montreal": {
-   "Banco":
-   {
-     "facil":"",
-     "media":"",
-     "dificil":""
-   },
-   "Puerto":
-   {
-     "facil":"",
-     "media":"",
-     "dificil":""
-   },
-   "Biblioteca":
-   {
-     "facil":"",
-     "media":"",
-     "dificil":""
-   }
-  },
-    "México":{
-      "Banco":
-      {
-        "facil":"",
-        "media":"",
-        "dificil":""
-      },
-      "Puerto":
-      {
-        "facil":"",
-        "media":"",
-        "dificil":""
-      },
-      "Biblioteca":
-      {
-        "facil":"",
-        "media":"",
-        "dificil":""
-      }
-    }
-  }
-
+"Bamako": {
+"Biblioteca": {
+"facil": "Librera: le ví leyendo libros y viendo imagenes sobre el desierto del Sahara",
+"media": "Librera: creo haberle escuchado mencionar algo sobre el monte Hombori",
+"dificil": "Librera: estoy muy seguro de haberle oído mencionar que iba a visitar una ex colonia francesa"
+},
+"Banco": {
+"facil": "Cajero: definitavente le vi acuñar Francos",
+"media": "Cajero: me parece haberle oído decir que iba a viajar a una nación presidencialista",
+"dificil": "Cajero: estoy bastante seguro de escuchar que iba a visitar un país con predominante industria arrocera"
+},
+"Aeropuerto": {
+"facil": "Marinera: estoy segura de haberle visto llevar una bandera verde, amarilla y roja",
+"media": "Marinera: creo haberle visto leyendo un libro con imagenes del río Niger, pero no estoy segura",
+"dificil": "Marinera: le oí decir que estaba viajando hacia un importante puerto fluvial y comercial de la región"
+}
+},
+"Atenas": {
+"Banco": {
+"facil": "Dijo que estaba buscando acuñar Euros",
+"media": "Dijo que estaba buscando un lugar con altos estandares de vida",
+"dificil": "Dijo que estaba buscando unlugar con una economía avanzada"
+},
+"Aeropuerto": {
+"facil": "Mencionó que estaba con ansias de visitar el Mar Egeo",
+"media": "Mencionó que estaba cona ansias de visitar la cumbre del monte Mytikas",
+"dificil": "Mencionó que estaba con ansias de visitar la coordillera del Pindo"
+},
+"Biblioteca": {
+"facil": "Se le vio caminar con un escudo espartano en su espalda",
+"media": "Mencionó que iba a visitar un país vecino a Bulgaria",
+"dificil": "Dijo que estaba buscando coleccionar Dracmas"
+}
+},
+"Bagdad": {
+"Aeropuerto": {
+"facil": "Analista: le escuché decir que estaba buscando cambiar libras",
+"media": "Analista: creo haberle escuchado decir que iba a visitar una región petrolifera",
+"dificil": "Analista: dijo que iba a visitar una republica semipresidencialista"
+},
+"Biblioteca": {
+"facil": "Capitán: creo haberle visto llevar una bandera negra , roja y blanca",
+"media": "Capitán: me parece haberle oído decir que iba a visitar un clima desierto, ¡Al parecer no le gusta el calor!",
+"dificil": "Capitán: estoy seguro de haber escuchado algo sobre el Rio Eufrates, si es que no me falla la memoria"
+},
+"Banco": {
+"facil": "Conserje: creo haberle escuchado decir que estaba estudiando al pueblo sumerio.",
+"media": "Conserje: no estoy seguro, pero creo haberle visto leyendo un libro sobre la región mesopotámica",
+"dificil": "Conserje: le oí decir que iba a visitar un país limitrofe a Sudan Del Sur"
+}
+}
+}
 
 

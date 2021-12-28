@@ -1,41 +1,36 @@
 package edu.fiuba.algo3.modelo.jugador;
 
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
-import edu.fiuba.algo3.modelo.ladron.ISospechable;
-import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class Jugador {
 
     private String nombre;
-    private Computadora computadora;
     private Reloj reloj;
     private GradoPolicia grado;
     private Caso caso;
-    private Ciudad ciudadActual;
+    private Mapa mapa;
 
 
-    public Jugador(String nombre,Integer arrestos,Reloj reloj){
+    public Jugador(String nombre,Integer arrestos,Reloj reloj,Mapa mapa){
         this.nombre=nombre;
         this.grado = new Novato();
         asignarGrado(arrestos);
         this.reloj = reloj;
-        this.ciudadActual = ciudadActual;
+        this.mapa=mapa;
     }
 
-    public void setCiudadActual(Ciudad actual){
-        this.ciudadActual = actual;
+    public void viajarACiudad(Ciudad destino){
+        mapa.viajarACiudad(destino, reloj, grado);
     }
-
 
     private void asignarGrado(int arrestos){
         for(int i = arrestos; i != 0; i--){
@@ -61,8 +56,8 @@ public class Jugador {
         return objeto;
     }
 
-    public void empezarCaso(Caso caso,Computadora computadora) {
-        this.caso = caso;
-        this.computadora = computadora;
+
+    public void empezarCaso(Caso caso) {
+        this.caso= caso;
     }
 }

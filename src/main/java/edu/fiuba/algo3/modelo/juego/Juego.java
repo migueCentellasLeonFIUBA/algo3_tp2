@@ -3,9 +3,8 @@ package edu.fiuba.algo3.modelo.juego;
 import edu.fiuba.algo3.modelo.ManejoArchivos.*;
 import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.jugador.*;
-import edu.fiuba.algo3.modelo.ladron.Estrategia;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
@@ -21,6 +20,7 @@ public class Juego {
     private  Map<String,Map<String, IPista>> pistas;
     private Map<String, ISospechable> sospechosos;
     private Map<Ciudad, ArrayList<Ciudad>> conexiones;
+    private Mapa mapa;
 
     private Jugador jugadorActual;
 
@@ -40,8 +40,8 @@ public class Juego {
         this.jugadores = jugadores;
     }
 
-    public void setConexiones(Map<Ciudad, ArrayList<Ciudad>> conexiones) {
-        this.conexiones = conexiones;
+    public void setMapa(Mapa mapa) {
+        this.mapa = mapa;
     }
 
     public void setSospechosos(Map<String, ISospechable> sospechosos) {
@@ -54,13 +54,13 @@ public class Juego {
             return jugadorActual;
         }
 
-        jugadorActual = new Jugador(nombre,0,new Reloj());
+        jugadorActual = new Jugador(nombre,0,new Reloj(),mapa);
         return jugadorActual;
     }
 
     private Ladron crearLadron(Map<String, ISospechable> sospechosos){
-        Random random = new Random();
-        String nombre = random.obtenerStringRandom((ArrayList<String>) sospechosos.keySet());
+        Randomizador random = new Randomizador();
+        String nombre = random.obtenerStringRandom(new ArrayList<String>(sospechosos.keySet()));
         Ladron ladron = new Ladron(sospechosos.get(nombre));
         sospechosos.put(nombre,ladron);
         return ladron;
@@ -73,12 +73,11 @@ public class Juego {
         Ladron ladron = crearLadron(sospechosos);
         Objeto objeto = jugadorActual.ObjetoRobado(objetos);
 
-
         Caso caso = new Caso(computadora,ladron,objeto);
 
-        objeto.aplicarEstrategia(ciudades,pistas,ladron);
+        jugadorActual.empezarCaso(caso);
 
-        //jugadorActual.empezarCaso(caso);
+        objeto.aplicarEstrategia(ciudades,pistas,ladron,mapa);
 
 
     }

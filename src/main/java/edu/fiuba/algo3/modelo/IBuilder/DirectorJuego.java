@@ -8,13 +8,13 @@ public class DirectorJuego {
 
     public DirectorJuego(ConstructorJuego constructor){ this.constructor = constructor;}
 
-    public void crearJuego(Fachada fachada){
+    public void crearJuego(Fachada fachada) throws Exception {
         constructor.cargarObjetos(fachada);
         constructor.cargarCiudades(fachada);
-        constructor.cargarJugadores(fachada);
-        //constructor.cargarConexiones(fachada);
+        constructor.cargarMapa(fachada);
         constructor.cargarPistas(fachada);
         constructor.cargarSospechosos(fachada);
+        constructor.cargarJugadores(fachada);
     }
 
     public Juego obtenerJuego(){

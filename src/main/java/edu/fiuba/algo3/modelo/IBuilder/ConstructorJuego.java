@@ -8,7 +8,7 @@ public interface ConstructorJuego {
     void  cargarObjetos(Fachada fachada);
     void cargarCiudades(Fachada fachada);
     void cargarJugadores(Fachada fachada);
-    void cargarConexiones(Fachada fachada) throws Exception;
+    void cargarMapa(Fachada fachada) throws Exception;
     void cargarPistas(Fachada fachada);
     void cargarSospechosos(Fachada fachada);
 

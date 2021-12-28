@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo.objetos;
 
 import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.ladron.Estrategia;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 
@@ -18,7 +19,7 @@ public class Objeto{
         this.estrategia= estrategia;
     }
 
-    public void aplicarEstrategia(Map<String, Ciudad> ciudades, Map<String, Map<String, IPista>> pistas, Ladron ladron) {
+    public void aplicarEstrategia(Map<String, Ciudad> ciudades, Map<String, Map<String, IPista>> pistas, Ladron ladron, Mapa mapa) {
         estrategia.aplicarEstrategia(ciudades, pistas,ladron);
     }
 }

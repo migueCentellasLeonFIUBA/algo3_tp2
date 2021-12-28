@@ -31,4 +31,14 @@ public class Ladron implements ISospechable,ILadron{
     public boolean arrestar() {
         return true;
     }
+
+    @Override
+    public String dameUnaPista() {
+        return sospechoso.dameUnaPista();
+    }
+
+    @Override
+    public String pistaDeLadron() {
+        return sospechoso.dameUnaPista();
+    }
 }

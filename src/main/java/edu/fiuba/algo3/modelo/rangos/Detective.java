@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.ArrayList;
 import java.util.Map;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Random;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Randomizador;
 
 public class Detective extends GradoPolicia {
 
@@ -22,7 +22,7 @@ public class Detective extends GradoPolicia {
 
     @Override
     public Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos){
-        Random random = new Random();
+        Randomizador random = new Randomizador();
         Objeto objetoRobado = random.obtenerObjetoRandom(objetos.get("Valioso"));
         return objetoRobado;
     }

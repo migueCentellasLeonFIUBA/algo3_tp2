@@ -20,19 +20,15 @@ public class Pista implements IPista {
     }
 
     public String obtenerPistaFacil(){
-        return pistasDificultad.get("facil");
+        return pistasDificultad.get("facil")+ ladron.pistaDeLadron();
     }
 
     public String obtenerPistaDificil(){
-        return pistasDificultad.get("dificil");
+        return pistasDificultad.get("dificil")+ ladron.pistaDeLadron();
     }
 
     public String obtenerPistaMedia(){
-        return pistasDificultad.get("media") ;//+ ladron.obtenerPista()// Las cualidades deben saber que pistas ya dieron.
-    }
-
-    private String pistaDeLadron(){
-        return null;// ladron.obtenerPista();
+        return pistasDificultad.get("media")  + ladron.pistaDeLadron();
     }
 
 }

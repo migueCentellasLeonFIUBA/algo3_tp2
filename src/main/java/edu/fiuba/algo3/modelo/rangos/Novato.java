@@ -1,10 +1,7 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
-import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
-import edu.fiuba.algo3.modelo.ManejoArchivos.Random;
-import edu.fiuba.algo3.modelo.juego.Juego;
-import edu.fiuba.algo3.modelo.jugador.Caso;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Randomizador;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.ArrayList;
@@ -14,6 +11,7 @@ public class Novato extends GradoPolicia {
 
     private Integer velocidad = 900;
     private Integer arrestos = 0;
+    private String grado = "Novato";
 
     public GradoPolicia arresto() {
         this.arrestos = this.arrestos + 1;
@@ -22,10 +20,13 @@ public class Novato extends GradoPolicia {
         }
         return this;
     }
-    public Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos){
-        return null;
-    }
 
+    @Override
+    public Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos) {
+        Randomizador random = new Randomizador();
+        Objeto objetoRobado = random.obtenerObjetoRandom(objetos.get("Comun"));
+        return objetoRobado;
+    }
 
 
 }

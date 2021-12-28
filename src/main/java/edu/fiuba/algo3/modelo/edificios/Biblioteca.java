@@ -15,6 +15,7 @@ public class Biblioteca implements IEdificio {
 
     @Override
     public void cambiarPista(Map<String, IPista> pistasEdificios, ILadron ladron) {
-
+        this.pista = pistasEdificios.get("Biblioteca");
+        this.pista.setLadron(ladron);
     }
 }

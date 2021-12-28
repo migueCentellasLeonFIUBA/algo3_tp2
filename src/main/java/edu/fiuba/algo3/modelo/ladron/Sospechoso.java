@@ -11,7 +11,6 @@ public class Sospechoso implements ISospechable{
     public Sospechoso(String nombre,Cualidades cualidades){
         this.nombre=nombre;
         this.cualidades=cualidades;
-
     }
 
     public Sospechoso comparar(ArrayList<String> caracteristicas) {
@@ -26,4 +25,7 @@ public class Sospechoso implements ISospechable{
         return false;
     }
 
+    public String dameUnaPista(){
+        return cualidades.dameUnaPista();
+    }
 }

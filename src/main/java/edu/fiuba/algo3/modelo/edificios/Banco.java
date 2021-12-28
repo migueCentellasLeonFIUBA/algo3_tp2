@@ -14,6 +14,7 @@ public class Banco implements IEdificio {
 
     @Override
     public void cambiarPista(Map<String, IPista> pistasEdificios, ILadron ladron) {
-
+        this.pista = pistasEdificios.get("Banco");
+        this.pista.setLadron(ladron);
     }
 }

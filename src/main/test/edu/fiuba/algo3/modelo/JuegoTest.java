@@ -17,14 +17,35 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class JuegoTest{
 
     @Test
-    public void TestJuegoCargaCorrectamenteLosArchivos() {
+    public void GanarJuego() throws Exception {
         Parser parser = new Parser();
         Fachada fachada = new Fachada(parser);
         ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
         DirectorJuego director = new DirectorJuego(constructor);
         director.crearJuego(fachada);
         Juego juego = director.obtenerJuego();
+
+        juego.IdentificarJugador("Lucio");
         Assert.assertEquals("","");
+        juego.comenzarCaso();
+        Assert.assertEquals("","");
+
+    }
+
+    @Test
+    public void PerderJuego() throws Exception {
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+
+        juego.IdentificarJugador("Lucio");
+        Assert.assertEquals("","");
+        juego.comenzarCaso();
+        Assert.assertEquals("","");
+
     }
 
 }

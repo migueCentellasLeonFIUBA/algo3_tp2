@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo.IBuilder;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
@@ -15,6 +16,7 @@ public class ConstructorJuegoConcreto implements ConstructorJuego{
 
     private Juego juego;
     private Map<String, Ciudad> ciudades;
+    private Mapa mapa;
 
     public ConstructorJuegoConcreto(){juego = new Juego();}
 
@@ -31,15 +33,15 @@ public class ConstructorJuegoConcreto implements ConstructorJuego{
     }
 
     @Override
-    public void cargarJugadores(Fachada fachada) {
-        Map<String, Jugador> jugadores = fachada.cargarJugadores();
-        juego.setJugadores(jugadores);
+    public void cargarMapa(Fachada fachada) throws Exception {
+        this.mapa = fachada.cargarMapa(ciudades);
+        juego.setMapa(mapa);
     }
 
     @Override
-    public void cargarConexiones(Fachada fachada) throws Exception {
-        Map<Ciudad, ArrayList<Ciudad>> conexiones = fachada.cargarConexiones(ciudades);
-        juego.setConexiones(conexiones);
+    public void cargarJugadores(Fachada fachada) {
+        Map<String, Jugador> jugadores = fachada.cargarJugadores(mapa);
+        juego.setJugadores(jugadores);
     }
 
     @Override

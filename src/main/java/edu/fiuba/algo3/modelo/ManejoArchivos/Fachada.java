@@ -4,12 +4,11 @@ import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.Pistas.Pista;
 import edu.fiuba.algo3.modelo.Pistas.SinPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
-import edu.fiuba.algo3.modelo.ciudades.CiudadNoEstrategia;
 import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.ComandoCreadorEdficios;
 import edu.fiuba.algo3.modelo.edificios.IEdificio;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.jugador.NoOrden;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
@@ -52,7 +51,7 @@ public class Fachada{
             Coordenadas coordenadas = new Coordenadas(latitud,longitud );
             String descripcion = parser.pedirValor("descripcion");
             ArrayList<IEdificio> edificios = cargarEdificios();
-            CiudadNoEstrategia ciudad = new CiudadNoEstrategia(nombreCiudad,descripcion ,coordenadas,edificios);
+            Ciudad ciudad = new Ciudad(nombreCiudad,descripcion ,coordenadas,edificios);
             resultado.put(nombreCiudad,ciudad);
         }
 
@@ -87,14 +86,14 @@ public class Fachada{
         return resultado;
     }
 
-        public Map<String, Jugador> cargarJugadores() {
+        public Map<String, Jugador> cargarJugadores(Mapa mapa) {
             parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json");
             ArrayList<String> jugadores = parser.listaDeElementos();
             Map<String,Jugador> resultado = new HashMap<>();
 
             for (String nombreJugador: jugadores){
                 parser.filtrar(nombreJugador);
-                Jugador jugador = new Jugador(nombreJugador,Integer.parseInt(parser.pedirValor("Arrestos")), new Reloj());
+                Jugador jugador = new Jugador(nombreJugador,Integer.parseInt(parser.pedirValor("Arrestos")), new Reloj(),mapa);
                 resultado.put(nombreJugador,jugador);
             }
                return resultado;
@@ -124,26 +123,25 @@ public class Fachada{
         return pistasCiudades;
         }
 
-    public Map<Ciudad, ArrayList<Ciudad>> cargarConexiones(Map<String, Ciudad> ciudades) throws Exception {
+    public Mapa cargarMapa(Map<String, Ciudad> ciudades) throws Exception {
         if(ciudades == null) throw new Exception("Ciudades está nulo, imposible ver conexiones.");
         parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Conexiones.json");
-        ArrayList<String> conexiones = parser.listaDeElementos();
+        ArrayList<String> ciudadesNombres = parser.listaDeElementos();
         Map<Ciudad, ArrayList<Ciudad>> resultado = new HashMap<>();
-        ArrayList<Ciudad> ciudadesMapa = new ArrayList<>();
 
-        //por cada nombre key en el archivo conexion:
-        for (String nombreCiudad : conexiones) {
-            //parser.filtrar(nombreCiudad);
-            //por cada ciudad en el arreglo de conexiones:
-            for (String ciudad : parser.pedirArregloFiltrado(nombreCiudad)) {
-                ciudadesMapa.add(ciudades.get(ciudad)); //devuelve la instancia de la ciudad.
+        for (String ciudadNombre:ciudadesNombres){
+            ArrayList<Ciudad> conexiones = new ArrayList<>();
+            for (String conexion : parser.pedirArreglo(ciudadNombre)) {
+                conexiones.add(ciudades.get(conexion)); //devuelve la instancia de la ciudad.
             }
-            resultado.put(ciudades.get(nombreCiudad), ciudadesMapa);
+            resultado.put(ciudades.get(ciudadNombre),conexiones);
         }
 
-        return resultado;
+        return new Mapa(resultado);
     }
 
 
 
 }
+
+
