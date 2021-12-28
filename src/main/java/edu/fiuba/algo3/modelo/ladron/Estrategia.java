@@ -26,7 +26,8 @@ public class Estrategia {
         mapa.setearCiudadActual(ciudades.get(ciudadesEstrategia.get(0)));
         for(String ciudadEstrategia: this.ciudadesEstrategia){
             Ciudad ciudadActual = ciudades.get(ciudadEstrategia);
-            Map<String, IPista> pistasEdificios = pistas.get(siguienteCiudad());
+            String siguienteCiudad=siguienteCiudad();
+            Map<String, IPista> pistasEdificios = pistas.get(siguienteCiudad);
 
             if (indice+1==ciudadesEstrategia.size()){
                 ciudadActual.cambiarDeEstado(new ConLadron());

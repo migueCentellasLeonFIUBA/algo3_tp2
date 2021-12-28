@@ -5,7 +5,7 @@
     "descripcion": "Montreal es la mayor ciudad de la provincia de Quebec, en Canadá y la segunda más poblada del país después de Toronto. Es también una región administrativa de Quebec. Se sitúa en la isla del mismo nombre entre el río San Lorenzo y la Rivière des Prairies. Es uno de los principales centros industriales, comerciales y culturales de Norteamérica. El clima de Montreal es continental húmedo, con cuatro estaciones bien definidas y variadas. En invierno, la temperatura media de la ciudad es de -8,2 °C y en verano, de 21 °C.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"],
   },
-  "Ciudad de Mexico":{
+  "Mexico":{
     "latitud": "23.634501",
     "longitud": "-102.552784",
     "descripcion": "En el territorio de Ciudad De Mexico se encuentra tres bienes culturales de los treinta y cinco sitios Patrimonio de la Humanidad con los que cuenta el país: el Centro Histórico, Xochimilco, el Campus Central de la Ciudad Universitaria de la UNAM y la Casa y estudio de Luis Barragán. Cuenta con ciento cincuenta y un museos que la pone como la segunda ciudad con más museos en el mundo, detrás de Londres. Además, fue la primera ciudad de Latinoamérica en albergar unas olimpiadas al ser sede de los Juegos Olímpicos de 1968.",

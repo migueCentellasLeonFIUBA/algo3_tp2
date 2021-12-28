@@ -40,7 +40,7 @@ public class ConstructorJuegoConcreto implements ConstructorJuego{
 
     @Override
     public void cargarJugadores(Fachada fachada) {
-        Map<String, Jugador> jugadores = fachada.cargarJugadores(mapa);
+        Map<String, Jugador> jugadores = fachada.cargarJugadores(mapa,juego);
         juego.setJugadores(jugadores);
     }
 

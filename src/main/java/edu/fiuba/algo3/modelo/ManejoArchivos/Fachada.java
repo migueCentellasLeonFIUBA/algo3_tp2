@@ -8,6 +8,7 @@ import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
 import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.ComandoCreadorEdficios;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.*;
@@ -86,14 +87,14 @@ public class Fachada{
         return resultado;
     }
 
-        public Map<String, Jugador> cargarJugadores(Mapa mapa) {
+        public Map<String, Jugador> cargarJugadores(Mapa mapa, Juego juego) {
             parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Jugadores.json");
             ArrayList<String> jugadores = parser.listaDeElementos();
             Map<String,Jugador> resultado = new HashMap<>();
 
             for (String nombreJugador: jugadores){
                 parser.filtrar(nombreJugador);
-                Jugador jugador = new Jugador(nombreJugador,Integer.parseInt(parser.pedirValor("Arrestos")), new Reloj(),mapa);
+                Jugador jugador = new Jugador(nombreJugador,Integer.parseInt(parser.pedirValor("Arrestos")), new Reloj(),mapa,juego);
                 resultado.put(nombreJugador,jugador);
             }
                return resultado;

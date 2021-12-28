@@ -4,6 +4,8 @@ import edu.fiuba.algo3.modelo.IBuilder.ConstructorJuegoConcreto;
 import edu.fiuba.algo3.modelo.IBuilder.DirectorJuego;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Parser;
+import edu.fiuba.algo3.modelo.Pistas.Pista;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
@@ -29,9 +31,33 @@ public class JuegoTest{
         Juego juego = director.obtenerJuego();
         Jugador jugador = juego.IdentificarJugador("Lucio");
         juego.comenzarCaso();
-        ArrayList<Edificio> edificios = jugador.verEdificios();
-        Edificio edificio = edificios.get(0);
-        String pista = jugador.visitarEdificio(edificio);
+
+        ArrayList<Edificio> edificios1 = jugador.verEdificios();
+        Edificio edificio1 = edificios1.get(0);
+        Edificio edificio2 = edificios1.get(1);
+        Edificio edificio3 = edificios1.get(2);
+
+        String pista1 = jugador.visitarEdificio(edificio1);
+        String pista2 = jugador.visitarEdificio(edificio2);
+        String pista3 = jugador.visitarEdificio(edificio3);
+
+        ArrayList<Ciudad> ciudades= jugador.verConexiones();
+
+        Ciudad ciudad1 =  ciudades.get(1);
+
+        jugador.viajarACiudad(ciudad1);
+
+        ArrayList<Edificio> edificios2 = jugador.verEdificios();
+        edificio1 = edificios2.get(0);
+        edificio2 = edificios2.get(1);
+        edificio3 = edificios2.get(2);
+
+        pista1 = jugador.visitarEdificio(edificio1);
+        pista2 = jugador.visitarEdificio(edificio2);
+        pista3 = jugador.visitarEdificio(edificio3);
+
+
+
 
         Assert.assertEquals("","");
 
