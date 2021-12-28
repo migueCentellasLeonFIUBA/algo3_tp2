@@ -6,7 +6,6 @@ import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Sexo.Sexo;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Senia.Senia;
 import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Vehiculo.Vehiculo;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
-import edu.fiuba.algo3.modelo.ladron.Sospechoso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +13,6 @@ import java.util.Map;
 
 public class Computadora {
 
-    private IOrden ordenActual;
     private Sexo sexo;
     private Hobby hobby;
     private Cabello cabello;
@@ -22,6 +20,8 @@ public class Computadora {
     private Senia senia;
 
     private Map<String, ISospechable> sospechosos;
+
+    private ArrayList<String> caracteristicasBuscadas;
 
     public Computadora(Map<String, ISospechable> sospechosos) {
 
@@ -31,7 +31,6 @@ public class Computadora {
         this.vehiculo = new Vehiculo();
         this.senia = new Senia();
         this.sospechosos = sospechosos;
-        this.ordenActual = new NoOrden();
     }
 
     public ArrayList<ISospechable> BuscarSospechoso(ArrayList<String> caracteristicasBuscadas) {
@@ -45,13 +44,9 @@ public class Computadora {
             }
         }
 
-        if(listaSospechosos.size() == 1){
-            ordenActual = new Orden(listaSospechosos.get(0));
-        }
-
         return listaSospechosos;
     }
-/*
+
     private List<ArrayList<String>> datosAsignados(){
 
         List<ArrayList<String>> parametros = new ArrayList<>();
@@ -96,8 +91,6 @@ public class Computadora {
         return parametros;
     }
 
-
- */
     public void siguienteSexo() {sexo.siguienteSexo();}
 
     public void siguienteHobby() {hobby.siguienteHobby();}

@@ -12,10 +12,12 @@ public class Caso {
     private Computadora computadora;
     private String descripcion;
     private Objeto objetoRobado;
+    private IOrden orden;
 
     public Caso(Computadora computadora, Ladron ladron, Objeto objeto){
         this.ladron = ladron;
         this.objetoRobado = objeto;
+        this.orden = new NoOrden();
         this.computadora= computadora;
     }
 
@@ -39,10 +41,19 @@ public class Caso {
     private String obtenerDescripicionObjeto() {
         String ciudadDeOrigen = objetoRobado.getCiudadDeOrigen();
         String nombre = objetoRobado.getNombre();
-        return ("Tesoro Nacional robado de " + ciudadDeOrigen + ".\n" + "El tesoro ha sido identificado como un " + "nombre.\n");
+        return ("Tesoro Nacional robado de " + ciudadDeOrigen + ".\n" + "El tesoro ha sido identificado como un " + nombre + "\n");
     }
 
     public ArrayList<ISospechable> buscarSospechosos(ArrayList<String> caracteristicasBuscadas) {
-        return computadora.BuscarSospechoso(caracteristicasBuscadas);
+        ArrayList<ISospechable> sospechosos = computadora.BuscarSospechoso(caracteristicasBuscadas);
+        if (sospechosos.size()==1){
+            orden = new Orden(sospechosos.get(0));
+        }
+        return sospechosos;
+    }
+
+    public void revisarOrden(Jugador jugador) {
+        orden.revisarOrden(jugador);
+
     }
 }

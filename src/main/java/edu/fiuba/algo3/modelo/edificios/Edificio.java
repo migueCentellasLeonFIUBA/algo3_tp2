@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo.edificios;
 import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.ILadron;
+import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.rangos.Detective;
 import edu.fiuba.algo3.modelo.rangos.Investigador;
 import edu.fiuba.algo3.modelo.rangos.Novato;
@@ -13,6 +14,8 @@ import java.util.Map;
 public abstract class Edificio {
     IPista pista;
     String nombre;
+    ILadron ladron;
+
 
     public abstract void cambiarPista(Map<String, IPista> pistasEdificios, ILadron ladron);
 
@@ -38,5 +41,13 @@ public abstract class Edificio {
 
     public String obtenerPista(Detective detective) {
         return pista.obtenerPistaMedia();
+    }
+
+    public void atraparLadron(Jugador jugador) {
+        jugador.atrapar(ladron);
+    }
+
+    public void esconderLadron(Ladron ladron) {
+        this.ladron=ladron;
     }
 }

@@ -3,13 +3,12 @@ package edu.fiuba.algo3.modelo.jugador;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.ladron.ILadron;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
-import edu.fiuba.algo3.modelo.ladron.Sospechoso;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -20,7 +19,6 @@ public class Jugador {
     private GradoPolicia grado;
     private Caso caso;
     private Mapa mapa;
-
 
     public Jugador(String nombre,Integer arrestos,Reloj reloj,Mapa mapa){
         this.nombre=nombre;
@@ -81,5 +79,17 @@ public class Jugador {
     public ArrayList<ISospechable> buscarSospechosos(ArrayList<String> caracteristicasBuscadas){
         reloj.descontarhoras(3);
         return caso.buscarSospechosos(caracteristicasBuscadas);
+    }
+
+    public void atrapar(ILadron ladron) {
+        if(ladron.atrapar(reloj)){
+            caso.revisarOrden(this);
+        }
+    }
+
+    public void ganador() {
+    }
+
+    public void perdedor() {
     }
 }

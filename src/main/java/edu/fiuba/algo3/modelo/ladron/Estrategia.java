@@ -29,7 +29,8 @@ public class Estrategia {
             Map<String, IPista> pistasEdificios = pistas.get(siguienteCiudad());
 
             if (indice+1==ciudadesEstrategia.size()){
-                ciudadActual.cambiarDeEstado(new ConLadron(ladron));
+                ciudadActual.cambiarDeEstado(new ConLadron());
+                ciudadActual.aplicarLadron(ladron);
             }else{
                 ciudadActual.cambiarDeEstado(new ConEstrategia());
                 ciudadActual.cambiarPistas(pistasEdificios,ladron);

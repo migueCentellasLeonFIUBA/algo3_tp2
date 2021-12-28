@@ -81,4 +81,10 @@ public class Ciudad {
     public void agregarConexion(Mapa mapa, Ciudad ciudadAnterior){
         estado.agregarConexion(mapa, ciudadAnterior);
     }
+
+    public void aplicarLadron(Ladron ladron) {
+        Randomizador random = new Randomizador();
+        Integer numeroRandom = random.obtenerIntegerRandom(edificios.size());
+        edificios.get(numeroRandom).esconderLadron(ladron);
+    }
 }

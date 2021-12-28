@@ -10,7 +10,11 @@ public class Orden implements IOrden {
         this.sospechoso = sospechoso;
     }
 
-    public boolean arrestar(){
-        return sospechoso.arrestar();
+    public void revisarOrden(Jugador jugador){
+        if(sospechoso.arrestar()){
+            jugador.ganador();
+        }else{
+            jugador.perdedor();
+        }
     }
 }
