@@ -7,7 +7,7 @@ import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.Coordenadas;
 import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.ComandoCreadorEdficios;
-import edu.fiuba.algo3.modelo.edificios.IEdificio;
+import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.*;
@@ -50,7 +50,7 @@ public class Fachada{
             Double longitud =Double.valueOf(parser.pedirValor("longitud"));
             Coordenadas coordenadas = new Coordenadas(latitud,longitud );
             String descripcion = parser.pedirValor("descripcion");
-            ArrayList<IEdificio> edificios = cargarEdificios();
+            ArrayList<Edificio> edificios = cargarEdificios();
             Ciudad ciudad = new Ciudad(nombreCiudad,descripcion ,coordenadas,edificios);
             resultado.put(nombreCiudad,ciudad);
         }
@@ -58,12 +58,12 @@ public class Fachada{
         return resultado;
     }
 
-    private ArrayList<IEdificio> cargarEdificios(){
+    private ArrayList<Edificio> cargarEdificios(){
         List<String> edificios = parser.pedirArregloFiltrado("Edificios");
-        ArrayList<IEdificio> resultado = new ArrayList<>();
+        ArrayList<Edificio> resultado = new ArrayList<>();
         for (String nombreEdificio: edificios){
             ComandoCreadorEdficios comando = new ComandoCreadorEdficios();
-            IEdificio edificio = comando.crearEdificio(nombreEdificio, new SinPista());
+            Edificio edificio = comando.crearEdificio(nombreEdificio, new SinPista());
             resultado.add(edificio);
         }
         return resultado;

@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo.ciudades;
 
+import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 
@@ -18,8 +20,14 @@ public class Mapa {
 
 
     public void viajarACiudad(Ciudad destino, Reloj reloj, GradoPolicia grado){
+        Ciudad ciudadAnterior;
+
         ciudadActual.viajarACiudad(destino, reloj, grado);
-        this.ciudadActual=destino;
+
+        ciudadAnterior = ciudadActual;
+        this.ciudadActual = destino;
+
+        ciudadActual.agregarConexion(this, ciudadAnterior);
     }
 
     public ArrayList<Ciudad> posiblesDestinos(){
@@ -30,4 +38,15 @@ public class Mapa {
         ciudadActual = ciudad;
     }
 
+    public void agregarConexion(Ciudad ciudad){
+        posiblesDestinos().add(ciudad);
+    }
+
+    public  ArrayList<Edificio> edificiosDeCiudadActual() {
+        return ciudadActual.MostrarEdificios();
+    }
+
+    public String visitarEdificio(Edificio edificio, Jugador jugador) {
+        return ciudadActual.visitarEdificio(edificio,jugador);
+    }
 }

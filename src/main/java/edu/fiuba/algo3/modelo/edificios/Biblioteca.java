@@ -6,9 +6,7 @@ import edu.fiuba.algo3.modelo.ladron.ILadron;
 
 import java.util.Map;
 
-public class Biblioteca implements IEdificio {
-    IPista pista;
-
+public class Biblioteca extends Edificio  {
     public Biblioteca(IPista pista) {
         this.pista = pista;
     }

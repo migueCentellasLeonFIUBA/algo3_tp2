@@ -6,8 +6,7 @@ import edu.fiuba.algo3.modelo.ladron.ILadron;
 
 import java.util.Map;
 
-public class Bolsa implements IEdificio {
-    IPista pista;
+public class Bolsa extends Edificio {
 
     public Bolsa(IPista pista) {
         this.pista = new SinPista();

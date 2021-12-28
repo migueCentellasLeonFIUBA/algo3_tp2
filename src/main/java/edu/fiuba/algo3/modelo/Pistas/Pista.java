@@ -28,7 +28,7 @@ public class Pista implements IPista {
     }
 
     public String obtenerPistaMedia(){
-        return pistasDificultad.get("media")  + ladron.pistaDeLadron();
+        return  pistasDificultad.get("media")  + ladron.pistaDeLadron();
     }
 
 }

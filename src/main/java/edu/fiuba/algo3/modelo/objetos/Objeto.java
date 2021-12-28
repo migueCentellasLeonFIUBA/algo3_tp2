@@ -20,6 +20,6 @@ public class Objeto{
     }
 
     public void aplicarEstrategia(Map<String, Ciudad> ciudades, Map<String, Map<String, IPista>> pistas, Ladron ladron, Mapa mapa) {
-        estrategia.aplicarEstrategia(ciudades, pistas,ladron);
+        estrategia.aplicarEstrategia(ciudades, pistas,ladron,mapa);
     }
 }

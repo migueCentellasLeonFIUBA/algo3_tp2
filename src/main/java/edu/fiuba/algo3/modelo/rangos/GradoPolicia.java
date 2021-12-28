@@ -1,14 +1,15 @@
 package edu.fiuba.algo3.modelo.rangos;
 
-import edu.fiuba.algo3.modelo.jugador.Caso;
+import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.ArrayList;
 import java.util.Map;
 
 public abstract class GradoPolicia {
-    private Integer velocidad;
-    private Integer arrestos = 10;
+    protected String grado;
+    protected Integer velocidad;
+    protected Integer arrestos;
 
     public abstract GradoPolicia arresto();
 
@@ -16,6 +17,7 @@ public abstract class GradoPolicia {
         return (int) (distancia/velocidad);
     }
 
-
     public abstract Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos);
+
+    public abstract String obtenerPista(Edificio edificio);
 }

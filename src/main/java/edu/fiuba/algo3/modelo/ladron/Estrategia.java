@@ -4,6 +4,9 @@ package edu.fiuba.algo3.modelo.ladron;
 
 import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+import edu.fiuba.algo3.modelo.ciudades.ConEstrategia;
+import edu.fiuba.algo3.modelo.ciudades.ConLadron;
+import edu.fiuba.algo3.modelo.ciudades.Mapa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,31 +21,27 @@ public class Estrategia {
         ciudadesEstrategia=listaCiudades;
     }
 
-    public void aplicarEstrategia(Map<String, Ciudad> ciudades, Map<String, Map<String, IPista>> pistas, Ladron ladron) {
+    public void aplicarEstrategia(Map<String, Ciudad> ciudades, Map<String, Map<String, IPista>> pistas, Ladron ladron,Mapa mapa) {
 
-
+        mapa.setearCiudadActual(ciudades.get(ciudadesEstrategia.get(0)));
         for(String ciudadEstrategia: this.ciudadesEstrategia){
-
             Ciudad ciudadActual = ciudades.get(ciudadEstrategia);
             Map<String, IPista> pistasEdificios = pistas.get(siguienteCiudad());
 
-            if (indice+1==ciudades.size()){
-                //ciudadActual.cambiarDeEstado(new ConLadron());
+            if (indice+1==ciudadesEstrategia.size()){
+                ciudadActual.cambiarDeEstado(new ConLadron(ladron));
             }else{
-                // ciudadActual.cambiarDeEstado(new ConEstrategia());
+                ciudadActual.cambiarDeEstado(new ConEstrategia());
+                ciudadActual.cambiarPistas(pistasEdificios,ladron);
             }
-            ciudadActual.cambiarPistas(pistasEdificios,ladron);
         }
     }
 
     private String siguienteCiudad(){
-
         if (indice+1<this.ciudadesEstrategia.size()){
             indice+=1;
         }
         return this.ciudadesEstrategia.get(indice);
     }
-
-
 
 }

@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo.rangos;
 
 
+import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 
 import java.util.ArrayList;
@@ -9,10 +10,11 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Randomizador;
 
 public class Investigador extends GradoPolicia{
 
-    private Integer arrestos = 10;
-    private Integer velocidad =1300;
-    private String grado = "Investigador";
-
+    public Investigador(){
+        super.arrestos=10;
+        super.velocidad=1300;
+        super.grado = "Investigador";
+    }
 
     public GradoPolicia arresto() {
         this.arrestos = this.arrestos + 1;
@@ -27,6 +29,11 @@ public class Investigador extends GradoPolicia{
         Randomizador random = new Randomizador();
         Objeto objetoRobado = random.obtenerObjetoRandom(objetos.get("Valioso"));
         return objetoRobado;
+    }
+
+    @Override
+    public String obtenerPista(Edificio edificio) {
+        return edificio.obtenerPista(this);
     }
 
 }

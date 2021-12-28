@@ -2,7 +2,8 @@ package edu.fiuba.algo3.modelo.ciudades;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Randomizador;
 import edu.fiuba.algo3.modelo.Pistas.IPista;
-import edu.fiuba.algo3.modelo.edificios.IEdificio;
+import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.Reloj;
 import edu.fiuba.algo3.modelo.ladron.Ladron;
 import edu.fiuba.algo3.modelo.ladron.LadronNulo;
@@ -15,12 +16,12 @@ public class Ciudad {
     protected final Coordenadas coordenadas;
     private final String nombreCiudad;
     private final String descripcion;
-    private final ArrayList<IEdificio> edificios;
+    private final ArrayList<Edificio> edificios;
     private Integer visitas;
     private IEstado estado;
 
 
-    public Ciudad(String nombreCiudad,String descripcion,Coordenadas coordenadas,ArrayList<IEdificio> edificios) {
+    public Ciudad(String nombreCiudad,String descripcion,Coordenadas coordenadas,ArrayList<Edificio> edificios) {
         this.nombreCiudad = nombreCiudad;
         this.descripcion = descripcion;
         this.coordenadas = coordenadas;
@@ -29,7 +30,7 @@ public class Ciudad {
         this.estado = new SinEstrategia();
     }
 
-    public ArrayList<IEdificio> MostrarEdificios() {
+    public ArrayList<Edificio> MostrarEdificios() {
         return this.edificios;
     }
 
@@ -42,13 +43,13 @@ public class Ciudad {
         reloj.descontarhoras(calcularHoras(destino, grado));
     }
 
-    public String visitarEdificio(IEdificio edificio, Reloj reloj){
 
+    public String visitarEdificio(Edificio edificio, Jugador jugador){
         if(visitas < 3){
-            visitas++;
+            visitas += 1;
         }
-        reloj.descontarhoras(visitas);
-        return null;
+        jugador.descontarHoras(visitas);
+        return estado.visitarEdificio(edificio,jugador);
     }
 
     public String nombre(){
@@ -63,7 +64,7 @@ public class Ciudad {
         Randomizador random = new Randomizador();
         Integer posEdificioRandom = random.obtenerIntegerRandom(pistasEdificios.size());
         Integer indice=0;
-        for(IEdificio edificio: edificios){
+        for(Edificio edificio: edificios){
            if(indice==posEdificioRandom){
                edificio.cambiarPista(pistasEdificios, ladron);
            }else{
@@ -71,5 +72,13 @@ public class Ciudad {
            }
            indice+=1;
         }
+    }
+
+    public void cambiarDeEstado(IEstado estado) {
+        this.estado = estado;
+    }
+
+    public void agregarConexion(Mapa mapa, Ciudad ciudadAnterior){
+        estado.agregarConexion(mapa, ciudadAnterior);
     }
 }

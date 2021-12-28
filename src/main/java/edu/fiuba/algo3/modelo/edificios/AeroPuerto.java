@@ -2,13 +2,11 @@ package edu.fiuba.algo3.modelo.edificios;
 
 import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.ladron.ILadron;
+import edu.fiuba.algo3.modelo.rangos.Detective;
 
 import java.util.Map;
 
-public class AeroPuerto implements IEdificio {
-    IPista pista;
-
-
+public class AeroPuerto  extends Edificio {
     public AeroPuerto(IPista pista) {
         this.pista = pista;
     }
@@ -18,4 +16,6 @@ public class AeroPuerto implements IEdificio {
         this.pista = pistasEdificios.get("Aeropuerto");
         this.pista.setLadron(ladron);
     }
+
 }
+

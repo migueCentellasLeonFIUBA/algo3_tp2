@@ -60,7 +60,7 @@ public class Juego {
 
     private Ladron crearLadron(Map<String, ISospechable> sospechosos){
         Randomizador random = new Randomizador();
-        String nombre = random.obtenerStringRandom(new ArrayList<String>(sospechosos.keySet()));
+        String nombre = random.obtenerStringRandom(new ArrayList<>(sospechosos.keySet()));
         Ladron ladron = new Ladron(sospechosos.get(nombre));
         sospechosos.put(nombre,ladron);
         return ladron;
@@ -75,10 +75,9 @@ public class Juego {
 
         Caso caso = new Caso(computadora,ladron,objeto);
 
-        jugadorActual.empezarCaso(caso);
-
         objeto.aplicarEstrategia(ciudades,pistas,ladron,mapa);
 
+        jugadorActual.empezarCaso(caso);
 
     }
 

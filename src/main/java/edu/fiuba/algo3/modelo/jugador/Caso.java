@@ -10,8 +10,8 @@ public class Caso {
 
     private Ladron ladron;
     private Computadora computadora;
-    String descripcion;//se genera con el objeto pidiendole a la ciudad.
-    private Objeto objetoRobado;//No hace falta
+    private String descripcion;
+    private Objeto objetoRobado;
 
     public Caso(Computadora computadora, Ladron ladron, Objeto objeto){
         this.ladron = ladron;
@@ -21,5 +21,6 @@ public class Caso {
 
     public String obtnerDescripcion() {
         return "";
+        //return ladron.obtenerDescripcionDeCaso(objetoRobado.obtenerDescripcionDeObjeto());
     }
 }

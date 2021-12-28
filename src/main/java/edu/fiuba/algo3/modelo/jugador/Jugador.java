@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.jugador;
 
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.Mapa;
-import edu.fiuba.algo3.modelo.edificios.IEdificio;
+import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
@@ -42,13 +42,12 @@ public class Jugador {
         //refactor: no debería tener atributos sin inicializar Memento al juego
     }
 
-    public String visitarEdificio(IEdificio edificio) throws FileNotFoundException {
-        //String pista = ciudadActual.visitarEdificio(edificio, reloj, visitante);
+    public String visitarEdificio(Edificio edificio){
         if(reloj.tiempoTerminado()){
             terminarJuego();
         }
-
-        return "";
+        String pista = mapa.visitarEdificio(edificio, this);
+        return pista;
     }
 
     public Objeto ObjetoRobado(Map<String, ArrayList<Objeto>> objetos) {
@@ -59,5 +58,21 @@ public class Jugador {
 
     public void empezarCaso(Caso caso) {
         this.caso= caso;
+    }
+
+    public String visitar(Edificio edificio) {
+        return grado.obtenerPista(edificio);
+    }
+
+    public void descontarHoras(Integer horas) {
+        reloj.descontarhoras(horas);
+    }
+
+    public ArrayList<Edificio> verEdificios() {
+        return mapa.edificiosDeCiudadActual();
+    }
+
+    public ArrayList<Ciudad> verConexiones() {
+        return mapa.posiblesDestinos();
     }
 }
