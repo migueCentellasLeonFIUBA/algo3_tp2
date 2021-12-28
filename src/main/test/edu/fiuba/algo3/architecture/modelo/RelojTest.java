@@ -1,6 +1,7 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import edu.fiuba.algo3.modelo.jugador.Reloj;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,10 +13,10 @@ public class RelojTest {
         Reloj reloj = new Reloj();
 
         reloj.descontarhoras(111);
-        assertEquals(false, reloj.tiempoTerminado());
+        Assertions.assertEquals(false, reloj.tiempoTerminado());
 
         reloj.descontarhoras(1);
-        assertEquals(true, reloj.tiempoTerminado());
+        Assertions.assertEquals(true, reloj.tiempoTerminado());
     }
 
     @Test
@@ -29,7 +30,7 @@ public class RelojTest {
             reloj.descontarhoras(16);
         }
 
-        assertEquals(true, reloj.tiempoTerminado());
+        Assertions.assertEquals(true, reloj.tiempoTerminado());
 
     }
 }

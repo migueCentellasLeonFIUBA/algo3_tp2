@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.architecture.modelo;
 
 import edu.fiuba.algo3.modelo.IBuilder.ConstructorJuegoConcreto;
 import edu.fiuba.algo3.modelo.IBuilder.DirectorJuego;

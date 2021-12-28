@@ -1,0 +1,36 @@
+package edu.fiuba.algo3.architecture.modelo;
+
+import edu.fiuba.algo3.modelo.ManejoArchivos.Ciudades;
+import edu.fiuba.algo3.modelo.ManejoArchivos.GestorDeArchivos;
+import edu.fiuba.algo3.modelo.ciudades.Ciudad;
+
+import edu.fiuba.algo3.modelo.ciudades.CiudadesRandom;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CiudadesTest {
+
+        @Test
+        public void seCarganAlgunasCiudades() throws FileNotFoundException {
+
+            String ruta = "src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json";
+
+            GestorDeArchivos gestorDeArchivos = new GestorDeArchivos();
+            Ciudades ciudadesCargadas = new Ciudades(gestorDeArchivos.leerTextoCompleto(ruta));
+            ArrayList<Ciudad> listaCiudades = ciudadesCargadas.crearCiudades();
+
+            Assertions.assertEquals(8, listaCiudades.size());
+
+            CiudadesRandom ciudades = new CiudadesRandom(listaCiudades);
+            ArrayList<Ciudad> ciudadesRandom = ciudades.getCiudadesRandom(listaCiudades.get(0), 4);
+
+            Assertions.assertEquals(4, ciudadesRandom.size());
+        }
+
+}
