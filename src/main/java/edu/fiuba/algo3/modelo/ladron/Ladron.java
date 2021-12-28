@@ -45,4 +45,5 @@ public class Ladron implements ISospechable,ILadron{
     public String getNombre(){
         return sospechoso.getNombre();
     }
+
 }
