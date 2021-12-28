@@ -1,40 +1,48 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.IBuilder.ConstructorJuegoConcreto;
+import edu.fiuba.algo3.modelo.IBuilder.DirectorJuego;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
+import edu.fiuba.algo3.modelo.ManejoArchivos.Parser;
+import edu.fiuba.algo3.modelo.juego.Juego;
+import edu.fiuba.algo3.modelo.jugador.Jugador;
+import edu.fiuba.algo3.modelo.ladron.ISospechable;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class ComputadoraTest {
 
     @Test
-    public void TestComputadoraSinParametrosDevuelveTodosLosSospechoso() throws FileNotFoundException {
-
+    public void TestComputadoraSinParametrosNoDevuelveNingunSospechoso() throws Exception {
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+        Jugador jugador = juego.IdentificarJugador("Lucio");
+        juego.comenzarCaso();
+        ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
+        ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
+        Assert.assertEquals(0, listaSospechosos.size());
     }
 
     @Test
-    public void TestRuedaDeCaracteristicasFuncionaCorrectamente() throws FileNotFoundException {
-        Integer cantSexos;
-        Integer cantCabellos;
-        Integer cantHobbys;
-        Integer cantVehiculos;
-        Integer cantSenias ;
+    public void TestSiSeTienenTodosLosParametrosSeDevuelveUnSospechoso() throws Exception {
 
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+        Jugador jugador = juego.IdentificarJugador("Lucio");
+        juego.comenzarCaso();
+        ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
 
-    }
-
-    @Test
-    public void TestSiSeTienenTodosLosParametrosSeDevuelveUnSospechoso() throws FileNotFoundException {
-        Integer hobby = 6;
-        Integer cabello = 2;
-        Integer vehiculo = 3;
-        Integer senia = 3;
-
-
-        int tenis = 6;
-        int rojo = 2;
-        int deportivo = 3;
-        int tatuaje = 3;
-        /*
+         /*
          "Merey Laroc":{
             "Sexo": "Femenino",
             "Hobby" : "Tenis",
@@ -43,47 +51,59 @@ public class ComputadoraTest {
             "Vehiculo" : "Deportivo"
           },
          */
-        //SETEO SEXO
 
-        //SETEO HOBBY
-        for (hobby = tenis; hobby > 0; hobby--) {
-        }
+        caracterisitcasABuscar.add("Femenino");
+        caracterisitcasABuscar.add("Tenis");
+        caracterisitcasABuscar.add("Rojo");
+        caracterisitcasABuscar.add("Tatuaje");
+        caracterisitcasABuscar.add("Deportivo");
 
-        //SETEO CABELLO
-        for (cabello = rojo; cabello > 0; cabello--) {
-        }
-
-        //SETEO VEHICULO
-        for (vehiculo = deportivo; vehiculo > 0; vehiculo--) {
-        }
-
-        //SETEO SEÑA
-        for (senia = tatuaje; senia > 0; senia--) {
-        }
-
+        ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
+        Assert.assertEquals(1, listaSospechosos.size());
 
     }
 
-        @Test
-        public void TestComputadoraConParametrosErroneosNoDevuelveSospechosos() throws FileNotFoundException {
-            Integer hobby = 1;
-            Integer cabello = 1;
-            Integer vehiculo = 1;
-            Integer senia = 1;
-            int castaño = 1;
-            int moto = 1;
-            int joyas = 1;
-        /*
-         Sospechoso Inexistente:{
-            "Sexo": "Femenino",
-            "Hobby" : "Alpinismo",
-            "Cabello" : "Castaño",
-            "Senia" : "Joyas",
-            "Vehiculo" : "Moto"
-          },
-         */
-        }
+    @Test
+    public void TestSiSeTienenParametrosEnComunDevuelveLosSospechososQueCumplen() throws Exception {
 
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+        Jugador jugador = juego.IdentificarJugador("Lucio");
+        juego.comenzarCaso();
+        ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
+
+        //"Merey Laroc":["Femenino","Tenis","Rojo","Tatuaje","Deportivo"],
+        //"Carmen Sandiego":["Femenino","Croquet","Negro","Joyas","Limusina"]
+
+        caracterisitcasABuscar.add("Femenino");
+
+        ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
+        Assert.assertEquals(2, listaSospechosos.size());
     }
+
+    @Test
+    public void TestComputadoraConParametrosErroneosNoDevuelveSospechosos() throws Exception {
+
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+        Jugador jugador = juego.IdentificarJugador("Lucio");
+        juego.comenzarCaso();
+        ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
+
+        caracterisitcasABuscar.add("Masculino");
+
+        ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
+        Assert.assertEquals(0, listaSospechosos.size());
+    }
+
+}
 
 

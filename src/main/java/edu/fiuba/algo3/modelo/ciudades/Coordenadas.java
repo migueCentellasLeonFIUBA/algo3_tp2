@@ -1,8 +1,6 @@
 package edu.fiuba.algo3.modelo.ciudades;
 
 
-import edu.fiuba.algo3.modelo.jugador.Reloj;
-
 import static java.lang.Math.sqrt;
 
 public class Coordenadas {

@@ -23,4 +23,8 @@ public class Caso {
         return "";
         //return ladron.obtenerDescripcionDeCaso(objetoRobado.obtenerDescripcionDeObjeto());
     }
+
+    public ArrayList<ISospechable> buscarSospechosos(ArrayList<String> caracteristicasBuscadas) {
+        return computadora.BuscarSospechoso(caracteristicasBuscadas);
+    }
 }

@@ -2,7 +2,6 @@ package edu.fiuba.algo3.modelo.edificios;
 
 import edu.fiuba.algo3.modelo.Pistas.IPista;
 import edu.fiuba.algo3.modelo.ladron.ILadron;
-import edu.fiuba.algo3.modelo.rangos.Detective;
 
 import java.util.Map;
 

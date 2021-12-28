@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo.ladron.Caracteristicas.Cabello;
 
-import edu.fiuba.algo3.modelo.ladron.Caracteristicas.Sexo.Sexo;
 
 import java.util.ArrayList;
 import java.util.List;

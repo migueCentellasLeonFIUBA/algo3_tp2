@@ -2,7 +2,6 @@ package edu.fiuba.algo3.modelo.ciudades;
 
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.jugador.Reloj;
 
 public class SinEstrategia implements IEstado{
     @Override

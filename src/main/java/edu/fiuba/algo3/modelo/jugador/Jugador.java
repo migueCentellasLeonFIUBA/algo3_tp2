@@ -3,6 +3,8 @@ package edu.fiuba.algo3.modelo.jugador;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.ciudades.Mapa;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
+import edu.fiuba.algo3.modelo.ladron.ISospechable;
+import edu.fiuba.algo3.modelo.ladron.Sospechoso;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
 import edu.fiuba.algo3.modelo.rangos.GradoPolicia;
 import edu.fiuba.algo3.modelo.rangos.Novato;
@@ -74,5 +76,10 @@ public class Jugador {
 
     public ArrayList<Ciudad> verConexiones() {
         return mapa.posiblesDestinos();
+    }
+
+    public ArrayList<ISospechable> buscarSospechosos(ArrayList<String> caracteristicasBuscadas){
+        reloj.descontarhoras(3);
+        return caso.buscarSospechosos(caracteristicasBuscadas);
     }
 }

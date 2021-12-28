@@ -23,8 +23,6 @@ public class Computadora {
 
     private Map<String, ISospechable> sospechosos;
 
-    private ArrayList<String> caracteristicasBuscadas;
-
     public Computadora(Map<String, ISospechable> sospechosos) {
 
         this.sexo = new Sexo();
@@ -36,13 +34,12 @@ public class Computadora {
         this.ordenActual = new NoOrden();
     }
 
-    public ArrayList<Sospechoso> BuscarSospechoso(Reloj reloj) {
-        ArrayList<String> listaNombreSospechosos = (ArrayList<String>) sospechosos.keySet();
-
-        ArrayList<Sospechoso> listaSospechosos = new ArrayList<>();
+    public ArrayList<ISospechable> BuscarSospechoso(ArrayList<String> caracteristicasBuscadas) {
+        ArrayList<String> listaNombreSospechosos = new ArrayList<>(sospechosos.keySet());;
+        ArrayList<ISospechable> listaSospechosos = new ArrayList<>();
 
         for(String nombre : listaNombreSospechosos){
-            Sospechoso sospechoso = (Sospechoso) sospechosos.get(nombre);
+            ISospechable sospechoso =  sospechosos.get(nombre);
             if(sospechoso.comparar(caracteristicasBuscadas)!=null){
                 listaSospechosos.add(sospechoso);
             }
@@ -52,10 +49,9 @@ public class Computadora {
             ordenActual = new Orden(listaSospechosos.get(0));
         }
 
-        reloj.descontarhoras(3);
         return listaSospechosos;
     }
-
+/*
     private List<ArrayList<String>> datosAsignados(){
 
         List<ArrayList<String>> parametros = new ArrayList<>();
@@ -100,6 +96,8 @@ public class Computadora {
         return parametros;
     }
 
+
+ */
     public void siguienteSexo() {sexo.siguienteSexo();}
 
     public void siguienteHobby() {hobby.siguienteHobby();}
