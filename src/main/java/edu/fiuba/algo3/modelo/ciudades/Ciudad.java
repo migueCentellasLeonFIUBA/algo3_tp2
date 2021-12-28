@@ -87,4 +87,12 @@ public class Ciudad {
         Integer numeroRandom = random.obtenerIntegerRandom(edificios.size());
         edificios.get(numeroRandom).esconderLadron(ladron);
     }
+
+    public String getNombre() {
+        return nombreCiudad;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
 }

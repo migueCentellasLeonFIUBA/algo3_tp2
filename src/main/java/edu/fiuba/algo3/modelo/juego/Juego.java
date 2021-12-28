@@ -21,6 +21,7 @@ public class Juego {
     private Map<String, ISospechable> sospechosos;
     private Map<Ciudad, ArrayList<Ciudad>> conexiones;
     private Mapa mapa;
+    private Computadora computadora;
 
     private Jugador jugadorActual;
 
@@ -46,6 +47,7 @@ public class Juego {
 
     public void setSospechosos(Map<String, ISospechable> sospechosos) {
         this.sospechosos = sospechosos;
+        computadora = new Computadora(sospechosos);
     }
 
     public Jugador IdentificarJugador(String nombre) {
@@ -54,7 +56,7 @@ public class Juego {
             return jugadorActual;
         }
 
-        jugadorActual = new Jugador(nombre,0,new Reloj(),mapa);
+        jugadorActual = new Jugador(nombre,0,new Reloj(),mapa, this);
         return jugadorActual;
     }
 
@@ -69,7 +71,10 @@ public class Juego {
     public void comenzarCaso() throws Exception {
         if(jugadorActual == null) throw new Exception("Identificar un jugador antes de crear un caso");
 
-        Computadora computadora = new Computadora(sospechosos);
+        asignarOtroCaso();
+    }
+
+    public void asignarOtroCaso() {
         Ladron ladron = crearLadron(sospechosos);
         Objeto objeto = jugadorActual.ObjetoRobado(objetos);
 
@@ -78,7 +83,5 @@ public class Juego {
         objeto.aplicarEstrategia(ciudades,pistas,ladron,mapa);
 
         jugadorActual.empezarCaso(caso);
-
     }
-
 }

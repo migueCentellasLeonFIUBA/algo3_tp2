@@ -38,7 +38,9 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
 
-        ArrayList<String> listaSospechosos = jugador.buscarSospechosos();
+        //ArrayList<String> listaSospechosos = jugador.buscarSospechosos();
+        ArrayList<String> listaSospechosos = new ArrayList<>();
+
         String sospechosos = "";
         String texto = "";
         for (String sospechoso: listaSospechosos) {

@@ -49,4 +49,12 @@ public class Mapa {
     public String visitarEdificio(Edificio edificio, Jugador jugador) {
         return ciudadActual.visitarEdificio(edificio,jugador);
     }
+
+    public String ciudadActual() {
+        return ciudadActual.getNombre();
+    }
+
+    public String descripcionCiudad() {
+        return ciudadActual.getDescripcion();
+    }
 }
