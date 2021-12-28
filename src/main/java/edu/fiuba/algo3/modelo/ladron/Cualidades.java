@@ -38,4 +38,8 @@ public class Cualidades {
         }
         return "El ladrón tiene " + caracteristicaRandom;
     }
+
+    public String obtenerSexo() {
+        return caracteristicas.get(0);
+    }
 }

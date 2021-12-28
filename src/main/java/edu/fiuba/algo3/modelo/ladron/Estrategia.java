@@ -44,4 +44,7 @@ public class Estrategia {
         return this.ciudadesEstrategia.get(indice);
     }
 
+    public String getCiudadDeOrigen() {
+        return ciudadesEstrategia.get(0);
+    }
 }

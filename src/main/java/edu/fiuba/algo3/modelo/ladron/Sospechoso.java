@@ -28,4 +28,9 @@ public class Sospechoso implements ISospechable{
     public String dameUnaPista(){
         return cualidades.dameUnaPista();
     }
+
+    @Override
+    public String obtenerSexo() {
+        return cualidades.obtenerSexo();
+    }
 }

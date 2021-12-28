@@ -41,4 +41,8 @@ public class Ladron implements ISospechable,ILadron{
     public String pistaDeLadron() {
         return sospechoso.dameUnaPista();
     }
+
+    public String obtenerSexo() {
+        return sospechoso.obtenerSexo();
+    }
 }

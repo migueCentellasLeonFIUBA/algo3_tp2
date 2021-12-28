@@ -8,4 +8,6 @@ public interface ISospechable {
     public boolean arrestar();
 
     String dameUnaPista();
+
+    String obtenerSexo();
 }
