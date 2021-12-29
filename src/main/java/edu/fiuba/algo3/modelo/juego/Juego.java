@@ -71,10 +71,6 @@ public class Juego {
     public void comenzarCaso() throws Exception {
         if(jugadorActual == null) throw new Exception("Identificar un jugador antes de crear un caso");
 
-        asignarOtroCaso();
-    }
-
-    public void asignarOtroCaso() {
         Ladron ladron = crearLadron(sospechosos);
         Objeto objeto = jugadorActual.ObjetoRobado(objetos);
 

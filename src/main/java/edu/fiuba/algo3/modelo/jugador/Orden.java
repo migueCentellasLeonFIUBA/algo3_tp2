@@ -10,11 +10,13 @@ public class Orden implements IOrden {
         this.sospechoso = sospechoso;
     }
 
-    public void revisarOrden(Jugador jugador){
+    public String revisarOrden(Jugador jugador){
         if(sospechoso.arrestar()){
             jugador.ganador();
+            return " y orden correcta, ganaste la partida.";
         }else{
             jugador.perdedor();
+            return " orden creada para el Sospechoso equivocado, cuidado nos pueden demandar por hacer esto.";
         }
     }
 }

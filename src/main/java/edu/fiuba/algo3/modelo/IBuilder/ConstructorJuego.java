@@ -5,7 +5,7 @@ import edu.fiuba.algo3.modelo.juego.Juego;
 
 
 public interface ConstructorJuego {
-    void  cargarObjetos(Fachada fachada);
+    void cargarObjetos(Fachada fachada);
     void cargarCiudades(Fachada fachada);
     void cargarJugadores(Fachada fachada);
     void cargarMapa(Fachada fachada) throws Exception;

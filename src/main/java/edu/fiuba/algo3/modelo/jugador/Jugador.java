@@ -118,23 +118,20 @@ public class Jugador {
         return caso.buscarSospechosos(caracteristicasBuscadas);
     }
 
-    public void atrapar(ILadron ladron) {
+    public String atrapar(ILadron ladron) {
         if(ladron.atrapar(reloj)){
-            caso.revisarOrden(this);
+            return "Ladron atrapado " + caso.revisarOrden(this);
+        }else{
+            return "Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio.";
         }
     }
 
     public void ganador() {
-        //se suma un arresto:
         grado = grado.arresto();
 
-        //se crea un nuevo caso:
-        juego.asignarOtroCaso();
     }
 
     public void perdedor() {
-        //se crea un nuevo caso:
-        juego.asignarOtroCaso();
     }
 
     public Boolean terminarJuego() {
