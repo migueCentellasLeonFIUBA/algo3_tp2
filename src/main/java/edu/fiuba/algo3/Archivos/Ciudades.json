@@ -5,7 +5,7 @@
     "descripcion": "Montreal es la mayor ciudad de la provincia de Quebec, en Canadá y la segunda más poblada del país después de Toronto. Es también una región administrativa de Quebec. Se sitúa en la isla del mismo nombre entre el río San Lorenzo y la Rivière des Prairies. Es uno de los principales centros industriales, comerciales y culturales de Norteamérica. El clima de Montreal es continental húmedo, con cuatro estaciones bien definidas y variadas. En invierno, la temperatura media de la ciudad es de -8,2 °C y en verano, de 21 °C.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
-  "Mexico":{
+  "Ciudad de Mexico":{
     "latitud": "23.634501",
     "longitud": "-102.552784",
     "descripcion": "En el territorio de Ciudad De Mexico se encuentra tres bienes culturales de los treinta y cinco sitios Patrimonio de la Humanidad con los que cuenta el país: el Centro Histórico, Xochimilco, el Campus Central de la Ciudad Universitaria de la UNAM y la Casa y estudio de Luis Barragán. Cuenta con ciento cincuenta y un museos que la pone como la segunda ciudad con más museos en el mundo, detrás de Londres. Además, fue la primera ciudad de Latinoamérica en albergar unas olimpiadas al ser sede de los Juegos Olímpicos de 1968.",
@@ -32,7 +32,7 @@
   "Port Moresby":{
     "latitud": "-9.47979",
     "longitud": "147.19",
-    "descripcion": "Pekín, también conocida como Pequín o Beijing, literalmente capital del Norte, es uno de los cuatro municipios que, junto con las veintidós provincias, cinco regiones autónomas y dos regiones administrativas especiales, conforman la República Popular China. Además, Pekín es la capital del país y una de las ciudades más pobladas del mundo con 21.710.000 habitantes en 2013. Los centros turisticos más visitados son la ampliación de Badaling de la Gran Muralla China, el Palacio de Verano, la Ciudad Prohibida.",
+    "descripcion": "Es la capital de Papúa Nueva Guinea, y su mayor aglomeración de población contando su área metropolitana que se extiende por todo el Distrito Capital Nacional. La ciudad está situada en las costas del golfo de Papúa, en la costa sureste de la isla de Nueva Guinea. La ciudad es a su vez la capital de la provincia Central, de la que está rodeada en la región de Papúa, aunque realmente no pertenece a esta ya que por sí sola forma el Distrito Capital Nacional.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Sydney":{
@@ -48,111 +48,111 @@
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "El Cairo":{
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "30.0446",
+    "longitud": "31.2456",
+    "descripcion":"Es la capital de Egipto y de su gobernación (muhafazah o provincia). Es la mayor ciudad del mundo árabe, de Oriente Próximo y de África, pronunciado en árabe culto Mişr y dialecto egipcio Maşr. Su área metropolitana incluye una población aproximada de unos 16 millones de habitantes, convirtiendo a El Cairo en la undécima urbe más poblada del mundo. Es, también, el área metropolitana más poblada de todo el continente africano.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Oslo": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "59.91273",
+    "longitud": "10.74609",
+    "descripcion":"Llamada Christiania de 1624 a 1897 y Kristiania de 1897 a 1925 (Cristianía en español), es la capital y la ciudad más poblada de Noruega, además de ser su centro político, económico y cultural. Políticamente constituye un municipio y a la vez una de las diecinueve provincias del país. Según el censo del 21 de noviembre de 2018, su población era de 673 469 habitantes. Es la tercera ciudad y área urbana escandinava más poblada, solo superada por Copenhague y Estocolmo.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Nueva York": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "40.71427",
+    "longitud": "-74.00597",
+    "descripcion":"Oficialmente New York City o NYC en siglas) es la ciudad más poblada de los Estados Unidos y una de las más pobladas del mundo. Desde finales del siglo XIX es uno de los centros de la economía mundial. Nueva York está considerada como una ciudad global, por sus influencias a nivel mundial en los medios de comunicación, en la política, en la educación, en la arquitectura, en el entretenimiento, las artes y la moda. La influencia artística y cultural de la ciudad es de las más fuertes del mundo. ",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Lima": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "-12.04318",
+    "longitud": "-77.02824",
+    "descripcion":"Lima es la capital y una megalópolis de la República del Perú. Se encuentra situada en la costa central del país, a orillas del océano Pacífico, conformando una extensa y poblada área urbana conocida como Lima Metropolitana de 70 km norte a sur, desde el distrito de Ancón hasta el distrito de Pucusana, y 44 km este a oeste, desde el distrito de La Punta hasta Chosica (distrito de Lurigancho-Chosica), flanqueada por el desierto costero y extendida sobre los valles de los ríos Chillón, Rímac y Lurín. ",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Rio De Janeiro": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "-22.90642",
+    "longitud": "-43.18223",
+    "descripcion":"Fundada como 'São Sebastião do Rio de Janeiro', es una ciudad, municipio brasileño y capital del estado homónimo, ubicada en el sureste del país. Es la segunda ciudad más poblada de Brasil después de São Paulo. Fue la capital del Imperio portugués entre 1808 y 1822 y, más tarde, la capital de Brasil desde 1822, cuando la nación declaró su independencia del país luso. Conservó ese rango hasta la inauguración de Brasilia, en 1960.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Atenas": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "37.98376",
+    "longitud": "23.72784",
+    "descripcion":"Es la capital de Grecia y actualmente la ciudad más grande, importante y poblada del país. La población del municipio de Atenas era de 664 046 (en 2011), pero su área metropolitana es mucho mayor y comprende una población de 3,8 millones (en 2011). Es el centro principal de la vida económica, cultural y política griega.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Colombo": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "6.93548",
+    "longitud": "79.84868",
+    "descripcion":"Es la ciudad más poblada de Sri Lanka y su capital comercial. Está situada en la costa occidental de la isla en proximidades de Sri Jayawardenepura Kotte, la capital administrativa de Sri Lanka. Colombo es una ciudad vibrante plena de vida con una mezcla de arquitectura moderna, edificios coloniales y ruinas2 y una población de más de 600.000 habitantes.El nombre \"Colombo\", le fue dado por los colonizadores portugueses en 1505, y se cree que deriva de la palabra cingalesa Kolon thota, \"Puerto sobre el río Kelani\".",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Katmandu": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "27.7033",
+    "longitud": "85.3181 ",
+    "descripcion":"Es la capital y mayor ciudad de Nepal. Tiene una población de 1 003 285 habitantes, según censo de 2013. Situada en el valle del mismo nombre en Nepal central, en las cercanías del río Vishnumati, a una altura de 1317 m. La ciudad antigua se caracteriza por la gran cantidad de templos y palacios budistas e hinduistas, la mayoría de ellos del siglo XVII. En el valle de Katmandú se encuentran siete sitios clasificados por la Unesco como Patrimonio de la Humanidad.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Bamako": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "12.65",
+    "longitud": "-8",
+    "descripcion":"Es la capital de Malí, se encuentra a orillas del río Níger en el sudoeste del país. Principal centro administrativo, importante puerto fluvial y un centro comercial para toda la región circundante, tiene la categoría de distrito a nivel nacional y está a su vez dividida en seis comunas dirigidas por sus respectivos alcaldes electos. El alcalde del distrito de Bamako es Adama Sangaré.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Moscu": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "55.75222",
+    "longitud": "37.61556",
+    "descripcion":"Es la capital y la entidad federal más poblada de Rusia. La ciudad es un importante centro político, económico, cultural y científico de Rusia y del continente. Moscú es la megaciudad más septentrional de la Tierra y la ciudad más poblada de Europa. Su población es de 12 108 257 habitantes. En virtud de su expansión territorial al suroeste del óblast de Moscú, el 1 de julio de 2012 la capital aumentó su área en 2,5 veces, desde unos 1000 km² hasta 2500 km², y ganó una población adicional de 230 000 habitantes.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Singapur": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "1.28333",
+    "longitud": "103.85",
+    "descripcion":"Es un país soberano insular de Asia, formado por sesenta y tres islas, cuya forma de gobierno es la república parlamentaria. Su territorio se divide en cinco consejos de desarrollo comunitario. Singapur es una ciudad-Estado, por lo que su capital se considera la ciudad de Singapur. Está situado al sur del estado de Johor (península de Malasia) y al norte de las islas Riau (Indonesia), separado de estas por el estrecho de Singapur.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
-  "Roma": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+  "Roma" : {
+    "latitud": "41.89193",
+    "longitud": "12.51133",
+    "descripcion":"Capital de la región del Lacio y de Italia. Es el municipio más poblado de Italia y la tercera ciudad más poblada de la Unión Europea. Por antonomasia, se la conoce desde la Antigüedad como la Urbe (Urbs). También es llamada \"La Ciudad Eterna\" (en italiano: Città Eterna).En el transcurso de su historia, que abarca tres milenios, llegó a extender sus dominios sobre toda la cuenca del Mediterráneo y gran parte de Europa, Oriente Próximo y África del Norte.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
-  "Kigali": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+  "Kigali" : {
+    "latitud": "-1.94995",
+    "longitud": "30.05885",
+    "descripcion":"Kigali es la capital de Ruanda, también su ciudad más poblada. Se encuentra situada en el centro geográfico del país, perteneciente a la provincia homónima. Fundada en 1907 durante el dominio alemán, la ciudad se convirtió en la capital del país tras la independencia en 1962.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Budapest": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "47.49835",
+    "longitud": "19.04045",
+    "descripcion":"Es la capital y ciudad más poblada de Hungría, así como su principal centro industrial, comercial y de transportes. Posee 1,75 millones de habitantes (2016) una disminución significativa respecto de los casi 2,1 millones con que contaba a mediados de los años 1980, que representan un quinto de la población total de Hungría. ",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "San Marino": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "43.94236",
+    "longitud": "12.457777",
+    "descripcion":"San Marino, oficialmente la Serenísima República de San Marino (en italiano: Serenissima Repubblica di San Marino), es una república parlamentaria y el Estado soberano más antiguo del mundo [cita requerida]. Es un enclavenota rodeado de territorio italiano, entre las regiones de Emilia-Romaña y las Marcas. La mayor parte de su territorio corresponde a las laderas del monte Titano, de 739 metros, y se encuentra a 10 kilómetros del mar Adriático, por lo que, dada su ubicación, el país no tiene salida al mar.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Paris": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "48.85341",
+    "longitud": "2.3488",
+    "descripcion":"Paris, es la capital de Francia y su ciudad más poblada. Capital de la región de Isla de Francia (o \"Región Parisina\"), constituye el único departamento unicomunal del país.La ciudad de París, dentro de sus estrechos límites administrativos, tiene una población de 2 273 305 habitantes en 2015.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Nueva Dehli": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "28.61",
+    "longitud": "77.23",
+    "descripcion":"Es la capital de la República de la India y sede del poder ejecutivo, legislativo y judicial de su Gobierno. Está situada en la metrópolis de Delhi y es uno de sus nueve distritos. La ciudad fue fundada el 15 de diciembre de 1911, por el emperador Jorge V, durante el Durbar de Delhi de ese año, cuando se colocó la piedra fundamental y se anunció el traslado de la capital del Raj desde Calcuta.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Bangkok": {
-    "latitud": "41.0122",
-    "longitud": "28.976",
-    "descripcion":"Estambul, antiguamente conocida como Bizancio y Constantinopla, es la ciudad más poblada de Turquía y el centro histórico, cultural y económico mas grande del país. Es una ciudad transcontinental, ubicada en el estrecho del Bósforo, que separa Europa y Asia, entre el mar de Mármara y el mar Negro. Con más de 15 millones de habitantes, es una de las ciudades más pobladas del mundo y la más poblada de Europa. La mayor parte de la población es de religión musulmana, existen minorías de cristianos y judíos.",
+    "latitud": "13.75398",
+    "longitud": "100.50144",
+    "descripcion":"Es la capital y ciudad principal de Tailandia. Aunque el nombre oficial de la capital no es Bangkok, es comúnmente empleado internacionalmente para referirse a la ciudad. Bangkok significa «aldea de la ciruela silvestre» y es el nombre de una parte del lado del río Thon Buri. Así pues, Bangkok es conocida como Krung Thep Mahanakhon. Fue un pequeño puesto de comercio en la desembocadura del río Chao Phraya durante el reino de Ayutthaya. ",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   }
 }

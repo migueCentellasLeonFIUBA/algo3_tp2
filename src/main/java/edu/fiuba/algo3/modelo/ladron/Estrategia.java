@@ -25,25 +25,19 @@ public class Estrategia {
 
         mapa.setearCiudadActual(ciudades.get(ciudadesEstrategia.get(0)));
         for(String ciudadEstrategia: this.ciudadesEstrategia){
+            Map<String, IPista> pistasEdificios;
             Ciudad ciudadActual = ciudades.get(ciudadEstrategia);
-            String siguienteCiudad=siguienteCiudad();
-            Map<String, IPista> pistasEdificios = pistas.get(siguienteCiudad);
-
-            if (indice+1==ciudadesEstrategia.size()){
+            indice+=1;
+            if (indice==ciudadesEstrategia.size()){
                 ciudadActual.cambiarDeEstado(new ConLadron());
                 ciudadActual.aplicarLadron(ladron);
-            }else{
+            }else if(indice < ciudadesEstrategia.size()){
+                String siguienteCiudad = this.ciudadesEstrategia.get(indice);
+                pistasEdificios = pistas.get(siguienteCiudad);
                 ciudadActual.cambiarDeEstado(new ConEstrategia());
                 ciudadActual.cambiarPistas(pistasEdificios,ladron);
             }
         }
-    }
-
-    private String siguienteCiudad(){
-        if (indice+1<this.ciudadesEstrategia.size()){
-            indice+=1;
-        }
-        return this.ciudadesEstrategia.get(indice);
     }
 
     public String getCiudadDeOrigen() {

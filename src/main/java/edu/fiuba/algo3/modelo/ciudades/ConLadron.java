@@ -11,12 +11,10 @@ public class ConLadron implements IEstado{
 
     @Override
     public String visitarEdificio(Edificio edificio, Jugador jugador) {
-        edificio.atraparLadron(jugador);
-        return "";
+
+        return edificio.atraparLadron(jugador);
     }
 
     @Override
-    public void agregarConexion(Mapa mapa, Ciudad ciudadAnterior) {
-
-    }
+    public void agregarConexion(Mapa mapa, Ciudad ciudadAnterior) {}
 }

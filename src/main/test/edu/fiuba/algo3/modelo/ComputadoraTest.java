@@ -9,10 +9,11 @@ import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.jugador.NoOrden;
 import edu.fiuba.algo3.modelo.jugador.Orden;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ComputadoraTest {
 
@@ -29,7 +30,7 @@ public class ComputadoraTest {
 
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
-        Assert.assertEquals(0, listaSospechosos.size());
+        assertEquals(0, listaSospechosos.size());
     }
 
     @Test
@@ -62,7 +63,7 @@ public class ComputadoraTest {
         caracterisitcasABuscar.add("Deportivo");
 
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
-        Assert.assertEquals(1, listaSospechosos.size());
+        assertEquals(1, listaSospechosos.size());
 
     }
 
@@ -85,7 +86,7 @@ public class ComputadoraTest {
         caracterisitcasABuscar.add("Femenino");
 
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
-        Assert.assertEquals(2, listaSospechosos.size());
+        assertEquals(2, listaSospechosos.size());
     }
 
     @Test
@@ -104,7 +105,7 @@ public class ComputadoraTest {
         caracterisitcasABuscar.add("Masculino");
 
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
-        Assert.assertEquals(0, listaSospechosos.size());
+        assertEquals(0, listaSospechosos.size());
     }
 
 }

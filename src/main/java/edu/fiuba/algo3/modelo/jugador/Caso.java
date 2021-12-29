@@ -56,8 +56,8 @@ public class Caso {
         return sospechosos;
     }
 
-    public void revisarOrden(Jugador jugador) {
-        orden.revisarOrden(jugador);
+    public String revisarOrden(Jugador jugador) {
+        return orden.revisarOrden(jugador);
 
     }
 }

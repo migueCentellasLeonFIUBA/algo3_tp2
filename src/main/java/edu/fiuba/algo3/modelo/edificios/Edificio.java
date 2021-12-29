@@ -43,8 +43,8 @@ public abstract class Edificio {
         return pista.obtenerPistaMedia();
     }
 
-    public void atraparLadron(Jugador jugador) {
-        jugador.atrapar(ladron);
+    public String atraparLadron(Jugador jugador) {
+        return jugador.atrapar(ladron);
     }
 
     public void esconderLadron(Ladron ladron) {
