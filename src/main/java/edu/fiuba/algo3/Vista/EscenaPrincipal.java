@@ -139,7 +139,7 @@ public class EscenaPrincipal extends HBox {
         edificio.setOnMouseEntered(mouseHoverEventHandlerEdificio);
         edificio.setOnMouseExited(mouseHoverExitEventHandlerEdificio);
 
-        BotonInvestigarEventHandler botonInvestigarEventHandler = new BotonInvestigarEventHandler(jugador, stage, rightSide);
+        BotonInvestigarEventHandler botonInvestigarEventHandler = new BotonInvestigarEventHandler(jugador, stage, rightSide, leftSide);
         edificio.setOnAction(botonInvestigarEventHandler);
 
         FileInputStream inputAeropuerto = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenAeropuerto.jpg");

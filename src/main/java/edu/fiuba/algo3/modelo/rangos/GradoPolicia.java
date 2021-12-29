@@ -14,6 +14,10 @@ public abstract class GradoPolicia {
     public abstract GradoPolicia arresto();
 
     public Integer calcularHoras(double distancia){
+        if(distancia < 1){
+            return 1;
+        }
+
         return (int) (distancia/velocidad);
     }
 

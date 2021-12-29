@@ -45,6 +45,9 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
 
         String sospechosos = "";
         String texto = "";
+
+
+
         for (ISospechable sospechoso: listaSospechosos) {
             sospechosos = sospechosos + sospechoso.getNombre() + ", ";
         }
@@ -52,6 +55,12 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
         if(sospechosos.length() != 0){
             texto = sospechosos.substring(0, sospechosos.length() - 2);
         }
+
+        if(sospechosos.length() == 0){
+            texto = "No hay coincidencias";
+        }
+
+        texto = texto + "\n\n" + jugador.orden();
 
 
         Text text = new Text(texto);

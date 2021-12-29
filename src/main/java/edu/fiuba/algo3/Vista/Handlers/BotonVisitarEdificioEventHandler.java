@@ -21,13 +21,13 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
 
     Edificio edificio;
     Jugador jugador;
-    VBox rightSide;
+    VBox leftSide;
     Text pista;
 
-    public BotonVisitarEdificioEventHandler(Edificio edificio, Jugador jugador, VBox rightSide, Text pista){
+    public BotonVisitarEdificioEventHandler(Edificio edificio, Jugador jugador, VBox leftSide, Text pista){
         this.edificio = edificio;
         this.jugador = jugador;
-        this.rightSide = rightSide;
+        this.leftSide = leftSide;
         this.pista = pista;
     }
 
@@ -45,6 +45,13 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
 
         pista.setTranslateY(-400);
         pista.setTranslateX(20);*/
+        Label tiempoRestante = new Label(jugador.diaYHora());
+        tiempoRestante.setTranslateX(115);
+        tiempoRestante.setTranslateY(-505);
+        tiempoRestante.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 20));
+
+        leftSide.getChildren().remove(3);
+        leftSide.getChildren().add(3, tiempoRestante);
 
 
     }

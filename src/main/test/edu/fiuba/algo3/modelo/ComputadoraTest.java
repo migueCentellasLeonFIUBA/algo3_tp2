@@ -29,7 +29,7 @@ public class ComputadoraTest {
 
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
-        Assert.assertEquals(0, listaSospechosos.size());
+        Assert.assertEquals(2, listaSospechosos.size());
     }
 
     @Test
@@ -106,6 +106,31 @@ public class ComputadoraTest {
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
         Assert.assertEquals(0, listaSospechosos.size());
     }
+
+    @Test
+    public void TestComputadoraConAlgunosParametrosFiltraAlgunosSosepchosos() throws Exception{
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+        Jugador jugador = juego.IdentificarJugador("Lucio");
+        juego.comenzarCaso();
+        ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
+
+        jugador.siguienteSexo();
+
+        jugador.siguienteCabello();
+        jugador.siguienteCabello();
+
+
+        ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos();
+        Assert.assertEquals(1, listaSospechosos.size());
+    }
+
+
+
 
 }
 

@@ -22,10 +22,12 @@ public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
     VBox rightSide;
     Jugador jugador;
     Stage stage;
-    public BotonInvestigarEventHandler(Jugador jugador, Stage stage, VBox rightSide){
+    VBox leftSide;
+    public BotonInvestigarEventHandler(Jugador jugador, Stage stage, VBox rightSide, VBox leftSide){
         this.rightSide = rightSide;
         this.jugador = jugador;
         this.stage = stage;
+        this.leftSide = leftSide;
     }
 
     public void handle(ActionEvent actionEvent){
@@ -51,7 +53,7 @@ public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
 
     private LayoutInvestigar crearLayoutInvestigar(){
 
-        LayoutInvestigar layoutInvestigar = new LayoutInvestigar(jugador, rightSide, stage);
+        LayoutInvestigar layoutInvestigar = new LayoutInvestigar(jugador, rightSide, stage, leftSide);
 
         return layoutInvestigar;
     }

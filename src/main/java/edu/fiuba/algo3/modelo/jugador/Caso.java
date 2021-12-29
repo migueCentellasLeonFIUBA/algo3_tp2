@@ -22,7 +22,11 @@ public class Caso {
     }
 
     public ArrayList<ISospechable> buscarSospechosos(){
-        return computadora.buscarSospechoso();
+        ArrayList<ISospechable> sospechosos = computadora.buscarSospechoso();
+        if (sospechosos.size()==1){
+            orden = new Orden(sospechosos.get(0));
+        }
+        return sospechosos;
     }
 
     public String obtnerDescripcion(){
@@ -60,4 +64,49 @@ public class Caso {
         orden.revisarOrden(jugador);
 
     }
+
+    public void siguienteSexo(){
+        computadora.siguienteSexo();
+    }
+
+    public void siguienteCabello(){
+        computadora.siguienteCabello();
+    }
+
+    public void siguienteSenia(){
+        computadora.siguienteSenia();
+    }
+
+    public void siguienteVehiculo(){
+        computadora.siguienteVehiculo();
+    }
+
+    public void siguienteHobby(){
+        computadora.siguienteHobby();
+    }
+
+    public String getSexoComputadora(){
+        return computadora.getSexo();
+    }
+
+    public String getCabelloComputadora(){
+        return computadora.getCabello();
+    }
+
+    public String getSeniaComputadora(){
+        return computadora.getSenia();
+    }
+
+    public String getVehiculoComputadora(){
+        return computadora.getVehiculo();
+    }
+
+    public String getHobbyComputadora(){
+        return computadora.getHobby();
+    }
+
+    public String orden(){
+        return orden.nombre();
+    }
+
 }

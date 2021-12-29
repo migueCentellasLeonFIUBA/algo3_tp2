@@ -32,8 +32,11 @@ public class Cualidades {
         boolean esSospechoso = true;
 
         for(String caracteristica : caracteristicasABuscar) {
-            if (caracteristica != "Sin Asignar") {
-                esSospechoso = !(caracteristicas.contains(caracteristica));
+            if (!caracteristica.equals("Sin Asignar")) {
+                //esSospechoso = !(caracteristicas.contains(caracteristica));
+                if(!(caracteristicas.contains(caracteristica))){
+                    return false;
+                }
             }
         }
 

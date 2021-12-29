@@ -25,11 +25,13 @@ import java.util.ArrayList;
 public class LayoutInvestigar extends Pane{
     Jugador jugador;
     Stage stage;
+    VBox leftSide;
 
-    public LayoutInvestigar(Jugador jugador, VBox rightSide, Stage stage){
+    public LayoutInvestigar(Jugador jugador, VBox rightSide, Stage stage, VBox leftSide){
 
         this.jugador = jugador;
         this.stage = stage;
+        this.leftSide = leftSide;
 
         Text pista = new Text("");
         pista.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
@@ -112,7 +114,7 @@ public class LayoutInvestigar extends Pane{
 
         Button aeropuerto = new Button(edificios.get(0).getNombre());
 
-        BotonVisitarEdificioEventHandler botonAeropuertoHandler = new BotonVisitarEdificioEventHandler(edificios.get(0), jugador, rightSide, pista);
+        BotonVisitarEdificioEventHandler botonAeropuertoHandler = new BotonVisitarEdificioEventHandler(edificios.get(0), jugador, leftSide, pista);
         aeropuerto.setOnAction(botonAeropuertoHandler);
 
         aeropuerto.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
@@ -133,7 +135,7 @@ public class LayoutInvestigar extends Pane{
 
         Button banco = new Button(edificios.get(1).getNombre());
 
-        BotonVisitarEdificioEventHandler botonBancoHandler = new BotonVisitarEdificioEventHandler(edificios.get(1), jugador, rightSide, pista);
+        BotonVisitarEdificioEventHandler botonBancoHandler = new BotonVisitarEdificioEventHandler(edificios.get(1), jugador, leftSide, pista);
         banco.setOnAction(botonBancoHandler);
         banco.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         banco.setBackground(grisClaro);
@@ -149,7 +151,7 @@ public class LayoutInvestigar extends Pane{
         banco.setOnMouseExited(mouseHoverExitEventHandlerBanco);
 
         Button biblioteca = new Button(edificios.get(2).getNombre());
-        BotonVisitarEdificioEventHandler botonBibliotecaHandler = new BotonVisitarEdificioEventHandler(edificios.get(2), jugador, rightSide, pista);
+        BotonVisitarEdificioEventHandler botonBibliotecaHandler = new BotonVisitarEdificioEventHandler(edificios.get(2), jugador, leftSide, pista);
         biblioteca.setOnAction(botonBibliotecaHandler);
         biblioteca.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));
         biblioteca.setBackground(grisClaro);

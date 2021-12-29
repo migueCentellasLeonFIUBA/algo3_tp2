@@ -28,11 +28,11 @@ public class Jugador {
     private Juego juego;
 
     //caracteristicas computadora
-    private Cabello cabello;
+/*    private Cabello cabello;
     private Hobby hobby;
     private Senia senia;
     private Sexo sexo;
-    private Vehiculo vehiculo;
+    private Vehiculo vehiculo;*/
 
     public Jugador(String nombre,Integer arrestos,Reloj reloj,Mapa mapa, Juego juego){
         this.nombre=nombre;
@@ -41,12 +41,12 @@ public class Jugador {
         this.reloj = reloj;
         this.mapa=mapa;
         this.juego = juego;
-
+/*
         this.cabello = new Cabello();
         this.hobby = new Hobby();
         this.senia = new Senia();
         this.sexo = new Sexo();
-        this.vehiculo = new Vehiculo();
+        this.vehiculo = new Vehiculo();*/
     }
 
     public void viajarACiudad(Ciudad destino){
@@ -171,46 +171,50 @@ public class Jugador {
 
     //"computadora interfaz"
     public void siguienteCabello() {
-        cabello.siguienteCabello();
+        caso.siguienteCabello();
     }
 
     public String getCabelloComputadora() {
-        return cabello.getCaracteristica();
+        return caso.getCabelloComputadora();
     }
 
     public void siguienteHobby() {
-        hobby.siguienteHobby();
+        caso.siguienteHobby();
     }
 
     public String getHobbyComputadora() {
-        return hobby.getCaracteristica();
+        return caso.getHobbyComputadora();
     }
 
     public void siguienteSenia() {
-        senia.siguienteSenia();
+        caso.siguienteSenia();
     }
 
     public String getSeniaComputadora() {
-        return senia.getCaracteristica();
+        return caso.getSeniaComputadora();
     }
 
     public void siguienteSexo() {
-        sexo.siguienteSexo();
+        caso.siguienteSexo();
     }
 
     public String getSexoComputadora() {
-        return sexo.getCaracteristica();
+        return caso.getSexoComputadora();
     }
 
     public void siguienteVehiculo() {
-        vehiculo.siguienteVehiculo();
+        caso.siguienteVehiculo();
     }
 
     public String getVehiculoComputadora() {
-        return vehiculo.getCaracteristica();
+        return caso.getVehiculoComputadora();
     }
 
     public String rango() {
         return grado.rango();
+    }
+
+    public String orden(){
+        return caso.orden();
     }
 }

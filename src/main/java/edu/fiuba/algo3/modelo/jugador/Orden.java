@@ -17,4 +17,8 @@ public class Orden implements IOrden {
             jugador.perdedor();
         }
     }
+
+    public String nombre(){
+        return "Orden emitida para " + sospechoso.getNombre();
+    }
 }
