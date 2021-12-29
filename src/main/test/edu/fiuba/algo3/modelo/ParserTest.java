@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.ManejoArchivos.Parser;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -13,11 +12,12 @@ public class ParserTest {
     @Test
     public void Test01ParseaUnTextoYConsigueSusValores(){
         Parser parser = new Parser();
+
         parser.parsear("src/main/java/edu/fiuba/algo3/Archivos/Ciudades.json");
         parser.filtrar("Montreal");
         List<String> listaDeEdificios = parser.pedirArregloFiltrado("Edificios");
-        Assert.assertEquals(listaDeEdificios.size(),3);
-        Assert.assertEquals(parser.pedirValor("descripcion"),"Ciudad de montreal");
+        assertEquals(listaDeEdificios.size(),3);
 
+        assert(parser.pedirValor("descripcion").contains("Montreal"));
     }
 }

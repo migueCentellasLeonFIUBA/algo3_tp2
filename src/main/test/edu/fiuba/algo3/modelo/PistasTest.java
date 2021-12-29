@@ -8,10 +8,11 @@ import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.edificios.Edificio;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PistasTest {
 
@@ -29,7 +30,7 @@ public class PistasTest {
             Edificio edificio = edificios.get(0);
             String pista = jugador.visitarEdificio(edificio);
 
-            Assert.assertEquals("","");
+            assertEquals("","");
 
         }
 
@@ -49,7 +50,7 @@ public class PistasTest {
         ArrayList<Edificio> edificios = jugador.verEdificios();
         Edificio edificio = edificios.get(0);
         String pista = jugador.visitarEdificio(edificio);
-        Assert.assertEquals("","");
+        assertEquals("","");
 
     }
 
@@ -67,8 +68,7 @@ public class PistasTest {
         Edificio edificio = edificios.get(0);
         String pista = jugador.visitarEdificio(edificio);
 
-        Assert.assertEquals("","");
-
+        assertEquals("","");
     }
 
-    }
+}

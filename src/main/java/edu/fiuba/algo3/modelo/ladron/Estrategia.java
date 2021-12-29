@@ -31,7 +31,7 @@ public class Estrategia {
             if (indice==ciudadesEstrategia.size()){
                 ciudadActual.cambiarDeEstado(new ConLadron());
                 ciudadActual.aplicarLadron(ladron);
-            }else{
+            }else if(indice < ciudadesEstrategia.size()){
                 String siguienteCiudad = this.ciudadesEstrategia.get(indice);
                 pistasEdificios = pistas.get(siguienteCiudad);
                 ciudadActual.cambiarDeEstado(new ConEstrategia());
