@@ -46,16 +46,6 @@ public class ComputadoraTest {
         juego.comenzarCaso();
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
 
-         /*
-         "Merey Laroc":{
-            "Sexo": "Femenino",
-            "Hobby" : "Tenis",
-            "Cabello" : "Rojo",
-            "Senia" : "Tatuaje",
-            "Vehiculo" : "Deportivo"
-          },
-         */
-
         caracterisitcasABuscar.add("Femenino");
         caracterisitcasABuscar.add("Tenis");
         caracterisitcasABuscar.add("Rojo");

@@ -69,6 +69,7 @@ public class Juego {
     }
 
     public void comenzarCaso() throws Exception {
+
         if(jugadorActual == null) throw new Exception("Identificar un jugador antes de crear un caso");
 
         Ladron ladron = crearLadron(sospechosos);

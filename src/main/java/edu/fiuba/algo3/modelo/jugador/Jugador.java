@@ -138,7 +138,7 @@ public class Jugador {
         return reloj.tiempoTerminado();
     }
 
-    //intrefaz
+    //Metodos para la intrefaz
     public String getDescripcionCaso() {
         return caso.obtnerDescripcion();
     }

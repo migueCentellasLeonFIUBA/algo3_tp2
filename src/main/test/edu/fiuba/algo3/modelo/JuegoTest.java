@@ -17,7 +17,6 @@ import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -41,6 +40,7 @@ public class JuegoTest{
         Juego juego = director.obtenerJuego();
         Jugador jugador = juego.IdentificarJugador("rafael");
         juego.comenzarCaso();
+
 //----------------------------------------------------Ciudad1 - Pekin----------------------------------------------
         ArrayList<Edificio> edificios = jugador.verEdificios();
         Edificio edificio1 = edificios.get(0);
@@ -60,6 +60,7 @@ public class JuegoTest{
         Ciudad ciudad =  ciudades.get(1);//Seleccionar ciudad.
 
         jugador.viajarACiudad(ciudad);
+
 //---------------------------------------------------Ciudad2 - Atenas -----------------------------------------------
         assertEquals("Atenas",ciudad.getNombre());
         edificios = jugador.verEdificios();
@@ -128,7 +129,9 @@ public class JuegoTest{
     }
 
     @Test
-    public void PerderJuego() throws Exception {
+    public void elJugadorSeQuedaSinHorasEntoncesPierdeElJuego() throws Exception {
+
+//***********************Version de Integracion / Lo que se ejecutaria en la interfaz******************
 
         Parser parser = new Parser();
         Fachada fachada = new Fachada(parser);
@@ -139,7 +142,7 @@ public class JuegoTest{
         Jugador jugador = juego.IdentificarJugador("Lucio");
         juego.comenzarCaso();
 
-        ArrayList<Ciudad> destinos = new ArrayList<>();
+        ArrayList<Ciudad> destinos;
 
         //viajo hasta quedarme sin horas
         for (int i = 0; i < 68; i++) {
@@ -274,10 +277,19 @@ public class JuegoTest{
         conjuntoDeAcciones.add(accion2);
         conjuntoDeAcciones.add(accion3);
 
-        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
-        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
-        Assert.assertTrue(conjuntoDeAcciones.contains("Ladron atrapado  orden creada para el Sospechoso equivocado, cuidado nos pueden demandar por hacer esto."));
+        int correctos = 0;
 
+        for (String accion : conjuntoDeAcciones){
+            if(accion.contains("Estan ocurriendo cosas muy turbias")) //hay dos edificios en donde no esta el ladron
+                correctos +=1;
+        }
+
+        for (String accion : conjuntoDeAcciones){
+            if(accion.contains("Ladron atrapado")) //el ladron aparece en un edificio y es capturado.
+                correctos +=1;
+        }
+
+        assertEquals(3, correctos);
     }
 
     @Test
@@ -398,75 +410,97 @@ public class JuegoTest{
         conjuntoDeAcciones.add(accion2);
         conjuntoDeAcciones.add(accion3);
 
-        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
-        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
-        Assert.assertTrue(conjuntoDeAcciones.contains("Ladron atrapado  y orden correcta, ganaste la partida."));
+
+        int correctos = 0;
+
+        for (String accion : conjuntoDeAcciones){
+            if(accion.contains("Estan ocurriendo cosas muy turbias")) //hay dos edificios en donde no esta el ladron
+                correctos +=1;
+        }
+
+        for (String accion : conjuntoDeAcciones){
+            if(accion.contains("Ladron atrapado")) //el ladron aparece en un edificio y es capturado.
+                correctos +=1;
+        }
+
+        assertEquals(3, correctos);
 
     }
 
     @Test
-    public void elJugadorPierdeLasHorasViajando(){
+    public void elJugadorPierdeLasHorasViajandoYPierdeElJuego(){
 
         Juego juego = new Juego();
 
         //carga de objetos necesarios para un juego:
         ArrayList<String> listaCiudades = new ArrayList<>();
 
+        //cada ciudad tiene una descripcion.
         String descripcion = "En el territorio de Ciudad De Mexico se encuentra tres bienes culturales de los " +
                 "treinta y cinco sitios Patrimonio de la Humanidad con los que cuenta el país: el Centro Histórico, Xochimilco, " +
                 "el Campus Central de la Ciudad Universitaria de la UNAM y la Casa y estudio de Luis Barragán. Cuenta con ciento cincuenta " +
                 "y un museos que la pone como la segunda ciudad con más museos en el mundo, detrás de Londres. Además, fue la primera " +
                 "ciudad de Latinoamérica en albergar unas olimpiadas al ser sede de los Juegos Olímpicos de 1968.";
 
-        //"Ciudad de Mexico": ["Rio De Janeiro","Atenas", "Buenos Aires"],
+        //cada ciudad tiene una coordenada
         Coordenadas coordenadas1 = new Coordenadas(23.634501, -102.552784);
-        Coordenadas coordenadas11 = new Coordenadas(-22.90642, -43.18223);
+        //Coordenadas coordenadas11 = new Coordenadas(-22.90642, -43.18223);
         Coordenadas coordenadas12 = new Coordenadas(37.98376, 23.72784);
         Coordenadas coordenadas13 = new Coordenadas(-34.6083, -58.3712);
 
-        //"Pekin" :["Sydney", "Atenas","Bamako"],
+
         Coordenadas coordenadas2 = new Coordenadas(39.9035, 116.388);
-        Coordenadas coordenadas21 = new Coordenadas(-33.8667, 151.2);
+        //Coordenadas coordenadas21 = new Coordenadas(-33.8667, 151.2);
         Coordenadas coordenadas22 = new Coordenadas(37.98376, 23.72784);
         Coordenadas coordenadas23 = new Coordenadas(12.65, -8);
 
-        //"Atenas" : ["Colombo", "Oslo", "Lima"],
+
         Coordenadas coordenadas3 = new Coordenadas(37.98376, 23.72784);
-        Coordenadas coordenadas31 = new Coordenadas(6.93548, 79.84868);
+        //Coordenadas coordenadas31 = new Coordenadas(6.93548, 79.84868);
         Coordenadas coordenadas32 = new Coordenadas(59.91273, 10.74609);
         Coordenadas coordenadas33 = new Coordenadas(-12.04318, -77.02824);
 
-        //"Bamako": ["Moscu","Oslo","San Marino"],
+
         Coordenadas coordenadas4 = new Coordenadas(12.65, -8);
         Coordenadas coordenadas41 = new Coordenadas(55.75222, 37.61556);
         Coordenadas coordenadas42 = new Coordenadas(59.91273, 10.74609);
         Coordenadas coordenadas43 = new Coordenadas(43.94236, 12.457777);
 
+//*************************************Pistas****************************************************
 
         //primero creo las pistas necesarias:
+        //el nucleo de una pista es, su dificultad y el contenido.
         Map<String, String> pistasEdificio = new HashMap<>();
         pistasEdificio.put("facil", "Co-Piloto: le ví llevar una bandera con una roja y blanca, con una hoja de maple en el centro");
         pistasEdificio.put("media", "Co-Piloto: creo haberle visto practicar su francés,¡No era muy bueno!");
         pistasEdificio.put("dificil", "Co-Piloto: creo haberle escuchado decir que iba a visitar las cataratas Montgomery por primera vez");
 
-        //creo el ladron:
-        //"Merey Laroc":["Femenino","Tenis","Rojo","Tatuaje","Deportivo"],
-        ArrayList<String> caracteristicas= new ArrayList<>();
-        caracteristicas.add("Femenino");
-        caracteristicas.add("Tenis");
-        caracteristicas.add("Rojo");
-        caracteristicas.add("Tatuaje");
-        caracteristicas.add("Deportivo");
 
+        //***************************Ladron y Sospechosos**************************
+
+        //los sospechosos son los del caso, tienen las caracteristicas, cabello, hobby, etc, ubicadas en Cualidades.
+        ArrayList<String> caracteristicas= new ArrayList<>();
+        caracteristicas.add("Femenino"); //sexo
+        caracteristicas.add("Tenis"); //hobby
+        caracteristicas.add("Rojo"); //cabello
+        caracteristicas.add("Tatuaje"); //senia
+        caracteristicas.add("Deportivo"); //vehiculo
+
+        //creo los sospechosos
+        //***para este caso, creo solo uno.***
         Cualidades cualidades= new Cualidades(caracteristicas);
         Sospechoso sospechoso = new Sospechoso("Merey Laroc", cualidades);
+
+        //un ladron se crea con un sospechoso.
         Ladron ladron = new Ladron(sospechoso);
 
+        //la pista necesita al ladron, para dar cuando corresponda una pista sobre el ladron.
         Pista pista = new Pista(pistasEdificio, ladron);
 
+        //***********************Edificios************************
         ArrayList<Edificio> edificios = new ArrayList<>();
 
-        //creo los edificios:
+        //creo los edificios, para colocar en las ciudades:
         AeroPuerto aeroPuerto = new AeroPuerto(pista);
         Biblioteca biblioteca = new Biblioteca(pista);
         Banco banco = new Banco(pista);
@@ -475,29 +509,29 @@ public class JuegoTest{
         edificios.add(aeroPuerto);
         edificios.add(banco);
 
-        //public void agregarConexion(Mapa mapa, Ciudad ciudadAnterior);
+//************************************Ciudad**************************************
 
-        //"Ciudad de Mexico": ["Rio De Janeiro","Atenas", "Buenos Aires"],
         Ciudad ciudad1 = new Ciudad("Ciudad de Mexico", descripcion,  coordenadas1, edificios);
         Ciudad ciudad12 = new Ciudad("Atenas", descripcion,  coordenadas12, edificios);
         Ciudad ciudad13 = new Ciudad("Buenos Aires", descripcion,  coordenadas13, edificios);
 
-        //"Pekin" :["Sydney", "Atenas","Bamako"],
+
         Ciudad ciudad2 = new Ciudad("Pekin", descripcion,  coordenadas2, edificios);
         Ciudad ciudad22 = new Ciudad("Rio De Janeiro", descripcion,  coordenadas22, edificios);
         Ciudad ciudad23 = new Ciudad("Bamako", descripcion,  coordenadas23, edificios);
 
-        //"Atenas" : ["Colombo", "Oslo", "Lima"],
+
         Ciudad ciudad3 = new Ciudad("Bangkok", descripcion,  coordenadas3, edificios);
         Ciudad ciudad32 = new Ciudad("Oslo", descripcion,  coordenadas32, edificios);
         Ciudad ciudad33 = new Ciudad("Lima", descripcion,  coordenadas33, edificios);
 
-        //"Bamako": ["Moscu","Oslo","San Marino"],
+
         Ciudad ciudad4 = new Ciudad("Budapest", descripcion,  coordenadas4, edificios);
         Ciudad ciudad41 = new Ciudad("Moscu", descripcion,  coordenadas41, edificios);
         Ciudad ciudad42 = new Ciudad("Paris", descripcion,  coordenadas42, edificios);
         Ciudad ciudad43 = new Ciudad("San Marino", descripcion,  coordenadas43, edificios);
 
+        //cargo todas las cuidades en una lista auxiliar.
         ArrayList<Ciudad> ciudades = new ArrayList<>();
         ciudades.add(ciudad1);
         ciudades.add(ciudad12);
@@ -516,12 +550,15 @@ public class JuegoTest{
         ciudades.add(ciudad42);
         ciudades.add(ciudad43);
 
+        //cargo las cuidades que son parte de la ruta valida del ladron
         listaCiudades.add(ciudad1.getNombre());
         listaCiudades.add(ciudad2.getNombre());
         listaCiudades.add(ciudad3.getNombre());
         listaCiudades.add(ciudad4.getNombre());
 
-        //cargo el diccionario de las ciudades:
+        //cargo un diccionario que contiene el juego con todas las instancias de ciudades creadas
+        //este diccionario sirve para obtener una instancia de ciudad, ne base al nombre
+        //esto permite que las ciudades SE CREEN UNA SOLA VEZ.
         Map<String, Ciudad> ciudadesjuego = new HashMap<>();
         ciudadesjuego.put("Ciudad de Mexico", ciudad1);
         ciudadesjuego.put("Atenas", ciudad12);
@@ -543,7 +580,12 @@ public class JuegoTest{
         //**************
         juego.setCiudades(ciudadesjuego);
 
-        //cargo el mapa
+//*************************************MAPA*********************************************
+
+        //cargo el diccionario de las ciudades, que contiene el mapa:
+        //este diccionario, guarda el par, ciudad, ciudades conexion.
+        //ciudades conexion: son las ciudades que se muestran en el mapa como opcion posible para viajar
+        //las ciudads estan conectadas como un grafo.
         Map<Ciudad, ArrayList<Ciudad>> conexiones = new HashMap<>();
         ArrayList<Ciudad> conectadas1 = new ArrayList<>();
         conectadas1.add(ciudad2);
@@ -573,26 +615,29 @@ public class JuegoTest{
 
         conexiones.put(ciudad4, conectadas4);
 
+        //creo el mapa con el diccionario recien creado
         Mapa mapa = new Mapa(conexiones);
 
         //**************
         juego.setMapa(mapa);
 
+//*******************************ESTRATEGIA / RUTA**********************************
+
         //creo la estrategia:
-        Estrategia estrategia = new Estrategia(listaCiudades); //seteo la ruta.
-        //public void aplicarEstrategia(Map<String, Ciudad> ciudades, Map<String, Map<String, IPista>> pistas, Ladron ladron,Mapa mapa)
+        //seteo la ruta anteriormente creada.
+        Estrategia estrategia = new Estrategia(listaCiudades);
 
+        //el juego usa un diccionario en el que se encuentra el par:
+        //nombre, instancia del sospechoso
+        //se usa la misma estrategia para las ciudades, LOS SOSPECHOSOS SE CREAN UNA SOLA VEZ
+        //gracias al diccionario, manteninendo las mismas instancias, para todos los casos.
         Map<String, ISospechable> sospechosos = new HashMap<>();
-
-        //public Sospechoso(String nombre,Cualidades cualidades){
-
         sospechosos.put("Merey Laroc", sospechoso);
 
-        //**************
+        //cargo el diccioanrio de sospechosos en el juego:
         juego.setSospechosos(sospechosos);
 
-
-        //public Pista(Map<String, String> pistasMap, ILadron ladron)
+//****************************Pistas Juego**********************
 
         Map<String, IPista> pistasCiudad = new HashMap<>();
 
@@ -602,48 +647,70 @@ public class JuegoTest{
         nombreEdificios.add("Aeropuerto");
         nombreEdificios.add("Banco");
 
+        //Cada ciudad tiene asignado un diccionario de pistas, en donde:
+        //cada edificio tiene asignada una clase pista (antes mostrada) y una ciudad tiene 3 edificios.
         for(String edificio : nombreEdificios){
             pistasCiudad.put(edificio, pista); //cargo la misma pista para todos los edificios.
         }
 
         Map<String, Map<String,IPista> > pistasCiudades= new HashMap<>();
 
+        //el juego tiene un diccionario de diccionarios, en donde aparece el par:
+        //<nombre ciudad, diccionario de pistas>, el diccionario de pistas es el recien creado.
+        //esto permite que LAS PISTAS SE CREEN UNA SOLA VEZ.
         for(Ciudad ciudad : ciudades){
             pistasCiudades.put(ciudad.getNombre(), pistasCiudad); //cargo la misma pista para todos los edificios.
         }
 
-        estrategia.aplicarEstrategia(ciudadesjuego, pistasCiudades, ladron, mapa);
-        Objeto objeto = new Objeto("Huevo de 1000 años", estrategia);
-
-        Map<String, ArrayList<Objeto>> objetos = new HashMap<>();
-        ArrayList<Objeto> tiposObjetos = new ArrayList<>();
-        tiposObjetos.add(objeto);
-        objetos.put("Comun", tiposObjetos);
-
-        //**************
-        juego.setObjetos(objetos);
-
-
         //**************
         juego.setPistas(pistasCiudades);
 
+//**************************Estragia y Objetos*******************************
+
+        //la estrategia se encarga de manipular lo relacionado a la ruta del ladron
+        //reparte las pistas a las ciudades correspondientes, segun la ruta.
+        estrategia.aplicarEstrategia(ciudadesjuego, pistasCiudades, ladron, mapa);
+
+        //cada objeto tiene una estrategia.
+        Objeto objeto = new Objeto("Huevo de 1000 años", estrategia);
+
+        ArrayList<Objeto> objetosComunes = new ArrayList<>();
+        objetosComunes.add(objeto);
+
+        //el juego tiene un diccionario en donde se encuentran clasificados los objetos
+        //esto permite que se repartan mas facilmente, segun el rango del jugador y
+        //que LOS OBJETOS SE CREEN UNA SOLA VEZ.
+        Map<String, ArrayList<Objeto>> objetos = new HashMap<>();
+        objetos.put("Comun", objetosComunes);
+
+        //**************carga del diccionario de objetos por tipo en el juego.
+        juego.setObjetos(objetos);
+
+//*******************************Jugadores******************************
+
+        //el juego tiene la capadcidad de recordar los jugadores que se crearon
+        //estos jugadores se guardan en un diccionario.
         Map<String, Jugador> jugadores = new HashMap<>();
 
-        //**************
+        //se chequea si el nombre ingresado de jugador, existe en el diccionario
+        //si no, se crea de  nuevo.
         juego.setJugadores(jugadores);
 
         Jugador jugador = juego.IdentificarJugador("Lucio");
+
+        //La exepcion se lanza por si se crea un caso, sin haber creado previamente un jugador
+        //desde la interfaz actual, esto no pasa nunca, pero el modelo esta preparado.
         try {
             juego.comenzarCaso();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        ArrayList<Ciudad> destinos = new ArrayList<>();
+        ArrayList<Ciudad> destinos;
 
-        //ya estan cargados todos los objetos necesarios para la prueba de perder el juego.
+        //ya estan cargados todos los objetos necesarios para la prueba.
+        //viajo hasta quedarme sin horas.
 
-        //viajo hasta quedarme sin horas
         int i;
         int tope = 37;
         for (i = 0; i < tope; i++) {
@@ -655,7 +722,8 @@ public class JuegoTest{
                 jugador.viajarACiudad(destinos.get(1));
         }
 
-        assert(jugador.terminarJuego());
+        assert(jugador.terminarJuego()); //el jugador se queda sin horas, entonces pierde.
+        //es un metodo que depende de reloj ->
     }
 
 }
