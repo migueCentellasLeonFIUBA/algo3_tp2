@@ -54,6 +54,7 @@ public class Reloj {
         dias.add("Viernes");
         dias.add("Sabado");
         dias.add("Domingo");
+        dias.add("Lunes");
     }
 
     public String diaYHora(){

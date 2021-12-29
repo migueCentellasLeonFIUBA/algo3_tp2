@@ -1,10 +1,12 @@
 package edu.fiuba.algo3.Vista.Handlers;
 
+import edu.fiuba.algo3.Vista.EscenaTiempoTerminado;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -15,6 +17,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -24,11 +27,12 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
 
     Jugador jugador;
     VBox leftSide;
+    Stage stage;
 
-    public BotonBuscarSospechosoEventHandler(Jugador jugador, VBox leftSide){
+    public BotonBuscarSospechosoEventHandler(Jugador jugador, VBox leftSide, Stage stage){
         this.jugador = jugador;
         this.leftSide = leftSide;
-
+        this.stage = stage;
     }
 
     public void handle(ActionEvent actionEvent){
@@ -39,6 +43,11 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
 
+        if(jugador.terminarJuego()){
+            EscenaTiempoTerminado tiempoTerminado = new EscenaTiempoTerminado(stage);
+            Scene escenaTiempoTerminado = new Scene(tiempoTerminado, 960, 600);
+            stage.setScene(escenaTiempoTerminado);
+        }
 
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos();
         //ArrayList<String> sospechosos = new ArrayList<>();

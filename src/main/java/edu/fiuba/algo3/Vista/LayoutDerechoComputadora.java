@@ -68,7 +68,7 @@ public class LayoutDerechoComputadora extends VBox {
         buscarSospechoso.setTranslateY(-430);
         buscarSospechoso.setBackground(grisClaro);
         buscarSospechoso.setEffect(new InnerShadow());
-        BotonBuscarSospechosoEventHandler botonBuscarSospechosoEventHandler = new BotonBuscarSospechosoEventHandler(jugador, leftSide);
+        BotonBuscarSospechosoEventHandler botonBuscarSospechosoEventHandler = new BotonBuscarSospechosoEventHandler(jugador, leftSide, stage);
         buscarSospechoso.setOnAction(botonBuscarSospechosoEventHandler);
 
         MouseHoverEnterEventHandler mouseHoverEventHandlerBuscar = new MouseHoverEnterEventHandler(buscarSospechoso);
