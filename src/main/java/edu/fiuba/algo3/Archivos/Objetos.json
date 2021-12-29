@@ -1,0 +1,10 @@
+{
+  "Huevo de 1000 años": {
+    "Rareza": "Comun",
+    "Estrategia": ["Pekin","Atenas","Bagdad","Colombo"]
+  },
+  "Mascara de Montezuma":{
+    "Rareza" : "Valioso",
+    "Estrategia": ["Mexico","Rio De Janeiro","Oslo","Lima","Moscu","Roma"]
+  }
+}

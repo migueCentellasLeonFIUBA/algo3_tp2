@@ -1,6 +1,20 @@
 package edu.fiuba.algo3.modelo.jugador;
 
-public interface Orden {
+import edu.fiuba.algo3.modelo.ladron.ISospechable;
 
-    boolean ArrestarSospechos();
+public class Orden implements IOrden {
+
+    ISospechable sospechoso;
+
+    public Orden(ISospechable sospechoso){
+        this.sospechoso = sospechoso;
+    }
+
+    public void revisarOrden(Jugador jugador){
+        if(sospechoso.arrestar()){
+            jugador.ganador();
+        }else{
+            jugador.perdedor();
+        }
+    }
 }

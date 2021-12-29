@@ -1,0 +1,462 @@
+{
+  "Montreal": {
+    "Biblioteca":
+    {
+      "facil":"Co-Piloto: le ví llevar una bandera con una roja y blanca, con una hoja de maple en el centro",
+      "media":"Co-Piloto: creo haberle visto practicar su francés,¡No era muy bueno!",
+      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar las cataratas Montgomery por primera vez"
+    },
+    "Aeropuerto":
+    {
+      "facil":"Co-Piloto: Definivamente le escuché decir que iba a cazar alces",
+      "media":"Co-Piloto: le escuché mencionar que iba a visitar la peninsula de Gaspe,¡Tenía planeado esconder allí su botín!",
+      "dificil":"Co-Piloto: Mencionó estar en viaje hacia una ex colonia francesa"
+    },
+    "Banco":
+    {
+      "facil":"Analista: le escuche decir que quería acuñar dolares,¡Llevaba un gran botín!",
+      "media":"Analista: le escuché mencionar que iba a visitar uno de las naciones más ricas del mundo",
+      "dificil":"Analista: dijo que iba a viajar a uno de los mayor exportadores de energía en el mundo"
+    }
+  },
+  "Mexico":{
+    "Biblioteca":
+    {
+      "facil":"Analista: escuché que estaba buscando cambiar pesos",
+      "media":"Analista: escuché que quería visitar una republica representativa, laica y federal",
+      "dificil":"Analista: escuché que iba a viajar a decimo país más poblado del mundo"
+    },
+    "Aeropuerto":
+    {
+      "facil":"Piloto: creo haberle visto con una bandera verde, roja y blanca en su espalda",
+      "media":"Piloto: definitivamente le oí decir que iba a visitar el Autodromo Hermanos Rodriguez",
+      "dificil":"Piloto: escuché que dijo que estaba con ansias de visitsr la Sierra Madre"
+    },
+    "Banco":
+    {
+      "facil":"Librero: le ví cargar una reliquia Azteca en su mochila",
+      "media":"Librero: me preguntó donde estaban los libros de historia antigua Maya",
+      "dificil":"Librero: me dijo que querá investigar sobre la Charrería"
+    }
+  },
+  "Buenos Aires": {
+    "Biblioteca":{
+      "facil": "Banquera: estoy bastante seguro de haberle visto cambiar Pesos",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las mayores metropolis de america",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar una ex colonia española"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera celeste y blanca, con un sol en el medio",
+      "medio": "Piloto: estoy seguro de haberle oído decir que quería nadar en el Río De La Plata, ¡Llevaba un traje de baño de lo más feo!",
+      "dificil": "Piloto: no estoy seguro, pero creo que dijo que iba intentar esconder "
+    },
+    "Banco":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre los gauchos",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre el Río Paraná",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre la Enología"
+    }
+  },
+  "Pekin":{
+    "Biblioteca":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar Renminbi ",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las mayores metropolis de asia",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar un territorio ex Mongol"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera Roja con una estrella",
+      "medio": "Piloto: creo haberle visto practicar su mandarin, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre \"una gran muralla\""
+    },
+    "Banco":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre la dinastia Ming",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre la dinastias \" Tang y Song\"",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre la ciudad de \" Beiping\""
+    }
+  },
+  "Bagdad": {
+    "Biblioteca": {
+      "facil": "Analista: le escuché decir que estaba buscando cambiar libras",
+      "media": "Analista: creo haberle escuchado decir que iba a visitar una región petrolifera",
+      "dificil": "Analista: dijo que iba a visitar una republica semipresidencialista"
+    },
+    "Aeropuerto": {
+      "facil": "Capitán: creo haberle visto llevar una bandera negra , roja y blanca",
+      "media": "Capitán: me parece haberle oído decir que iba a visitar un clima desierto, ¡Al parecer no le gusta el calor!",
+      "dificil": "Capitán: estoy seguro de haber escuchado algo sobre el Rio Eufrates, si es que no me falla la memoria"
+    },
+    "Banco": {
+      "facil": "Conserje: creo haberle escuchado decir que estaba estudiando al pueblo sumerio.",
+      "media": "Conserje: no estoy seguro, pero creo haberle visto leyendo un libro sobre la región mesopotámica",
+      "dificil": "Conserje: le oí decir que iba a visitar un país limitrofe a Sudan Del Sur"
+    }
+  },
+  "Port Moresby": {
+    "Biblioteca":
+    {
+      "facil":"Co-Piloto: le ví llevar una bandera amarilla, con un velero",
+      "media":"Co-Piloto: creo haberle visto practicar su inglés,¡No era muy bueno!",
+      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar una ciudad costera por primera vez"
+    },
+    "Aeropuerto":
+    {
+      "facil":"Co-Piloto: Definivamente le escuché decir que iba a pescar",
+      "media":"Co-Piloto: le escuché mencionar que iba a visitar el golfo de papua¡Tenía planeado esconder allí su botín!",
+      "dificil":"Co-Piloto: Mencionó estar en viaje hacia una ex colonia europea"
+    },
+    "Banco":
+    {
+      "facil":"Analista: le escuche decir que quería acuñar kinas,¡Llevaba un gran botín!",
+      "media":"Analista: le escuché mencionar que iba a visitar uno de los paises más pobres del mundo",
+      "dificil":"Analista: dijo que iba a viajar a uno de los paises mas cálidos del mundo"
+    }
+  },
+  "Sydney": {
+    "Biblioteca": {
+      "facil": "Analista: le escuché decir que estaba buscando cambiar dolares",
+      "media": "Analista: creo haberle escuchado decir que iba a visitar un archipielago",
+      "dificil": "Analista: dijo que iba a visitar una de las ciudades mas populares del mundo"
+    },
+    "Aeropuerto": {
+      "facil": "Capitán: creo haberle visto llevar una bandera amarilla y azul, con un barco en el medio",
+      "media": "Capitán: me parece haberle oído decir que iba a visitar un clima subtropical humedo, ¡Al parecer no le gusta el frio!",
+      "dificil": "Capitán: estoy seguro de haber escuchado algo sobre un museo famoso, si es que no me falla la memoria"
+    },
+    "Banco": {
+      "facil": "Conserje: creo haberle escuchado decir que estaba estudiando la historia un colonia de Gran Bretaña.",
+      "media": "Conserje: no estoy seguro, pero creo haberle visto leyendo un libro sobre la llanura de Cumberland ",
+      "dificil": "Conserje: le oí decir que iba a visitar un país limitrofe a Nueva Zelanda"
+    }
+  },
+  "Estambul":{
+    "Biblioteca":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar Liras ",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las mayores metropolis de Turquia",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar un la antigua ciudad de Bizancio"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera Roja, con una luna y una estrella",
+      "medio": "Piloto: creo haberle visto practicar su arabe, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre \"la religion musulmana\""
+    },
+    "Banco":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre Constantinola",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre historia Otomana",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre \"la capital del imperio latino\""
+    }
+  },
+  "El Cairo":{
+    "Biblioteca":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar Libras",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las civilizaciones mas antiguas del mundo",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar un patrimonio de la humanidad"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera Roja, blanca y negra, con un aguila",
+      "medio": "Piloto: creo haberle visto practicar su arabe, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre la undecima urbe mas poblada del mundo"
+    },
+    "Banco":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre las piramides",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre historia Egipcia",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre Cleopatra"
+    }
+  },
+  "Oslo": {
+    "Biblioteca":
+    {
+      "facil":"Co-Piloto: le ví llevar una bandera con una roja con una cruz",
+      "media":"Co-Piloto: creo haberle visto practicar su noruego,¡No era muy bueno!",
+      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar un glaciar por primera vez"
+    },
+    "Aeropuerto":
+    {
+      "facil":"Co-Piloto: Definivamente le escuché decir que iba visitar una ciudad escandinava",
+      "media":"Co-Piloto: le escuché mencionar que iba a visitar el \"Lago Maridalsvannet\",¡Tenía planeado esconder allí su botín!",
+      "dificil":"Co-Piloto: Mencionó estar en viaje hacia una ex colonia Alemana"
+    },
+    "Banco":
+    {
+      "facil":"Analista: le escuche decir que quería acuñar coronas,¡Llevaba un gran botín!",
+      "media":"Analista: le escuché mencionar que iba a visitar uno de las naciones que conforman la peninsula escandinava",
+      "dificil":"Analista: dijo que iba a viajar a una de las naciones con mayor exportación de petroleo en el mundo"
+    }
+  },
+  "Nueva York" : {
+    "Biblioteca":
+    {
+      "facil":"Co-Piloto: le ví llevar una bandera con una roja y blanca, con muchas estrellas",
+      "media":"Co-Piloto: creo haberle visto practicar su inglés,¡No era muy bueno!",
+      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar las cataratas del niagara por primera vez"
+    },
+    "Aeropuerto":
+    {
+      "facil":"Co-Piloto: Definivamente le escuché decir que iba a cazar alces",
+      "media":"Co-Piloto: le escuché mencionar que iba a visitar uno de los edificios mas altos del mundo,¡Tenía planeado esconder allí su botín!",
+      "dificil":"Co-Piloto: Mencionó estar en viaje hacia una de las naciones mas poderosas del mundo"
+    },
+    "Banco":
+    {
+      "facil":"Analista: le escuche decir que quería acuñar dolares,¡Llevaba un gran botín!",
+      "media":"Analista: le escuché mencionar que iba a visitar uno de las naciones más ricas del mundo",
+      "dificil":"Analista: dijo que iba a viajar a una de las ciudades mas influyentes en la economia mundial"
+    }
+  },
+  "Lima":{
+    "Biblioteca":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar Soles",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar el pais con la mejor gastronomia del mundo",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar la antigua civilizacion incaica"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera Roja y blanca, con un pajaro en el centro",
+      "medio": "Piloto: creo haberle visto practicar su español, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre un patrimonio de la humanidad"
+    },
+    "Banco":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre los Incas",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre historia Incaica",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre Viracocha"
+    }
+  },
+  "Rio De Janeiro": {
+    "Biblioteca":
+    {
+      "facil":"Co-Piloto: le ví llevar una bandera amarilla con un mundo azul",
+      "media":"Co-Piloto: creo haberle visto practicar su potugues,¡No era muy bueno!",
+      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar una playa por primera vez"
+    },
+    "Aeropuerto":
+    {
+      "facil":"Co-Piloto: Definivamente le escuché decir que iba visitar una de las ciudadades mas populares del mundo",
+      "media":"Co-Piloto: le escuché mencionar que iba a visitar el \"El Cristo Redentor\",¡Tenía planeado esconder allí su botín!",
+      "dificil":"Co-Piloto: Mencionó estar en viaje hacia una ex colonia Protuguesa"
+    },
+    "Banco":
+    {
+      "facil":"Analista: le escuche decir que quería acuñar reales,¡Llevaba un gran botín!",
+      "media":"Analista: le escuché mencionar que iba a visitar uno de las naciones mas importantes de america del sur",
+      "dificil":"Analista: dijo que iba a viajar a una de las naciones con mayor produccion de cafe del mundo"
+    }
+  },
+  "Atenas": {
+    "Biblioteca": {
+      "facil": "Dijo que estaba buscando acuñar Euros",
+      "media": "Dijo que estaba buscando un lugar con altos estandares de vida",
+      "dificil": "Dijo que estaba buscando unlugar con una economía avanzada"
+    },
+    "Aeropuerto": {
+      "facil": "Mencionó que estaba con ansias de visitar el Mar Egeo",
+      "media": "Mencionó que estaba cona ansias de visitar la cumbre del monte Mytikas",
+      "dificil": "Mencionó que estaba con ansias de visitar la coordillera del Pindo"
+    },
+    "Banco": {
+      "facil": "Se le vio caminar con un escudo espartano en su espalda",
+      "media": "Mencionó que iba a visitar un país vecino a Bulgaria",
+      "dificil": "Dijo que estaba buscando coleccionar Dracmas"
+    }
+  },
+  "Colombo" :{
+    "Banco":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar rupias",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar la ciudad mas importante de Sri lanka",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar una ex colonia inglesa"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera amarilla, verde y naranja, con un extraño leon",
+      "medio": "Piloto: creo haberle visto practicar su congales, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre una ex colonia portuguesa"
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre una colonia del imperio britanico",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre una colonia portuguesa",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre una ciudad costera"
+    }
+  },
+  "Katmandu" :{
+    "Banco":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar rupias",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una ciudad con muchos templos budistas",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar el \"rio  Vishnumati\""
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera Roja, de forma extraña, con un sol blanco",
+      "medio": "Piloto: creo haberle visto practicar su nepali, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre una ciudad con telefericos"
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre mitologia nepali",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre la historia de un pais de los periodos \"Maya y Newar\"",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre La dinastía Licchavi"
+    }
+  },
+  "Bamako": {
+    "Biblioteca": {
+      "facil": "Librera: le ví leyendo libros y viendo imagenes sobre el desierto del Sahara",
+      "media": "Librera: creo haberle escuchado mencionar algo sobre el monte Hombori",
+      "dificil": "Librera: estoy muy seguro de haberle oído mencionar que iba a visitar una ex colonia francesa"
+    },
+    "Banco": {
+      "facil": "Cajero: definitavente le vi acuñar Francos",
+      "media": "Cajero: me parece haberle oído decir que iba a viajar a una nación presidencialista",
+      "dificil": "Cajero: estoy bastante seguro de escuchar que iba a visitar un país con predominante industria arrocera"
+    },
+    "Aeropuerto": {
+      "facil": "Marinera: estoy segura de haberle visto llevar una bandera verde, amarilla y roja",
+      "media": "Marinera: creo haberle visto leyendo un libro con imagenes del río Niger, pero no estoy segura",
+      "dificil": "Marinera: le oí decir que estaba viajando hacia un importante puerto fluvial y comercial de la región"
+    }
+  },
+  "Moscu" : {
+    "Biblioteca": {
+      "facil": "Librera: le ví leyendo libros historia Rusa",
+      "media": "Librera: creo haberle escuchado mencionar algo sobre un \"Kremlin\"",
+      "dificil": "Librera: estoy muy seguro de haberle oído mencionar que iba a visitar la mega ciudad mas septentrional del mundo"
+    },
+    "Banco": {
+      "facil": "Cajero: definitavente le vi acuñar rupias",
+      "media": "Cajero: me parece haberle oído decir que iba a viajar a una nación comunista",
+      "dificil": "Cajero: estoy bastante seguro de escuchar que iba a visitar un país de clima continental humedo"
+    },
+    "Aeropuerto": {
+      "facil": "Marinera: estoy segura de haberle visto llevar una bandera blanca, azul y roja",
+      "media": "Marinera: creo haberle visto leyendo un libro con imagenes de una plaza roja, pero no estoy segura",
+      "dificil": "Marinera: le oí decir que estaba viajando hacia una ciudad albergue de un mundial deportivo, reciente"
+    }
+  },
+  "Singapur":{
+    "Banco":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar dolares",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar un pais soberano insular",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar la peninsula de malasia"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera Roja y blanca, con una luna blanca con estrellas",
+      "medio": "Piloto: creo haberle visto practicar su ingles, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre una ciudad isleña"
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre ",
+      "media": "Bibliotecario: me pidió libros sobre la historia sobre el fundador de la \"asociacion de naciones del sudeste asiatico\"",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre \"ciudad leon, ciudad jardin y pequeño punto rojo\""
+    }
+  },
+  "Roma" :{
+    "Banco":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar Euros",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las civilizaciones mas antiguas del mundo",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar un famoso patrimonio romano de la humanidad"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera verde, blanca y roja",
+      "medio": "Piloto: creo haberle visto practicar su italiano, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre la capital de cristianismo"
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre los romanos",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre Alejandro Magno",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre una entidad estatal autonoma"
+    }
+  },
+  "Kigali" :{
+    "Banco" :{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar francos",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una ciudad ubicada en el centro de un pais",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar la Iglesia Episcopal"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera azul, amarilla y verde, con un sol",
+      "medio": "Piloto: creo haberle visto practicar su frances, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre uno de los paises mas seguros del mundo"
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre tribus africanas",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre el genocidio de 1994",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre Paul Kagame"
+    }
+  },
+  "Budapest": {
+    "Banco": {
+      "facil" : "Analista: estoy bastante segura de haberle visto intercambiando Fiorintos",
+      "media": "Analista: le oí decir que iba a visitar un país con una fuerte industria en Viticultura",
+      "dificil": "Analista: estoy muy segura de haberle oído decir que iba visitar un importe centro financiero de Europa Central"
+    },
+    "Aeropuerto": {
+      "facil": "Pescador: le ví abordar un barco que llevaba una bandera verde, roja y blanca",
+      "media": "Pescador: le escuché decir que estaba con ansías de ver por primera vez el rio Danubio",
+      "dificil": "Pescador: estoy bastante seguro de haberle oído decir que esperaba poder adentrarse en la cultura gitana"
+    },
+    "Biblioteca": {
+      "facil": "Guardia: le oí decir que iba a visitar un país vecino de Austria",
+      "media": "Guardia: me parece haberle oído decir que iba su ruta de escape sería a través de la llanura Panónica",
+      "dificil": "Guardia: creo haberle escuchado decir que iba a visitar una nación que estuvo bajo el régimen socialista"
+    }
+  },
+  "San Marino" : {
+    "Banco": {
+      "facil" : "Analista: estoy bastante segura de haberle visto intercambiando Euros",
+      "media": "Analista: le oí decir que iba a visitar un país con una fuerte industria en Viticultura",
+      "dificil": "Analista: estoy muy segura de haberle oído decir que iba visitar el estado soberano mas antiguo del mundo"
+    },
+    "Aeropuerto": {
+      "facil": "Pescador: le ví abordar un barco que llevaba una bandera verde, roja y blanca",
+      "media": "Pescador: le escuché decir que estaba con ansías de ver por primera vez el Monte Titano",
+      "dificil": "Pescador: estoy bastante seguro de haberle oído decir que el vaticano reconocio la independencia del pais en 1631"
+    },
+    "Biblioteca": {
+      "facil": "Guardia: le oí decir que iba a visitar un país limitrofe de Italia",
+      "media": "Guardia: me parece haberle oído decir que iba su ruta de escape sería a través de \"las tres torres\"",
+      "dificil": "Bibiotecario: creo que me habia pedido un libreo sobre Marino diácono,"
+    }
+  },
+  "Paris" :{
+    "Banco":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar francos",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las maravillas del mundo",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar un famoso patrimonio de la humanidad"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera azul, blanca y roja",
+      "medio": "Piloto: creo haberle visto practicar su frances, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre un iglesia famosa"
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre revolcucion francesa",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre eiffel",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre paises con mejor gastronomia"
+    }
+  },
+  "Nueva Dehli" :{
+    "Banco":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar rupias",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar una de las naciones mas pobladas del mundo",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar el rio ganges"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera naranja, blanca y verde",
+      "medio": "Piloto: creo haberle visto practicar su ingles, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre un taj mahal"
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre dioses hindues",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre la Tumba de Humayun",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre el Jantar Mantar"
+    }
+  },
+  "Bangkok" :{
+    "Banco":{
+      "facil": "Banquera: estoy bastante segura de haberle visto cambiar bahts",
+      "media": "Banquera: no estoy segura, pero creo haberle oído decir que iba a visitar un ciudad con clima tropical monzónico",
+      "dificil": "Banquera: definitavente le escuché decir que tenía ganas de visitar el río Thon Buri"
+    },
+    "Aeropuerto": {
+      "facil": "Piloto: creo haberle visto abordar un avión con una bandera roja, azul y blanca",
+      "medio": "Piloto: creo haberle visto practicar su tailandes, ¡No era muy bueno!",
+      "dificil": "Piloto: creo haberle escuchado decir algo, sobre el río Chao Phraya, "
+    },
+    "Biblioteca":{
+      "facil": "Bibliotecario: recuerdo que me pidió sacar libros sobre las mejores ciudades de Tailandia",
+      "media": "Bibliotecario: recuerdo que me pidió sacar libros sobre la \"ciudad de ángeles\"",
+      "dificil": "Bibliotecario: recuerdo que me pidió sacar libros sobre Bang Makok"
+    }
+  }
+}

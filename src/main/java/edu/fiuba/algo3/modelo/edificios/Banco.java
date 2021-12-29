@@ -1,17 +1,23 @@
 package edu.fiuba.algo3.modelo.edificios;
+import edu.fiuba.algo3.modelo.Pistas.IPista;
+import edu.fiuba.algo3.modelo.ladron.ILadron;
+import edu.fiuba.algo3.modelo.ladron.LadronNulo;
 
+import java.util.Map;
 
-public class Banco implements Edificio {
-
-    @Override
-    public void visitarEdificio() {
-
+public class Banco  extends Edificio {
+    public Banco(IPista pista) {
+        this.pista = pista;
+        this.ladron= new LadronNulo();
     }
 
-    //                          Operations
     @Override
-    public void DamePista() {
-        //TODO
+    public void cambiarPista(Map<String, IPista> pistasEdificios, ILadron ladron) {
+        this.pista = pistasEdificios.get("Banco");
+        this.pista.setLadron(ladron);
     }
-    
+
+    public String getNombre(){
+        return "Banco";
+    }
 }

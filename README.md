@@ -4,7 +4,7 @@
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
-## Grupo {N}
+## Grupo 9
 
 * **Integrante 1** - [Nicolas Fernandez](https://github.com/Nico-Fer)
 * **Integrante 2** - [Tomás González Mongelós.](https://github.com/TomasGonzalezMongelos)
@@ -12,7 +12,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Integrante 4** - [Miguel Centellas Leon](https://github.com/migueCentellasLeonFIUBA)
 * **Integrante 5** - [Nicolás Carreño](https://github.com/nicolascarreno)
 
-Corrector: **{Corrector}**
+Corrector: **Pablo Rodríguez Massuh**
 
 ## Aplicación
 

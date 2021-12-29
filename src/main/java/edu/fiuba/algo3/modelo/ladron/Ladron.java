@@ -1,33 +1,50 @@
 package edu.fiuba.algo3.modelo.ladron;
 
+import edu.fiuba.algo3.modelo.jugador.Reloj;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class Ladron implements Secuaces {
+public class Ladron implements ISospechable,ILadron{
 
-    private List<String> caracteristicas;
-    private Estrategia estrategia;
+    private ISospechable sospechoso;
 
-    public void setCaracteristicas (List<String> caracteristicas) {
-        this.caracteristicas.addAll(caracteristicas);
+    public Ladron(ISospechable sospechoso){
+        this.sospechoso = sospechoso;
     }
-
-    public void setEstrategia(Estrategia plan) {
-        this.estrategia = plan;
-    }
-
-    //Operations
 
     @Override
-    public boolean Arrestar() {
-        //TODO
+    public Sospechoso comparar(ArrayList<String> caracteristicas) {
+        return this.sospechoso.comparar(caracteristicas);
+    }
+
+    @Override
+    public boolean arrestar() {
         return true;
     }
 
     @Override
-    public boolean Sospechar() {
-        //TODO
-        return false;
+    public String dameUnaPista() {
+        return sospechoso.dameUnaPista();
     }
-    
+
+    @Override
+    public String pistaDeLadron() {
+        return sospechoso.dameUnaPista();
+    }
+
+    @Override
+    public boolean atrapar(Reloj reloj) {
+        return true;
+    }
+
+    public String obtenerSexo() {
+        return sospechoso.obtenerSexo();
+    }
+
+    @Override
+    public String getNombre(){
+        return sospechoso.getNombre();
+    }
+
+
 }
