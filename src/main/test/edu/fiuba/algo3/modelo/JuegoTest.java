@@ -17,6 +17,7 @@ import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.ladron.*;
 import edu.fiuba.algo3.modelo.objetos.Objeto;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -147,6 +148,260 @@ public class JuegoTest{
         }
 
         assert(jugador.terminarJuego());
+    }
+
+    @Test
+    public void Test03JugadorPierdePorArrestarLadronConOrdenIncorrecta() throws Exception {
+
+        //----------------------------------------------------SetUp------------------------------------------------
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+        Jugador jugador = juego.IdentificarJugador("rafael");
+        juego.comenzarCaso();
+
+        //----------------------------------------------------Ciudad1 - Pekin----------------------------------------------
+        ArrayList<Edificio> edificios = jugador.verEdificios();
+        Edificio edificio1 = edificios.get(0);
+        Edificio edificio2 = edificios.get(1);
+        Edificio edificio3 = edificios.get(2);
+
+        String pista1 = jugador.visitarEdificio(edificio1);
+        String pista2 = jugador.visitarEdificio(edificio2);
+        String pista3 = jugador.visitarEdificio(edificio3);
+
+        assertTrue(pista1.contains("Mar Egeo"));
+        assertTrue(pista2.contains("Euros"));
+        assertTrue(pista3.contains("escudo espartano"));
+
+        ArrayList<Ciudad> ciudades= jugador.verConexiones();
+
+        Ciudad ciudad =  ciudades.get(1);//Seleccionar ciudad.
+
+        jugador.viajarACiudad(ciudad);
+//---------------------------------------------------Ciudad2 - Atenas -----------------------------------------------
+        assertEquals("Atenas",ciudad.getNombre());
+        edificios = jugador.verEdificios();
+
+        edificio1 = edificios.get(0);
+        edificio2 = edificios.get(1);
+        edificio3 = edificios.get(2);
+
+        pista1 = jugador.visitarEdificio(edificio1);
+        pista2 = jugador.visitarEdificio(edificio2);
+        pista3 = jugador.visitarEdificio(edificio3);
+
+        assertTrue(pista1.contains("amarilla, verde y naranja"));
+        assertTrue(pista2.contains("imperio britanico"));
+        assertTrue(pista3.contains("rupias"));
+
+        ciudades = jugador.verConexiones();
+
+        ciudad =  ciudades.get(0);//Seleccionar ciudad.
+
+        jugador.viajarACiudad(ciudad);
+
+//----------------------------------------------------Ciudad3 - Colombo ------------------------------------------------
+        assertEquals("Colombo",ciudad.getNombre());
+        edificios = jugador.verEdificios();
+
+        edificio1 = edificios.get(0);
+        edificio2 = edificios.get(1);
+        edificio3 = edificios.get(2);
+
+        pista1 = jugador.visitarEdificio(edificio1);
+        pista2 = jugador.visitarEdificio(edificio2);
+        pista3 = jugador.visitarEdificio(edificio3);
+
+        assertTrue(pista1.contains("Roja y blanca"));
+        assertTrue(pista2.contains("Soles"));
+        assertTrue(pista3.contains("Incas"));
+
+        ciudades = jugador.verConexiones();
+
+        ciudad =  ciudades.get(0);//Seleccionar ciudad.
+
+        jugador.viajarACiudad(ciudad);
+
+        //----------------------------------------------------Ciudad4 - Lima ------------------------------------------------
+        assertEquals("Lima",ciudad.getNombre());
+
+        edificios = jugador.verEdificios();
+
+        edificio1 = edificios.get(0);
+        edificio2 = edificios.get(1);
+        edificio3 = edificios.get(2);
+
+        /*
+        ---------Sospechoso-------------
+         "Merey Laroc":{
+            "Sexo": "Femenino",
+            "Hobby" : "Tenis",
+            "Cabello" : "Rojo",
+            "Senia" : "Tatuaje",
+            "Vehiculo" : "Deportivo"
+          },
+         */
+
+        //Seteo de caracterisiticas
+        jugador.siguienteSexo();
+        jugador.siguienteHobby();
+        jugador.siguienteHobby();
+        jugador.siguienteHobby();
+        jugador.siguienteHobby();
+        jugador.siguienteHobby();
+        jugador.siguienteHobby();
+        jugador.siguienteCabello();
+        jugador.siguienteCabello();
+        jugador.siguienteSenia();
+        jugador.siguienteSenia();
+        jugador.siguienteSenia();
+        jugador.siguienteVehiculo();
+        jugador.siguienteVehiculo();
+        jugador.siguienteVehiculo();
+
+        //Hay un solo seospechoso que cumple estas caracteristicas, pero no es el ladron
+        jugador.buscarSospechosos();
+
+        String accion1 = jugador.visitarEdificio(edificio1);
+        String accion2 = jugador.visitarEdificio(edificio2);
+        String accion3 = jugador.visitarEdificio(edificio3);
+        ArrayList<String> conjuntoDeAcciones=new ArrayList<>();
+        conjuntoDeAcciones.add(accion1);
+        conjuntoDeAcciones.add(accion2);
+        conjuntoDeAcciones.add(accion3);
+
+        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
+        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
+        Assert.assertTrue(conjuntoDeAcciones.contains("Ladron atrapado  orden creada para el Sospechoso equivocado, cuidado nos pueden demandar por hacer esto."));
+
+    }
+
+    @Test
+    public void Test04JugadorGanaPorArrestarLadronConOrdenCorrecta() throws Exception {
+
+        //----------------------------------------------------SetUp------------------------------------------------
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        director.crearJuego(fachada);
+        Juego juego = director.obtenerJuego();
+        Jugador jugador = juego.IdentificarJugador("rafael");
+        juego.comenzarCaso();
+
+        //----------------------------------------------------Ciudad1 - Pekin----------------------------------------------
+        ArrayList<Edificio> edificios = jugador.verEdificios();
+        Edificio edificio1 = edificios.get(0);
+        Edificio edificio2 = edificios.get(1);
+        Edificio edificio3 = edificios.get(2);
+
+        String pista1 = jugador.visitarEdificio(edificio1);
+        String pista2 = jugador.visitarEdificio(edificio2);
+        String pista3 = jugador.visitarEdificio(edificio3);
+
+        assertTrue(pista1.contains("Mar Egeo"));
+        assertTrue(pista2.contains("Euros"));
+        assertTrue(pista3.contains("escudo espartano"));
+
+        ArrayList<Ciudad> ciudades= jugador.verConexiones();
+
+        Ciudad ciudad =  ciudades.get(1);//Seleccionar ciudad.
+
+        jugador.viajarACiudad(ciudad);
+//---------------------------------------------------Ciudad2 - Atenas -----------------------------------------------
+        assertEquals("Atenas",ciudad.getNombre());
+        edificios = jugador.verEdificios();
+
+        edificio1 = edificios.get(0);
+        edificio2 = edificios.get(1);
+        edificio3 = edificios.get(2);
+
+        pista1 = jugador.visitarEdificio(edificio1);
+        pista2 = jugador.visitarEdificio(edificio2);
+        pista3 = jugador.visitarEdificio(edificio3);
+
+        assertTrue(pista1.contains("amarilla, verde y naranja"));
+        assertTrue(pista2.contains("imperio britanico"));
+        assertTrue(pista3.contains("rupias"));
+
+        ciudades = jugador.verConexiones();
+
+        ciudad =  ciudades.get(0);//Seleccionar ciudad.
+
+        jugador.viajarACiudad(ciudad);
+
+//----------------------------------------------------Ciudad3 - Colombo ------------------------------------------------
+        assertEquals("Colombo",ciudad.getNombre());
+        edificios = jugador.verEdificios();
+
+        edificio1 = edificios.get(0);
+        edificio2 = edificios.get(1);
+        edificio3 = edificios.get(2);
+
+        pista1 = jugador.visitarEdificio(edificio1);
+        pista2 = jugador.visitarEdificio(edificio2);
+        pista3 = jugador.visitarEdificio(edificio3);
+
+        assertTrue(pista1.contains("Roja y blanca"));
+        assertTrue(pista2.contains("Soles"));
+        assertTrue(pista3.contains("Incas"));
+
+        ciudades = jugador.verConexiones();
+
+        ciudad =  ciudades.get(0);//Seleccionar ciudad.
+
+        jugador.viajarACiudad(ciudad);
+
+        //----------------------------------------------------Ciudad4 - Lima ------------------------------------------------
+        assertEquals("Lima",ciudad.getNombre());
+
+        edificios = jugador.verEdificios();
+
+        edificio1 = edificios.get(0);
+        edificio2 = edificios.get(1);
+        edificio3 = edificios.get(2);
+
+        /*
+        ---------Ladron-------------
+         "Carmen San Diego":{
+            "Sexo": "Femenino",
+            "Hobby" : "Croquet",
+            "Cabello" : "Negro",
+            "Senia" : "Joyas",
+            "Vehiculo" : "Limusina"
+          },
+         */
+
+        //Seteo de caracterisiticas
+        jugador.siguienteSexo();
+        jugador.siguienteHobby();
+        jugador.siguienteHobby();
+        jugador.siguienteCabello();
+        jugador.siguienteCabello();
+        jugador.siguienteCabello();
+        jugador.siguienteSenia();
+        jugador.siguienteVehiculo();
+        jugador.siguienteVehiculo();
+
+        //Hay un solo seospechoso que cumple estas caracteristicas, pero no es el ladron
+        jugador.buscarSospechosos();
+
+        String accion1 = jugador.visitarEdificio(edificio1);
+        String accion2 = jugador.visitarEdificio(edificio2);
+        String accion3 = jugador.visitarEdificio(edificio3);
+        ArrayList<String> conjuntoDeAcciones=new ArrayList<>();
+        conjuntoDeAcciones.add(accion1);
+        conjuntoDeAcciones.add(accion2);
+        conjuntoDeAcciones.add(accion3);
+
+        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
+        Assert.assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
+        Assert.assertTrue(conjuntoDeAcciones.contains("Ladron atrapado  y orden correcta, ganaste la partida."));
+
     }
 
     @Test
