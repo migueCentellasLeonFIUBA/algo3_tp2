@@ -38,7 +38,7 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
 
     public void handle(ActionEvent actionEvent){
 
-        String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+        String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
         Media sound = new Media(new File(musicFile).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -57,7 +57,7 @@ public class BotonBuscarSospechosoEventHandler implements EventHandler<ActionEve
             Scene escenaTiempoTerminado = new Scene(tiempoTerminado, 960, 600);
             stage.setScene(escenaTiempoTerminado);
 
-            String filePerder = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoPerder.mp3";     // For example
+            String filePerder = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
             Media mediaPerder = new Media(new File(filePerder).toURI().toString());
             MediaPlayer mediaPlayerPerder = new MediaPlayer(mediaPerder);

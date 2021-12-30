@@ -46,8 +46,8 @@ public class BotonViajarADestinoEventHandler implements EventHandler<ActionEvent
         }
         Scene escenaActulizada = new Scene(escenaPrincipal, 960, 600);
         stage.setScene(escenaActulizada);
-        String sonidoBoton = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
-        String sonidoAvion = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoAvion.mp3";     // For example
+        String sonidoBoton = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
+        String sonidoAvion = "src/main/resources/sonidos/SonidoAvion.mp3";     // For example
 
         Media boton = new Media(new File(sonidoBoton).toURI().toString());
         MediaPlayer mediaPlayerBoton = new MediaPlayer(boton);

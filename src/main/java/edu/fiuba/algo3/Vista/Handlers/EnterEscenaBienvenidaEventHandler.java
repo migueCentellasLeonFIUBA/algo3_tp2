@@ -42,7 +42,7 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
     public void handle(KeyEvent keyEvent){
 
         if((keyEvent.getCode().equals(KeyCode.ENTER)) && cantidadEnters == 1){
-            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+            String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";    // For example
 
             Media sound = new Media(new File(musicFile).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -62,7 +62,7 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
         }
 
         if((keyEvent.getCode().equals(KeyCode.ENTER)) && cantidadEnters == 0){
-            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+            String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
             Media sound = new Media(new File(musicFile).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);

@@ -93,7 +93,7 @@ public class EscenaTiempoTerminado extends HBox {
         Background grisClaro = new Background(fondoGrisClaro);
 
 
-        InputStream streamSalir = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\Salir.jpg");
+        InputStream streamSalir = new FileInputStream("src/main/resources/imagenes/Salir.jpg");
         Image imageSalir = new Image(streamSalir);
         ImageView imageViewSalir = new ImageView();
         imageViewSalir.setImage(imageSalir);
@@ -116,7 +116,7 @@ public class EscenaTiempoTerminado extends HBox {
         salir.setOnMouseEntered(mouseHoverEnterEventHandlerSalir);
         salir.setOnMouseExited(mouseHoverExitEventHandlerSalir);
 
-        InputStream streamReiniciar = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ReiniciarEdit.jpg");
+        InputStream streamReiniciar = new FileInputStream("src/main/resources/imagenes/ReiniciarEdit.jpg");
         Image imageReiniciar = new Image(streamReiniciar);
         ImageView imageViewReiniciar = new ImageView();
         imageViewReiniciar.setImage(imageReiniciar);

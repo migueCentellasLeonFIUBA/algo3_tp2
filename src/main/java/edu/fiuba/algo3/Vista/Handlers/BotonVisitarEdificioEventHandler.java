@@ -38,7 +38,7 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
     }
 
     public void handle(ActionEvent actionEvent) {
-        String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+        String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
         Media sound = new Media(new File(musicFile).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -88,7 +88,7 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
             Scene escenaTiempoTerminado = new Scene(tiempoTerminado, 960, 600);
             stage.setScene(escenaTiempoTerminado);
 
-            String filePerder = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoPerder.mp3";     // For example
+            String filePerder = "src/main/resources/sonidos/SonidoPerder.mp3";     // For example
 
             Media mediaPerder = new Media(new File(filePerder).toURI().toString());
             MediaPlayer mediaPlayerPerder = new MediaPlayer(mediaPerder);
@@ -107,7 +107,7 @@ public class BotonVisitarEdificioEventHandler implements EventHandler<ActionEven
                 stage.setScene(escenaAtraparLadron);
 
                 if (pistaEdificio.contains("correcta")) {
-                    String musicFileGanar = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoGanar.mp3";     // For example
+                    String musicFileGanar = "src/main/resources/sonidos/SonidoGanar.mp3";     // For example
 
                     Media sonidoGanar = new Media(new File(musicFileGanar).toURI().toString());
                     MediaPlayer mediaPlayerGanar = new MediaPlayer(sonidoGanar);

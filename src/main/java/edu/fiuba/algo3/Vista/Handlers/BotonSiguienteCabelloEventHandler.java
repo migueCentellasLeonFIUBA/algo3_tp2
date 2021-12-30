@@ -18,7 +18,7 @@ public class BotonSiguienteCabelloEventHandler implements EventHandler<ActionEve
     }
 
     public void handle(ActionEvent actionEvent){
-        String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+        String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
         Media sound = new Media(new File(musicFile).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);

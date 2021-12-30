@@ -69,7 +69,7 @@ public class EscenaPrincipal extends HBox {
 
 
 
-        InputStream stream = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\IndianapolisImage.jpg");
+        InputStream stream = new FileInputStream("src/main/resources/imagenes/IndianapolisImage.jpg");
         Image image = new Image(stream);
         ImageView imageView = new ImageView();
         imageView.setImage(image);
@@ -104,7 +104,7 @@ public class EscenaPrincipal extends HBox {
         BackgroundFill fondoGris = new BackgroundFill(Color.DARKGRAY, CornerRadii.EMPTY, Insets.EMPTY);
         Background fondo = new Background(fondoGris);
 
-        FileInputStream inputComputadora = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenComputadora.jpg");
+        FileInputStream inputComputadora = new FileInputStream("src/main/resources/imagenes/ImagenComputadora.jpg");
         Image imagenComputadora = new Image(inputComputadora);
         ImageView imageViewComputadora = new ImageView(imagenComputadora);
         imageViewComputadora.setFitHeight(80);
@@ -123,7 +123,7 @@ public class EscenaPrincipal extends HBox {
         BotonComputadoraEventHandler botonComputadoraEventHandler = new BotonComputadoraEventHandler(leftSide, rightSide, stage, jugador);
         computadora.setOnAction(botonComputadoraEventHandler);
 
-        FileInputStream inputEdificio = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenEdificio.jpg");
+        FileInputStream inputEdificio = new FileInputStream("src/main/resources/imagenes/ImagenEdificio.jpg");
         Image imagenEdificio = new Image(inputEdificio);
         ImageView imageViewEdificio = new ImageView(imagenEdificio);
         imageViewEdificio.setFitHeight(80);
@@ -142,7 +142,7 @@ public class EscenaPrincipal extends HBox {
         BotonInvestigarEventHandler botonInvestigarEventHandler = new BotonInvestigarEventHandler(jugador, stage, rightSide, leftSide);
         edificio.setOnAction(botonInvestigarEventHandler);
 
-        FileInputStream inputAeropuerto = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenAeropuerto.jpg");
+        FileInputStream inputAeropuerto = new FileInputStream("src/main/resources/imagenes/ImagenAeropuerto.jpg");
         Image imagenAeropuerto = new Image(inputAeropuerto);
         ImageView imageViewAeropuerto = new ImageView(imagenAeropuerto);
         imageViewAeropuerto.setFitHeight(80);

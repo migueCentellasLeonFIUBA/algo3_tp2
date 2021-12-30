@@ -150,6 +150,8 @@ public class JuegoTest{
         String pista2 = jugador.visitarEdificio(edificio2);
         String pista3 = jugador.visitarEdificio(edificio3);
 
+        //pista3: Se le vio caminar con un escudo espartano en su espalda, conducía un coche descapotable clasico.
+
         assertTrue(pista1.contains("Mar Egeo"));
         assertTrue(pista2.contains("Euros"));
         assertTrue(pista3.contains("escudo espartano"));
@@ -175,6 +177,7 @@ public class JuegoTest{
         assertTrue(pista2.contains("imperio britanico"));
         assertTrue(pista3.contains("rupias"));
 
+        //pista3:Banquera: estoy bastante segura de haberle visto cambiar rupias, tenía puesto un anillo muy lujoso
         ciudades = jugador.verConexiones();
 
         ciudad =  ciudades.get(0);//Seleccionar ciudad.
@@ -240,7 +243,7 @@ public class JuegoTest{
         jugador.siguienteVehiculo();
         jugador.siguienteVehiculo();
 
-        //Hay un solo seospechoso que cumple estas caracteristicas, pero no es el ladron
+        //Hay un solo seospechoso que cumple estas características, pero no es el ladron
         jugador.buscarSospechosos();
 
         String accion1 = jugador.visitarEdificio(edificio1);
@@ -325,6 +328,8 @@ public class JuegoTest{
         assertTrue(pista2.contains("Soles"));
         assertTrue(pista3.contains("Incas"));
 
+        //pista1: Piloto: creo haberle visto abordar un avión con una bandera Roja y blanca, con un pajaro en el centro tenía un largo cabello Negro.
+
         ciudades = jugador.verConexiones();
 
         ciudad =  ciudades.get(0);//Seleccionar ciudad.
@@ -351,7 +356,7 @@ public class JuegoTest{
           },
          */
 
-        //Seteo de caracterisiticas
+        //Seteo de caracterisiticas inteligentes...
         jugador.siguienteSexo();
         jugador.siguienteHobby();
         jugador.siguienteHobby();
@@ -363,7 +368,6 @@ public class JuegoTest{
         jugador.siguienteVehiculo();
 
 
-        //Hay un solo seospechoso que cumple estas caracteristicas, pero no es el ladron
         jugador.buscarSospechosos();
 
         String accion1 = jugador.visitarEdificio(edificio1);

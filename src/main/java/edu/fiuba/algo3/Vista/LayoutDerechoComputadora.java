@@ -111,7 +111,7 @@ public class LayoutDerechoComputadora extends VBox {
         BackgroundFill fondoGris = new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY);
         Background fondo = new Background(fondoGris);
 
-        FileInputStream inputSexo = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenFlechaDerecha.png");
+        FileInputStream inputSexo = new FileInputStream("src/main/resources/imagenes/ImagenFlechaDerecha.png");
         Image imagenSexo = new Image(inputSexo);
         ImageView imageViewSexo = new ImageView(imagenSexo);
         imageViewSexo.setFitHeight(40);
