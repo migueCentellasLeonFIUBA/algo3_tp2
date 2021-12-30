@@ -124,7 +124,6 @@ public class JuegoTest{
         assertTrue(conjuntoDeAcciones.contains("Ladron atrapado  pero usted no tiene la orden cargada, perdió el juego."));
         assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
         assertTrue(conjuntoDeAcciones.contains("Estan ocurriendo cosas muy turbias en esta ciudad! Fuiste apuñalado, el ladron justo se escapo del edificio."));
-
     }
 
 
@@ -386,8 +385,53 @@ public class JuegoTest{
         assertEquals(1, coincidencias);
     }
 
+    //test integracion con carga de archivos.
     @Test
-    public void elJugadorPierdeLasHorasViajandoYPierdeElJuego() {
+    public void Test04ElJugadorSeQuedaSinHorasEntoncesPierdeElJuego() {
+
+//***********************Version de Integración / Lo que se ejecutaria en la interfaz*************************
+
+        //patron fachada
+        Parser parser = new Parser();
+        Fachada fachada = new Fachada(parser);
+
+        //patron builder de juego
+        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
+        DirectorJuego director = new DirectorJuego(constructor);
+        try{
+            director.crearJuego(fachada);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        Juego juego = director.obtenerJuego();
+
+        //comienzo del juego
+        Jugador jugador = juego.IdentificarJugador("Lucio");
+
+        try {
+            juego.comenzarCaso();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        ArrayList<Ciudad> destinos;
+
+        //viajo hasta quedarme sin horas
+        int viajes = 38;
+        for (int i = 0; i < viajes; i++) {
+            //se obtienen los destinos disponibles
+            destinos = jugador.obtenerSiguientesDestinos();
+
+            jugador.viajarACiudad(destinos.get(0)); //las cuidades están conectadas, como un grafo dirigido.
+        }
+
+        assert(jugador.terminarJuego());
+    }
+
+    //test unitario sin fachada
+    @Test
+    public void Test05ElJugadorPierdeLasHorasViajandoYPierdeElJuego() {
 
         Juego juego = new Juego();
 
@@ -658,59 +702,5 @@ public class JuegoTest{
         assert(jugador.terminarJuego()); //el jugador se queda sin horas, entonces pierde.
         //es un metodo que depende de reloj ->
     }
-
-
-    //test integracion con carga de archivos.
-    @Test
-    public void elJugadorSeQuedaSinHorasEntoncesPierdeElJuego() {
-
-//***********************Version de Integración / Lo que se ejecutaria en la interfaz*************************
-
-        //patron fachada
-        Parser parser = new Parser();
-        Fachada fachada = new Fachada(parser);
-
-        //patron builder de juego
-        ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
-        DirectorJuego director = new DirectorJuego(constructor);
-        try{
-            director.crearJuego(fachada);
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
-        Juego juego = director.obtenerJuego();
-
-        //comienzo del juego
-        Jugador jugador = juego.IdentificarJugador("Lucio");
-
-        try {
-            juego.comenzarCaso();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        ArrayList<Ciudad> destinos;
-
-        //viajo hasta quedarme sin horas
-        int viajes = 38;
-        for (int i = 0; i < viajes; i++) {
-            //se obtienen los destinos disponibles
-            destinos = jugador.obtenerSiguientesDestinos();
-
-            jugador.viajarACiudad(destinos.get(0)); //las cuidades están conectadas, como un grafo dirigido.
-        }
-
-        assert(jugador.terminarJuego());
-    }
-
-
-
-
-
-
-
-
-
 
 }

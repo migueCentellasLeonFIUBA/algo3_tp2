@@ -30,8 +30,6 @@ public class PantallaDeInicio extends VBox {
 
         super();
 
-
-
         String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\MusicaInicialDos.mp3";     // For example
 
         Media sound = new Media(new File(musicFile).toURI().toString());
@@ -40,8 +38,6 @@ public class PantallaDeInicio extends VBox {
         //mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         //mediaPlayer.setAutoPlay(true);
         //mediaPlayer.play();
-
-
 
         this.stage = stage;
         //this.stage.setMaxHeight(600);
