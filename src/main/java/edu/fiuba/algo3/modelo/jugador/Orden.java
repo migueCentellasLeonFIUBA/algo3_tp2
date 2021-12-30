@@ -13,10 +13,14 @@ public class Orden implements IOrden {
     public String revisarOrden(Jugador jugador){
         if(sospechoso.arrestar()){
             jugador.ganador();
-            return " y orden correcta, ganaste la partida.";
+            return " y orden correcta, ganaste la partida. Muy bien hecho";
         }else{
             jugador.perdedor();
-            return " orden creada para el Sospechoso equivocado, cuidado nos pueden demandar por hacer esto.";
+            return ", orden emitida para el Sospechoso equivocado, perdió el juego.";
         }
+    }
+
+    public String nombre(){
+        return "Orden emitida para " + sospechoso.getNombre();
     }
 }

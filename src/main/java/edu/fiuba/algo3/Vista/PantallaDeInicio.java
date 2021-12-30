@@ -30,18 +30,15 @@ public class PantallaDeInicio extends VBox {
 
         super();
 
+        //String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\MusicaInicialDos.mp3";     // For example
+        //String musicFile = "/sonidos";
+        //Media sound = new Media(new File(musicFile).toURI().toString());
+        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
 
-
-        String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\MusicaInicialDos.mp3";     // For example
-
-        Media sound = new Media(new File(musicFile).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
         //mediaPlayer.isAutoPlay(true);
         //mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         //mediaPlayer.setAutoPlay(true);
         //mediaPlayer.play();
-
-
 
         this.stage = stage;
         //this.stage.setMaxHeight(600);
@@ -52,9 +49,9 @@ public class PantallaDeInicio extends VBox {
         this.setSpacing(20);
         this.setPadding(new Insets(25));
 
-        //InputStream stream = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\pantallaCarga.png");
-        Image imagen = new Image("https://www.mobygames.com/images/shots/l/491-where-in-the-world-is-carmen-sandiego-dos-screenshot-title-screen.gif");
-
+        InputStream stream = new FileInputStream("src/main/resources/imagenes/pantallaCarga.png");
+        //Image imagen = new Image("https://www.mobygames.com/images/shots/l/491-where-in-the-world-is-carmen-sandiego-dos-screenshot-title-screen.gif");
+        Image imagen = new Image(stream);
         BackgroundSize backgroundSize = new BackgroundSize(100, 100, true, true, true, true);
         BackgroundImage imagenDeFondo = new BackgroundImage(imagen, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, backgroundSize);
         this.setBackground(new Background(imagenDeFondo));

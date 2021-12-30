@@ -53,7 +53,7 @@ public class EscenaBienvenida extends HBox {
         lugar.setTranslateY(-495);
         lugar.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 25));
 
-        Label tiempoRestante = new Label("Lunes, 9 a.m.");
+        Label tiempoRestante = new Label("Lunes, 8 hs");
         tiempoRestante.setTranslateX(130);
         tiempoRestante.setTranslateY(-495);
         tiempoRestante.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 20));

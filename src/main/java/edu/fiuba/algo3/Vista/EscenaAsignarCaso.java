@@ -49,7 +49,7 @@ public class EscenaAsignarCaso extends HBox {
 
         Label presioneEnter = new Label("Presione 'Enter'");
         presioneEnter.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 25));
-        presioneEnter.setTranslateX(65);
+        presioneEnter.setTranslateX(90);
         presioneEnter.setTranslateY(-70);
 
         /*Button boton = new Button();
@@ -72,7 +72,7 @@ public class EscenaAsignarCaso extends HBox {
         lugar.setTranslateY(-495);
         lugar.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 25));
 
-        Label tiempoRestante = new Label("Lunes, 9 a.m.");
+        Label tiempoRestante = new Label("Lunes, 8 hs.");
         tiempoRestante.setTranslateX(130);
         tiempoRestante.setTranslateY(-495);
         tiempoRestante.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 20));

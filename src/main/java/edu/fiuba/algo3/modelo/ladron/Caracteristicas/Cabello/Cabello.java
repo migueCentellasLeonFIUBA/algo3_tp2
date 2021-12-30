@@ -34,8 +34,5 @@ public class Cabello {
         return cabelloActual != 0;
     }
 
-    public String getCaracteristica(){
-        return cabellos.get(cabelloActual);
-    }
 }
 

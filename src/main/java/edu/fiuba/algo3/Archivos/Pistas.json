@@ -164,9 +164,9 @@
   "Oslo": {
     "Biblioteca":
     {
-      "facil":"Co-Piloto: le ví llevar una bandera con una roja con una cruz",
-      "media":"Co-Piloto: creo haberle visto practicar su noruego,¡No era muy bueno!",
-      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar un glaciar por primera vez"
+      "facil":"Guardia: le ví llevar una bandera roja con una cruz",
+      "media":"Guardia: creo haberle visto practicar su noruego,¡No era muy bueno!",
+      "dificil":"Guardia: creo haberle escuchado decir que iba a visitar un glaciar por primera vez"
     },
     "Aeropuerto":
     {
@@ -184,9 +184,9 @@
   "Nueva York" : {
     "Biblioteca":
     {
-      "facil":"Co-Piloto: le ví llevar una bandera con una roja y blanca, con muchas estrellas",
-      "media":"Co-Piloto: creo haberle visto practicar su inglés,¡No era muy bueno!",
-      "dificil":"Co-Piloto: creo haberle escuchado decir que iba a visitar las cataratas del niagara por primera vez"
+      "facil":"Bibliotecario: le ví llevar una bandera con una roja y blanca, con muchas estrellas",
+      "media":"Bibliotecario: creo haberle visto practicar su inglés,¡No era muy bueno!",
+      "dificil":"Bibliotecario: creo haberle escuchado decir que iba a visitar las cataratas del niagara por primera vez"
     },
     "Aeropuerto":
     {

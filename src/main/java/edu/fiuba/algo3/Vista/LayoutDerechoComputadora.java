@@ -38,23 +38,23 @@ public class LayoutDerechoComputadora extends VBox {
         computadora.setTextFill(Color.BLACK);
 
 
-        Label labelSexo = crearLabel();
+        Label labelSexo = crearLabel(jugador.getSexoComputadora());
         BotonSiguienteSexoEventHandler botonSiguienteSexoEventHandler = new BotonSiguienteSexoEventHandler(jugador, labelSexo);
         HBox sexo = crearCaja(botonSiguienteSexoEventHandler, labelSexo);
 
-        Label labelCabello = crearLabel();
+        Label labelCabello = crearLabel(jugador.getCabelloComputadora());
         BotonSiguienteCabelloEventHandler botonSiguienteCabelloEventHandler = new BotonSiguienteCabelloEventHandler(jugador, labelCabello);
         HBox cabello = crearCaja(botonSiguienteCabelloEventHandler, labelCabello);
 
-        Label labelHobby = crearLabel();
+        Label labelHobby = crearLabel(jugador.getHobbyComputadora());
         BotonSiguienteHobbyEventHandler botonSiguienteHobbyEventHandler = new BotonSiguienteHobbyEventHandler(jugador, labelHobby);
         HBox hobby = crearCaja(botonSiguienteHobbyEventHandler, labelHobby);
 
-        Label labelSenia = crearLabel();
+        Label labelSenia = crearLabel(jugador.getSeniaComputadora());
         BotonSiguienteSeniaEventHandler botonSiguienteSeniaEventHandler = new BotonSiguienteSeniaEventHandler(jugador, labelSenia);
         HBox senia = crearCaja(botonSiguienteSeniaEventHandler, labelSenia);
 
-        Label labelVehiculo = crearLabel();
+        Label labelVehiculo = crearLabel(jugador.getVehiculoComputadora());
         BotonSiguienteVehiculoEventHandler botonSiguienteVehiculoEventHandler = new BotonSiguienteVehiculoEventHandler(jugador, labelVehiculo);
         HBox vehiculo = crearCaja(botonSiguienteVehiculoEventHandler, labelVehiculo);
 
@@ -68,7 +68,7 @@ public class LayoutDerechoComputadora extends VBox {
         buscarSospechoso.setTranslateY(-430);
         buscarSospechoso.setBackground(grisClaro);
         buscarSospechoso.setEffect(new InnerShadow());
-        BotonBuscarSospechosoEventHandler botonBuscarSospechosoEventHandler = new BotonBuscarSospechosoEventHandler(jugador, leftSide);
+        BotonBuscarSospechosoEventHandler botonBuscarSospechosoEventHandler = new BotonBuscarSospechosoEventHandler(jugador, leftSide, stage);
         buscarSospechoso.setOnAction(botonBuscarSospechosoEventHandler);
 
         MouseHoverEnterEventHandler mouseHoverEventHandlerBuscar = new MouseHoverEnterEventHandler(buscarSospechoso);
@@ -111,7 +111,7 @@ public class LayoutDerechoComputadora extends VBox {
         BackgroundFill fondoGris = new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY);
         Background fondo = new Background(fondoGris);
 
-        FileInputStream inputSexo = new FileInputStream("C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\images\\ImagenFlechaDerecha.png");
+        FileInputStream inputSexo = new FileInputStream("src/main/resources/imagenes/ImagenFlechaDerecha.png");
         Image imagenSexo = new Image(inputSexo);
         ImageView imageViewSexo = new ImageView(imagenSexo);
         imageViewSexo.setFitHeight(40);
@@ -134,9 +134,9 @@ public class LayoutDerechoComputadora extends VBox {
         return hbox;
     }
 
-    private Label crearLabel(){
+    private Label crearLabel(String atributo){
         Label label = new Label();
-        label.setText("Sin Asignar");
+        label.setText(atributo);
         label.setTranslateY(-450);
         label.setTranslateX(20);
         label.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 18));

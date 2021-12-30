@@ -16,10 +16,6 @@ public class Sexo {
         sexos.add("Masculino"); //2
     }
 
-    public Boolean compararSexo(Sexo sexo) {
-        return (sexo.sexo() == this.sexo());
-    }
-
     public String sexo() {
         return sexos.get(sexoActual);
     }
@@ -35,8 +31,5 @@ public class Sexo {
         return sexoActual != 0;
     }
 
-    public String getCaracteristica(){
-        return sexos.get(sexoActual);
-    }
 }
 

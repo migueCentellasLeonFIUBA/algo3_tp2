@@ -92,27 +92,12 @@ public class Jugador {
         return mapa.posiblesDestinos();
     }
 
-/*    public ArrayList<String> buscarSospechosos(){
-        ArrayList<String> nombresSospechosos = new ArrayList<>();
+    public ArrayList<ISospechable> buscarSospechosos(){
 
-        ArrayList<String> carateristicasComputadora = new ArrayList<>();
-
-        carateristicasComputadora.add(this.cabello.getCaracteristica());
-        carateristicasComputadora.add(this.hobby.getCaracteristica());
-        carateristicasComputadora.add(this.senia.getCaracteristica());
-        carateristicasComputadora.add(this.sexo.getCaracteristica());
-        carateristicasComputadora.add(this.vehiculo.getCaracteristica());
-
-        ArrayList<ISospechable> sospechosos = this.buscarSospechosos(carateristicasComputadora);
-
-        //cargo los nombres de cada sospechoso:
-        for(ISospechable sospechoso : sospechosos){
-            nombresSospechosos.add(sospechoso.getNombre());
-        }
-
-        return nombresSospechosos;
+        reloj.descontarhoras(3);
+        return caso.buscarSospechosos();
     }
-*/
+
     public ArrayList<ISospechable> buscarSospechosos(ArrayList<String> caracteristicasBuscadas){
         reloj.descontarhoras(3);
         return caso.buscarSospechosos(caracteristicasBuscadas);
@@ -138,7 +123,7 @@ public class Jugador {
         return reloj.tiempoTerminado();
     }
 
-    //intrefaz
+    //Metodos para la intrefaz
     public String getDescripcionCaso() {
         return caso.obtnerDescripcion();
     }
@@ -159,55 +144,57 @@ public class Jugador {
         return mapa.posiblesDestinos();
     }
 
-    public ArrayList<ISospechable> buscarSospechosos(){
-
-        reloj.descontarhoras(3);
-        return caso.buscarSospechosos();
-    }
-
 
     //"computadora interfaz"
     public void siguienteCabello() {
-        cabello.siguienteCabello();
+        caso.siguienteCabello();
     }
 
     public String getCabelloComputadora() {
-        return cabello.getCaracteristica();
+        return caso.getCabelloComputadora();
     }
 
     public void siguienteHobby() {
-        hobby.siguienteHobby();
+        caso.siguienteHobby();
     }
 
     public String getHobbyComputadora() {
-        return hobby.getCaracteristica();
+        return caso.getHobbyComputadora();
     }
 
     public void siguienteSenia() {
-        senia.siguienteSenia();
+        caso.siguienteSenia();
     }
 
     public String getSeniaComputadora() {
-        return senia.getCaracteristica();
+        return caso.getSeniaComputadora();
     }
 
     public void siguienteSexo() {
-        sexo.siguienteSexo();
+        caso.siguienteSexo();
     }
 
     public String getSexoComputadora() {
-        return sexo.getCaracteristica();
+        return caso.getSexoComputadora();
     }
 
     public void siguienteVehiculo() {
-        vehiculo.siguienteVehiculo();
+        caso.siguienteVehiculo();
     }
 
     public String getVehiculoComputadora() {
-        return vehiculo.getCaracteristica();
+        return caso.getVehiculoComputadora();
     }
 
     public String rango() {
         return grado.rango();
+    }
+
+    public String orden(){
+        return caso.orden();
+    }
+
+    public String nombre() {
+        return nombre;
     }
 }

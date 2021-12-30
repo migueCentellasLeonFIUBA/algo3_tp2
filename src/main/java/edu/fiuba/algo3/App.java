@@ -19,27 +19,9 @@ import javafx.stage.Stage;
  */
 public class App extends Application {
 
-   /* @Override
-    public void start(Stage stage) {
-        var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
-        var label = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        var scene = new Scene(new StackPane(label), 640, 480);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public static void main(String[] args) {
-        launch();
-    }*/
-
     @Override
     public void start(Stage stage) throws Exception {
         Juego juego = crearModelo();
-
-        //IdentificarJugador identificarJugador = new IdentificarJugador(stage, juego);
-        //Scene escenaIdentificarJugador = new Scene(identificarJugador);
-
-        //EscenaPrincipal identificarJugador = new EscenaPrincipal(stage, jugador , crearLeftSide(), crearRightSide());
 
         EscenaBienvenida bienvenida = new EscenaBienvenida(stage, juego);
         Scene escenaBienvenida = new Scene(bienvenida, 960, 600);

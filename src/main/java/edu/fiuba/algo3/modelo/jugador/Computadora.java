@@ -18,10 +18,7 @@ public class Computadora {
     private Cabello cabello;
     private Vehiculo vehiculo;
     private Senia senia;
-
     private Map<String, ISospechable> sospechosos;
-
-    private ArrayList<String> caracteristicasBuscadas;
 
     public Computadora(Map<String, ISospechable> sospechosos) {
 
@@ -50,67 +47,36 @@ public class Computadora {
     public ArrayList<ISospechable> buscarSospechoso(){
         ArrayList<String> listaNombreSospechosos = new ArrayList<>(sospechosos.keySet());;
         ArrayList<ISospechable> listaSospechosos = new ArrayList<>();
-        ArrayList<String> caracteristicasBuscadas = new ArrayList<>();
+        ArrayList<String> caracteristicasBuscadas = datosAsignados();
 
-        caracteristicasBuscadas.add(sexo.sexo());
-        caracteristicasBuscadas.add(cabello.cabello());
-        caracteristicasBuscadas.add(senia.senia());
-        caracteristicasBuscadas.add(vehiculo.vehiculo());
-        caracteristicasBuscadas.add(hobby.hobby());
-
-
-        for(String nombre : listaNombreSospechosos){
-            ISospechable sospechoso =  sospechosos.get(nombre);
-            if(sospechoso.comparar(caracteristicasBuscadas)!=null){
-                listaSospechosos.add(sospechoso);
-            }
-        }
-
-        return listaSospechosos;
+        return BuscarSospechoso(caracteristicasBuscadas);
     }
 
-    private List<ArrayList<String>> datosAsignados(){
+    private ArrayList<String> datosAsignados(){
 
-        List<ArrayList<String>> parametros = new ArrayList<>();
-        ArrayList<String> caracteristicas = new ArrayList<>();
-        ArrayList<String> datos = new ArrayList<>();
-        ArrayList<String> caracteristicasABuscar = new ArrayList<>();
+       ArrayList<String> datos = new ArrayList<>();
 
-        if(sexo.estaAsignado()){
-            caracteristicas.add("Sexo");
+       if(sexo.estaAsignado()){
             datos.add(sexo.sexo());
-            caracteristicasABuscar.add(sexo.sexo());
-        }
+       }
 
         if(hobby.estaAsignado()){
-            caracteristicas.add("Hobby");
             datos.add(hobby.hobby());
-            caracteristicasABuscar.add(hobby.hobby());
         }
 
         if(cabello.estaAsignado()){
-            caracteristicas.add("Cabello");
             datos.add(cabello.cabello());
-            caracteristicasABuscar.add(cabello.cabello());
         }
 
         if(senia.estaAsignado()){
-            caracteristicas.add("Senia");
             datos.add(senia.senia());
-            caracteristicasABuscar.add(senia.senia());
         }
 
         if(vehiculo.estaAsignado()){
-            caracteristicas.add("Vehiculo");
             datos.add(vehiculo.vehiculo());
-            caracteristicasABuscar.add(vehiculo.vehiculo());
         }
 
-        caracteristicasBuscadas = caracteristicasABuscar;
-        parametros.add(caracteristicas);
-        parametros.add(datos);
-
-        return parametros;
+        return datos;
     }
 
     public void siguienteSexo() {sexo.siguienteSexo();}

@@ -22,24 +22,28 @@ public class Caso {
     }
 
     public ArrayList<ISospechable> buscarSospechosos(){
-        return computadora.buscarSospechoso();
+        ArrayList<ISospechable> sospechosos = computadora.buscarSospechoso();
+        if (sospechosos.size()==1){
+            orden = new Orden(sospechosos.get(0));
+        }
+        return sospechosos;
     }
 
     public String obtnerDescripcion(){
         String descripcionObjeto = this.obtenerDescripicionObjeto();
         String descripcionLadron = this.obtenerDescripicionLadron();
         String descripcionCasoFinal = this.obtenerDescripcionFinal();
-        return (descripcionObjeto + descripcionLadron + descripcionCasoFinal);
+        return (descripcionObjeto + "\n\n" + descripcionLadron + "\n\n" + descripcionCasoFinal);
     }
 
     private String obtenerDescripcionFinal() {
         String ciudadDeOrigen = objetoRobado.getCiudadDeOrigen();
-        return ("Tu tarea: Rastrear al ladrón de" + ciudadDeOrigen + "a su econdite y arrestarlo!\n");
+        return ("Tu tarea: Rastrear al ladrón de " + ciudadDeOrigen + " a su econdite y arrestarlo!\n");
     }
 
     private String obtenerDescripicionLadron() {
         String sexo = ladron.obtenerSexo();
-        return ("Sospechoso" + sexo + "identificado en la escena del crimen.\n");
+        return ("Sospechoso " + sexo + " identificado en la escena del crimen.\n");
     }
 
     private String obtenerDescripicionObjeto() {
@@ -59,5 +63,49 @@ public class Caso {
     public String revisarOrden(Jugador jugador) {
         return orden.revisarOrden(jugador);
 
+    }
+
+    public void siguienteSexo(){
+        computadora.siguienteSexo();
+    }
+
+    public void siguienteCabello(){
+        computadora.siguienteCabello();
+    }
+
+    public void siguienteSenia(){
+        computadora.siguienteSenia();
+    }
+
+    public void siguienteVehiculo(){
+        computadora.siguienteVehiculo();
+    }
+
+    public void siguienteHobby(){
+        computadora.siguienteHobby();
+    }
+
+    public String getSexoComputadora(){
+        return computadora.getSexo();
+    }
+
+    public String getCabelloComputadora(){
+        return computadora.getCabello();
+    }
+
+    public String getSeniaComputadora(){
+        return computadora.getSenia();
+    }
+
+    public String getVehiculoComputadora(){
+        return computadora.getVehiculo();
+    }
+
+    public String getHobbyComputadora(){
+        return computadora.getHobby();
+    }
+
+    public String orden(){
+        return orden.nombre();
     }
 }

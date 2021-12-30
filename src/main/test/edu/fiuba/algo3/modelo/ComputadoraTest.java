@@ -6,8 +6,6 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Parser;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.jugador.NoOrden;
-import edu.fiuba.algo3.modelo.jugador.Orden;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ComputadoraTest {
 
     @Test
-    public void TestComputadoraSinParametrosNoDevuelveNingunSospechoso() throws Exception {
+    public void TestComputadoraSinParametrosDevuelveTodosLosSospechosos() throws Exception {
         Parser parser = new Parser();
         Fachada fachada = new Fachada(parser);
         ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
@@ -30,7 +28,7 @@ public class ComputadoraTest {
 
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
-        assertEquals(0, listaSospechosos.size());
+        assertEquals(4, listaSospechosos.size());
     }
 
     @Test
@@ -45,16 +43,6 @@ public class ComputadoraTest {
         Jugador jugador = juego.IdentificarJugador("Lucio");
         juego.comenzarCaso();
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
-
-         /*
-         "Merey Laroc":{
-            "Sexo": "Femenino",
-            "Hobby" : "Tenis",
-            "Cabello" : "Rojo",
-            "Senia" : "Tatuaje",
-            "Vehiculo" : "Deportivo"
-          },
-         */
 
         caracterisitcasABuscar.add("Femenino");
         caracterisitcasABuscar.add("Tenis");
@@ -102,7 +90,7 @@ public class ComputadoraTest {
         juego.comenzarCaso();
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
 
-        caracterisitcasABuscar.add("Masculino");
+        caracterisitcasABuscar.add("Cicatriz");
 
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
         assertEquals(0, listaSospechosos.size());

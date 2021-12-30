@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.Vista.Handlers;
 
 import edu.fiuba.algo3.Vista.EscenaPrincipal;
+import edu.fiuba.algo3.Vista.EscenaTiempoTerminado;
 import edu.fiuba.algo3.modelo.ciudades.Ciudad;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.event.ActionEvent;
@@ -18,21 +19,25 @@ import java.io.FileNotFoundException;
 public class BotonViajarADestinoEventHandler implements EventHandler<ActionEvent> {
 
     Jugador jugador;
-    HBox hbox;
     Stage stage;
     Ciudad destino;
 
-    public BotonViajarADestinoEventHandler(Jugador jugador, Stage stage, Ciudad destino){
+    public BotonViajarADestinoEventHandler(Jugador jugador, Stage stage, Ciudad destino) {
         this.jugador = jugador;
-        this.hbox = hbox;
         this.stage = stage;
         this.destino = destino;
     }
 
     public void handle(ActionEvent actionEvent){
+
         jugador.viajarACiudad(destino);
-        TextArea center = crearCenter();
-        //BorderPane newBorderPane = new BorderPane(layoutComputadora, borderPane.getTop(), borderPane.getRight(), borderPane.getBottom(), borderPane.getLeft());
+
+        /*if(jugador.terminarJuego()){
+            EscenaTiempoTerminado tiempoTerminado = new EscenaTiempoTerminado(stage);
+            Scene escenaTiempoTerminado = new Scene(tiempoTerminado, 960, 600);
+            stage.setScene(escenaTiempoTerminado);
+        }*/
+
         EscenaPrincipal escenaPrincipal = null;
         try {
             escenaPrincipal = new EscenaPrincipal(stage, jugador);
@@ -41,30 +46,34 @@ public class BotonViajarADestinoEventHandler implements EventHandler<ActionEvent
         }
         Scene escenaActulizada = new Scene(escenaPrincipal, 960, 600);
         stage.setScene(escenaActulizada);
-        String sonidoBoton = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
-        String sonidoAvion = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoAvion.mp3";     // For example
-
+        String sonidoBoton = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
+        String sonidoAvion = "src/main/resources/sonidos/SonidoAvion.mp3";     // For example
 
         Media boton = new Media(new File(sonidoBoton).toURI().toString());
         MediaPlayer mediaPlayerBoton = new MediaPlayer(boton);
         mediaPlayerBoton.play();
 
-        Media avion = new Media(new File(sonidoAvion).toURI().toString());
-        MediaPlayer mediaPlayerAvion = new MediaPlayer(avion);
-        mediaPlayerAvion.play();
+
+        if(jugador.terminarJuego()){
+            EscenaTiempoTerminado tiempoTerminado = null;
+            try {
+                tiempoTerminado = new EscenaTiempoTerminado(stage, jugador);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            Scene escenaTiempoTerminado = new Scene(tiempoTerminado, 960, 600);
+            stage.setScene(escenaTiempoTerminado);
+        }
+
+        else {
+
+            Media avion = new Media(new File(sonidoAvion).toURI().toString());
+            MediaPlayer mediaPlayerAvion = new MediaPlayer(avion);
+            mediaPlayerAvion.play();
+        }
+
 
 
     }
 
-    private TextArea crearCenter(){
-
-        TextArea textArea = new TextArea();
-        //textArea.setMaxSize(600, 600);
-
-        String descripcion;
-        descripcion = jugador.getDescripcionCiudad();
-
-        textArea.setText(descripcion);
-        return textArea;
-    }
 }

@@ -25,13 +25,13 @@ public class EnterEscenaAsignarCasoEventHandler implements EventHandler<KeyEvent
     private Integer cantidadEnters;
     private Stage stage;
     private Jugador jugador;
-    private VBox leftSide;
 
-    public EnterEscenaAsignarCasoEventHandler(Stage stage, Jugador jugador, VBox leftSide){
+
+    public EnterEscenaAsignarCasoEventHandler(Stage stage, Jugador jugador){
         this.cantidadEnters = -1;
         this.jugador = jugador;
         this.stage = stage;
-        this.leftSide = leftSide;
+
     }
 
     public void handle(KeyEvent keyEvent){
@@ -49,7 +49,7 @@ public class EnterEscenaAsignarCasoEventHandler implements EventHandler<KeyEvent
         stage.setScene(escenaPrincipal);*/
 
         if((keyEvent.getCode().equals(KeyCode.ENTER))){
-            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+            String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
             Media sound = new Media(new File(musicFile).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -66,7 +66,7 @@ public class EnterEscenaAsignarCasoEventHandler implements EventHandler<KeyEvent
         }
 
         else{
-            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+            String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
             Media sound = new Media(new File(musicFile).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);

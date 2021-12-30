@@ -42,7 +42,7 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
     public void handle(KeyEvent keyEvent){
 
         if((keyEvent.getCode().equals(KeyCode.ENTER)) && cantidadEnters == 1){
-            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+            String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";    // For example
 
             Media sound = new Media(new File(musicFile).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -56,13 +56,13 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
             EscenaAsignarCaso asignarCaso = new EscenaAsignarCaso(stage, jugador);
             Scene escenaAsignarCaso = new Scene(asignarCaso, 960, 600);
             stage.setScene(escenaAsignarCaso);
-            EnterEscenaAsignarCasoEventHandler siguiente = new EnterEscenaAsignarCasoEventHandler(this.stage, jugador, leftSide);
+            EnterEscenaAsignarCasoEventHandler siguiente = new EnterEscenaAsignarCasoEventHandler(this.stage, jugador);
             escenaAsignarCaso.setOnKeyPressed(siguiente);
 
         }
 
         if((keyEvent.getCode().equals(KeyCode.ENTER)) && cantidadEnters == 0){
-            String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+            String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
             Media sound = new Media(new File(musicFile).toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -82,7 +82,7 @@ public class EnterEscenaBienvenidaEventHandler implements EventHandler<KeyEvent>
 
             Label presioneEnter = new Label("Presione 'Enter'");
             presioneEnter.setFont(Font.font("Rockwell Extra Bold", FontWeight.BOLD, 25));
-            presioneEnter.setTranslateX(65);
+            presioneEnter.setTranslateX(90);
             presioneEnter.setTranslateY(-70);
 
             rightSide.getChildren().add(presioneEnter);

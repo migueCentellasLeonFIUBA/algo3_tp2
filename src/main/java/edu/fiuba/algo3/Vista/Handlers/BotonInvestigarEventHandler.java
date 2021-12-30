@@ -22,10 +22,12 @@ public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
     VBox rightSide;
     Jugador jugador;
     Stage stage;
-    public BotonInvestigarEventHandler(Jugador jugador, Stage stage, VBox rightSide){
+    VBox leftSide;
+    public BotonInvestigarEventHandler(Jugador jugador, Stage stage, VBox rightSide, VBox leftSide){
         this.rightSide = rightSide;
         this.jugador = jugador;
         this.stage = stage;
+        this.leftSide = leftSide;
     }
 
     public void handle(ActionEvent actionEvent){
@@ -35,7 +37,7 @@ public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
         Scene escenaActulizada = new Scene(escenaPrincipal);
         stage.setScene(escenaActulizada);
         stage.setFullScreen(true);*/
-        String musicFile = "C:\\Users\\fabia\\OneDrive\\Documentos\\tp2\\sonidos\\SonidoBoton.mp3";     // For example
+        String musicFile = "src/main/resources/sonidos/SonidoBoton.mp3";     // For example
 
         Media sound = new Media(new File(musicFile).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -51,7 +53,7 @@ public class BotonInvestigarEventHandler implements EventHandler<ActionEvent> {
 
     private LayoutInvestigar crearLayoutInvestigar(){
 
-        LayoutInvestigar layoutInvestigar = new LayoutInvestigar(jugador, rightSide, stage);
+        LayoutInvestigar layoutInvestigar = new LayoutInvestigar(jugador, rightSide, stage, leftSide);
 
         return layoutInvestigar;
     }
