@@ -6,8 +6,6 @@ import edu.fiuba.algo3.modelo.ManejoArchivos.Fachada;
 import edu.fiuba.algo3.modelo.ManejoArchivos.Parser;
 import edu.fiuba.algo3.modelo.juego.Juego;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
-import edu.fiuba.algo3.modelo.jugador.NoOrden;
-import edu.fiuba.algo3.modelo.jugador.Orden;
 import edu.fiuba.algo3.modelo.ladron.ISospechable;
 import org.junit.jupiter.api.Test;
 
