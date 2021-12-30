@@ -33,6 +33,9 @@ public class Cualidades {
         this.explicacionPista.put("Natacion", ", llevaba en su maleta unas antiparras para nadar");
         this.explicacionPista.put("Alpinismo", ", llevaba en su maleta unas botas y picos, como de alpinismo");
         this.explicacionPista.put("Moto", ", conducía una moto roja");
+        this.explicacionPista.put("Musica", ", llevaba una guitarra bajo el brazo");
+        this.explicacionPista.put("Paracaidismo", ", tenía una mochila de paracaidista en su espalda");
+        this.explicacionPista.put("Cicatriz", ", tenía una horrible cicatriz en su rostro");
     }
 
 
