@@ -56,7 +56,7 @@
   "Oslo": {
     "latitud": "59.91273",
     "longitud": "10.74609",
-    "descripcion":"Llamada Christiania de 1624 a 1897 y Kristiania de 1897 a 1925 (Cristianía en español), es la capital y la ciudad más poblada de Noruega, además de ser su centro político, económico y cultural. Políticamente constituye un municipio y a la vez una de las diecinueve provincias del país. Según el censo del 21 de noviembre de 2018, su población era de 673 469 habitantes. Es la tercera ciudad y área urbana escandinava más poblada, solo superada por Copenhague y Estocolmo.",
+    "descripcion":"Llamada Christiania de 1624 a 1897 y Kristiania de 1897 a 1925 (Cristianía en español), Oslo es la capital y la ciudad más poblada de Noruega, además de ser su centro político, económico y cultural. Políticamente constituye un municipio y a la vez una de las diecinueve provincias del país. Según el censo del 21 de noviembre de 2018, su población era de 673 469 habitantes. Es la tercera ciudad y área urbana escandinava más poblada, solo superada por Copenhague y Estocolmo. Debido a su latitud, tiene uno de los climas más frios del mundo.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Nueva York": {
@@ -68,7 +68,7 @@
   "Lima": {
     "latitud": "-12.04318",
     "longitud": "-77.02824",
-    "descripcion":"Lima es la capital y una megalópolis de la República del Perú. Se encuentra situada en la costa central del país, a orillas del océano Pacífico, conformando una extensa y poblada área urbana conocida como Lima Metropolitana de 70 km norte a sur, desde el distrito de Ancón hasta el distrito de Pucusana, y 44 km este a oeste, desde el distrito de La Punta hasta Chosica (distrito de Lurigancho-Chosica), flanqueada por el desierto costero y extendida sobre los valles de los ríos Chillón, Rímac y Lurín. ",
+    "descripcion":"Lima es la capital y una megalópolis de la República del Perú. Se encuentra situada en la costa central del país, a orillas del océano Pacífico, conformando una extensa y poblada área urbana conocida como Lima Metropolitana de 70 kilometros de norte a sur, desde el distrito de Ancón hasta el distrito de Pucusana, y 44 kilometros de este a oeste, desde el distrito de La Punta hasta Chosica (distrito de Lurigancho-Chosica), flanqueada por el desierto costero y extendida sobre los valles de los ríos Chillón, Rímac y Lurín. ",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Rio De Janeiro": {
@@ -80,7 +80,7 @@
   "Atenas": {
     "latitud": "37.98376",
     "longitud": "23.72784",
-    "descripcion":"Es la capital de Grecia y actualmente la ciudad más grande, importante y poblada del país. La población del municipio de Atenas era de 664 046 (en 2011), pero su área metropolitana es mucho mayor y comprende una población de 3,8 millones (en 2011). Es el centro principal de la vida económica, cultural y política griega.",
+    "descripcion":"Es la capital de Grecia y actualmente la ciudad más grande, importante y poblada del país. La población del municipio de Atenas era de 664 046 (en 2011), pero su área metropolitana es mucho mayor y comprende una población de 3,8 millones (en 2011). Es el centro principal de la vida económica, cultural y política griega. Tiene una gran historia vinculada al deporte, al ser quienes comenzaron con la tradición de las olimpiadas. Tmabién se consagraron campeones de la Euro 2004, lo cual fue un logro historico para el país.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Colombo": {
@@ -104,7 +104,7 @@
   "Moscu": {
     "latitud": "55.75222",
     "longitud": "37.61556",
-    "descripcion":"Es la capital y la entidad federal más poblada de Rusia. La ciudad es un importante centro político, económico, cultural y científico de Rusia y del continente. Moscú es la megaciudad más septentrional de la Tierra y la ciudad más poblada de Europa. Su población es de 12 108 257 habitantes. En virtud de su expansión territorial al suroeste del óblast de Moscú, el 1 de julio de 2012 la capital aumentó su área en 2,5 veces, desde unos 1000 km² hasta 2500 km², y ganó una población adicional de 230 000 habitantes.",
+    "descripcion":"Moscú Es la capital y la entidad federal más poblada de Rusia. La ciudad es un importante centro político, económico, cultural y científico de Rusia y del continente. Moscú es la megaciudad más septentrional de la Tierra y la ciudad más poblada de toda Europa. Su población es de 12 108 257 habitantes. En virtud de su expansión territorial al suroeste del óblast de Moscú, el 1 de julio de 2012 la capital aumentó su área en 2,5 veces, desde unos 1000 km² hasta 2500 km², y ganó una población adicional de 230 000 habitantes.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "Singapur": {
@@ -128,7 +128,7 @@
   "Budapest": {
     "latitud": "47.49835",
     "longitud": "19.04045",
-    "descripcion":"Es la capital y ciudad más poblada de Hungría, así como su principal centro industrial, comercial y de transportes. Posee 1,75 millones de habitantes (2016) una disminución significativa respecto de los casi 2,1 millones con que contaba a mediados de los años 1980, que representan un quinto de la población total de Hungría. ",
+    "descripcion":"Budapest es la capital y ciudad más poblada de Hungría, así como su principal centro industrial, comercial y de transportes. Hasta 2016 poseía 1,75 millones de habitantes una disminución significativa respecto de los casi 2,1 millones con que contaba a mediados de los años 1980, que representan un quinto de la población total de Hungría. En cuanto a eventos deportivos, se caracteriza por ser anfitrión del Gran Premio de Hungría de la Formula 1. Es considerada unade las ciudades más bella de Europa.",
     "Edificios": ["Aeropuerto","Biblioteca","Banco"]
   },
   "San Marino": {

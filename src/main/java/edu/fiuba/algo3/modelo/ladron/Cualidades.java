@@ -26,16 +26,28 @@ public class Cualidades {
         this.explicacionPista.put("Tatuaje", " le vi un extraño Tatuaje negro.");
         this.explicacionPista.put("Limusina", " andaba en una lujosa Limusina.");
         this.explicacionPista.put("Deportivo", " manejaba un bellisimo Deportivo.");
+        this.explicacionPista.put("Descapotable", ", conducía un coche descapotable clasico");
+        this.explicacionPista.put("Anillo", ", tenía puesto un anillo muy lujoso");
+        this.explicacionPista.put("Rubio", ", tenía el cabello rubio");
+        this.explicacionPista.put("Castaño", ", tenía el cabello castaño");
+        this.explicacionPista.put("Natacion", ", llevaba en su maleta unas antiparras para nadar");
+        this.explicacionPista.put("Alpinismo", ", llevaba en su maleta unas botas y picos, como de alpinismo");
+        this.explicacionPista.put("Moto", ", conducía una moto roja");
     }
+
 
     public boolean comparar(ArrayList<String> caracteristicasABuscar){
 
-        boolean esSospechoso = false;
+        boolean esSospechoso = true;
 
-        for(String caracteristica : caracteristicasABuscar){
-            esSospechoso = caracteristicas.contains(caracteristica);
+        for(String caracteristica : caracteristicasABuscar) {
+            if (!caracteristica.equals("Sin Asignar")) {
+                if(!(caracteristicas.contains(caracteristica))){
+                    return false;
+                }
+            }
+
         }
-
         return esSospechoso;
     }
 

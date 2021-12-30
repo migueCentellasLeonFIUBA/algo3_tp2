@@ -6,4 +6,8 @@ public class NoOrden implements IOrden{
         jugador.perdedor();
         return " pero usted no tiene la orden cargada, perdió el juego.";
     }
+
+    public String nombre(){
+        return "No se emitió una orden de arresto";
+    }
 }

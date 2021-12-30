@@ -18,11 +18,6 @@ public class Vehiculo{
 
     }
 
-    public Boolean compararVehiculo(Vehiculo vehiculo){
-        return (vehiculo.vehiculo() == this.vehiculo());
-    }
-
-
     public String vehiculo(){
         return vehiculos.get(vehiculoActual);
     }
@@ -39,7 +34,4 @@ public class Vehiculo{
         return vehiculoActual != 0;
     }
 
-    public String getCaracteristica(){
-        return vehiculos.get(vehiculoActual);
-    }
 }

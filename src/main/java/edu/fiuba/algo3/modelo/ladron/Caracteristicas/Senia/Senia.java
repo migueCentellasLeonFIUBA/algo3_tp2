@@ -38,7 +38,4 @@ public class Senia {
         return seniaActual != 0;
     }
 
-    public String getCaracteristica(){
-        return senias.get(seniaActual);
-    }
 }

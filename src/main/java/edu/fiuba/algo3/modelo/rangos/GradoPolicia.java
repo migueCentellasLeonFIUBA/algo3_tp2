@@ -14,10 +14,16 @@ public abstract class GradoPolicia {
     public abstract GradoPolicia arresto();
 
     public Integer calcularHoras(double distancia){
+        if(distancia < 1){
+            return 1;
+        }
+
         return (int) (distancia/velocidad);
     }
 
     public abstract Objeto ObtenerObjeto(Map<String, ArrayList<Objeto>> objetos);
 
     public abstract String obtenerPista(Edificio edificio);
+
+    public abstract String rango();
 }

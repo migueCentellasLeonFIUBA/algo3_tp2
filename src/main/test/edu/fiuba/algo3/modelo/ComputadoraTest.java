@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ComputadoraTest {
 
     @Test
-    public void TestComputadoraSinParametrosNoDevuelveNingunSospechoso() throws Exception {
+    public void TestComputadoraSinParametrosDevuelveTodosLosSospechosos() throws Exception {
         Parser parser = new Parser();
         Fachada fachada = new Fachada(parser);
         ConstructorJuegoConcreto constructor = new ConstructorJuegoConcreto();
@@ -30,7 +30,7 @@ public class ComputadoraTest {
 
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
-        assertEquals(0, listaSospechosos.size());
+        assertEquals(4, listaSospechosos.size());
     }
 
     @Test
@@ -92,7 +92,7 @@ public class ComputadoraTest {
         juego.comenzarCaso();
         ArrayList<String> caracterisitcasABuscar = new ArrayList<>();
 
-        caracterisitcasABuscar.add("Masculino");
+        caracterisitcasABuscar.add("Cicatriz");
 
         ArrayList<ISospechable> listaSospechosos = jugador.buscarSospechosos(caracterisitcasABuscar);
         assertEquals(0, listaSospechosos.size());

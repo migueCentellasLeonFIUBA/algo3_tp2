@@ -12,8 +12,5 @@ public class ConEstrategia implements IEstado {
     @Override
     public void agregarConexion(Mapa mapa, Ciudad ciudadAnterior){};
 
-    private String mostrarSecuaz(){
-        return "Cuidado un secuaz";
-    }
 
 }

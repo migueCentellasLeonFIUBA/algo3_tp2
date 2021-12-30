@@ -37,7 +37,4 @@ public class Hobby {
         return hobbyActual != 0;
     }
 
-    public String getCaracteristica(){
-        return hobbys.get(hobbyActual);
-    }
 }

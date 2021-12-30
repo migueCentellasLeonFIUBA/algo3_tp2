@@ -16,6 +16,10 @@ public class Sargento extends GradoPolicia {
         super.grado = "Sargento";
     }
 
+    public String rango(){
+        return "Sargento";
+    }
+
     public GradoPolicia arresto() {
         this.arrestos = this.arrestos + 1;
 
